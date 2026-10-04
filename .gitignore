@@ -2,4 +2,6 @@ node_modules/
 dist/
 artifacts/
 .deploy/
+.build-*/
+research/starting-hints/candidate-hints.js
 .DS_Store

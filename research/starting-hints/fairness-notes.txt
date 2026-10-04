@@ -1,7 +1,0 @@
-Independent fairness review: passed, final bank
-
-Each shown starting clue should leave at least four confirmed matching active answers and at most 70% possible matching answers. Conservative geographic upper bounds include suppressed ambiguous-border or neighbour-area cases. Stored hints are alternatives, not clues to combine in one round.
-
-General name and numeric predicates are independently recomputed from all 195 displayed country records. Basic language, no slogans, no capital or landmark giveaways, no answer names. Geographic claims are reusable facts rather than unique custom trivia.
-
-All 195 countries have exactly four eligible clues in their starting tier: one name fact, one population/area fact and two distinct geography dimensions. All 86 catalog entries and 780 assignments pass. Zero wording, breadth, membership, answer leakage or nested geography findings remain. The final content hash is independently computed and recorded in fairness-review.json. Landlocked wording and conventional regional names avoid ambiguous coast or country-name interpretations. No selected pair repeats a nested location/island fact. Practical breadth limits assess individual clues rather than combined facts; they do not measure every player's knowledge.

@@ -1,9 +1,10 @@
 import { createServer } from 'node:http';
 import { createReadStream, realpathSync } from 'node:fs';
-import { realpath, stat } from 'node:fs/promises';
+import { readFile, realpath, stat } from 'node:fs/promises';
 import { resolve, relative, sep, extname } from 'node:path';
 import { pipeline } from 'node:stream/promises';
 import { fileURLToPath } from 'node:url';
+import { READING_PAGES, renderReadingPage } from './reading-pages.mjs';
 
 const types = {
   '.html': 'text/html; charset=utf-8',
@@ -39,7 +40,9 @@ export function createPreviewServer(root = import.meta.dirname) {
     }
 
     try {
-      const candidate = resolve(directory, `.${name === '/' ? '/index.html' : name}`);
+      // Reader pages come from their Markdown/licence source in local preview.
+      const document = READING_PAGES.find(page => '/' + page.name === name);
+      const candidate = resolve(directory, `.${document ? '/' + document.source : name === '/' ? '/index.html' : name}`);
       // Check both spelling and destination: a symlink must not expose other files.
       if (!candidate.startsWith(directory + sep) || name.split('/').some(part => part.startsWith('.'))) {
         reply(403, 'Forbidden');
@@ -55,13 +58,15 @@ export function createPreviewServer(root = import.meta.dirname) {
         reply(404, 'Not found');
         return;
       }
+      const body = document ? renderReadingPage(document, await readFile(path, 'utf8')) : null;
       response.writeHead(200, {
-        'Content-Type': types[extname(path)] || 'application/octet-stream',
-        'Content-Length': details.size,
+        'Content-Type': types[document ? '.html' : extname(path)] || 'application/octet-stream',
+        'Content-Length': body === null ? details.size : Buffer.byteLength(body),
         'Cache-Control': 'no-cache',
         'X-Content-Type-Options': 'nosniff',
       });
       if (request.method === 'HEAD') response.end();
+      else if (body !== null) response.end(body);
       else await pipeline(createReadStream(path), response);
     } catch (error) {
       // Once streaming starts, close a failed response instead of sending two headers.

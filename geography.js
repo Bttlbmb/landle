@@ -98,13 +98,7 @@ export function clueFor(guess, target) {
   };
 }
 
-// Keep dataset order so answer pools have a consistent ordering.
-const TIER_COUNTRIES = [null, ...[1, 2].map(tier => Object.freeze(COUNTRIES.filter(country => country.tier <= tier))), COUNTRIES];
-
-export function countriesForTier(tier) {
-  if (![1, 2, 3].includes(tier)) throw new RangeError('Difficulty tier must be 1, 2, or 3.');
-  return TIER_COUNTRIES[tier];
-}
+export { countriesForTier } from './hint-selection.js';
 
 /** One reviewed hint stays fixed against the available pool saved for this round. */
 export const { countriesForRound, openingHintsFor, chooseOpeningHint, openingHint } = createHintSelector(STARTING_HINTS, HINT_RULES);

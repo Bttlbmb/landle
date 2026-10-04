@@ -45,7 +45,6 @@
   --quiet: #8e9e99;
   --error: #a44e3a;
   --shadow-soft: #223d3812;
-  --shadow: #223d3820;
   --dialog-shadow: #223d3829;
   --backdrop: #223d3855;
   --radius: 8px;
@@ -64,6 +63,8 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
+  /* Extra scroll range only while a mobile keyboard reduces visible space. */
+  padding-bottom: var(--keyboard-space, 0px);
 }
 
 button {
@@ -97,16 +98,8 @@ button:disabled {
   cursor: default;
 }
 
-button:focus-visible {
-  outline: 3px solid var(--primary);
-  outline-offset: 4px;
-}
-
-a:focus-visible {
-  outline: 3px solid var(--primary);
-  outline-offset: 4px;
-}
-
+button:focus-visible,
+a:focus-visible,
 input:focus-visible {
   outline: 3px solid var(--primary);
   outline-offset: 4px;
@@ -314,11 +307,7 @@ h1 {
   background: var(--moss-soft);
 }
 
-.guess-row.filled .clue-tile.distance-far {
-  color: var(--primary);
-  background: var(--primary-soft);
-}
-
+.guess-row.filled .clue-tile.distance-far,
 .guess-row.filled .clue-tile.distance-very-far {
   color: var(--primary);
   background: var(--primary-soft);
@@ -555,10 +544,7 @@ input:focus {
   padding: 11px 12px;
 }
 
-.country-option.selected {
-  background: var(--primary-soft);
-}
-
+.country-option.selected,
 .country-option:hover {
   background: var(--primary-soft);
 }
@@ -705,19 +691,6 @@ dialog::backdrop {
   margin: 10px 0;
 }
 
-.dialog-inner li {
-  font-size: 13px;
-  color: var(--muted);
-  line-height: 1.7;
-}
-
-.dialog-eyebrow {
-  font-size: 10px;
-  letter-spacing: 1.5px;
-  color: var(--primary);
-  font-weight: 600;
-}
-
 .help-example {
   border-radius: var(--radius);
   background: var(--moss-soft);
@@ -757,16 +730,6 @@ dialog::backdrop {
 .guess-row.filled .clue-tile.distance-very-close {
   background: var(--moss-mid);
   color: var(--ink);
-}
-
-.guess-row.filled .clue-tile.distance-close {
-  background: var(--moss-soft);
-  color: var(--moss-ink);
-}
-
-.guess-row.filled .clue-tile.distance-nearby {
-  background: var(--moss-soft);
-  color: var(--moss-ink);
 }
 
 .pool-details {
@@ -921,7 +884,6 @@ dialog::backdrop {
   .guess-row {
     height: auto;
     min-height: 54px;
-    grid-template-columns: minmax(0,1fr) 64px 46px 46px;
     gap: 4px;
   }
 
@@ -957,7 +919,6 @@ dialog::backdrop {
   }
 
   .board-head {
-    grid-template-columns: minmax(0,1fr) 64px 46px 46px;
     gap: 4px;
     font-size: 9px;
     letter-spacing: .4px;
@@ -1011,15 +972,10 @@ dialog::backdrop {
 
   .guess-row {
     min-height: 56px;
-    grid-template-columns: minmax(0,1fr) 60px 42px 42px;
   }
 
   .clue-tile {
     min-height: 56px;
-  }
-
-  .board-head {
-    grid-template-columns: minmax(0,1fr) 60px 42px 42px;
   }
 
   .task-instruction {
@@ -1028,18 +984,8 @@ dialog::backdrop {
 }
 
 @media(prefers-reduced-motion:reduce) {
-  * {
-    animation: none!important;
-    transition: none!important;
-    scroll-behavior: auto!important;
-  }
-
-  *::before {
-    animation: none!important;
-    transition: none!important;
-    scroll-behavior: auto!important;
-  }
-
+  *,
+  *::before,
   *::after {
     animation: none!important;
     transition: none!important;
@@ -1190,7 +1136,7 @@ dialog::backdrop {
   margin-top: 14px;
 }
 
-/* Selected responsive improvements. Full board slots and tablet hitboxes are retained. */
+/* Phone Help filtering and links. Wider dialogs retain the full country list. */
 .pool-filter { display: none; }
 
 @media (max-width: 640px) {
@@ -1325,6 +1271,3 @@ dialog::backdrop {
     border-radius: var(--radius);
   }
 }
-
-/* Preserve normal board/form flow while a keyboard reduces visible space. */
-body { padding-bottom: var(--keyboard-space, 0px); }

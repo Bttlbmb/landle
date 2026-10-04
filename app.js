@@ -6,7 +6,8 @@ import {
   getOpeningHint,
   recordGuess,
   advanceJourney,
-  restartPuzzle
+  restartPuzzle,
+  MAX_GUESSES
 } from './game-state.js';
 import { registerGameTools } from './game-tools.js';
 import { searchCountries } from './country-search.js';
@@ -109,13 +110,14 @@ function loadPuzzle() {
   render();
 }
 
+// Render only from the saved round; rendering never draws a new country or hint.
 function render() {
   ui.journeyLevelLabel.textContent = LEVELS[store.tier];
   ui.journeyLevelProgress.textContent = `Round ${store.tier} of 3`;
   const target = countryByCode.get(current.target);
   ui.openingHint.textContent = getOpeningHint(current);
   renderBoard(target);
-  ui.guessCount.textContent = `${current.guesses.length} / 6 guesses`;
+  ui.guessCount.textContent = `${current.guesses.length} / ${MAX_GUESSES} guesses`;
   ui.guessForm.hidden = current.finished;
   message(defaultMessage(), false, false);
   renderResult();
@@ -125,7 +127,7 @@ function render() {
 function renderBoard(target) {
   const board = ui.guessBoard;
   const rows = document.createDocumentFragment();
-  for (let index = 0; index < 6; index++) {
+  for (let index = 0; index < MAX_GUESSES; index++) {
     const guess = countryByCode.get(current.guesses[index]);
     const clue = guess ? clueFor(guess, target) : null;
     const row = document.createElement('div');
@@ -184,7 +186,7 @@ function comparisonSymbol(value) {
 
 function defaultMessage() {
   if (current.finished) return '';
-  const remaining = 6 - current.guesses.length;
+  const remaining = MAX_GUESSES - current.guesses.length;
   return current.guesses.length ? `${remaining} ${remaining === 1 ? 'guess' : 'guesses'} left.` : '';
 }
 
@@ -195,6 +197,7 @@ function message(text, error = false, announce = true) {
   if (announce) ui.clueAnnouncement.textContent = text;
 }
 
+// Country suggestions and touch keyboard geometry.
 function closeOptions() {
   ui.countryOptions.hidden = true;
   ui.countrySearch.setAttribute('aria-expanded', 'false');
@@ -293,7 +296,12 @@ function updateKeyboardLayout() {
   // Leave the form below the board. Extra page space lets it scroll clear of
   // the keyboard and accessory controls without covering any board rows.
   document.body.classList.toggle('keyboard-active', active);
-  document.body.style.setProperty('--keyboard-space', `${active ? Math.ceil(obscured) + 80 : 0}px`);
+  const space = `${active ? Math.ceil(obscured) + 80 : 0}px`;
+  // Repeated viewport notifications usually report the same geometry. Avoid
+  // rewriting the inline style, which can trigger another layout calculation.
+  if (document.body.style.getPropertyValue('--keyboard-space') !== space) {
+    document.body.style.setProperty('--keyboard-space', space);
+  }
 }
 
 let keyboardRevealTimer;
@@ -369,9 +377,10 @@ function submitGuess(event) {
   const value = ui.countrySearch.value.trim();
   const country = findCountry(value);
   if (!country) {
-    message(!value ? 'Type a country to make a guess.' : searchCountries(value).length ? 'Choose a matching country from the suggestions.' : 'No country matches that name. Try another name or country code.', true);
+    const hasSuggestions = searchCountries(value).length > 0;
+    message(!value ? 'Type a country to make a guess.' : hasSuggestions ? 'Choose a matching country from the suggestions.' : 'No country matches that name. Try another name or country code.', true);
     ui.countrySearch.focus({ preventScroll: true });
-    if (matchMedia('(max-width: 640px)').matches && !searchCountries(value).length) closeOptions();
+    if (matchMedia('(max-width: 640px)').matches && !hasSuggestions) closeOptions();
     else updateOptions();
     revealWorkingArea();
     return;
@@ -394,7 +403,7 @@ function submitGuess(event) {
   persist();
   render();
   const clue = result.clue;
-  const remaining = 6 - current.guesses.length;
+  const remaining = MAX_GUESSES - current.guesses.length;
   const ending = clue.correct ? `Found in ${current.guesses.length} ${current.guesses.length === 1 ? 'guess' : 'guesses'}.` : current.finished ? `The hidden country was ${countryByCode.get(current.target).name}.` : `${remaining} ${remaining === 1 ? 'guess' : 'guesses'} left.`;
   const announcement = `${describeClue(country, clue)} ${ending}`;
   ui.clueAnnouncement.textContent = announcement;
@@ -462,6 +471,7 @@ function revealNewRound() {
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
+// Help always lists the same available pool used to create this round.
 function setupPoolFilter() {
   const input = ui.dialogContent.querySelector('#pool-search');
   if (!input) return;
@@ -669,7 +679,7 @@ function getBoard() {
     level: LEVELS[store.tier],
     targetPoolSize: availableRoundCountries().length,
     openingHint: getOpeningHint(current),
-    attemptsRemaining: 6 - current.guesses.length,
+    attemptsRemaining: MAX_GUESSES - current.guesses.length,
     finished: current.finished,
     won: current.won,
     guesses: current.guesses.map(code => {

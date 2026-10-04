@@ -4,7 +4,7 @@ import { STARTING_HINTS } from './starting-hints.js';
 
 const COUNTRY_BY_CODE = new Map(COUNTRIES.map(country => [country.code, country]));
 const TIERS = [1, 2, 3];
-const MAX_GUESSES = 6;
+export const MAX_GUESSES = 6;
 const ANSWER_COOLDOWN = 12;
 const HINT_COOLDOWN = 6;
 // Twelve completed answers, up to two earlier rounds, and the board being reloaded.
@@ -120,7 +120,8 @@ function restoreRecent(value, field, limit, valid) {
   const seen = new Set();
   const entries = [];
   // Keep the latest entry if damaged storage repeats a round identity.
-  for (const entry of value.slice().reverse()) {
+  for (let index = value.length - 1; index >= 0; index--) {
+    const entry = value[index];
     if (!isRecord(entry) || !validRoundId(entry.roundId) || !valid(entry[field]) || seen.has(entry.roundId)) continue;
     seen.add(entry.roundId);
     entries.push({ roundId: entry.roundId, [field]: entry[field] });

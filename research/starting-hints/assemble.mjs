@@ -1,5 +1,6 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
+import { gunzipSync } from 'node:zlib';
 import { COUNTRIES, POPULATION_YEAR, AREA_YEAR } from '../../data.js';
 
 const root = new URL('./', import.meta.url);
@@ -74,11 +75,8 @@ const generalCatalog = [
   ...numericHints('population', 'population', [0, 1_000_000, 10_000_000, 50_000_000, 150_000_000, Infinity], '', [populationSource], POPULATION_YEAR),
   ...numericHints('area', 'area', [0, 10_000, 100_000, 500_000, 1_500_000, Infinity], ' km²', [areaSource], AREA_YEAR),
 ].filter(hint => hint.eligibleTiers.length);
-await writeFile(new URL('general-catalog.json', root), JSON.stringify(generalCatalog, null, 2) + '\n');
-
-let geography;
-try { geography = JSON.parse(await readFile(new URL('geography-draft.json', root), 'utf8')); }
-catch (error) { if (error.code === 'ENOENT') { console.log('General hint catalog ready; geography draft is pending.'); process.exit(0); } throw error; }
+// Geography is required: a missing source must not silently produce an incomplete bank.
+const geography = JSON.parse(await readFile(new URL('geography.json', root), 'utf8'));
 
 const specificCatalog = geography.factGroups.filter(group => group.displaySafe !== false).map(group => {
   const codes = new Set(group.codes);
@@ -142,7 +140,8 @@ for (const country of COUNTRIES.toSorted((a, b) => a.tier - b.tier || a.code.loc
 }
 const coverage = COUNTRIES.map(country => coverageByCode.get(country.code));
 
-const sourceBytes = await readFile(new URL('upstream-countries.json', root));
+// Compression retains the exact source bytes and the original snapshot hash.
+const sourceBytes = gunzipSync(await readFile(new URL('upstream-countries.json.gz', root)));
 const bank = {
   version: 2,
   assembled: '2026-10-04',
@@ -151,7 +150,7 @@ const bank = {
   selectionNotes: 'Four concise examples per country; gameplay selects from every reviewed eligible alternative. Availability is rechecked against the saved round exclusions. Every Medium/Hard hint must leave at least seven declared possible answers, including conservative extras, and at least four confirmed matches. A partial positive list is not an exhaustive shortlist.',
   nameConvention: 'Use the displayed English country name; accents do not change letter identity, spaces/hyphens are not letters, and vowels are A/E/I/O/U.',
   attribution: [
-    { source: 'mledoze/countries contributors', license: 'ODbL-1.0', url: nameSource, localLicense: '../../DATA_LICENSE.txt' },
+    { source: 'mledoze/countries contributors', license: 'ODbL-1.0', url: nameSource, localLicense: 'DATA_LICENSE.txt' },
     { source: 'World Bank, World Development Indicators', license: 'CC-BY-4.0', populationYear: POPULATION_YEAR, landAreaYear: AREA_YEAR },
     { source: 'Vatican City official population and geography publications; additional official and UN geography sources are cited per clue.' },
   ],
@@ -173,23 +172,5 @@ for (const file of reviewFiles) {
   } catch (error) { if (error.code !== 'ENOENT') throw error; }
 }
 if (reviews.length === 2 && !unresolved.length) { bank.status = 'reviewed'; bank.reviews = reviews; }
-await writeFile(new URL('bank.json', root), JSON.stringify(bank, null, 2) + '\n');
-const levels = { 1: 'Easy', 2: 'Medium', 3: 'Hard' };
-const byId = new Map(catalog.map(candidate => [candidate.id, candidate]));
-const lines = [
-  'Ländle starting hints',
-  '195 countries; four examples each, drawn from a wider verified bank.',
-  'Each clue stands alone. One is shown per round; gameplay uses all reviewed eligible alternatives, with the remaining answer pool checked at round creation.',
-  'Name clues use the displayed English name. Accents do not change letter identity; spaces and hyphens are not letters.',
-  '',
-];
-for (const country of coverage) {
-  lines.push(country.name);
-  for (const id of country.hints) {
-    const candidate = byId.get(id);
-    lines.push(`  - ${candidate.text} [${candidate.eligibleTiers.map(tier => levels[tier]).join(', ')}]`);
-  }
-  lines.push('');
-}
-await writeFile(new URL('hints.txt', root), lines.join('\n'));
+await writeFile(new URL('../../starting-hints.json', root), JSON.stringify(bank, null, 2) + '\n');
 console.log(JSON.stringify({ countries: coverage.length, examples: coverage.reduce((sum, country) => sum + country.hints.length, 0), alternatives: coverage.reduce((sum, country) => sum + country.alternatives.length, 0), generalPhrases: generalCatalog.length, specificPhrases: specificCatalog.length, unresolved, contentSha256: bank.contentSha256 }));

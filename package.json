@@ -7,6 +7,7 @@
     "start": "node server.mjs",
     "test": "node --test tests/*.test.mjs",
     "test:browser": "node tests/browser.mjs",
+    "test:keyboard": "node tests/keyboard.mjs",
     "build": "node build.mjs"
   },
   "engines": {

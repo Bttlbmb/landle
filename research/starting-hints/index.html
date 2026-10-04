@@ -62,7 +62,7 @@
     return node;
   };
   try {
-    const response = await fetch('./bank.json');
+    const response = await fetch('../../starting-hints.json');
     if (!response.ok) throw new Error('The hint bank could not be loaded.');
     const bank = await response.json();
     const hints = new Map(bank.catalog.map(hint => [hint.id,hint]));
@@ -75,13 +75,17 @@
       text('span',`${bank.catalog.length} distinct clues`,'badge')
     );
     document.querySelector('#status').replaceChildren(text('p',bank.status === 'reviewed'
-      ? 'Fact and fairness reviews completed. Counts below use the full difficulty pool; play rechecks them after removing recent answers. Every Medium/Hard hint leaves at least seven declared possible answers. Letter clues use the displayed English name; accents, spaces and hyphens do not count as extra letters.'
+      ? 'Facts and fairness have been reviewed. Counts below include the full difficulty pool; the game checks them again after excluding recent answers. Medium and Hard hints allow at least seven possible countries, including uncertain cases. Name clues use the displayed English name. Accents do not change letters; spaces and hyphens are not letters.'
       : 'Draft bank. Independent fact and fairness reviews are in progress.'));
+    // Country and phrase text is fixed. Normalize it once, not on each keystroke.
+    const searchIndex = new Map(bank.countries.map(country => [country.code,
+      normalizeText(`${country.name} ${country.alternatives.map(id => hints.get(id).text).join(' ')}`),
+    ]));
     const render = () => {
       const query = normalizeText(document.querySelector('#search').value);
       const tier = document.querySelector('#pool').value;
       const selected = bank.countries.filter(country => (tier === 'all' || country.tier <= Number(tier)) &&
-        normalizeText(`${country.name} ${country.alternatives.map(id=>hints.get(id).text).join(' ')}`).includes(query));
+        searchIndex.get(country.code).includes(query));
       const fragment = document.createDocumentFragment();
       for (const country of selected) {
         const card = document.createElement('article'); card.className = 'country';
@@ -111,12 +115,17 @@
         extra.className = 'alternatives';
         extra.append(text('summary',`${extraIds.length} additional verified alternatives`));
         const extraList = document.createElement('ul');
-        for (const id of extraIds) {
-          const hint = hints.get(id), item = document.createElement('li');
-          item.append(text('p',hint.text,'hint'));
-          item.append(text('p',`${families[hint.family]} · ${hint.eligibleTiers.map(level=>labels[level]).join(', ')}`,'meta'));
-          extraList.append(item);
-        }
+        // Most readers inspect the four examples. Keep the wider lists out
+        // of the DOM until a country is expanded or a matching search opens it.
+        extra.addEventListener('toggle', () => {
+          if (!extra.open || extraList.children.length) return;
+          for (const id of extraIds) {
+            const hint = hints.get(id), item = document.createElement('li');
+            item.append(text('p',hint.text,'hint'));
+            item.append(text('p',`${families[hint.family]} · ${hint.eligibleTiers.map(level=>labels[level]).join(', ')}`,'meta'));
+            extraList.append(item);
+          }
+        });
         extra.append(extraList);
         if (query && extraIds.some(id=>normalizeText(hints.get(id).text).includes(query))) extra.open = true;
         card.append(extra); fragment.append(card);

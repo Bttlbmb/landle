@@ -10,7 +10,7 @@ import {
 } from '../geography.js';
 
 const point = (lat, lon) => ({ lat, lon });
-const hintBank = JSON.parse(await readFile(new URL('../research/starting-hints/bank.json', import.meta.url), 'utf8'));
+const hintBank = JSON.parse(await readFile(new URL('../starting-hints.json', import.meta.url), 'utf8'));
 const reviewedHints = new Map(hintBank.catalog.map(hint => [hint.id, hint]));
 const hintAssignment = hint => ({ id: hint.id, text: hint.text, family: hint.family, dimension: hint.dimension,
   eligibleTiers: hint.eligibleTiers, matches: hint.matches, possibleExtraMatches: hint.possibleExtraMatches });

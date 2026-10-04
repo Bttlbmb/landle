@@ -1,10 +1,10 @@
 // Independent review tooling. This file does not change bank or game behavior.
-// Invoke only after the revised bank is ready; a new expected hash is required.
+// Supply the exact current content hash and generate its candidate first.
 import fs from 'node:fs';
 import crypto from 'node:crypto';
+import { gzipSync } from 'node:zlib';
 import { COUNTRIES } from '../../data.js';
 
-const PREVIOUS_REVIEWED_HASH = 'c97649815d6f7669761b014a47d0e8772dbc1625f15d7ec113850cba87aaa2a8';
 const TIERS = [1, 2, 3];
 const letters = country => country.name.normalize('NFKD').replace(/\p{Diacritic}/gu, '').replace(/[^a-z]/gi, '').toUpperCase();
 const vowel = letter => 'AEIOU'.includes(letter);
@@ -131,17 +131,14 @@ export function summarizeWeightedSelection(rows, poolSize) {
 }
 
 export function readBankForReadyAudit(expectedHash) {
-  if (!expectedHash || expectedHash === PREVIOUS_REVIEWED_HASH) {
-    throw new Error('Supply the new bank hash after the revised bank is ready. This audit cannot certify the old bank.');
+  if (!/^[a-f0-9]{64}$/.test(expectedHash || '')) {
+    throw new Error('Supply the exact current bank content hash.');
   }
-  const bank = JSON.parse(fs.readFileSync(new URL('./bank.json', import.meta.url), 'utf8'));
+  const bank = JSON.parse(fs.readFileSync(new URL('../../starting-hints.json', import.meta.url), 'utf8'));
   const digest = crypto.createHash('sha256').update(JSON.stringify({ rules: bank.rules, catalog: bank.catalog, countries: bank.countries })).digest('hex');
   if (digest !== expectedHash || bank.contentSha256 !== expectedHash) throw new Error('Expected revised bank hash does not match current content.');
   return { bank, digest };
 }
-
-// The runtime adapter will be added after root confirms the revised API.
-// Do not emit a review verdict from an unready bank or an assumed API.
 
 export async function auditReadyRuntime(expectedHash, { seedsPerCountry = 1024 } = {}) {
   const { bank, digest } = readBankForReadyAudit(expectedHash);
@@ -273,14 +270,14 @@ export async function auditReadyRuntime(expectedHash, { seedsPerCountry = 1024 }
     poolSummaries.push({ tier, poolSize: pool.length, catalogEligiblePhrases: phraseSupport.length, displaySingletons: phraseSupport.filter(row => row.targetCount === 1), minimumDisplaySupport: Math.min(...phraseSupport.map(row => row.targetCount)), phraseSupport, weightedSelection: summarizeWeightedSelection(weightedRows, pool.length), sample: { seedsPerCountry, totalDraws: sampledDraws, familyCounts: sampleTotals, familyFractions: Object.fromEntries(Object.entries(sampleTotals).map(([key, value]) => [key, round(value / sampledDraws)])) }, exclusionScenarios: scenarios.length - 1, perCountry });
   }
   const effectivePossibleSmallCases = [...effectiveCompleteSmallCases, ...permittedPartialSmallCases].filter(row => row.declaredMaximumCount <= 6);
-  return { contentSha256: digest, previousContentSha256: PREVIOUS_REVIEWED_HASH, generatedAt: new Date().toISOString(), status: 'raw independent audit; no editorial verdict', generalMembershipDiscrepancies: independent.generalDiscrepancies, boundsDiscrepancies: independent.boundsDiscrepancies, issues, effectiveCompleteSmallCases, effectivePossibleSmallCases, permittedPartialSmallCases, exclusionScenarioCount, excludedTargetChecks, poolSummaries };
+  return { contentSha256: digest, generatedAt: new Date().toISOString(), status: 'raw independent audit; no editorial verdict', generalMembershipDiscrepancies: independent.generalDiscrepancies, boundsDiscrepancies: independent.boundsDiscrepancies, issues, effectiveCompleteSmallCases, effectivePossibleSmallCases, permittedPartialSmallCases, exclusionScenarioCount, excludedTargetChecks, poolSummaries };
 }
 
 if (process.argv.includes('--run')) {
   const flagIndex = process.argv.indexOf('--expected-hash');
   const expectedHash = flagIndex >= 0 ? process.argv[flagIndex + 1] : undefined;
   const raw = await auditReadyRuntime(expectedHash);
-  const output = new URL('./revised-fairness-audit-results.json', import.meta.url);
-  fs.writeFileSync(output, JSON.stringify(raw, null, 2) + '\n');
+  const output = new URL('./revised-fairness-audit-results.json.gz', import.meta.url);
+  fs.writeFileSync(output, gzipSync(JSON.stringify(raw, null, 2) + '\n'));
   console.log(JSON.stringify({ contentSha256: raw.contentSha256, issues: raw.issues.length, generalMembershipDiscrepancies: raw.generalMembershipDiscrepancies.length, boundsDiscrepancies: raw.boundsDiscrepancies.length, effectiveCompleteSmallCases: raw.effectiveCompleteSmallCases.length, effectivePossibleSmallCases: raw.effectivePossibleSmallCases.length, permittedPartialSmallCases: raw.permittedPartialSmallCases.length, exclusionScenarioCount: raw.exclusionScenarioCount, excludedTargetChecks: raw.excludedTargetChecks, tiers: raw.poolSummaries.map(tier => ({ tier: tier.tier, selectablePhrases: tier.catalogEligiblePhrases, displaySingletons: tier.displaySingletons.length, minimumDisplaySupport: tier.minimumDisplaySupport, sampledFamilyFractions: tier.sample.familyFractions })) }, null, 2));
 }

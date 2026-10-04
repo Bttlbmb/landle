@@ -1,31 +1,26 @@
+// Optional cross-engine keyboard regression; reports are generated artifacts.
 import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
 import { once } from 'node:events';
-import { createServer } from 'node:http';
-import { execFileSync } from 'node:child_process';
 import { mkdir, writeFile } from 'node:fs/promises';
-import { createPreviewServer } from '../../server.mjs';
+import { createPreviewServer } from '../server.mjs';
 const require = createRequire(import.meta.url);
 const { webkit, chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
-const output = new URL('./', import.meta.url);
-const sourceCommit = '91d830abc7a4499086602eb5ec4e2117b2a4ee6d';
-const preview = createPreviewServer();
-const baselineFiles = process.env.BASELINE ? Object.fromEntries(['app.js', 'styles.css'].map(name =>
-  [name, execFileSync('git', ['show', `${sourceCommit}:${name}`])])) : null;
-const server = baselineFiles ? createServer((request, response) => {
-  const name = new URL(request.url, 'http://localhost').pathname.slice(1);
-  if (baselineFiles[name]) {
-    response.writeHead(200, { 'Content-Type': name.endsWith('.css') ? 'text/css' : 'text/javascript' });
-    response.end(baselineFiles[name]);
-  } else preview.emit('request', request, response);
-}) : preview;
-server.listen(0, '127.0.0.1'); await once(server, 'listening');
+const output = new URL('../artifacts/audit/', import.meta.url);
+const server = createPreviewServer();
 const records = [];
-const stage = process.env.ASSERT_STABLE ? 'flow-after' : 'before';
+const stage = 'keyboard';
+// Match the game's conservative reserve for keyboard accessory controls.
+const ACCESSORY_SPACE = 80;
 const engine = process.env.PROBE_ENGINE || 'webkit';
-const browser = await (engine === 'webkit' ? webkit : chromium).launch({ headless: true,
-  ...(engine === 'chromium' ? { executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' } : {}) });
+if (!['webkit', 'chromium'].includes(engine)) throw new Error('PROBE_ENGINE must be webkit or chromium.');
+let browser;
 try {
+  server.listen(0, '127.0.0.1');
+  await once(server, 'listening');
+  browser = await (engine === 'webkit' ? webkit : chromium).launch({ headless: true,
+    ...(engine === 'chromium' && process.env.BROWSER_BIN ? { executablePath: process.env.BROWSER_BIN } : {}),
+  });
   for (const height of [240, 240.5, 280.333333, 300.666667, 360.25, 400.5]) {
     for (const offsetTop of [0, 60.5, 120.125]) {
       const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
@@ -53,35 +48,33 @@ try {
       await page.locator('#country-search').focus();
       await page.evaluate(() => visualViewport.dispatchEvent(new Event('resize')));
       await page.waitForTimeout(160);
-      const beforeTyping = await page.evaluate(() => {
+      const beforeTyping = await page.evaluate(accessorySpace => {
         const input = document.querySelector('#country-search').getBoundingClientRect();
-        return { top: input.top, bottom: input.bottom, accessoryTop: visualViewport.offsetTop + visualViewport.height - 56 };
-      });
+        return { top: input.top, bottom: input.bottom, accessoryTop: visualViewport.offsetTop + visualViewport.height - accessorySpace };
+      }, ACCESSORY_SPACE);
       await page.evaluate(() => { window.scrollTrace = []; });
       await page.keyboard.insertText('n');
       await page.waitForTimeout(650);
-      if (process.env.ASSERT_STABLE) {
-        // A run of viewport notifications must not trigger document corrections.
-        await page.evaluate(() => new Promise(resolve => {
-          let frames = 0;
-          const notify = () => {
-            visualViewport.dispatchEvent(new Event('scroll'));
-            visualViewport.dispatchEvent(new Event('resize'));
-            if (++frames < 60) requestAnimationFrame(notify); else resolve();
-          };
-          requestAnimationFrame(notify);
-        }));
-      }
+      // A run of viewport notifications must not trigger document corrections.
+      await page.evaluate(() => new Promise(resolve => {
+        let frames = 0;
+        const notify = () => {
+          visualViewport.dispatchEvent(new Event('scroll'));
+          visualViewport.dispatchEvent(new Event('resize'));
+          if (++frames < 60) requestAnimationFrame(notify); else resolve();
+        };
+        requestAnimationFrame(notify);
+      }));
       const trace = await page.evaluate(() => window.scrollTrace);
-      const geometry = await page.evaluate(() => {
+      const geometry = await page.evaluate(accessorySpace => {
         const input = document.querySelector('#country-search').getBoundingClientRect();
         const list = document.querySelector('#country-options').getBoundingClientRect();
         const form = document.querySelector('#guess-form');
         return { inputTop: input.top, inputBottom: input.bottom, listTop: list.top, listBottom: list.bottom,
-          viewportTop: visualViewport.offsetTop, accessoryTop: visualViewport.offsetTop + visualViewport.height - 56,
+          viewportTop: visualViewport.offsetTop, accessoryTop: visualViewport.offsetTop + visualViewport.height - accessorySpace,
           formPosition: getComputedStyle(form).position, formTop: form.getBoundingClientRect().top,
           boardBottom: document.querySelector('#guess-board').getBoundingClientRect().bottom };
-      });
+      }, ACCESSORY_SPACE);
       const result = { engine, height, offsetTop, beforeTyping, trace, geometry,
         reversals: trace.slice(1).filter((step, index) => step.delta * trace[index].delta < 0).length };
       records.push(result);
@@ -90,17 +83,20 @@ try {
     }
   }
   await mkdir(output, { recursive: true });
-  await writeFile(new URL(`${stage}-${engine}.json`, output), JSON.stringify({ engine, stage, sourceCommit: process.env.BASELINE ? sourceCommit : null, version: browser.version(), records }, null, 2));
+  await writeFile(new URL(`${stage}-${engine}.json`, output), JSON.stringify({ engine, stage, version: browser.version(), records }, null, 2));
   const oscillating = records.filter(record => record.reversals > 4);
   const hiddenBeforeTyping = records.filter(record => record.beforeTyping.bottom > record.beforeTyping.accessoryTop);
   console.log(JSON.stringify({ engine, scenarios: records.length, oscillating: oscillating.length, hiddenBeforeTyping: hiddenBeforeTyping.length,
     maximumScrollCalls: Math.max(...records.map(record => record.trace.length)) }));
-  if (process.env.ASSERT_STABLE) {
-    assert.equal(oscillating.length, 0, 'Typing must not start a scrolling loop');
-    assert.equal(hiddenBeforeTyping.length, 0, 'The empty field must clear the accessory bar');
-    assert.ok(records.every(record => record.trace.length === 0), 'Keyboard viewport events must never scroll the document');
-    assert.ok(records.every(record => record.geometry.formPosition === 'relative' && record.geometry.formTop >= record.geometry.boardBottom), 'Entry stays in normal flow below the board');
-  }
+  assert.equal(oscillating.length, 0, 'Typing must not start a scrolling loop');
+  assert.equal(hiddenBeforeTyping.length, 0, 'The empty field must clear the accessory bar');
+  assert.ok(records.every(record => record.geometry.inputBottom <= record.geometry.accessoryTop), 'The typed field must clear the accessory bar');
+  assert.ok(records.every(record => record.trace.length === 0), 'Keyboard viewport events must never scroll the document');
+  assert.ok(records.every(record => record.geometry.formPosition === 'relative' && record.geometry.formTop >= record.geometry.boardBottom), 'Entry stays in normal flow below the board');
 } finally {
-  await browser.close(); server.closeAllConnections(); await new Promise(resolve => server.close(resolve));
+  await browser?.close();
+  if (server.listening) {
+    server.closeAllConnections();
+    await new Promise(resolve => server.close(resolve));
+  }
 }

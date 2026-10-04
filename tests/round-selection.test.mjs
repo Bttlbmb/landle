@@ -11,13 +11,26 @@ const bank = JSON.parse(await readFile(new URL('../starting-hints.json', import.
 const catalog = new Map(bank.catalog.map(hint => [hint.id, hint]));
 const country = code => COUNTRIES.find(item => item.code === code);
 const text = id => catalog.get(id).text;
+const factMembership = new Map(bank.catalog.map(hint => [hint.id, {
+  confirmed: new Set(hint.matches), possible: new Set([...hint.matches, ...hint.possibleExtraMatches]),
+}]));
+const poolCounts = new WeakMap();
 
 function assertBreadth(puzzle) {
   const pool = countriesForRound(puzzle.tier, puzzle.excludedCodes);
   const hint = catalog.get(puzzle.hintId);
   assert.ok(hint.matches.includes(puzzle.target), 'Displayed hint is true for the selected answer');
-  const confirmed = pool.filter(item => hint.matches.includes(item.code)).length;
-  const maximum = pool.filter(item => [...hint.matches, ...hint.possibleExtraMatches].includes(item.code)).length;
+  let counts = poolCounts.get(pool);
+  if (!counts) { counts = new Map(); poolCounts.set(pool, counts); }
+  if (!counts.has(hint.id)) {
+    const facts = factMembership.get(hint.id);
+    counts.set(hint.id, {
+      confirmed: pool.filter(item => facts.confirmed.has(item.code)).length,
+      maximum: pool.filter(item => facts.possible.has(item.code)).length,
+    });
+  }
+  const { confirmed, maximum } = counts.get(hint.id);
+  assert.ok(maximum >= HINT_RULES.minimumPossibleMatches[puzzle.tier], 'Enough declared possible answers remain');
   assert.ok(confirmed >= 4, hint.id + ' leaves ' + confirmed + ' confirmed answers');
   assert.ok(maximum <= pool.length * 0.7, hint.id + ' matches up to ' + maximum + '/' + pool.length + ' answers');
 }
@@ -247,4 +260,21 @@ test('invalid round creation or advancement cannot consume cooldown history or s
   assert.throws(() => createPuzzle(1, { recentHintIds: ['unreviewed'] }), RangeError);
   assert.throws(() => createPuzzle(1, { excludedCodes: ['ZZ'] }), RangeError);
   assert.throws(() => createPuzzle(1, { excludedCodes: countriesForTier(1).slice(0, 16).map(item => item.code) }), RangeError);
+});
+
+
+test('removing an answer without a usable hint rechecks all remaining memberships', () => {
+  const shared = { id: 'shared', text: 'Shared fact.', family: 'geography', eligibleTiers: [1],
+    matches: ['FR', 'GB'], possibleExtraMatches: [] };
+  const dependent = { ...shared, id: 'dependent', matches: ['JP', 'IT'] };
+  const selector = createHintSelector({ FR: [shared], GB: [shared], JP: [dependent] }, {
+    minimumMatches: 2, minimumPossibleMatches: { 1: 2 }, maximumFraction: 1,
+  });
+  // Italy has no assigned hint. Removing it makes Japan's two-match hint
+  // ineligible, so the final pool must remove Japan in the following pass.
+  assert.deepEqual(new Set(selector.countriesForRound(1).map(country => country.code)), new Set(['FR', 'GB']));
+  assert.throws(() => selector.openingHintsFor({ code: 'JP' }, 1), RangeError);
+  const choices = selector.openingHintsFor({ code: 'FR' }, 1);
+  assert.deepEqual(choices, [shared]);
+  assert.ok(Object.isFrozen(choices));
 });

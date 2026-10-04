@@ -1,7 +1,14 @@
 import { COUNTRIES } from './data.js';
 
 const COUNTRY_CODES = new Set(COUNTRIES.map(country => country.code));
-const POOLS = [null, ...[1, 2, 3].map(tier => COUNTRIES.filter(country => country.tier <= tier))];
+const POOLS = [null, ...[1, 2].map(tier => Object.freeze(COUNTRIES.filter(country => country.tier <= tier))), COUNTRIES];
+const CACHE_LIMIT = 64;
+
+/** Cumulative difficulty pools share immutable country records and dataset order. */
+export function countriesForTier(tier) {
+  if (![1, 2, 3].includes(tier)) throw new RangeError('Difficulty tier must be 1, 2, or 3.');
+  return POOLS[tier];
+}
 
 function seedNumber(text) {
   let value = 2166136261;
@@ -12,60 +19,62 @@ function seedNumber(text) {
   return value >>> 0;
 }
 
-/** The same selector is used to evaluate a candidate bank and play its reviewed export. */
+/** Candidate review and gameplay use the same eligibility and selection rules. */
 export function createHintSelector(countryHints, rules) {
   const membership = new Map();
   const wording = new Map();
-  const roundPools = new Map();
+  const rounds = new Map();
   for (const hints of Object.values(countryHints)) {
     for (const hint of hints) {
       if (membership.has(hint.id)) continue;
-      const facts = hint;
-      if (!facts) throw new Error('Starting-hint membership must match the reviewed bank.');
       membership.set(hint.id, {
-        confirmed: new Set(facts.matches),
-        possible: new Set([...facts.matches, ...(facts.possibleExtraMatches || [])]),
+        hint,
+        confirmed: new Set(hint.matches),
+        possible: new Set([...hint.matches, ...(hint.possibleExtraMatches || [])]),
       });
       wording.set(hint.id, hint.text);
     }
   }
 
-  function validatePool(tier, excludedCodes) {
-    if (![1, 2, 3].includes(tier)) throw new RangeError('Hint difficulty must be 1, 2, or 3.');
+  function hintsForPool(tier, pool) {
+    const eligible = new Set();
+    // A phrase can belong to many countries. Count it once per pool, rather
+    // than repeating the same membership scan for each of its assignments.
+    for (const [id, { hint, confirmed, possible }] of membership) {
+      if (!hint.eligibleTiers.includes(tier)) continue;
+      let count = 0, maximum = 0;
+      for (const country of pool) {
+        if (confirmed.has(country.code)) count++;
+        if (possible.has(country.code)) maximum++;
+      }
+      if (count >= rules.minimumMatches && maximum >= rules.minimumPossibleMatches[tier]
+        && maximum <= rules.maximumFraction * pool.length) eligible.add(id);
+    }
+    return new Map(pool.map(country => [country.code,
+      Object.freeze((countryHints[country.code] || []).filter(hint => eligible.has(hint.id))),
+    ]));
+  }
+
+  function roundFor(tier, excludedCodes) {
+    const base = countriesForTier(tier);
+    // Array.from also catches holes in a malformed saved exclusion array.
     if (!Array.isArray(excludedCodes) || Array.from(excludedCodes).some(code => !COUNTRY_CODES.has(code))) {
       throw new RangeError('Excluded answers must be known country codes.');
     }
-  }
-
-  function eligibleHints(country, tier, pool) {
-    return (countryHints[country?.code] || []).filter(hint => {
-      if (!hint.eligibleTiers.includes(tier)) return false;
-      const { confirmed, possible } = membership.get(hint.id);
-      let count = 0, maximum = 0;
-      for (const item of pool) {
-        if (confirmed.has(item.code)) count++;
-        if (possible.has(item.code)) maximum++;
-      }
-      return count >= rules.minimumMatches && maximum >= rules.minimumPossibleMatches[tier]
-        && maximum <= rules.maximumFraction * pool.length;
-    });
-  }
-
-  /** Cooldowns and reviewed hint breadth determine the actual possible answers. */
-  function countriesForRound(tier, excludedCodes = []) {
-    validatePool(tier, excludedCodes);
     const excluded = new Set(excludedCodes);
     const key = tier + ':' + [...excluded].sort().join(',');
-    if (roundPools.has(key)) return roundPools.get(key);
-    let pool = POOLS[tier].filter(country => !excluded.has(country.code));
-    // Removing a country with no safe hint also removes it from other hints' match counts.
-    // Repeat until all answers have a fair hint against the same final answer pool.
+    if (rounds.has(key)) return rounds.get(key);
+    let pool = base.filter(country => !excluded.has(country.code));
+    // Removing an answer without a fair hint changes other phrases' counts.
+    // Repeat until every remaining answer has a hint against the final pool.
     while (pool.length) {
-      const eligible = pool.filter(country => eligibleHints(country, tier, pool).length);
+      const hints = hintsForPool(tier, pool);
+      const eligible = pool.filter(country => hints.get(country.code).length);
       if (eligible.length === pool.length) {
-        const result = Object.freeze(pool);
-        if (roundPools.size >= 256) roundPools.delete(roundPools.keys().next().value);
-        roundPools.set(key, result);
+        const result = { countries: Object.freeze(pool), hints };
+        // Bound memory during long sessions; cached hint arrays stay immutable.
+        if (rounds.size >= CACHE_LIMIT) rounds.delete(rounds.keys().next().value);
+        rounds.set(key, result);
         return result;
       }
       pool = eligible;
@@ -73,14 +82,15 @@ export function createHintSelector(countryHints, rules) {
     throw new RangeError('At least one country with a fair starting hint must remain available.');
   }
 
+  /** Cooldowns and reviewed hint breadth determine the actual answer pool. */
+  function countriesForRound(tier, excludedCodes = []) {
+    return roundFor(tier, excludedCodes).countries;
+  }
+
   function openingHintsFor(country, tier = country?.tier, excludedCodes = []) {
-    const pool = countriesForRound(tier, excludedCodes);
-    if (!pool.some(item => item.code === country?.code)) {
-      throw new RangeError('The country must be available at this difficulty.');
-    }
-    const hints = eligibleHints(country, tier, pool);
-    if (!hints.length) throw new RangeError('The country needs an eligible reviewed starting hint.');
-    return Object.freeze(hints);
+    const hints = roundFor(tier, excludedCodes).hints.get(country?.code);
+    if (!hints) throw new RangeError('The country must be available at this difficulty.');
+    return hints;
   }
 
   /** Prefer unseen wording, then the least recently shown eligible wording. */
@@ -101,7 +111,8 @@ export function createHintSelector(countryHints, rules) {
       choices.filter(hint => hint.family === 'population' || hint.family === 'area'),
       choices.filter(hint => hint.family === 'geography'),
     ];
-    // Separate bits choose the family and its fact; sharing low bits can hide alternatives.
+    // Independent hash bits choose the family and fact so every alternative
+    // remains reachable. The four slots give family weights of 25/25/50%.
     const slot = value & 3;
     const family = slot < 2 ? slot : 2;
     const bucket = buckets[family].length ? buckets[family] : buckets.find(items => items.length);
