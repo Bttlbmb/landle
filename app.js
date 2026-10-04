@@ -279,8 +279,25 @@ function positionOptions() {
   list.style.setProperty('--options-max-height', `${Math.floor(Math.min(252, useAbove ? above : below))}px`);
 }
 
+function updateKeyboardSpace() {
+  const view = window.visualViewport;
+  // Safari's keyboard can cover the page without shrinking its layout viewport.
+  // Add scroll range so even a short board can lift the form above that keyboard.
+  // Ignore browser chrome and pinch zoom; neither needs keyboard-sized padding.
+  const obscured = view && usesResponsiveTouchLayout() && view.scale === 1
+    && document.activeElement === ui.countrySearch && !current.finished
+    ? Math.max(0, document.documentElement.clientHeight - view.height) : 0;
+  const space = `${obscured > 100 ? Math.ceil(obscured) : 0}px`;
+  if (document.body.style.getPropertyValue('--keyboard-space') !== space) {
+    document.body.style.setProperty('--keyboard-space', space);
+  }
+}
+
+let workingAreaFrame;
 function revealWorkingArea() {
-  requestAnimationFrame(() => {
+  cancelAnimationFrame(workingAreaFrame);
+  workingAreaFrame = requestAnimationFrame(() => {
+    updateKeyboardSpace();
     const view = viewportBounds();
     let elements;
     if (current.finished) elements = [ui.resultPanel];
@@ -509,9 +526,11 @@ ui.guessForm.addEventListener('submit', submitGuess);
 ui.countrySearch.addEventListener('input', () => {
   message(defaultMessage(), false, false);
   updateOptions();
+  if (usesResponsiveTouchLayout()) revealWorkingArea();
 });
 ui.countrySearch.addEventListener('focus', () => {
   if (ui.countrySearch.value && !current.finished) updateOptions();
+  if (usesResponsiveTouchLayout()) revealWorkingArea();
 });
 ui.countrySearch.addEventListener('keydown', event => {
   // Enter confirms a character while an international keyboard is composing.
@@ -549,6 +568,7 @@ window.addEventListener('scroll', positionOptions, { passive: true });
 let previousLayoutWidth = innerWidth;
 let previousLayoutHeight = innerHeight;
 function handleViewportResize() {
+  updateKeyboardSpace();
   positionOptions();
   const rotatedToShortLandscape = usesResponsiveTouchLayout() && innerWidth > previousLayoutWidth && innerHeight < previousLayoutHeight && innerHeight <= 500 && innerWidth > innerHeight;
   previousLayoutWidth = innerWidth;
@@ -573,7 +593,10 @@ function handleViewportResize() {
 }
 window.addEventListener('resize', handleViewportResize);
 window.visualViewport?.addEventListener('resize', handleViewportResize);
-window.visualViewport?.addEventListener('scroll', positionOptions);
+window.visualViewport?.addEventListener('scroll', () => {
+  if (document.activeElement === ui.countrySearch && !current.finished) revealWorkingArea();
+  else positionOptions();
+});
 ui.helpButton.addEventListener('click', showHelp);
 ui.dialogClose.addEventListener('click', () => ui.gameDialog.close());
 ui.gameDialog.addEventListener('click', event => {

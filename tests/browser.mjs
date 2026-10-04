@@ -231,6 +231,80 @@ try {
     response.error ? request.reject(new Error(JSON.stringify(response.error))) : request.resolve(response.result);
   });
 
+  // Model a keyboard that shrinks/pans visualViewport while the layout viewport
+  // keeps its original height (the mobile behavior a window resize misses).
+  for (const [width, height, keyboardHeight] of [[320, 568, 240], [375, 667, 300], [390, 844, 360], [430, 932, 400]]) {
+    for (const path of ['/', '/dist/index.html']) {
+      const page = await openPage(width, height, undefined, path);
+      await page.send('Page.addScriptToEvaluateOnNewDocument', { source: `
+        const viewport = window.visualViewport;
+        const original = { height: viewport.height, offsetTop: viewport.offsetTop };
+        let keyboard = null;
+        for (const key of ['height', 'offsetTop']) Object.defineProperty(viewport, key, {
+          configurable: true, get: () => keyboard ? keyboard[key] : original[key]
+        });
+        window.setKeyboardViewport = (height, offsetTop = 0) => {
+          keyboard = height == null ? null : { height, offsetTop };
+          viewport.dispatchEvent(new Event('resize'));
+          viewport.dispatchEvent(new Event('scroll'));
+        };
+      ` });
+      await page.navigate();
+      await page.evaluate(h => {
+        document.querySelector('#country-search').focus({ preventScroll: true });
+        window.setKeyboardViewport(h);
+      }, keyboardHeight);
+      await pause(160);
+      const entryVisible = () => page.evaluate(() => {
+        const viewport = window.visualViewport;
+        return ['#country-search', '#guess-button'].every(selector => {
+          const rect = document.querySelector(selector).getBoundingClientRect();
+          return rect.top >= viewport.offsetTop + 11 && rect.bottom <= viewport.offsetTop + viewport.height - 11;
+        });
+      });
+      assert.ok(await entryVisible(), `${width} ${path}: entry and Guess remain above an overlay keyboard before typing`);
+      await page.fill('a');
+      await pause(100);
+      const listGeometry = await page.evaluate(() => {
+        const list = document.querySelector('#country-options').getBoundingClientRect();
+        const first = document.querySelector('.country-option').getBoundingClientRect();
+        const viewport = window.visualViewport;
+        return { top: list.top, bottom: list.bottom, height: list.height, rowHeight: first.height,
+          visibleTop: viewport.offsetTop + 12, visibleBottom: viewport.offsetTop + viewport.height - 12 };
+      });
+      assert.ok(listGeometry.top >= listGeometry.visibleTop - 1 && listGeometry.bottom <= listGeometry.visibleBottom + 1
+        && listGeometry.height >= listGeometry.rowHeight + 10, `${width} ${path}: suggestions offer a visible touch target`);
+      // Scroll to the last suggestion and send real touch events, rather than a DOM click.
+      const target = await page.evaluate(() => {
+        const list = document.querySelector('#country-options');
+        list.scrollTop = list.scrollHeight;
+        const option = list.lastElementChild;
+        const rect = option.getBoundingClientRect();
+        return { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2, name: option.firstElementChild.textContent };
+      });
+      assert.ok(target.y > listGeometry.top && target.y < listGeometry.bottom, 'Scrolled suggestion is tappable');
+      await page.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x: target.x, y: target.y }] });
+      await page.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+      await pause(160);
+      assert.equal(await page.evaluate(() => document.querySelector('#country-search').value), target.name, 'Touch selects the country without Enter');
+      assert.equal(await page.evaluate(() => document.querySelector('#country-options').hidden), true);
+      assert.ok(await entryVisible(), 'Selection keeps the entry and Guess visible');
+      await page.evaluate(h => window.setKeyboardViewport(h, 60), keyboardHeight);
+      await page.fill('ko');
+      await pause(160);
+      assert.ok(await entryVisible(), 'Keyboard viewport pan preserves entry visibility');
+      await page.screenshot(`keyboard-${width}-${path === '/' ? 'source' : 'export'}`);
+      await page.evaluate(() => {
+        document.querySelector('#country-search').blur();
+        window.setKeyboardViewport(null);
+      });
+      await pause(160);
+      assert.equal(await page.evaluate(() => parseFloat(getComputedStyle(document.body).paddingBottom)), 0, 'Dismissed keyboard leaves no spacer');
+      checks.push({ check: 'overlay-keyboard-entry-and-touch-suggestions', width, height, keyboardHeight, path });
+      await page.close();
+    }
+  }
+
   for (const [width, height] of [[320, 568], [360, 640], [375, 568], [376, 568], [390, 844], [430, 932], [768, 1024], [1024, 768], [1440, 900], [1920, 1080], [844, 390]]) {
     const page = await openPage(width, height);
     const initial = await page.geometry(['h1', '.task-instruction', '#guess-form', '.status-line']);
