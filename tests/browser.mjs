@@ -231,6 +231,44 @@ try {
     response.error ? request.reject(new Error(JSON.stringify(response.error))) : request.resolve(response.result);
   });
 
+  // A short one-country list can fit below the input according to viewport
+  // metrics while an iOS accessory bar actually covers that space.
+  for (const [width, height] of [[320, 568], [390, 844]]) {
+    for (const path of ['/', '/dist/index.html']) {
+      const page = await openPage(width, height, undefined, path);
+      if (path === '/') await page.fixture({ guesses: ['FR', 'BE'] });
+      await page.fill('Netherl');
+      await pause(120);
+      await page.evaluate(() => {
+        const form = document.querySelector('#guess-form').getBoundingClientRect();
+        const bar = document.createElement('div');
+        bar.id = 'keyboard-accessory';
+        bar.style.cssText = `position:fixed;left:0;right:0;top:${form.bottom + 1}px;height:80px;background:#8e9e99;z-index:9999`;
+        bar.textContent = 'iOS keyboard accessory bar';
+        document.body.append(bar);
+      });
+      const target = await page.evaluate(() => {
+        const list = document.querySelector('#country-options').getBoundingClientRect();
+        const input = document.querySelector('#country-search').getBoundingClientRect();
+        const option = document.querySelector('.country-option');
+        const rect = option.getBoundingClientRect();
+        const x = rect.left + rect.width / 2, y = rect.top + rect.height / 2;
+        return { listBottom: list.bottom, inputTop: input.top, height: list.height, x, y,
+          name: option.textContent, tappable: option.contains(document.elementFromPoint(x, y)) };
+      });
+      assert.ok(target.listBottom <= target.inputTop - 4 && target.height >= 44,
+        `${width} ${path}: a single Netherlands suggestion opens above entry`);
+      assert.ok(target.tappable, 'The accessory bar cannot intercept the suggestion tap');
+      await page.screenshot(`accessory-${width}-${path === '/' ? 'source' : 'export'}`);
+      await page.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x: target.x, y: target.y }] });
+      await page.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+      await pause(120);
+      assert.equal(await page.evaluate(() => document.querySelector('#country-search').value), 'Netherlands');
+      checks.push({ check: 'single-suggestion-above-ios-accessory-bar', width, height, path });
+      await page.close();
+    }
+  }
+
   // Model a keyboard that shrinks/pans visualViewport while the layout viewport
   // keeps its original height (the mobile behavior a window resize misses).
   for (const [width, height, keyboardHeight] of [[320, 568, 240], [375, 667, 300], [390, 844, 360], [430, 932, 400]]) {

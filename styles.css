@@ -538,6 +538,14 @@ input:focus {
   bottom: calc(100% + 5px);
 }
 
+/* Stay clear of mobile keyboard accessory bars even before JS positioning. */
+@media (pointer: coarse) {
+  .country-options {
+    top: auto;
+    bottom: calc(100% + 5px);
+  }
+}
+
 .country-option {
   border-radius: 4px;
   font-size: 13px;

@@ -274,7 +274,9 @@ function positionOptions() {
   const above = Math.max(0, rect.top - view.top - 5);
   const below = Math.max(0, view.bottom - rect.bottom - 5);
   const desired = Math.min(252, list.scrollHeight + 2);
-  const useAbove = below < desired && above > below;
+  // iOS accessory bars can overlap space reported as visible below the field.
+  // Keep every touch list above entry, including a single matching country.
+  const useAbove = matchMedia('(pointer: coarse)').matches || (below < desired && above > below);
   list.classList.toggle('above', useAbove);
   list.style.setProperty('--options-max-height', `${Math.floor(Math.min(252, useAbove ? above : below))}px`);
 }
@@ -305,9 +307,19 @@ function revealWorkingArea() {
       const latest = [...document.querySelectorAll('#guess-board .filled')].at(-1);
       elements = [latest, ui.guessForm, ui.statusLine].filter(Boolean);
     }
+    const form = ui.guessForm.getBoundingClientRect();
+    const status = ui.statusLine.getBoundingClientRect();
+    const touchSuggestions = !ui.countryOptions.hidden && matchMedia('(pointer: coarse)').matches;
+    const optionHeight = touchSuggestions ? ui.countryOptions.firstElementChild.getBoundingClientRect().height : 0;
+    const optionsSpace = touchSuggestions ? Math.min(252, ui.countryOptions.scrollHeight + 2,
+      Math.max(optionHeight + 12, view.bottom - view.top - (status.bottom - form.top) - 5)) : 0;
     const bounds = list => {
       const rects = list.map(element => element.getBoundingClientRect());
-      return { top: Math.min(...rects.map(rect => rect.top)), bottom: Math.max(...rects.map(rect => rect.bottom)) };
+      const top = Math.min(...rects.map(rect => rect.top));
+      return {
+        top: touchSuggestions && list.includes(ui.guessForm) ? Math.min(top, form.top - optionsSpace - 5) : top,
+        bottom: Math.max(...rects.map(rect => rect.bottom))
+      };
     };
     let rect = bounds(elements);
     if (rect.bottom - rect.top > view.bottom - view.top) {
