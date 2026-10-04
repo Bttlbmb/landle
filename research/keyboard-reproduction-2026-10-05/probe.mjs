@@ -21,7 +21,7 @@ const server = baselineFiles ? createServer((request, response) => {
 }) : preview;
 server.listen(0, '127.0.0.1'); await once(server, 'listening');
 const records = [];
-const stage = process.env.ASSERT_STABLE ? 'after' : 'before';
+const stage = process.env.ASSERT_STABLE ? 'flow-after' : 'before';
 const engine = process.env.PROBE_ENGINE || 'webkit';
 const browser = await (engine === 'webkit' ? webkit : chromium).launch({ headless: true,
   ...(engine === 'chromium' ? { executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' } : {}) });
@@ -76,8 +76,11 @@ try {
       const geometry = await page.evaluate(() => {
         const input = document.querySelector('#country-search').getBoundingClientRect();
         const list = document.querySelector('#country-options').getBoundingClientRect();
+        const form = document.querySelector('#guess-form');
         return { inputTop: input.top, inputBottom: input.bottom, listTop: list.top, listBottom: list.bottom,
-          viewportTop: visualViewport.offsetTop, accessoryTop: visualViewport.offsetTop + visualViewport.height - 56 };
+          viewportTop: visualViewport.offsetTop, accessoryTop: visualViewport.offsetTop + visualViewport.height - 56,
+          formPosition: getComputedStyle(form).position, formTop: form.getBoundingClientRect().top,
+          boardBottom: document.querySelector('#guess-board').getBoundingClientRect().bottom };
       });
       const result = { engine, height, offsetTop, beforeTyping, trace, geometry,
         reversals: trace.slice(1).filter((step, index) => step.delta * trace[index].delta < 0).length };
@@ -96,6 +99,7 @@ try {
     assert.equal(oscillating.length, 0, 'Typing must not start a scrolling loop');
     assert.equal(hiddenBeforeTyping.length, 0, 'The empty field must clear the accessory bar');
     assert.ok(records.every(record => record.trace.length === 0), 'Keyboard viewport events must never scroll the document');
+    assert.ok(records.every(record => record.geometry.formPosition === 'relative' && record.geometry.formTop >= record.geometry.boardBottom), 'Entry stays in normal flow below the board');
   }
 } finally {
   await browser.close(); server.closeAllConnections(); await new Promise(resolve => server.close(resolve));

@@ -67,6 +67,12 @@ Keyboard entry now uses a fixed form positioned within the visual viewport, with
 
 All 36 stability scenarios pass across the two engines, covering fractional visible heights from 240 to 400.5px and offset positions from 0 to 120.125px. Revised entry overlap is zero and application-driven page-scroll calls are zero. The 41 existing browser scenarios also pass. These runs emulate keyboard viewport metrics; they do not open a native iPhone keyboard or establish that physical Safari's flicker is resolved.
 
+## Input returned to board flow · 5 October 2026
+
+The fixed keyboard form was stable in the viewport probes but visibly hovered over board rows on the reported iPhone. That fixed positioning and its placeholder have been removed. The field remains below all six rows in the ordinary layout. Temporary page padding supplies scroll range above the keyboard and the existing accessory reserve; suggestions remain above entry. Explicit focus, typing and selection can reveal the form. Scroll notifications only update layout measurements and list placement. Keyboard height changes over 8px schedule a correction after 120ms of settling, with at most two automatic corrections per focus session, preventing an unbounded viewport feedback loop.
+
+The existing eight source/export keyboard cases now also assert that the form is relatively positioned and below the board. All 41 browser scenarios pass. The WebKit and Chromium stability probes additionally check the same normal-flow geometry across 36 fractional-height/pan cases and repeated viewport notifications. Measurements are saved as `flow-after-*.json` alongside the earlier reproduction evidence. The probes model keyboard metrics and do not constitute physical-iPhone verification.
+
 ## Limits
 
 Browser emulation can reveal layout and interaction problems, but it does not establish behavior on every physical phone. The game uses accessible names, keyboard controls, and clue announcements; this review is not a complete screen-reader audit. Automated checks do not establish a representative human win rate or prove the difficulty groups suit every player.

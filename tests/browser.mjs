@@ -301,6 +301,11 @@ try {
         });
       });
       assert.ok(await entryVisible(), `${width} ${path}: entry and Guess remain above an overlay keyboard before typing`);
+      assert.ok(await page.evaluate(() => {
+        const form = document.querySelector('#guess-form');
+        return getComputedStyle(form).position === 'relative'
+          && form.getBoundingClientRect().top >= document.querySelector('#guess-board').getBoundingClientRect().bottom;
+      }), 'Keyboard entry stays below the complete board, without hovering over rows');
       await page.fill('a');
       await pause(100);
       const listGeometry = await page.evaluate(() => {
