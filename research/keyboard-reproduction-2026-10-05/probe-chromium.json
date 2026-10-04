@@ -1,0 +1,525 @@
+{
+  "engine": "chromium",
+  "version": "154.0.8037.59",
+  "records": [
+    {
+      "engine": "chromium",
+      "height": 240,
+      "offsetTop": 0,
+      "beforeTyping": {
+        "top": 598.890625,
+        "bottom": 648.890625,
+        "accessoryTop": 184
+      },
+      "trace": [
+        {
+          "time": 606.1000001430511,
+          "delta": 447.890625,
+          "before": 0,
+          "after": 448,
+          "inputTop": 150.890625,
+          "inputBottom": 200.890625,
+          "maxHeight": "252px"
+        },
+        {
+          "time": 628.2000000476837,
+          "delta": -0.109375,
+          "before": 448,
+          "after": 448,
+          "inputTop": 150.890625,
+          "inputBottom": 200.890625,
+          "maxHeight": "133px"
+        }
+      ],
+      "geometry": {
+        "inputTop": 150.890625,
+        "inputBottom": 200.890625,
+        "listTop": 12.890625,
+        "listBottom": 145.890625,
+        "viewportTop": 0,
+        "accessoryTop": 184
+      },
+      "reversals": 1
+    },
+    {
+      "engine": "chromium",
+      "height": 240,
+      "offsetTop": 60.5,
+      "beforeTyping": {
+        "top": 211.890625,
+        "bottom": 261.890625,
+        "accessoryTop": 244.5
+      },
+      "trace": [
+        {
+          "time": 231,
+          "delta": 0.390625,
+          "before": 387,
+          "after": 387,
+          "inputTop": 211.890625,
+          "inputBottom": 261.890625,
+          "maxHeight": "134px"
+        }
+      ],
+      "geometry": {
+        "inputTop": 211.890625,
+        "inputBottom": 261.890625,
+        "listTop": 72.890625,
+        "listBottom": 206.890625,
+        "viewportTop": 60.5,
+        "accessoryTop": 244.5
+      },
+      "reversals": 0
+    },
+    {
+      "engine": "chromium",
+      "height": 240,
+      "offsetTop": 120.125,
+      "beforeTyping": {
+        "top": 270.890625,
+        "bottom": 320.890625,
+        "accessoryTop": 304.125
+      },
+      "trace": [
+        {
+          "time": 247.5,
+          "delta": -0.234375,
+          "before": 328,
+          "after": 328,
+          "inputTop": 270.890625,
+          "inputBottom": 320.890625,
+          "maxHeight": "133px"
+        }
+      ],
+      "geometry": {
+        "inputTop": 270.890625,
+        "inputBottom": 320.890625,
+        "listTop": 132.890625,
+        "listBottom": 265.890625,
+        "viewportTop": 120.125,
+        "accessoryTop": 304.125
+      },
+      "reversals": 0
+    },
+    {
+      "engine": "chromium",
+      "height": 240.5,
+      "offsetTop": 0,
+      "beforeTyping": {
+        "top": 151.890625,
+        "bottom": 201.890625,
+        "accessoryTop": 184.5
+      },
+      "trace": [
+        {
+          "time": 231,
+          "delta": 0.390625,
+          "before": 447,
+          "after": 447,
+          "inputTop": 151.890625,
+          "inputBottom": 201.890625,
+          "maxHeight": "134px"
+        }
+      ],
+      "geometry": {
+        "inputTop": 151.890625,
+        "inputBottom": 201.890625,
+        "listTop": 12.890625,
+        "listBottom": 146.890625,
+        "viewportTop": 0,
+        "accessoryTop": 184.5
+      },
+      "reversals": 0
+    },
+    {
+      "engine": "chromium",
+      "height": 240.5,
+      "offsetTop": 60.5,
+      "beforeTyping": {
+        "top": 211.890625,
+        "bottom": 261.890625,
+        "accessoryTop": 245
+      },
+      "trace": [
+        {
+          "time": 227.79999995231628,
+          "delta": -0.109375,
+          "before": 387,
+          "after": 387,
+          "inputTop": 211.890625,
+          "inputBottom": 261.890625,
+          "maxHeight": "134px"
+        }
+      ],
+      "geometry": {
+        "inputTop": 211.890625,
+        "inputBottom": 261.890625,
+        "listTop": 72.890625,
+        "listBottom": 206.890625,
+        "viewportTop": 60.5,
+        "accessoryTop": 245
+      },
+      "reversals": 0
+    },
+    {
+      "engine": "chromium",
+      "height": 240.5,
+      "offsetTop": 120.125,
+      "beforeTyping": {
+        "top": 271.890625,
+        "bottom": 321.890625,
+        "accessoryTop": 304.625
+      },
+      "trace": [
+        {
+          "time": 235.10000014305115,
+          "delta": 0.265625,
+          "before": 327,
+          "after": 327,
+          "inputTop": 271.890625,
+          "inputBottom": 321.890625,
+          "maxHeight": "134px"
+        }
+      ],
+      "geometry": {
+        "inputTop": 271.890625,
+        "inputBottom": 321.890625,
+        "listTop": 132.890625,
+        "listBottom": 266.890625,
+        "viewportTop": 120.125,
+        "accessoryTop": 304.625
+      },
+      "reversals": 0
+    },
+    {
+      "engine": "chromium",
+      "height": 280.333333,
+      "offsetTop": 0,
+      "beforeTyping": {
+        "top": 190.890625,
+        "bottom": 240.890625,
+        "accessoryTop": 224.33333299999998
+      },
+      "trace": [
+        {
+          "time": 309.60000014305115,
+          "delta": -0.4427079999999819,
+          "before": 408,
+          "after": 408,
+          "inputTop": 190.890625,
+          "inputBottom": 240.890625,
+          "maxHeight": "173px"
+        }
+      ],
+      "geometry": {
+        "inputTop": 190.890625,
+        "inputBottom": 240.890625,
+        "listTop": 12.890625,
+        "listBottom": 185.890625,
+        "viewportTop": 0,
+        "accessoryTop": 224.33333299999998
+      },
+      "reversals": 0
+    },
+    {
+      "engine": "chromium",
+      "height": 280.333333,
+      "offsetTop": 60.5,
+      "beforeTyping": {
+        "top": 251.890625,
+        "bottom": 301.890625,
+        "accessoryTop": 284.833333
+      },
+      "trace": [
+        {
+          "time": 256.09999990463257,
+          "delta": 0.057292000000018106,
+          "before": 347,
+          "after": 347,
+          "inputTop": 251.890625,
+          "inputBottom": 301.890625,
+          "maxHeight": "174px"
+        }
+      ],
+      "geometry": {
+        "inputTop": 251.890625,
+        "inputBottom": 301.890625,
+        "listTop": 72.890625,
+        "listBottom": 246.890625,
+        "viewportTop": 60.5,
+        "accessoryTop": 284.833333
+      },
+      "reversals": 0
+    },
+    {
+      "engine": "chromium",
+      "height": 280.333333,
+      "offsetTop": 120.125,
+      "beforeTyping": {
+        "top": 311.890625,
+        "bottom": 361.890625,
+        "accessoryTop": 344.458333
+      },
+      "trace": [
+        {
+          "time": 224.90000009536743,
+          "delta": 0.4322920000000181,
+          "before": 287,
+          "after": 287,
+          "inputTop": 311.890625,
+          "inputBottom": 361.890625,
+          "maxHeight": "174px"
+        }
+      ],
+      "geometry": {
+        "inputTop": 311.890625,
+        "inputBottom": 361.890625,
+        "listTop": 132.890625,
+        "listBottom": 306.890625,
+        "viewportTop": 120.125,
+        "accessoryTop": 344.458333
+      },
+      "reversals": 0
+    },
+    {
+      "engine": "chromium",
+      "height": 300.666667,
+      "offsetTop": 0,
+      "beforeTyping": {
+        "top": 211.890625,
+        "bottom": 261.890625,
+        "accessoryTop": 244.66666700000002
+      },
+      "trace": [
+        {
+          "time": 230.69999980926514,
+          "delta": 0.2239579999999819,
+          "before": 387,
+          "after": 387,
+          "inputTop": 211.890625,
+          "inputBottom": 261.890625,
+          "maxHeight": "194px"
+        }
+      ],
+      "geometry": {
+        "inputTop": 211.890625,
+        "inputBottom": 261.890625,
+        "listTop": 12.890625,
+        "listBottom": 206.890625,
+        "viewportTop": 0,
+        "accessoryTop": 244.66666700000002
+      },
+      "reversals": 0
+    },
+    {
+      "engine": "chromium",
+      "height": 300.666667,
+      "offsetTop": 60.5,
+      "beforeTyping": {
+        "top": 271.890625,
+        "bottom": 321.890625,
+        "accessoryTop": 305.166667
+      },
+      "trace": [
+        {
+          "time": 229.79999995231628,
+          "delta": -0.2760420000000181,
+          "before": 327,
+          "after": 327,
+          "inputTop": 271.890625,
+          "inputBottom": 321.890625,
+          "maxHeight": "194px"
+        }
+      ],
+      "geometry": {
+        "inputTop": 271.890625,
+        "inputBottom": 321.890625,
+        "listTop": 72.890625,
+        "listBottom": 266.890625,
+        "viewportTop": 60.5,
+        "accessoryTop": 305.166667
+      },
+      "reversals": 0
+    },
+    {
+      "engine": "chromium",
+      "height": 300.666667,
+      "offsetTop": 120.125,
+      "beforeTyping": {
+        "top": 331.890625,
+        "bottom": 381.890625,
+        "accessoryTop": 364.791667
+      },
+      "trace": [
+        {
+          "time": 290.30000019073486,
+          "delta": 0.0989579999999819,
+          "before": 267,
+          "after": 267,
+          "inputTop": 331.890625,
+          "inputBottom": 381.890625,
+          "maxHeight": "194px"
+        }
+      ],
+      "geometry": {
+        "inputTop": 331.890625,
+        "inputBottom": 381.890625,
+        "listTop": 132.890625,
+        "listBottom": 326.890625,
+        "viewportTop": 120.125,
+        "accessoryTop": 364.791667
+      },
+      "reversals": 0
+    },
+    {
+      "engine": "chromium",
+      "height": 360.25,
+      "offsetTop": 0,
+      "beforeTyping": {
+        "top": 270.890625,
+        "bottom": 320.890625,
+        "accessoryTop": 304.25
+      },
+      "trace": [],
+      "geometry": {
+        "inputTop": 270.890625,
+        "inputBottom": 320.890625,
+        "listTop": 13.890625,
+        "listBottom": 265.890625,
+        "viewportTop": 0,
+        "accessoryTop": 304.25
+      },
+      "reversals": 0
+    },
+    {
+      "engine": "chromium",
+      "height": 360.25,
+      "offsetTop": 60.5,
+      "beforeTyping": {
+        "top": 331.890625,
+        "bottom": 381.890625,
+        "accessoryTop": 364.75
+      },
+      "trace": [
+        {
+          "time": 508.09999990463257,
+          "delta": 0.140625,
+          "before": 267,
+          "after": 267,
+          "inputTop": 331.890625,
+          "inputBottom": 381.890625,
+          "maxHeight": "252px"
+        }
+      ],
+      "geometry": {
+        "inputTop": 331.890625,
+        "inputBottom": 381.890625,
+        "listTop": 74.890625,
+        "listBottom": 326.890625,
+        "viewportTop": 60.5,
+        "accessoryTop": 364.75
+      },
+      "reversals": 0
+    },
+    {
+      "engine": "chromium",
+      "height": 360.25,
+      "offsetTop": 120.125,
+      "beforeTyping": {
+        "top": 390.890625,
+        "bottom": 440.890625,
+        "accessoryTop": 424.375
+      },
+      "trace": [],
+      "geometry": {
+        "inputTop": 390.890625,
+        "inputBottom": 440.890625,
+        "listTop": 133.890625,
+        "listBottom": 385.890625,
+        "viewportTop": 120.125,
+        "accessoryTop": 424.375
+      },
+      "reversals": 0
+    },
+    {
+      "engine": "chromium",
+      "height": 400.5,
+      "offsetTop": 0,
+      "beforeTyping": {
+        "top": 311.890625,
+        "bottom": 361.890625,
+        "accessoryTop": 344.5
+      },
+      "trace": [
+        {
+          "time": 238.90000009536743,
+          "delta": 0.390625,
+          "before": 287,
+          "after": 287,
+          "inputTop": 311.890625,
+          "inputBottom": 361.890625,
+          "maxHeight": "252px"
+        }
+      ],
+      "geometry": {
+        "inputTop": 311.890625,
+        "inputBottom": 361.890625,
+        "listTop": 54.890625,
+        "listBottom": 306.890625,
+        "viewportTop": 0,
+        "accessoryTop": 344.5
+      },
+      "reversals": 0
+    },
+    {
+      "engine": "chromium",
+      "height": 400.5,
+      "offsetTop": 60.5,
+      "beforeTyping": {
+        "top": 371.890625,
+        "bottom": 421.890625,
+        "accessoryTop": 405
+      },
+      "trace": [],
+      "geometry": {
+        "inputTop": 371.890625,
+        "inputBottom": 421.890625,
+        "listTop": 114.890625,
+        "listBottom": 366.890625,
+        "viewportTop": 60.5,
+        "accessoryTop": 405
+      },
+      "reversals": 0
+    },
+    {
+      "engine": "chromium",
+      "height": 400.5,
+      "offsetTop": 120.125,
+      "beforeTyping": {
+        "top": 431.890625,
+        "bottom": 481.890625,
+        "accessoryTop": 464.625
+      },
+      "trace": [
+        {
+          "time": 289.5,
+          "delta": 0.265625,
+          "before": 167,
+          "after": 167,
+          "inputTop": 431.890625,
+          "inputBottom": 481.890625,
+          "maxHeight": "252px"
+        }
+      ],
+      "geometry": {
+        "inputTop": 431.890625,
+        "inputBottom": 481.890625,
+        "listTop": 174.890625,
+        "listBottom": 426.890625,
+        "viewportTop": 120.125,
+        "accessoryTop": 464.625
+      },
+      "reversals": 0
+    }
+  ]
+}

@@ -263,7 +263,9 @@ function highlightOption() {
 
 function viewportBounds() {
   const view = window.visualViewport;
-  return { top: (view?.offsetTop || 0) + 12, bottom: (view?.offsetTop || 0) + (view?.height || innerHeight) - 12 };
+  const accessorySpace = document.body.classList.contains('keyboard-active') ? 80 : 0;
+  return { top: (view?.offsetTop || 0) + 12,
+    bottom: (view?.offsetTop || 0) + (view?.height || innerHeight) - 12 - accessorySpace };
 }
 
 function positionOptions() {
@@ -281,25 +283,43 @@ function positionOptions() {
   list.style.setProperty('--options-max-height', `${Math.floor(Math.min(252, useAbove ? above : below))}px`);
 }
 
-function updateKeyboardSpace() {
+// Keep the form's normal space when keyboard entry is lifted out of the board.
+const keyboardPlaceholder = document.createElement('div');
+keyboardPlaceholder.className = 'keyboard-entry-placeholder';
+keyboardPlaceholder.setAttribute('aria-hidden', 'true');
+ui.guessForm.before(keyboardPlaceholder);
+
+function updateKeyboardLayout() {
   const view = window.visualViewport;
-  // Safari's keyboard can cover the page without shrinking its layout viewport.
-  // Add scroll range so even a short board can lift the form above that keyboard.
-  // Ignore browser chrome and pinch zoom; neither needs keyboard-sized padding.
-  const obscured = view && usesResponsiveTouchLayout() && view.scale === 1
-    && document.activeElement === ui.countrySearch && !current.finished
-    ? Math.max(0, document.documentElement.clientHeight - view.height) : 0;
-  const space = `${obscured > 100 ? Math.ceil(obscured) : 0}px`;
-  if (document.body.style.getPropertyValue('--keyboard-space') !== space) {
-    document.body.style.setProperty('--keyboard-space', space);
+  const focused = document.activeElement === ui.countrySearch
+    || (document.body.classList.contains('keyboard-active') && !ui.countryOptions.hidden);
+  const active = view && usesResponsiveTouchLayout() && view.scale === 1 && focused && !current.finished
+    && document.documentElement.clientHeight - view.height > 100;
+  if (active) {
+    if (!document.body.classList.contains('keyboard-active')) {
+      const margin = parseFloat(getComputedStyle(ui.guessForm).marginTop);
+      keyboardPlaceholder.style.height = `${ui.guessForm.offsetHeight + margin}px`;
+    }
+    const shell = document.querySelector('.game-shell').getBoundingClientRect();
+    // Reserve 80px for accessory controls that can overlap reported viewport space.
+    // Move the form, never the page: viewport scroll events cannot scroll it back.
+    const top = Math.max(view.offsetTop + 12, view.offsetTop + view.height - 92 - ui.guessForm.offsetHeight);
+    ui.guessForm.style.setProperty('--keyboard-entry-top', `${top}px`);
+    ui.guessForm.style.setProperty('--keyboard-entry-left', `${shell.left}px`);
+    ui.guessForm.style.setProperty('--keyboard-entry-width', `${shell.width}px`);
   }
+  document.body.classList.toggle('keyboard-active', Boolean(active));
 }
 
 let workingAreaFrame;
 function revealWorkingArea() {
   cancelAnimationFrame(workingAreaFrame);
   workingAreaFrame = requestAnimationFrame(() => {
-    updateKeyboardSpace();
+    updateKeyboardLayout();
+    if (document.body.classList.contains('keyboard-active')) {
+      positionOptions();
+      return;
+    }
     const view = viewportBounds();
     let elements;
     if (current.finished) elements = [ui.resultPanel];
@@ -576,11 +596,14 @@ ui.countrySearch.addEventListener('keydown', event => {
 document.addEventListener('pointerdown', event => {
   if (!event.target.closest('.search-wrap')) closeOptions();
 });
-window.addEventListener('scroll', positionOptions, { passive: true });
+window.addEventListener('scroll', () => {
+  updateKeyboardLayout();
+  positionOptions();
+}, { passive: true });
 let previousLayoutWidth = innerWidth;
 let previousLayoutHeight = innerHeight;
 function handleViewportResize() {
-  updateKeyboardSpace();
+  updateKeyboardLayout();
   positionOptions();
   const rotatedToShortLandscape = usesResponsiveTouchLayout() && innerWidth > previousLayoutWidth && innerHeight < previousLayoutHeight && innerHeight <= 500 && innerWidth > innerHeight;
   previousLayoutWidth = innerWidth;
@@ -592,6 +615,7 @@ function handleViewportResize() {
     const context = latest || ui.openingHint.closest('.opening-hint');
     context.tabIndex = -1;
     context.focus({ preventScroll: true });
+    updateKeyboardLayout();
     requestAnimationFrame(() => {
       const view = viewportBounds();
       const hint = ui.openingHint.getBoundingClientRect();
@@ -606,8 +630,8 @@ function handleViewportResize() {
 window.addEventListener('resize', handleViewportResize);
 window.visualViewport?.addEventListener('resize', handleViewportResize);
 window.visualViewport?.addEventListener('scroll', () => {
-  if (document.activeElement === ui.countrySearch && !current.finished) revealWorkingArea();
-  else positionOptions();
+  updateKeyboardLayout();
+  positionOptions();
 });
 ui.helpButton.addEventListener('click', showHelp);
 ui.dialogClose.addEventListener('click', () => ui.gameDialog.close());

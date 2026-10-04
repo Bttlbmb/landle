@@ -60,7 +60,6 @@
 }
 
 body {
-  padding-bottom: var(--keyboard-space, 0px);
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -1325,4 +1324,17 @@ dialog::backdrop {
     outline-offset: 3px;
     border-radius: var(--radius);
   }
+}
+
+/* Keyboard entry tracks the visible viewport without scrolling the document. */
+.keyboard-entry-placeholder { display: none; }
+body.keyboard-active .keyboard-entry-placeholder { display: block; }
+body.keyboard-active .guess-form {
+  position: fixed;
+  top: var(--keyboard-entry-top);
+  left: var(--keyboard-entry-left);
+  width: var(--keyboard-entry-width);
+  margin-top: 0;
+  z-index: 30;
+  background: var(--paper);
 }

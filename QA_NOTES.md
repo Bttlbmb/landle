@@ -57,6 +57,16 @@ The screenshot exposed a gap in the first keyboard fix: a single matching countr
 
 Four new source/export scenarios reproduce `Netherl` with an 80px accessory-bar overlay at 320 and 390px widths. The source cases retain two previous guesses, matching the reported board state. The old implementation failed the 390px case. The correction checks a visible Netherlands row above the input, hit testing against the overlay, and selection through real touch events without Enter. Evidence is in `artifacts/audit/accessory-*.jpg` and `browser-results.json`. These remain isolated Chromium simulations, not physical iPhone verification.
 
+## Keyboard scrolling investigation · 5 October 2026
+
+The next device report found the empty entry behind the accessory bar and rapid scrolling after the first letter. A dedicated probe reproduced entry overlap in all 18 viewport cases in both WebKit 26.5 and Chromium. The previous accessory-bar test placed its overlay below the form, so it did not test whether the field itself could be covered. The sustained physical-device flicker was not reproduced: the desktop engines with controlled keyboard metrics produced at most one WebKit or two Chromium page-scroll calls after typing. Code inspection found that visual-viewport scroll events called the page-scrolling reveal function, providing a feedback path that the static viewport tests did not exercise fully.
+
+Keyboard entry now uses a fixed form positioned within the visual viewport, with an 80px reserve for accessory controls. A placeholder retains the form's normal board space. Keyboard layout updates and viewport scroll events reposition the form and list without scrolling the document. The body-padding workaround is removed. Normal layout returns when the keyboard closes; round results and landscape rotation retain their existing behavior.
+
+`research/keyboard-reproduction-2026-10-05/probe.mjs` records original and revised behavior. `BASELINE=1` serves the original JS/CSS from the exact published commit without reverting local work. `ASSERT_STABLE=1` checks field clearance and zero page-scroll calls, including 60 consecutive pairs of viewport scroll/resize notifications. Run with `PLAYWRIGHT_MODULE` pointing to an installed Playwright module; `PROBE_ENGINE=chromium` selects Google Chrome, otherwise it uses an installed WebKit browser. Saved `before-*.json` and `after-*.json` contain measurements and scroll traces.
+
+All 36 stability scenarios pass across the two engines, covering fractional visible heights from 240 to 400.5px and offset positions from 0 to 120.125px. Revised entry overlap is zero and application-driven page-scroll calls are zero. The 41 existing browser scenarios also pass. These runs emulate keyboard viewport metrics; they do not open a native iPhone keyboard or establish that physical Safari's flicker is resolved.
+
 ## Limits
 
 Browser emulation can reveal layout and interaction problems, but it does not establish behavior on every physical phone. The game uses accessible names, keyboard controls, and clue announcements; this review is not a complete screen-reader audit. Automated checks do not establish a representative human win rate or prove the difficulty groups suit every player.
