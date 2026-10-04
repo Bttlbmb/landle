@@ -1,0 +1,68 @@
+{
+  "contentSha256": "cd447208aa27e101b96c3e864d3988451ba01a21e687a618b6711f56ccbfe6ed",
+  "generatedAt": "2026-10-03T23:14:57.450Z",
+  "status": "passed public API lifecycle checks; no editorial verdict",
+  "sourceHashes": [
+    {
+      "path": "data.js",
+      "sha256": "9639699e679c2c47e51aeb0a6fc8991ef6b93fc5591b4ecd5f626341a99e48de"
+    },
+    {
+      "path": "hint-selection.js",
+      "sha256": "383cda6bf5725b6468791303efd2526500c9483b322fcaad6af078e1eac0b56d"
+    },
+    {
+      "path": "research/starting-hints/candidate-selection.js",
+      "sha256": "4924a25ef4d5c525089aadd17d60f195ac0f85ddaef3ce7a2153d093601ae26f"
+    },
+    {
+      "path": "research/starting-hints/candidate-hints.js",
+      "sha256": "82a3bc9bc72578eca6ba0b26c954a6efc6c2a6c087b79011e301c7c052e87629"
+    },
+    {
+      "path": "game-state.js",
+      "sha256": "03e5349f1913faaa8da6c33379cd801c946f684c3813d03d67b6550aad15fbe0"
+    }
+  ],
+  "historyExclusionReproduction": {
+    "previousJourney": [
+      "GR",
+      "IT",
+      "PT"
+    ],
+    "nextEasyTarget": "ES",
+    "persistedExcludedCodes": [
+      "GR",
+      "IT",
+      "PT"
+    ],
+    "staleSouthernEuropeHintSuppressed": true
+  },
+  "actualPoolCompleteness": {
+    "northSeaEligibleBeforeExclusions": true,
+    "northSeaExcludedWithSwedenAndBelgiumRemoved": true,
+    "note": "Removing Sweden, the declared extra, and Belgium, a confirmed member, leaves six confirmed and six possible North Sea candidates, rejected on Hard.",
+    "northSeaExcludedWithFranceAndBelgiumRemoved": true,
+    "possibleUnionNote": "A valid France-to-Belgium journey leaves five confirmed and six declared possible North Sea answers on Hard. The revised possible-union minimum also rejects this partial set."
+  },
+  "identity": {
+    "sameRoundIdAfterRestore": true,
+    "sameTargetAfterRestore": true,
+    "sameExclusionsAfterRestore": true,
+    "sameHintAfterRestore": true,
+    "sameHintAfterGuess": true,
+    "exclusionOrderAndDuplicateInsensitive": true,
+    "copiedInputExclusions": true,
+    "frozenCreatedAndRestoredExclusions": true
+  },
+  "legacy": {
+    "earlierJourneyExclusionsFilled": true,
+    "legacyRestoredExclusions": [
+      [],
+      [
+        "GR"
+      ]
+    ]
+  },
+  "scope": "Candidate selector and current state implementation within the exact bank version. Explicit new-round actions create new identities; cross-version hint stability is not claimed."
+}

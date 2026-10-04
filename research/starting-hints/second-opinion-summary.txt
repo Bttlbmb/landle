@@ -1,0 +1,54 @@
+Ländle starter hints: additional assessment
+4 October 2026
+
+Three agents reviewed the current integrated bank. Two fresh agents assessed geography and fairness; a third assessed the player experience and wording. That third reviewer had helped draft the geography catalog and did not certify their own facts. A separate editorial assessment and verification of the history-exclusion case were completed by the main agent.
+
+Verdict
+The bank is broadly usable, but further refinements are justified. No confirmed false assigned geographic claim was established within the new geography review's checked scope. This is not an exhaustive certification of every country's borders, islands and coastlines. The strongest concerns are about runtime difficulty, hidden geographic conventions, and variety.
+
+Priorities
+
+1. Check hints against the countries still available.
+Hint eligibility currently uses the full Easy, Medium or Hard pool, while target selection excludes previous answers. The reviewers reproduced Greece → Italy → Portugal, followed by a new Easy Spain round. “In Southern Europe” remains eligible, although the three other matching Easy countries have just been excluded. A player remembering those answers can deduce Spain.
+Recommendation: evaluate breadth against the actual available target pool when a round is created, and keep the resulting selection stable throughout that round.
+
+2. Clarify geographic wording that can send players in the wrong direction.
+“Has a land neighbour in Europe” is assigned to Mongolia and North Korea because they border Russia and the bank uses a country-level European classification. Their shared boundaries are in Asian Russia. Prefer a different clear fact for those cases, or wording such as “Borders a country with land in Europe,” with its matches rechecked.
+Ocean clues also use conventions about surrounding seas. “Has a Pacific coast” includes marginal seas in the bank, while the Indian Ocean clue explicitly says “or its seas.” Make that scope consistent and consider direct named-sea or other geographic facts where these would be clearer and still broad enough. The player reviewer also flagged Papua New Guinea's Asia-neighbour wording as a related country-versus-border-location ambiguity.
+These are wording issues, rather than established false claims under the stated classifications.
+
+3. Review clues that fit within the six-guess allowance.
+Some complete or conservatively bounded groups leave only four to six answers. A knowledgeable player can try every remaining candidate. Examples include “In Southern Europe” on Easy and “In North Africa” on Medium or Hard.
+Recommendation: selectively broaden or replace the narrowest starting clues. A welcoming Easy round may intentionally retain some. Do not make all hints vague or impose a blanket threshold increase without considering the country and difficulty.
+Important distinction: a partial confirmed membership list is not an exhaustive shortlist. The no-land-neighbours clue has four confirmed Easy matches but a fourteen-country upper bound.
+
+4. Reduce predictable and repeated choices.
+“First letter comes after M” is assigned to 63 countries and “The name ends with a consonant” to 52. Together they represent 59% of all name assignments. Eighteen identical four-hint profiles cover 42 countries. Ten country sets have both island-country and no-land-neighbour alternatives; those often produce a similar search strategy.
+Several broadly worded clues have only one display-capable target. For example, “In Asia” only displays for India and “In Africa” only for Morocco. This is a repeat-play association risk, not a presumed first-time giveaway.
+Recommendation: balance actual phrase exposure and display-target diversity, and vary one choice in repeated profiles using existing reviewed facts where possible.
+
+5. Restore a few sharper facts in the requested style.
+“All its land neighbours are smaller by land area” is reviewed and eligible, but assigned to no country, so it never appears in gameplay. Its confirmed counts are 4 / 6 / 8 in the cumulative pools; conservative possible-match bounds are 15 / 25 / 33.
+Recommendation: consider a few carefully chosen assignments, especially where this is an intuitive and distinctive fact. Recheck their difficulty and history context.
+
+Keep
+The direct factual tone; one starting clue per round; the mixture of name, number and geography facts; and the simple alphabet-half clues the user explicitly proposed. Simplifying the A–M negative phrasing is optional. The rejected slogans, first-versus-last alphabetical comparisons and repeated-letter puzzles are absent.
+
+Scope and evidence
+The reviewers inspected all 52 assigned phrases and 195 four-choice country sets. The fairness review independently checked all 24 general predicates, pool counts, declared upper bounds, tier eligibility and runtime assignments. The geography review included 35 targeted country checks, 77 assigned neighbour-area comparisons, 25 UN M49 membership checks and fresh World Bank land-area verification for 194 countries. It did not independently reconstruct all national boundary histories. No human win-rate study was performed.
+
+Reports
+second-opinion-geography.json
+second-opinion-fairness.json
+second-opinion-player.json
+second-opinion-editorial.json
+
+Primary sources for the geographic conventions
+UN M49 country groupings: https://unstats.un.org/unsd/methodology/m49/overview/
+Mongolian national atlas: https://www.mongolianatlas.ac.mn/en/atlas/general
+FAO Pacific geography coverage: https://www.fao.org/4/a1465e/a1465e00.htm
+Further primary evidence and access limitations are recorded in the geography report.
+
+Review identity
+All reports assess content SHA-256 c97649815d6f7669761b014a47d0e8772dbc1625f15d7ec113850cba87aaa2a8.
+This assessment adds review reports only; the approved hint bank and game behavior were not edited.

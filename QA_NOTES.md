@@ -1,0 +1,50 @@
+# Verification notes
+
+Reviewed **4 October 2026**. The checks below can be repeated after changes.
+
+## Automated checks
+
+Run `npm test`. The checks cover all country pairs, compass directions and distance boundaries, names and aliases, starting-hint accuracy, breadth and stability, six-guess endings, the three-round Journey on wins and losses, exactly-once statistics, and recovery from malformed saved data. Hint checks verify all runtime alternatives against the exact independently reviewed bank and retain four distinct examples per country. They independently check name and numerical facts, confirmed and maximum counts, every Medium/Hard possible set above six answers, and selection reachability. Regressions cover omitted neighbour-size memberships, Cyprus’s revealed region, and prior-answer exclusions that would otherwise leave Spain alone in Southern Europe or reduce the North Sea group to six or fewer possible answers, including uncertain Sweden. Storage checks cover immutable saved exclusions, legacy hydration, malformed context, statistics, completed-prefix validation, and stable round identities for tab updates.
+
+Answer and hint cooldown checks run 1,000 completed rounds across journeys, with wins, losses and restoration between rounds. They also cover the exact 12-answer window, six shown hints including reloads, oldest-eligible fallback, adversarial exclusions, fixed hints during guessing, and legacy Journey hydration. Historical rounds absent from older saves cannot be reconstructed.
+
+Run `npm run build` to export the static game. The export should contain only runtime files, local assets, data attribution, and licence notices. It requires no external fonts or data requests.
+
+## Browser checks
+
+The optional browser suite requires Node.js 22 or newer and a Chromium executable. Preview, unit tests, and build still support Node.js 20.11 or newer.
+
+```sh
+npm run build
+BROWSER_BIN=/path/to/chromium npm run test:browser
+```
+
+It starts a local preview and an isolated browser, without using your saved game history. Results are saved in [browser-results.json](artifacts/audit/browser-results.json).
+
+The latest run passed 82 automated tests and 29 browser scenarios, including 16 consecutive browser rounds across journey resets. Browser coverage includes 11 viewport layouts, keyboard and touch input, starting a new round from results, Easy → Medium → Hard on wins and losses, a fresh Journey after Hard, shared-tab updates, reload behavior, older-save migration, unavailable storage, optional browser tools, forced colours, text spacing, and the static export. Three representative screenshots accompany the results. Checks also verify the compact header and introduction, approved introductory sentence, locally loaded Manrope, every reviewed Japan alternative across the eligible difficulties, stable hints during guessing and tab updates, saved previous-answer exclusions, Help’s available answer list, the Spain and North Sea history regressions, removed mode and statistics controls, the absence of the top slogan and Journey footer, quiet round starts, the longest hint on narrow phones, name-hint conventions in Help, and data-source and licence links. The static export includes the reviewed selector, runtime hints and full source bank, and the game makes no external requests.
+
+The revised bank has separate [accuracy](research/starting-hints/revised-accuracy-review.json), [fairness](research/starting-hints/revised-fairness-review.json) and [player wording](research/starting-hints/revised-player-review.json) reports. Accuracy and fairness passed independently for the exact exported bank and shared selector; the wording reviewer declares earlier drafting involvement. The independent fairness audit checked 358,400 seeded selections and 7,020 target/exclusion combinations, with no singleton phrases or Medium/Hard possible sets of six or fewer surviving. Its raw frequencies and scope are saved in the research folder. These are mechanical and editorial checks, not a measured human win rate.
+
+After interface changes, check both the preview and static export:
+
+- Valid, invalid, repeated, winning, and losing guesses; three clue groups after each wrong guess.
+- Keyboard and touch suggestions, ambiguous names, Escape, and text composition through international keyboards.
+- Easy → Medium → Hard after each finished round, a fresh Journey after Hard, saved-board resume, and fresh rounds on reload without losing lifetime statistics.
+- Two tabs sharing a board: retain a typed draft for an update to the same round and clear it when the round is replaced.
+- Help, possible-answer lists, dialog focus, data-source links, and the single action to start a new round after a result.
+- Narrow phones, landscape phones, tablets, and desktop windows; long country names and finished boards must remain readable without horizontal scrolling.
+- An unchanged round at a new local day, older-save migration, and play when browser storage is unavailable.
+
+## Responsive implementation · 4 October 2026
+
+Implemented the accepted review proposals: readable Sources/Licence pages, phone search space and full-form suggestions, gradual 480–767px tablet proportions, hint-first touch round starts and rotation context, intact clue words under text spacing, and phone Help filtering with visible results. The local hint-bank page uses a compact sticky search and consistently normalized searches. The compact landscape board and enlarged tablet control targets were excluded; all six board slots remain.
+
+[Responsive evidence](artifacts/responsive-implementation-2026-10-04/verification.html) includes 126 screenshot states across 22 viewports and 192 passing checks. Ten pixel comparisons at 1440×900 and 1920×1080 cover empty, long-name, search, Help and result states with zero changed pixels. Those comparisons use the saved original layout with the current runtime so concurrent hint-bank wording and selection changes are held constant. The 640/641px transition is checked at both 960px and 700px heights. Tablet input, option, disclosure and Close dimensions retain their previous values. A reduced-height viewport is only a keyboard proxy; native keyboard behavior still requires a physical-device check.
+
+The browser suite additionally checks country-code filtering, filter/result visibility inside the dialog, restoring the full answer list after rotation, touch round context, and retaining a typed draft while revealing the latest clue. The export includes the two reading pages and their stylesheet. Keep each reading-page article synchronized with its original source document when changing attribution or licence text.
+
+## Limits
+
+Browser emulation can reveal layout and interaction problems, but it does not establish behavior on every physical phone. The game uses accessible names, keyboard controls, and clue announcements; this review is not a complete screen-reader audit. Automated checks do not establish a representative human win rate or prove the difficulty groups suit every player.
+
+The clues also inherit limits from the data: historical population estimates, land area excluding inland water, and one approximate reference point per country. [Data sources](DATA_SOURCES.md) explains how these choices can affect a guess.

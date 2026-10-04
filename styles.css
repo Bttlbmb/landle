@@ -1,0 +1,1319 @@
+/* latin-ext */
+
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(./fonts/manrope-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(./fonts/manrope-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Mountains, Rivers, Forests — granite, river blue, and moss. */
+
+:root {
+  color-scheme: light;
+  --paper: #f0f4f2;
+  --granite: #ccd6d8;
+  --ink: #223d38;
+  --river: #3c6874;
+  --moss: #6e7b55;
+  --muted: #536963;
+  --line: var(--granite);
+  --control-line: #758c91;
+  --primary: var(--river);
+  --primary-hover: #2e515b;
+  --primary-soft: #e1e9eb;
+  --current-fill: #e5edef;
+  --moss-soft: #e4e9dd;
+  --moss-mid: #d4ddc7;
+  --moss-ink: #4c5a39;
+  --success: var(--ink);
+  --success-muted: var(--granite);
+  --white: #f8faf9;
+  --quiet: #8e9e99;
+  --error: #a44e3a;
+  --shadow-soft: #223d3812;
+  --shadow: #223d3820;
+  --dialog-shadow: #223d3829;
+  --backdrop: #223d3855;
+  --radius: 8px;
+  font-family: 'Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  color: inherit;
+  border: 0;
+}
+
+input {
+  font: inherit;
+  -webkit-tap-highlight-color: transparent;
+  height: 50px;
+  width: 100%;
+  border: 1px solid var(--control-line);
+  border-radius: var(--radius);
+  font-size: 14px;
+  background: var(--white);
+  color: var(--ink);
+  outline-offset: 0!important;
+  padding: 0 39px 0 43px;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+  color: inherit;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+button:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 4px;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 4px;
+}
+
+input:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 4px;
+}
+
+svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+button svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Header and introduction */
+
+.site-header {
+  width: min(100% - 80px,1000px);
+  border-bottom: 1px solid var(--line);
+  height: 56px;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.brand {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -.055em;
+}
+
+.brand-icon {
+  display: block;
+  flex: none;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.brand-dot {
+  color: var(--moss);
+}
+
+.header-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.icon-button {
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border-radius: 50%;
+  transition: background .18s;
+  width: 44px;
+  height: 44px;
+}
+
+.icon-button:hover {
+  background: var(--primary-soft);
+}
+
+.game-shell {
+  width: min(100% - 40px,600px);
+  padding: 16px 0 32px;
+  margin: 0 auto;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -.045em;
+  line-height: 1.05;
+  margin: 0 0 6px;
+}
+
+/* Game controls and six-guess board */
+
+.game-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.level-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--moss);
+  border-radius: 50%;
+}
+
+.board-head {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 106px 82px 82px;
+  gap: 7px;
+  font-size: 10px;
+  letter-spacing: 1.3px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 9px;
+}
+
+.guess-row {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 106px 82px 82px;
+  gap: 7px;
+  height: auto;
+  min-height: 62px;
+}
+
+.board-head span {
+  text-align: center;
+}
+
+.board-head span:first-child {
+  text-align: left;
+  padding-left: 16px;
+}
+
+.guess-board {
+  display: grid;
+  gap: 7px;
+}
+
+.country-tile {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 8px 15px;
+}
+
+.clue-tile {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  color: var(--quiet);
+  min-height: 62px;
+}
+
+.row-number {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--muted);
+  min-width: 10px;
+  flex: none;
+}
+
+.country-name {
+  font-weight: 550;
+  font-size: 14px;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+.empty-mark {
+  width: 14px;
+  height: 2px;
+  background: var(--line);
+  border-radius: 2px;
+}
+
+.guess-row.current .country-tile {
+  border: 1.5px solid var(--primary);
+  background: var(--current-fill);
+}
+
+.guess-row.current .row-number {
+  color: var(--primary);
+}
+
+.guess-row.filled .country-tile {
+  background: var(--white);
+}
+
+.guess-row.filled .clue-tile {
+  border-color: transparent;
+  color: var(--moss-ink);
+  background: var(--moss-soft);
+}
+
+.guess-row.filled .clue-tile.distance-far {
+  color: var(--primary);
+  background: var(--primary-soft);
+}
+
+.guess-row.filled .clue-tile.distance-very-far {
+  color: var(--primary);
+  background: var(--primary-soft);
+}
+
+.clue-symbol {
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+.clue-label {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 550;
+  line-height: 1.2;
+}
+
+.guess-row.correct .country-tile {
+  background: var(--success);
+  color: var(--white);
+  border-color: var(--success);
+}
+
+.guess-row.correct .clue-tile {
+  background: var(--success);
+  color: var(--white);
+  border-color: var(--success);
+}
+
+.guess-row.correct .row-number {
+  color: var(--success-muted);
+}
+
+.guess-row.newly-filled .clue-tile {
+  animation: reveal .38s both;
+}
+
+.guess-row.newly-filled .clue-tile:nth-child(3) {
+  animation-delay: .09s;
+}
+
+.guess-row.newly-filled .clue-tile:nth-child(4) {
+  animation-delay: .18s;
+}
+
+@keyframes reveal {
+  from {
+    transform: rotateX(60deg);
+    opacity: .2;
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+/* Country search and clue guide */
+
+.guess-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.search-wrap {
+  flex: 1;
+  position: relative;
+  min-width: 0;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 16px;
+  width: 18px;
+  height: 18px;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+input::placeholder {
+  color: var(--muted);
+}
+
+input:focus {
+  border-color: var(--primary);
+}
+
+.input-key {
+  position: absolute;
+  right: 13px;
+  top: 16px;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.primary-button {
+  height: 50px;
+  border-radius: var(--radius);
+  background: var(--primary);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-weight: 550;
+  font-size: 13px;
+  transition: background .18s,transform .18s;
+  padding: 0 22px;
+}
+
+.primary-button:hover {
+  background: var(--primary-hover);
+}
+
+.primary-button:active {
+  transform: translateY(1px);
+}
+
+.primary-button span {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.status-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 11px;
+  color: var(--muted);
+  min-height: 16px;
+  margin: 11px 0 27px;
+}
+
+.status-line p {
+  line-height: 1.5;
+  margin: 0;
+}
+
+.status-line p.error {
+  color: var(--error);
+}
+
+#guess-count {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.clue-guide {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.clue-guide>div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+}
+
+.clue-guide svg {
+  width: 17px;
+  height: 17px;
+  color: var(--primary);
+  flex: none;
+}
+
+.guide-icon {
+  font-size: 22px;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.clue-guide b {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.guide-note {
+  font-size: 10px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.5;
+  margin: 13px 0 0;
+}
+
+.country-options {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  right: 0;
+  background: var(--white);
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 24px var(--shadow-soft);
+  border-radius: 8px;
+  z-index: 20;
+  max-height: var(--options-max-height,252px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: 5px;
+}
+
+.country-options.above {
+  top: auto;
+  bottom: calc(100% + 5px);
+}
+
+.country-option {
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 12px;
+}
+
+.country-option.selected {
+  background: var(--primary-soft);
+}
+
+.country-option:hover {
+  background: var(--primary-soft);
+}
+
+.country-option.used {
+  color: var(--muted);
+}
+
+.option-meta {
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.no-options {
+  font-size: 12px;
+  color: var(--muted);
+  padding: 12px;
+}
+
+/* Results */
+
+.result-panel {
+  background: var(--moss-soft);
+  border: 1px solid var(--moss-mid);
+  border-radius: 10px;
+  margin-bottom: 26px;
+  padding: 24px;
+}
+
+.result-eyebrow {
+  font-size: 10px;
+  color: var(--primary);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.result-panel h2 {
+  font-size: 35px;
+  font-weight: 500;
+  letter-spacing: -.035em;
+  line-height: 1.1;
+  margin: 7px 0 8px;
+}
+
+.result-panel p {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+}
+
+.result-actions {
+  display: flex;
+  gap: 9px;
+  margin-top: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.result-actions .primary-button {
+  font-size: 12px;
+  height: 42px;
+  gap: 12px;
+  padding: 0 16px;
+}
+
+.result-facts {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--moss-mid);
+  color: var(--muted);
+  font-size: 11px;
+  padding: 13px 0 0;
+  margin: 15px 0 0;
+}
+
+/* Dialogs */
+
+dialog {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  max-width: 480px;
+  width: calc(100% - 36px);
+  max-height: calc(100svh - 40px);
+  color: var(--ink);
+  background: var(--paper);
+  box-shadow: 0 24px 80px var(--dialog-shadow);
+  overflow: hidden;
+  padding: 0;
+}
+
+dialog[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+dialog::backdrop {
+  background: var(--backdrop);
+  backdrop-filter: blur(3px);
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: flex-end;
+  flex: none;
+  padding: 8px;
+}
+
+.dialog-inner {
+  padding: 0 34px 34px;
+}
+
+#dialog-body {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+.dialog-close {
+  position: static;
+  width: 40px;
+  height: 40px;
+}
+
+.dialog-inner h2 {
+  font-size: 38px;
+  font-weight: 500;
+  letter-spacing: -.035em;
+  line-height: 1.1;
+  margin: 4px 0 15px;
+}
+
+.dialog-inner h3 {
+  font-size: 12px;
+  margin: 22px 0 9px;
+}
+
+.dialog-inner p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 10px 0;
+}
+
+.dialog-inner li {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.dialog-eyebrow {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.help-example {
+  border-radius: var(--radius);
+  background: var(--moss-soft);
+  padding: 12px 14px;
+  margin: 18px 0;
+}
+
+.help-example strong {
+  color: var(--ink);
+}
+
+.dialog-footnote {
+  font-size: 10px!important;
+  color: var(--muted)!important;
+  border-top: 1px solid var(--line);
+  padding-top: 13px;
+}
+
+/* Feedback and accessibility */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+  padding: 0;
+  margin: -1px;
+}
+
+[hidden] {
+  display: none!important;
+}
+
+.guess-row.filled .clue-tile.distance-very-close {
+  background: var(--moss-mid);
+  color: var(--ink);
+}
+
+.guess-row.filled .clue-tile.distance-close {
+  background: var(--moss-soft);
+  color: var(--moss-ink);
+}
+
+.guess-row.filled .clue-tile.distance-nearby {
+  background: var(--moss-soft);
+  color: var(--moss-ink);
+}
+
+.pool-details {
+  margin-top: 18px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.pool-details summary {
+  cursor: pointer;
+  color: var(--primary);
+  font-weight: 550;
+  padding: 7px 0;
+}
+
+.pool-details summary:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 4px;
+}
+
+.pool-list {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 7px 13px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--muted);
+  padding: 14px 0 8px;
+}
+
+.opening-hint {
+  --hint-font-size: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--primary);
+  font-size: var(--hint-font-size);
+  line-height: 1.5;
+  margin: 0 0 18px;
+}
+
+.opening-hint > span:first-child {
+  flex: none;
+  font-size: 8px;
+  line-height: calc(var(--hint-font-size) * 1.5);
+  letter-spacing: 1.3px;
+  font-weight: 650;
+}
+
+.journey-level {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 550;
+  min-height: 40px;
+}
+
+#journey-level-progress {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.task-instruction {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+/* Responsive layout: widths first, then compact heights and accessibility preferences. */
+
+@media(min-width:1500px) {
+  .guess-row {
+    min-height: 66px;
+  }
+
+  .clue-tile {
+    min-height: 66px;
+  }
+}
+
+@media(max-width:640px) {
+  .site-header {
+    height: 48px;
+    width: calc(100% - 28px);
+  }
+
+  .brand {
+    font-size: 23px;
+  }
+
+  .brand-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .game-shell {
+    padding-bottom: 31px;
+    padding-top: 12px;
+    width: calc(100% - 28px);
+  }
+
+  .clue-symbol {
+    font-size: 23px;
+  }
+
+  .clue-guide {
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 11px;
+    font-size: 10px;
+  }
+
+  .clue-guide>div {
+    gap: 5px;
+  }
+
+  .primary-button {
+    gap: 12px;
+    padding: 0 16px;
+  }
+
+  .dialog-inner {
+    padding: 0 25px 25px;
+  }
+
+  .result-panel {
+    padding: 20px;
+  }
+
+  .status-line {
+    margin-bottom: 22px;
+    font-size: 11px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .guess-form {
+    margin-top: 16px;
+  }
+
+  .guide-note {
+    font-size: 11px;
+  }
+
+  .guess-row {
+    height: auto;
+    min-height: 54px;
+    grid-template-columns: minmax(0,1fr) 64px 46px 46px;
+    gap: 4px;
+  }
+
+  .clue-tile {
+    min-height: 54px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  input::placeholder {
+    font-size: 14px;
+  }
+
+  .country-option {
+    min-height: 44px;
+    font-size: 14px;
+  }
+
+  .game-toolbar {
+    margin-bottom: 9px;
+  }
+
+  .opening-hint {
+    --hint-font-size: 11px;
+    margin-bottom: 14px;
+    gap: 8px;
+  }
+
+  .task-instruction {
+    margin-bottom: 8px;
+  }
+
+  .board-head {
+    grid-template-columns: minmax(0,1fr) 64px 46px 46px;
+    gap: 4px;
+    font-size: 9px;
+    letter-spacing: .4px;
+  }
+
+  .board-head span:first-child {
+    padding-left: 8px;
+  }
+
+  .country-tile {
+    padding-left: 7px;
+    padding-right: 7px;
+    gap: 4px;
+  }
+
+  .country-name {
+    font-size: 12px;
+  }
+
+  .clue-label {
+    font-size: 11px;
+  }
+
+  .row-number {
+    font-size: 9px;
+  }
+
+  .opening-hint > span:first-child {
+    font-size: 11px;
+    letter-spacing: 0;
+  }
+}
+
+@media(max-width:375px) {
+  .search-icon {
+    left: 12px;
+  }
+
+  input {
+    padding-left: 37px;
+  }
+
+  .primary-button {
+    gap: 9px;
+    padding: 0 13px;
+  }
+
+  .clue-guide {
+    column-gap: 13px;
+  }
+
+  .guess-row {
+    min-height: 56px;
+    grid-template-columns: minmax(0,1fr) 60px 42px 42px;
+  }
+
+  .clue-tile {
+    min-height: 56px;
+  }
+
+  .board-head {
+    grid-template-columns: minmax(0,1fr) 60px 42px 42px;
+  }
+
+  .task-instruction {
+    text-align: left;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  * {
+    animation: none!important;
+    transition: none!important;
+    scroll-behavior: auto!important;
+  }
+
+  *::before {
+    animation: none!important;
+    transition: none!important;
+    scroll-behavior: auto!important;
+  }
+
+  *::after {
+    animation: none!important;
+    transition: none!important;
+    scroll-behavior: auto!important;
+  }
+}
+
+@media(max-width:640px) and (max-height:740px) {
+  .guess-form {
+    margin-top: 14px;
+  }
+
+  .status-line {
+    margin-bottom: 17px;
+  }
+
+  .clue-guide {
+    padding-top: 16px;
+  }
+
+  .guess-row {
+    min-height: 49px;
+  }
+
+  .clue-tile {
+    min-height: 49px;
+  }
+}
+
+@media(max-width:360px) {
+  .clue-symbol {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 641px) and (max-height: 850px) {
+  .game-shell {
+    padding-bottom: 28px;
+  }
+
+  .guess-row {
+    min-height: 52px;
+  }
+
+  .clue-tile {
+    min-height: 52px;
+  }
+
+  .guess-form {
+    margin-top: 16px;
+  }
+
+}
+
+@media (max-width: 640px) and (max-height: 700px) {
+  .game-shell {
+    padding-top: 5px;
+  }
+
+  .intro {
+    margin-bottom: 2px;
+  }
+
+  h1 {
+    margin-bottom: 4px;
+  }
+
+  .task-instruction {
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+
+  .journey-level {
+    min-height: 24px;
+  }
+
+  .game-toolbar {
+    margin-bottom: 6px;
+  }
+
+  .opening-hint {
+    margin-bottom: 6px;
+  }
+
+  .board-head {
+    margin-bottom: 4px;
+  }
+
+  .guess-board {
+    gap: 3px;
+  }
+
+  .guess-row {
+    min-height: 44px;
+  }
+
+  .clue-tile {
+    min-height: 44px;
+  }
+
+  .guess-row:not(.filled),
+  .guess-row:not(.filled) .clue-tile {
+    min-height: 42px;
+  }
+
+  .country-tile {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  .guess-form {
+    margin-top: 6px;
+  }
+
+  .status-line {
+    margin-top: 7px;
+  }
+}
+
+@media (min-width: 641px) and (max-height: 500px) {
+  .intro {
+    display: none;
+  }
+
+  .guess-row {
+    min-height: 48px;
+  }
+
+  .clue-tile {
+    min-height: 48px;
+  }
+}
+
+@media (forced-colors: active) {
+  .country-option.selected {
+    outline: 2px solid Highlight;
+    outline-offset: -2px;
+  }
+
+  .guess-row.current .country-tile {
+    border-color: Highlight;
+  }
+
+}
+
+.result-panel .promotion-note {
+  margin-top: 14px;
+}
+
+/* Selected responsive improvements. Full board slots and tablet hitboxes are retained. */
+.pool-filter { display: none; }
+
+@media (max-width: 640px) {
+  .guess-row, .board-head {
+    grid-template-columns: minmax(0,1fr) 64px 52px 54px;
+  }
+  .country-name { font-size: 13px; }
+  .row-number, .board-head { font-size: 10px; }
+  .clue-label {
+    font-size: 12px;
+    overflow-wrap: normal;
+    white-space: normal;
+  }
+  .pool-details summary:active { color: var(--ink); }
+  .pool-list { font-size: 13px; overflow-wrap: break-word; }
+  .pool-filter { display: block; margin-top: 14px; }
+  .pool-filter label { display: block; font-size: 12px; margin-bottom: 6px; }
+  .pool-filter input { padding: 0 12px; font-size: 16px; height: 42px; }
+  .pool-filter p { font-size: 11px; margin: 6px 0 0; }
+  .dialog-footnote { font-size: 12px!important; }
+  .help-source-link { display: block; padding: 7px 0; font-size: 12px; line-height: 1.5; }
+  .help-source-link + br { display: none; }
+}
+
+@media (max-width: 375px) {
+  .guess-row, .board-head { grid-template-columns: minmax(0,1fr) 60px 52px 54px; }
+  .task-instruction { text-align: center; }
+}
+
+/* Preserve name space on the narrowest phones while keeping the clue words whole. */
+@media (max-width: 360px) {
+  .guess-row, .board-head { grid-template-columns: minmax(0,1fr) 60px 48px 54px; }
+  .country-name { font-size: 12px; }
+  .country-tile { padding-inline: 6px; gap: 3px; }
+  .row-number { font-size: 9px; }
+}
+
+@media (pointer: coarse) and (max-width: 640px) {
+  .input-key { display: none; }
+  #country-search { padding-right: 12px; }
+  .search-wrap { position: static; }
+  .country-options { width: 100%; }
+  .status-line p { font-size: 12px; overflow-wrap: break-word; }
+}
+
+@media (pointer: coarse) and (max-width: 375px) {
+  #guess-button > span { display: none; }
+}
+
+/* Grow from phone proportions into the existing 600px tablet/desktop grid.
+   Short landscape layouts keep their existing width/height treatment. */
+@media (min-width: 480px) and (max-width: 767px) and (min-height: 501px) {
+  .site-header {
+    --header-gutter: clamp(14px,calc(9.02778vw - 29.3333px),40px);
+    width: min(calc(100% - 2 * var(--header-gutter)),1000px);
+    height: clamp(48px,calc(2.77778vw + 34.6667px),56px);
+  }
+  .brand { font-size: clamp(23px,calc(.694444vw + 19.6667px),25px); }
+  .brand-icon { width: clamp(18px,calc(.694444vw + 14.6667px),20px); height: clamp(18px,calc(.694444vw + 14.6667px),20px); }
+  .game-shell {
+    width: min(calc(100% - 28px),600px);
+    padding-top: clamp(12px,calc(1.38889vw + 5.3333px),16px);
+    padding-bottom: clamp(31px,calc(.347222vw + 29.3333px),32px);
+  }
+  h1 { font-size: clamp(28px,calc(.694444vw + 24.6667px),30px); }
+  .task-instruction { font-size: 12px; margin-bottom: clamp(8px,calc(.694444vw + 4.6667px),10px); }
+  .game-toolbar { margin-bottom: clamp(9px,calc(1.04167vw + 4px),12px); }
+  .opening-hint {
+    --hint-font-size: clamp(11px,calc(.347222vw + 9.3333px),12px);
+    gap: clamp(8px,calc(.694444vw + 4.6667px),10px);
+    margin-bottom: clamp(14px,calc(1.38889vw + 7.3333px),18px);
+  }
+  .opening-hint > span:first-child { font-size: clamp(8px,calc(16px - 1.04167vw),11px); letter-spacing: clamp(0px,calc(.451389vw - 2.1667px),1.3px); }
+  .guess-row, .board-head {
+    grid-template-columns: minmax(0,1fr) clamp(68px,calc(13.19444vw + 4.6667px),106px) clamp(58px,calc(8.33333vw + 18px),82px) clamp(58px,calc(8.33333vw + 18px),82px);
+    gap: clamp(4px,calc(1.04167vw - 1px),7px);
+  }
+  .board-head { font-size: 10px; letter-spacing: clamp(.4px,calc(.3125vw - 1.1px),1.3px); }
+  .board-head span:first-child { padding-left: clamp(8px,calc(2.77778vw - 5.3333px),16px); }
+  .guess-row, .clue-tile { min-height: clamp(54px,calc(2.77778vw + 40.6667px),62px); }
+  .country-tile {
+    padding: 8px clamp(7px,calc(2.77778vw - 6.3333px),15px);
+    gap: clamp(4px,calc(2.77778vw - 9.3333px),12px);
+  }
+  .country-name { font-size: clamp(13px,calc(.347222vw + 11.3333px),14px); }
+  .row-number { font-size: clamp(10px,calc(.347222vw + 8.3333px),11px); }
+  .clue-symbol { font-size: clamp(23px,calc(.347222vw + 21.3333px),24px); }
+  .clue-label { font-size: 11px; white-space: normal; overflow-wrap: normal; }
+  .guess-form { margin-top: clamp(16px,calc(1.38889vw + 9.3333px),20px); }
+  .primary-button { gap: clamp(12px,calc(2.77778vw - 1.3333px),20px); padding: 0 clamp(16px,calc(2.08333vw + 6px),22px); }
+  .status-line { margin-bottom: clamp(22px,calc(1.73611vw + 13.6667px),27px); }
+  .clue-guide { justify-content: space-between; flex-wrap: wrap; gap: 12px; row-gap: 11px; }
+  .clue-guide > div { gap: clamp(5px,calc(.694444vw + 1.6667px),7px); }
+  .guide-note { font-size: clamp(10px,calc(12.6667px - .347222vw),11px); }
+  .dialog-inner { padding: 0 clamp(25px,calc(3.125vw + 10px),34px) clamp(25px,calc(3.125vw + 10px),34px); }
+  .result-panel { padding: clamp(20px,calc(1.38889vw + 13.3333px),24px); }
+}
+
+@media (min-width: 480px) and (max-width: 767px) and (min-height: 501px) and (max-height: 850px) {
+  .guess-row, .clue-tile { min-height: clamp(49px,calc(1.04167vw + 44px),52px); }
+  .guess-form { margin-top: clamp(14px,calc(.694444vw + 10.6667px),16px); }
+  .game-shell { padding-bottom: 28px; }
+}
+
+/* Shorter small-tablet views keep all six slots, with the same continuous width transition.
+   Phone landscape heights of 500px and less retain their existing layout. */
+@media (min-width: 480px) and (max-width: 767px) and (min-height: 501px) and (max-height: 700px) {
+  .game-shell { padding-top: clamp(5px,calc(3.819444vw - 13.3333px),16px); }
+  .intro { margin-bottom: clamp(2px,calc(.694444vw - 1.3333px),4px); }
+  h1 { margin-bottom: clamp(4px,calc(.694444vw + .6667px),6px); }
+  .task-instruction {
+    font-size: clamp(11px,calc(.347222vw + 9.3333px),12px);
+    margin-bottom: clamp(6px,calc(1.388889vw - .6667px),10px);
+  }
+  .journey-level { min-height: clamp(24px,calc(5.555556vw - 2.6667px),40px); }
+  .game-toolbar { margin-bottom: clamp(6px,calc(2.083333vw - 4px),12px); }
+  .opening-hint { margin-bottom: clamp(6px,calc(4.166667vw - 14px),18px); }
+  .board-head { margin-bottom: clamp(4px,calc(1.736111vw - 4.3333px),9px); }
+  .guess-board { gap: clamp(3px,calc(1.388889vw - 3.6667px),7px); }
+  .guess-row, .clue-tile { min-height: clamp(44px,calc(2.777778vw + 30.6667px),52px); }
+  .guess-row:not(.filled), .guess-row:not(.filled) .clue-tile { min-height: clamp(42px,calc(3.472222vw + 25.3333px),52px); }
+  .country-tile { padding-block: clamp(7px,calc(.347222vw + 5.3333px),8px); }
+  .guess-form { margin-top: clamp(6px,calc(3.472222vw - 10.6667px),16px); }
+  .status-line { margin-top: clamp(7px,calc(1.388889vw + .3333px),11px); }
+  .clue-guide { padding-top: clamp(16px,calc(1.388889vw + 9.3333px),20px); }
+}
+
+@media (pointer: coarse) and (max-width: 1199px) {
+  .guess-row:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+    border-radius: var(--radius);
+  }
+}

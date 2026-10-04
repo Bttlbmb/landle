@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f0f4f2">
+  <meta name="description" content="Three rounds, six guesses each: Easy, Medium, Hard. Find the hidden countries with direction, population and land area clues.">
+  <title>Ländle — Country guessing game</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Ländle home"><img class="brand-icon" src="logo.svg" width="20" height="20" alt="" aria-hidden="true"><span>Ländle<span class="brand-dot">.</span></span></a>
+    <div class="header-actions">
+      <button class="icon-button" id="help-button" aria-label="How to play" title="How to play">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.7 8.6a2.5 2.5 0 0 1 4.8 1c0 1.8-2.5 2-2.5 3.6M12 16.5v.2"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="game-shell">
+    <div class="intro">
+      <h1>Guess the country.</h1>
+    </div>
+    <p class="task-instruction">Three rounds, six guesses each: Easy → Medium → Hard.</p>
+    <div class="game-toolbar">
+      <span class="journey-level" id="journey-level">
+        <span class="level-dot" aria-hidden="true"></span>
+        <span id="journey-level-label">Easy</span>
+      </span>
+      <span id="journey-level-progress">Round 1 of 3</span>
+    </div>
+    <p class="opening-hint" tabindex="-1"><span>Hint</span><span id="opening-hint"></span></p>
+    <section class="board-section" aria-label="Your six guesses">
+      <div class="board-head" aria-hidden="true"><span>YOUR GUESS</span><span>DIRECTION</span><span>PEOPLE</span><span>AREA</span></div>
+      <div id="guess-board" class="guess-board"></div>
+    </section>
+    <form id="guess-form" class="guess-form" novalidate>
+      <div class="search-wrap">
+        <label for="country-search" class="sr-only">Search for a country</label>
+        <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+        <input id="country-search" type="text" placeholder="Type a country…" autocomplete="off" autocapitalize="words" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="country-options" aria-describedby="game-message" aria-invalid="false">
+        <kbd class="input-key" aria-hidden="true">↵</kbd>
+        <div id="country-options" class="country-options" role="listbox" hidden></div>
+      </div>
+      <button type="submit" id="guess-button" class="primary-button">Guess <span aria-hidden="true">↗</span></button>
+    </form>
+    <!-- One live region announces clues and errors without repeating visual tiles. -->
+    <p id="clue-announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+    <div class="status-line">
+      <p id="game-message"></p>
+      <span id="guess-count">0 / 6</span>
+    </div>
+    <section id="result-panel" class="result-panel" hidden></section>
+    <div class="clue-guide">
+      <div><span class="guide-icon">↗</span><span>Follow the direction</span></div>
+      <div>
+        <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8" cy="5.5" r="2.5"/><path d="M3.5 15v-2a4.5 4.5 0 0 1 9 0v2M14 4a2.5 2.5 0 0 1 0 5M15 10a4 4 0 0 1 2 3.5V15"/></svg>
+        <span>More <b>↑</b> or fewer <b>↓</b> people</span>
+      </div>
+      <div>
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 4h12v12H4zM4 8h3M4 12h3M8 4v3M12 4v3"/></svg>
+        <span>Larger <b>↑</b> or smaller <b>↓</b> land area</span>
+      </div>
+    </div>
+    <p class="guide-note">Every clue describes the hidden country relative to your guess.</p>
+  </main>
+
+  <dialog id="game-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-header">
+      <button class="dialog-close icon-button" type="button" aria-label="Close dialog">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div id="dialog-body" class="dialog-inner"><div id="dialog-content"></div></div>
+  </dialog>
+</body>
+</html>

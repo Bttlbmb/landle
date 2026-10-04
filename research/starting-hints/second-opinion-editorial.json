@@ -1,0 +1,154 @@
+{
+  "reviewer": "root editorial review",
+  "date": "2026-10-04",
+  "reviewedContentSha256": "c97649815d6f7669761b014a47d0e8772dbc1625f15d7ec113850cba87aaa2a8",
+  "status": "changes-recommended",
+  "scope": {
+    "countries": 195,
+    "assignments": 780,
+    "geographyAssignments": 390,
+    "uniqueAssignedPhrases": 52,
+    "uniqueCatalogPhrases": 86,
+    "method": "Read every unique assigned phrase and inspect each country's four-choice set; independently recalculate concentration and overlap from the bank. This report is an editorial assessment, not an accuracy certificate."
+  },
+  "positiveObservations": [
+    "Assigned phrases use direct factual language. None repeats the rejected slogans or obscure first/last-letter and repeated-letter puzzles.",
+    "Only one starting hint is displayed per round, so the four alternatives do not combine into an answer giveaway.",
+    "The name convention is defined in Help and uses the names displayed in suggestions.",
+    "No pair of selected geography clues has identical or nested confirmed candidate sets, or Jaccard overlap of at least 0.75, in any playable cumulative pool. This metric does not prove semantic variety."
+  ],
+  "findings": [
+    {
+      "id": "clarity-transcontinental-neighbour",
+      "priority": "medium",
+      "hintIds": [
+        "geo-neighbour-in-europe"
+      ],
+      "countries": [
+        "Mongolia",
+        "North Korea"
+      ],
+      "text": "Has a land neighbour in Europe.",
+      "kind": "player-facing ambiguity",
+      "problem": "The phrase uses a country-level continental classification for Russia. A player can reasonably read it as a shared border located in Europe. The wording hides a convention that matters in these two Asian-border cases.",
+      "recommendation": "Prefer another geographic hint for these assignments. If retaining a shared phrase, 'Borders a country that lies partly in Europe' is clearer but its changed predicate and candidate bounds must be rechecked.",
+      "evidence": [
+        {
+          "url": "https://unstats.un.org/unsd/methodology/m49/overview/",
+          "supports": "UN M49 places the Russian Federation in Eastern Europe; this is a country classification, not a statement locating every Russian border."
+        }
+      ],
+      "accuracyDisposition": "Not established as a false country-level statement; ambiguity is the actionable issue."
+    },
+    {
+      "id": "clarity-pacific-seas",
+      "priority": "medium",
+      "hintIds": [
+        "geo-pacific-coast"
+      ],
+      "countries": [
+        "Cambodia",
+        "China",
+        "Japan",
+        "South Korea",
+        "Philippines"
+      ],
+      "text": "Has a Pacific coast.",
+      "kind": "hidden geographic scope",
+      "problem": "The bank's notes include marginal Pacific seas, whereas the Indian Ocean clue states 'or its seas' on screen. The inconsistent wording asks players to infer different ocean conventions.",
+      "recommendation": "Use 'Has a coast on the Pacific Ocean or its seas.' Retain only independently supported members and revalidate the wording against the intended scope.",
+      "evidence": [
+        {
+          "url": "https://www.fao.org/4/a1465e/a1465e00.htm",
+          "supports": "The FAO Pacific fisheries review groups Cambodia and other marginal-sea countries within its Pacific coverage."
+        }
+      ],
+      "accuracyDisposition": "The source supports the broad classification; the recommendation concerns clarity, not a confirmed geographic falsehood."
+    },
+    {
+      "id": "variety-name-concentration",
+      "priority": "medium",
+      "hintIds": [
+        "name-first-n-z",
+        "name-ends-consonant"
+      ],
+      "kind": "selection variety",
+      "problem": "Two phrases account for 115 of 195 name assignments (58.97%): 'First letter comes after M' for 63 countries and 'The name ends with a consonant' for 52. Only eight of fourteen available name predicates are assigned.",
+      "recommendation": "Redistribute among existing verified eligible name alternatives, retaining simple wording and the current target/tier checks. Measure exposure across likely journeys rather than optimizing every country independently."
+    },
+    {
+      "id": "variety-unused-all-smaller",
+      "priority": "low",
+      "hintIds": [
+        "geo-all-smaller-land-neighbours"
+      ],
+      "kind": "fit to user's requested style",
+      "problem": "The user's example has a reviewed equivalent with eight confirmed matches but zero assigned countries. The score favors broader alternatives such as having at least one smaller neighbour.",
+      "recommendation": "Consider retaining this stronger fact for one or more eligible countries after judging difficulty. Do not lower the minimum-match gate solely to add it."
+    },
+    {
+      "id": "difficulty-history-exclusions",
+      "priority": "high",
+      "kind": "runtime eligibility mismatch",
+      "problem": "Starting-hint eligibility uses the full nominal tier pool, while target creation excludes previous round answers. A reproduced completed journey Greece → Italy → Portugal followed by a new Easy Spain round still permits 'In Southern Europe'. Its nominal four-country set becomes Spain alone after the previous three answers are excluded.",
+      "recommendation": "Check starter-hint breadth against the actual target pool at round creation, including history exclusions. Store enough context to keep the resulting selection stable throughout the round. Revalidate the remaining alternatives instead of relying only on catalog tier eligibility.",
+      "verification": "Reproduced locally using the public newStore, createPuzzle, recordGuess and restartPuzzle APIs, then openingHintsFor(Spain, 1). No user game state was touched.",
+      "limitation": "The single-answer deduction assumes the player remembers previous answers and knows that those countries cannot immediately recur. It does not assert that this sequence is common."
+    },
+    {
+      "id": "difficulty-six-guess-shortlists",
+      "priority": "medium",
+      "kind": "excessive reveal strength",
+      "problem": "Thirteen actually displayed phrase/tier combinations have complete or conservative upper-bound matching sets of no more than six answers. For example, 'In Southern Europe' leaves four Easy answers, and 'In North Africa' leaves six Medium or Hard answers. A player who knows that shortlist can try every answer within the six-guess allowance.",
+      "recommendation": "Prefer more than six matching possibilities for opening hints, especially explicit region and sea lists. Re-evaluate replacements per actual tier rather than assuming the current absolute minimum of four gives balanced difficulty.",
+      "limitation": "This describes a known-shortlist strategy, not an observed human win rate. Incomplete positive membership sets are not exhaustive shortlists."
+    },
+    {
+      "id": "variety-repeat-play-target-patterns",
+      "priority": "medium",
+      "kind": "selection predictability",
+      "problem": "Truth-set breadth differs from actual display assignment breadth. Six phrases on Easy, four on Medium, and six on Hard are assigned to exactly one display-capable target. For example, 'In Asia' can only display for India, and 'In Africa' can only display for Morocco. Returning players can learn these associations despite each fact being true for other countries.",
+      "recommendation": "Account for actual display-target diversity when assigning phrases, or select from a larger pool of eligible facts for each country. Keep the difference between factual matching candidates and generation candidates explicit in review metrics.",
+      "limitation": "These mappings are not assumed to be known to first-time players. This is an exposure-pattern risk, not an allegation that the client must hide its source."
+    },
+    {
+      "id": "optional-neighbour-area-wordiness",
+      "priority": "low",
+      "hintIds": [
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-at-least-one-larger-land-neighbour"
+      ],
+      "kind": "optional wording polish",
+      "problem": "These are direct and accurate under the land-area convention but long compared with the shortest starter clues.",
+      "recommendation": "Possible shorter phrasing: 'Has smaller and larger land neighbours by land area.' Preserve 'land area' so size is not mistaken for population. This is stylistic, not a required correctness fix."
+    }
+  ],
+  "metrics": {
+    "nameAssignments": {
+      "name-first-a-m": 2,
+      "name-first-n-z": 63,
+      "name-last-n-z": 6,
+      "name-up-to-six": 30,
+      "name-ends-consonant": 52,
+      "name-no-e": 14,
+      "name-has-e": 19,
+      "name-has-o": 9
+    },
+    "unassignedNamePhrases": [
+      "name-last-a-m",
+      "name-over-six",
+      "name-ends-vowel",
+      "name-vowel-consonant",
+      "name-has-space",
+      "name-no-a"
+    ],
+    "selectedGeographyNestedPairs": 0,
+    "selectedGeographyPairsWithJaccardAtLeastPoint75": 0
+  },
+  "limitations": [
+    "This is desk-based editorial review. It does not measure player win rate, enjoyment, or how much country knowledge a typical player has.",
+    "Confirmed membership sets are conservative; missing catalog matches are not evidence that a country's fact is false.",
+    "Recommendations are proposals. The approved bank, runtime files, and saved gameplay were not edited."
+  ]
+}

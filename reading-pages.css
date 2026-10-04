@@ -1,0 +1,28 @@
+.reading-shell {
+  width: min(calc(100% - 40px),680px);
+  margin: 0 auto;
+  padding: 38px 0 56px;
+  font-size: 16px;
+  line-height: 1.75;
+  overflow-wrap: break-word;
+}
+.reading-shell h1 { font-size: 36px; line-height: 1.15; margin: 0 0 26px; }
+.reading-shell h2 { font-size: 23px; font-weight: 550; letter-spacing: -.025em; line-height: 1.3; margin: 32px 0 12px; }
+.reading-shell p { margin: 0 0 18px; }
+.reading-shell a { color: var(--river); text-underline-offset: 3px; overflow-wrap: anywhere; }
+.reading-shell code { font-size: .9em; overflow-wrap: anywhere; }
+.reading-shell pre { white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; margin: 22px 0; }
+.reading-shell pre code { font: inherit; }
+.reading-shell table { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 14px; margin: 22px 0; }
+.reading-shell th, .reading-shell td { padding: 11px 9px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+.reading-shell th { font-weight: 600; }
+.reading-shell hr { border: 0; border-top: 1px solid var(--line); margin: 28px 0; }
+.reading-back { font-size: 13px; text-decoration: none; color: var(--river); }
+.reading-footer { border-top: 1px solid var(--line); margin-top: 32px; padding-top: 18px; display: flex; flex-wrap: wrap; gap: 14px 22px; font-size: 13px; }
+@media (max-width: 640px) {
+  .reading-shell { width: calc(100% - 28px); padding: 25px 0 40px; line-height: 1.7; }
+  .reading-shell h1 { font-size: 30px; }
+  .reading-shell h2 { font-size: 21px; }
+  .reading-shell table { font-size: 13px; }
+  .reading-shell th, .reading-shell td { padding: 9px 6px; }
+}

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ländle — Starting hint bank</title>
+  <style>
+    @font-face{font-family:Manrope;src:url('../../fonts/manrope-latin.woff2') format('woff2');font-weight:400 700;font-display:swap}
+    *{box-sizing:border-box}body{margin:0;background:#f0f4f2;color:#213d35;font:14px/1.6 Manrope,system-ui,sans-serif}
+    main{max-width:1080px;margin:auto;padding:32px 24px 64px}h1{font-size:30px;letter-spacing:-.04em;margin:0 0 8px}p{margin:0 0 16px;color:#526961}
+    .intro{max-width:760px}.summary{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0}.badge{display:inline-block;background:#e1ebe6;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600}
+    .controls{display:flex;gap:12px;align-items:end;margin:24px 0;position:sticky;top:0;background:#f0f4f2;padding:12px 0;z-index:1}label{display:block;font-size:12px;margin-bottom:5px}.search{flex:1}input,select,button{font:inherit;border:1px solid #9eafa7;border-radius:7px;background:#fff;color:inherit;padding:11px 13px;min-height:44px}input{width:100%}select{max-width:220px}button{cursor:pointer}input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid #3c6d78;outline-offset:3px}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.country{border:1px solid #c5d3cb;border-radius:9px;background:#fbfdfb;padding:18px 20px}.country h2{font-size:18px;margin:0}.country-head{display:flex;justify-content:space-between;gap:10px;align-items:start;margin-bottom:14px}ul{list-style:none;margin:0;padding:0}li+li{border-top:1px solid #e0e8e2;margin-top:14px;padding-top:14px}.hint{font-size:14px;line-height:1.6;color:#213d35;margin:0 0 5px}.meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:11px;color:#526961}.kind{font-weight:650;color:#3c6d78}.limited{color:#805b21}details{font-size:11px;color:#526961;margin-top:7px}summary{cursor:pointer;width:fit-content}details p{margin:6px 0}a{color:#3c6d78;text-underline-offset:3px}.sources{display:flex;gap:8px;flex-wrap:wrap}.empty{padding:40px;text-align:center}.status{border-left:3px solid #789181;padding:10px 16px;background:#e7efe9;max-width:760px;font-size:12px}.status p{margin:0}.results{font-size:12px;margin-bottom:12px}
+    @media(max-width:700px){main{padding:22px 14px 40px}.grid{grid-template-columns:1fr}.controls{align-items:stretch;flex-wrap:wrap}.search{flex-basis:100%}.controls>div:last-child{flex:1}select{width:100%;max-width:none}.country{padding:16px}h1{font-size:26px}}
+    .bank-review{font:inherit;color:inherit;margin:0}.bank-review>summary{display:none}
+  @media(max-width:700px){
+    .bank-review>summary{display:list-item;font-size:13px;padding:6px 0;color:#3c6d78}
+    .bank-review[open]{margin-bottom:14px}
+    .controls{display:contents}
+    .search{position:sticky;top:0;background:#f0f4f2;z-index:2;padding:8px 0;margin:14px 0}
+    .search label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+    .difficulty-control{margin:0 0 18px}
+    input,select{font-size:16px}
+    .country,.country details{scroll-margin-top:84px}
+    .country summary{font-size:12px;padding:5px 0;-webkit-tap-highlight-color:transparent}
+    .sources a{font-size:12px;padding:5px 0}
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Starting hints</h1>
+  <p class="intro">Four examples per country, with a wider set of verified alternatives. Each round shows one starting clue.</p>
+  <details class="bank-review" open><summary>Review notes</summary>
+    <div id="status" class="status" role="status">Loading the hint bank…</div>
+    <div id="summary" class="summary"></div>
+  </details>
+  <div class="controls">
+    <div class="search"><label for="search">Find a country or a hint</label><input id="search" type="search" placeholder="Country name or clue text" autocomplete="off"></div>
+    <div class="difficulty-control"><label for="pool">Check a difficulty</label><select id="pool"><option value="all">All bank entries</option><option value="1">Easy · 45 answers</option><option value="2">Medium · 110 answers</option><option value="3">Hard · 195 answers</option></select></div>
+  </div>
+  <p id="results" class="results" aria-live="polite"></p>
+  <div id="countries" class="grid"></div>
+  <p id="empty" class="empty" hidden>No matching countries.</p>
+</main>
+<script type="module">
+  const normalizeText = value => String(value).normalize('NFKD').replace(/\p{Diacritic}/gu, '')
+    .toLowerCase().replace(/\./g, '').replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+  const mobileLayout=matchMedia('(max-width:700px)');
+  const review=document.querySelector('.bank-review');
+  review.open=!mobileLayout.matches;
+  mobileLayout.addEventListener('change',()=>{review.open=!mobileLayout.matches});
+  const labels = {1:'Easy',2:'Medium',3:'Hard'};
+  const families = {name:'Name',population:'Population',area:'Land area',geography:'Geography'};
+  const sourceTitle = url => {
+    const host = new URL(url).hostname.replace(/^www\./,'');
+    return host === 'github.com' ? 'Country database' : host === 'data.worldbank.org' ? 'World Bank' : host;
+  };
+  const text = (tag, value, className) => {
+    const node = document.createElement(tag); node.textContent = value;
+    if (className) node.className = className;
+    return node;
+  };
+  try {
+    const response = await fetch('./bank.json');
+    if (!response.ok) throw new Error('The hint bank could not be loaded.');
+    const bank = await response.json();
+    const hints = new Map(bank.catalog.map(hint => [hint.id,hint]));
+    const assignments = bank.countries.reduce((total,country)=>total+country.hints.length,0);
+    const alternatives = bank.countries.reduce((total,country)=>total+country.alternatives.length,0);
+    document.querySelector('#summary').append(
+      text('span',`${bank.countries.length} countries`,'badge'),
+      text('span',`${assignments} curated examples`,'badge'),
+      text('span',`${alternatives} playable assignments`,'badge'),
+      text('span',`${bank.catalog.length} distinct clues`,'badge')
+    );
+    document.querySelector('#status').replaceChildren(text('p',bank.status === 'reviewed'
+      ? 'Fact and fairness reviews completed. Counts below use the full difficulty pool; play rechecks them after removing recent answers. Every Medium/Hard hint leaves at least seven declared possible answers. Letter clues use the displayed English name; accents, spaces and hyphens do not count as extra letters.'
+      : 'Draft bank. Independent fact and fairness reviews are in progress.'));
+    const render = () => {
+      const query = normalizeText(document.querySelector('#search').value);
+      const tier = document.querySelector('#pool').value;
+      const selected = bank.countries.filter(country => (tier === 'all' || country.tier <= Number(tier)) &&
+        normalizeText(`${country.name} ${country.alternatives.map(id=>hints.get(id).text).join(' ')}`).includes(query));
+      const fragment = document.createDocumentFragment();
+      for (const country of selected) {
+        const card = document.createElement('article'); card.className = 'country';
+        const head = document.createElement('div'); head.className = 'country-head';
+        head.append(text('h2',country.name),text('span',labels[country.tier],'badge')); card.append(head);
+        const list = document.createElement('ul');
+        for (const id of country.hints) {
+          const hint = hints.get(id), item = document.createElement('li');
+          item.append(text('p',hint.text,'hint'));
+          const meta = document.createElement('div'); meta.className = 'meta';
+          meta.append(text('span',families[hint.family],'kind'));
+          const eligible = hint.eligibleTiers.map(level=>labels[level]).join(', ');
+          meta.append(text('span',`Use in ${eligible}`));
+          if (tier !== 'all' && !hint.eligibleTiers.includes(Number(tier))) meta.append(text('span','Skip at this difficulty','limited'));
+          item.append(meta);
+          const details = document.createElement('details'); details.append(text('summary','Breadth and sources'));
+          details.append(text('p',[1,2,3].map(level=>`${labels[level]}: ${hint.counts[level]}${hint.maximumCounts[level]!==hint.counts[level]?`–${hint.maximumCounts[level]}`:''} possible answers out of ${bank.rules.pools[level]}`).join(' · ')));
+          if (hint.possibleExtraMatches.length) details.append(text('p','The range allows for countries whose geography has an uncertain or disputed scope. They are not assigned this clue.'));
+          for (const note of hint.notes) details.append(text('p',note));
+          const sources = document.createElement('div'); sources.className = 'sources';
+          for (const original of hint.sources) { const url = bank.sourceAlternatives?.[original] || original; const link = text('a',sourceTitle(url)); link.href = url; link.target = '_blank'; link.rel = 'noopener'; sources.append(link); }
+          details.append(sources); item.append(details); list.append(item);
+        }
+        card.append(list);
+        const extraIds = country.alternatives.filter(id=>!country.hints.includes(id));
+        const extra = document.createElement('details');
+        extra.className = 'alternatives';
+        extra.append(text('summary',`${extraIds.length} additional verified alternatives`));
+        const extraList = document.createElement('ul');
+        for (const id of extraIds) {
+          const hint = hints.get(id), item = document.createElement('li');
+          item.append(text('p',hint.text,'hint'));
+          item.append(text('p',`${families[hint.family]} · ${hint.eligibleTiers.map(level=>labels[level]).join(', ')}`,'meta'));
+          extraList.append(item);
+        }
+        extra.append(extraList);
+        if (query && extraIds.some(id=>normalizeText(hints.get(id).text).includes(query))) extra.open = true;
+        card.append(extra); fragment.append(card);
+      }
+      document.querySelector('#countries').replaceChildren(fragment);
+      document.querySelector('#results').textContent = `${selected.length} ${selected.length===1?'country':'countries'} shown`;
+      document.querySelector('#empty').hidden = Boolean(selected.length);
+      if (mobileLayout.matches && query) requestAnimationFrame(()=>{
+        const first=document.querySelector('.country');
+        const search=document.querySelector('.search');
+        if(first && first.getBoundingClientRect().top < search.getBoundingClientRect().bottom + 12)
+          window.scrollBy({top:first.getBoundingClientRect().top-search.getBoundingClientRect().bottom-12,behavior:'instant'});
+      });
+    };
+    document.querySelector('#search').addEventListener('input',render);
+    document.querySelector('#pool').addEventListener('change',render);
+    render();
+  } catch (error) { review.open = true; document.querySelector('#status').textContent = error.message; }
+</script>
+</body>
+</html>

@@ -1,0 +1,5464 @@
+{
+  "reviewer": "hint_geography_draft — second player/editorial pass",
+  "reviewDate": "2026-10-04",
+  "contentSha256": "c97649815d6f7669761b014a47d0e8772dbc1625f15d7ec113850cba87aaa2a8",
+  "scope": {
+    "assignedUniquePhrases": 52,
+    "countrySets": 195,
+    "assignments": 780,
+    "filesRead": [
+      "research/starting-hints/bank.json — catalog, rules and country content; reviews field not read",
+      "starting-hints.js",
+      "data.js",
+      "geography.js — one-hint runtime selection",
+      "app.js — Help conventions"
+    ],
+    "priorVerdictsRead": false,
+    "newSecondOpinionReportsRead": false,
+    "oneHintPerRound": true,
+    "notAGeographicFactCertification": true
+  },
+  "independenceLimitation": "I helped draft the earlier geographic candidate catalog. This is a separate player/editorial assessment, but not independent certification of my own geographic facts. I formed these findings without reading prior final verdicts or the other second-opinion reports.",
+  "summary": "Most phrases use basic, usable wording. Replace the hidden neighbour-continent interpretation for selected countries and the Indian Ocean umbrella phrase. Other changes are optional: reduce near-duplicate island alternatives, make the A–M wording direct, and vary template-heavy country sets. There are no slogans, repeated-letter puzzles, or first-versus-last alphabetical comparisons among the 52 assigned phrases.",
+  "priorities": {
+    "requiredClarity": [
+      "P1-neighbour-continent",
+      "P1-ocean-seas"
+    ],
+    "optionalClarityOrVariety": [
+      "P2-island-overlap",
+      "P2-shared-island",
+      "P2-north-america",
+      "P2-double-negative",
+      "P2-neighbour-area-effort",
+      "P2-template-repetition"
+    ],
+    "polish": [
+      "P3-numeric-copy",
+      "P3-last-alphabet-half",
+      "P3-visible-name"
+    ],
+    "intentionalDifficultyChoice": [
+      "P2-easy-strength"
+    ]
+  },
+  "findings": [
+    {
+      "id": "P1-neighbour-continent",
+      "priority": "P1",
+      "category": "required-clarity",
+      "hintIds": [
+        "geo-neighbour-in-europe",
+        "geo-neighbour-in-asia"
+      ],
+      "countryCodes": [
+        "MN",
+        "KP",
+        "PG"
+      ],
+      "issue": "A player reads 'Has a land neighbour in Europe' as a border that is physically in Europe. For Mongolia and North Korea the bank instead counts Russia's whole-country region label. The same kind of surprise arises when Papua New Guinea's Indonesian neighbour is described as 'in Asia'. This interpretation is not explained in Help.",
+      "playerEffect": "It sends a nonexpert to the wrong part of the map rather than giving a useful constraint.",
+      "suggestion": "Replace these assignments with a clear, already reviewed location or border-count fact. Do not fix this by adding a long definition to Help. Audit every neighbour-continent assignment against its ordinary reading.",
+      "verificationBoundary": "This is a wording/convention finding, not a fresh certification of transcontinental boundaries."
+    },
+    {
+      "id": "P1-ocean-seas",
+      "priority": "P1",
+      "category": "required-clarity",
+      "hintIds": [
+        "geo-indian-ocean-coast"
+      ],
+      "countryCodes": [
+        "AU",
+        "BH",
+        "BD",
+        "KM",
+        "EG",
+        "IN",
+        "ID",
+        "IR",
+        "IQ",
+        "IL",
+        "JO",
+        "KE",
+        "KW",
+        "MG",
+        "MY",
+        "MV",
+        "MU",
+        "MM",
+        "PK",
+        "QA",
+        "SA",
+        "SC",
+        "LK",
+        "SD",
+        "TZ",
+        "TH",
+        "AE",
+        "YE"
+      ],
+      "highestRiskCountryCodes": [
+        "IL",
+        "JO",
+        "IQ",
+        "BH",
+        "KW",
+        "QA",
+        "SA",
+        "AE"
+      ],
+      "issue": "'Has a coast on the Indian Ocean or its seas' depends on knowing which named seas belong to an ocean system. A player thinking of the Indian Ocean coastline may rule out Jordan, Israel or Iraq. 'Its seas' is not a recognizable place clue for a nonexpert.",
+      "playerEffect": "A technically inclusive phrase can feel contradictory when the answer is revealed; it also gives no actionable named sea for many targets.",
+      "suggestion": "Use a direct named-sea clue where the pool allows it, such as the existing reviewed 'Has a Red Sea or Gulf of Aden coast' for suitable Medium/Hard targets. Use a different simple fact for Gulf countries rather than an ocean classification umbrella. Recheck each replacement's active-tier matches.",
+      "verificationBoundary": "No new sea memberships were researched or certified in this review."
+    },
+    {
+      "id": "P2-island-overlap",
+      "priority": "P2",
+      "category": "optional-variety",
+      "hintIds": [
+        "geo-no-land-neighbours",
+        "geo-island-country"
+      ],
+      "countryCodes": [
+        "AG",
+        "BS",
+        "BB",
+        "DM",
+        "GD",
+        "MT",
+        "KN",
+        "LC",
+        "VC",
+        "TT"
+      ],
+      "issue": "These ten sets contain both 'An island country' and 'Has no land neighbours'. Only one is shown, but either often tells the player practically the same thing: think of islands rather than a mainland border map.",
+      "playerEffect": "The two geography alternatives are less varied than their different data dimensions suggest.",
+      "suggestion": "Keep one and use an already reviewed regional clue, e.g. 'In the Caribbean', where eligible. Prefer a location plus a border fact rather than two near-synonyms. Preserve a broad backup at tiers where a regional clue is too revealing."
+    },
+    {
+      "id": "P2-shared-island",
+      "priority": "P2",
+      "category": "optional-clarity",
+      "hintIds": [
+        "geo-island-country"
+      ],
+      "countryCodes": [
+        "BN",
+        "TL"
+      ],
+      "issue": "'An island country' may make a novice imagine a country occupying its own island. Brunei and Timor-Leste are shared-island countries. The wording is conventional, but the likely player image is less precise than the bank's meaning.",
+      "playerEffect": "A player can over-eliminate countries that also have land neighbours.",
+      "suggestion": "Consider 'Located on an island' for shared-island assignments, or choose a different reviewed fact. Check whether the revised phrase's full match set includes other mainland countries with island territory before using it as a catalog-wide replacement."
+    },
+    {
+      "id": "P2-north-america",
+      "priority": "P2",
+      "category": "optional-clarity",
+      "hintIds": [
+        "geo-north-america"
+      ],
+      "countryCodes": [
+        "CU",
+        "JM"
+      ],
+      "issue": "A casual player may use 'North America' to mean Canada, the United States and Mexico, and place Cuba and Jamaica in 'the Caribbean' instead. The clue is broader than that everyday shorthand; Help does not define the convention.",
+      "playerEffect": "The clue can exclude the correct island in a player’s mental model.",
+      "suggestion": "For Jamaica at Medium, consider the existing 'In the Caribbean' clue. Cuba needs an Easy-eligible alternative or retain a clearly broad Americas wording after checking the pool. Do not silently change matching rules."
+    },
+    {
+      "id": "P2-double-negative",
+      "priority": "P2",
+      "category": "optional-wording",
+      "hintIds": [
+        "name-first-a-m"
+      ],
+      "countryCodes": [
+        "AR",
+        "ID"
+      ],
+      "issue": "The negative wording makes a simple A–M split harder to parse than necessary.",
+      "playerEffect": "The player first has to negate the alphabet half before checking a candidate.",
+      "suggestion": "Use 'First letter is from A to M.' This preserves the same fact and matches without a new factual review."
+    },
+    {
+      "id": "P2-neighbour-area-effort",
+      "priority": "P2",
+      "category": "optional-usefulness",
+      "hintIds": [
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-at-least-one-larger-land-neighbour"
+      ],
+      "countryCodes": [
+        "AO",
+        "AZ",
+        "BY",
+        "BJ",
+        "BO",
+        "BW",
+        "BF",
+        "BI",
+        "CM",
+        "CF",
+        "TD",
+        "CZ",
+        "ER",
+        "ET",
+        "GA",
+        "GE",
+        "GH",
+        "GT",
+        "GN",
+        "GY",
+        "HN",
+        "CI",
+        "LV",
+        "LR",
+        "LT",
+        "MZ",
+        "NA",
+        "OM",
+        "PA",
+        "CG",
+        "SO",
+        "SS",
+        "TZ",
+        "UG",
+        "VE",
+        "YE",
+        "ZM",
+        "AR",
+        "AT",
+        "CO",
+        "CD",
+        "DO",
+        "KE",
+        "NI",
+        "NG",
+        "NO",
+        "PE",
+        "PL",
+        "ZA",
+        "SD",
+        "SE",
+        "TR",
+        "UA",
+        "CL",
+        "CR",
+        "FI",
+        "KR"
+      ],
+      "exampleCountryCodes": [
+        "AT",
+        "PL",
+        "SE",
+        "NO",
+        "CL",
+        "CR",
+        "KR"
+      ],
+      "issue": "These are understandable statements, but using them requires the player to recall neighbouring countries and their relative land areas. 'Has at least one smaller/larger neighbour' rarely suggests a first guess by itself. 'Both smaller and larger' adds a second comparison without giving a location.",
+      "playerEffect": "Some nominally specific hints demand more prior knowledge than they provide. Austria, Poland and Sweden are weak examples because a European neighbour and one smaller neighbour are two broad alternatives.",
+      "suggestion": "Prefer a simple location clue or a more distinctive all-neighbours comparison for selected countries, retaining comparisons where the size relationship is intuitive. The already reviewed all-smaller group is unused and could be considered for matching countries. Do not blanket-remove neighbour-size clues: they match the user’s intended style."
+    },
+    {
+      "id": "P2-template-repetition",
+      "priority": "P2",
+      "category": "optional-variety",
+      "hintIds": [],
+      "countryCodes": [
+        "AO",
+        "GH",
+        "AZ",
+        "CM",
+        "BY",
+        "CF",
+        "BJ",
+        "HN",
+        "KM",
+        "MV",
+        "CZ",
+        "GT",
+        "ER",
+        "GE",
+        "LR",
+        "GN",
+        "MZ",
+        "IL",
+        "JO",
+        "NR",
+        "PW",
+        "WS",
+        "TO",
+        "TV",
+        "MK",
+        "RS",
+        "PL",
+        "SE",
+        "RW",
+        "TJ",
+        "ZW",
+        "KN",
+        "LC",
+        "VC",
+        "SM",
+        "VA",
+        "SB",
+        "VU",
+        "SO",
+        "VE",
+        "SS",
+        "ZM"
+      ],
+      "issue": "Eighteen groups of countries have exactly the same four hint IDs. This is allowed because only one hint is displayed, but it means repeat rounds can feel like the same template rather than a bank assembled for each country.",
+      "playerEffect": "Nauru, Palau, Samoa, Tonga and Tuvalu all have the same four alternatives; Saint Kitts and Nevis, Saint Lucia and Saint Vincent and the Grenadines are another identical group. Pacific/coast/no-border facts recur especially often.",
+      "suggestion": "Optional enrichment: vary one geography or name choice in the repeated clusters using existing reviewed candidates before researching new trivia. Keep the wording basic and avoid famous landmark giveaways."
+    },
+    {
+      "id": "P3-numeric-copy",
+      "priority": "P3",
+      "category": "optional-wording",
+      "hintIds": [
+        "population-1000000-10000000",
+        "population-10000000-50000000",
+        "population-50000000-150000000",
+        "area-10000-100000",
+        "area-100000-500000",
+        "area-500000-1500000"
+      ],
+      "countryCodes": [],
+      "issue": "The ranges are precise and fair in principle, but 'from X to under Y' reads like a dataset filter. Area ranges require more geographical scale knowledge than population ranges. For many Hard answers this is a useful size constraint, not an obvious place clue.",
+      "playerEffect": "No misleading wording, but some players will have no confident opening guess based on the range alone.",
+      "suggestion": "Optional copy polish such as 'Between 1 million and 10 million people' must preserve the exclusive upper boundary or explicitly revise the numeric rule. Shortening must not silently change the facts. Keep km² when using land area; avoid unsupported country-size analogies."
+    },
+    {
+      "id": "P3-last-alphabet-half",
+      "priority": "P3",
+      "category": "optional-wording",
+      "hintIds": [
+        "name-last-n-z"
+      ],
+      "countryCodes": [
+        "BF",
+        "CD",
+        "GW",
+        "LS",
+        "MC",
+        "ME"
+      ],
+      "issue": "The final-letter half clue is simple enough to compute, but less immediately usable than an initial-letter clue. It does not compare the first and last letters and should not be mistaken for the user-rejected alphabetical-order puzzle.",
+      "playerEffect": "The player has to spell a candidate through its last letter and locate that letter within N–Z.",
+      "suggestion": "Acceptable to keep. If the goal is less letter-puzzle effort, use an existing vowel/consonant or name-length fact for these countries after checking truth and tier eligibility."
+    },
+    {
+      "id": "P3-visible-name",
+      "priority": "P3",
+      "category": "optional-clarity",
+      "hintIds": [
+        "name-last-n-z",
+        "name-first-n-z",
+        "name-no-e",
+        "name-has-e",
+        "name-has-o",
+        "name-up-to-six",
+        "name-ends-consonant",
+        "name-first-a-m"
+      ],
+      "countryCodes": [
+        "CD",
+        "CG",
+        "CI",
+        "CV",
+        "TR",
+        "ST"
+      ],
+      "issue": "Help correctly defines displayed English names and accents. Players using an alias or a familiar longer form can still find a spelling clue surprising, particularly DR Congo versus Democratic Republic of the Congo.",
+      "playerEffect": "The clue depends on the suggestion label rather than every accepted name for the country.",
+      "suggestion": "Keep the existing Help convention. Optional light copy cue: 'The displayed name …' where ambiguity is likely. Avoid cluttering every hint with a long explanation."
+    },
+    {
+      "id": "P2-easy-strength",
+      "priority": "P2",
+      "category": "design-choice",
+      "hintIds": [
+        "geo-island-country-asia",
+        "geo-un-location-southern-europe"
+      ],
+      "countryCodes": [
+        "JP",
+        "SG",
+        "PT",
+        "ES"
+      ],
+      "issue": "The Asia-island and Southern-Europe groups each have a complete four-match bound at Easy. If a player can enumerate one of those groups, six guesses are enough to exhaust it. This is not a unique-answer giveaway, but the formal minimum of four does not guarantee a challenging round. The no-land-neighbours catalog is incomplete: it has four confirmed Easy matches and a declared upper bound of fourteen, so it does not support the same exhaustive-shortlist claim.",
+      "playerEffect": "A recognizable location category with a complete four-answer bound can make Easy a short checklist rather than an exploratory search.",
+      "suggestion": "Keep if Easy is intentionally welcoming. If that experience is too easy, use a larger answer group at Easy while retaining the same specific fact in later rounds. Do not make all clues vaguer to solve an Easy-only design choice."
+    }
+  ],
+  "strongExamples": [
+    {
+      "hintId": "name-first-n-z",
+      "text": "First letter comes after M.",
+      "why": "Direct and mildly tricky without an obscure comparison; easy to apply to a candidate."
+    },
+    {
+      "hintId": "geo-mediterranean-coast",
+      "countryCodes": [
+        "CY",
+        "GR",
+        "IT",
+        "TN"
+      ],
+      "why": "A named and recognizable sea gives a real map strategy without identifying one country."
+    },
+    {
+      "hintId": "geo-no-ocean-coast",
+      "countryCodes": [
+        "BT",
+        "NP",
+        "MN"
+      ],
+      "why": "A familiar inland trait is clear and reusable. It is a sensible Hard/Medium clue even if border alternatives can overlap."
+    },
+    {
+      "hintId": "geo-all-larger-land-neighbours",
+      "countryCodes": [
+        "PG",
+        "TL"
+      ],
+      "why": "The all-neighbours relation is stronger and more distinctive than knowing just one larger neighbour; this is close to the style the user asked for."
+    },
+    {
+      "countryCode": "CY",
+      "hintIds": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-island-country",
+        "geo-mediterranean-coast"
+      ],
+      "why": "Name ending, population, island status and a recognizable coast give different usable starting angles. Only one is displayed."
+    },
+    {
+      "countryCode": "DE",
+      "hintIds": [
+        "name-ends-consonant",
+        "area-100000-500000",
+        "geo-seven-or-more-land-neighbours",
+        "geo-baltic-coast"
+      ],
+      "why": "Name, area, many neighbours and a named sea offer genuinely different kinds of constraint; Baltic coast may be deliberately strong at Easy."
+    }
+  ],
+  "duplicateSetGroups": [
+    {
+      "countryCodes": [
+        "AO",
+        "GH"
+      ],
+      "hintIds": [
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours",
+        "name-up-to-six",
+        "population-10000000-50000000"
+      ]
+    },
+    {
+      "countryCodes": [
+        "AZ",
+        "CM"
+      ],
+      "hintIds": [
+        "geo-five-or-six-land-neighbours",
+        "geo-smaller-and-larger-land-neighbours",
+        "name-ends-consonant",
+        "population-10000000-50000000"
+      ]
+    },
+    {
+      "countryCodes": [
+        "BY",
+        "CF"
+      ],
+      "hintIds": [
+        "geo-no-ocean-coast",
+        "geo-smaller-and-larger-land-neighbours",
+        "name-ends-consonant",
+        "population-1000000-10000000"
+      ]
+    },
+    {
+      "countryCodes": [
+        "BJ",
+        "HN"
+      ],
+      "hintIds": [
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours",
+        "name-ends-consonant",
+        "population-10000000-50000000"
+      ]
+    },
+    {
+      "countryCodes": [
+        "KM",
+        "MV"
+      ],
+      "hintIds": [
+        "geo-indian-ocean-coast",
+        "geo-no-land-neighbours",
+        "name-ends-consonant",
+        "population-0-1000000"
+      ]
+    },
+    {
+      "countryCodes": [
+        "CZ",
+        "GT"
+      ],
+      "hintIds": [
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours",
+        "name-has-e",
+        "population-10000000-50000000"
+      ]
+    },
+    {
+      "countryCodes": [
+        "ER",
+        "GE",
+        "LR"
+      ],
+      "hintIds": [
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours",
+        "name-has-e",
+        "population-1000000-10000000"
+      ]
+    },
+    {
+      "countryCodes": [
+        "GN",
+        "MZ"
+      ],
+      "hintIds": [
+        "geo-all-neighbours-in-africa",
+        "geo-smaller-and-larger-land-neighbours",
+        "name-has-e",
+        "population-10000000-50000000"
+      ]
+    },
+    {
+      "countryCodes": [
+        "IL",
+        "JO"
+      ],
+      "hintIds": [
+        "geo-indian-ocean-coast",
+        "geo-un-location-western-asia",
+        "name-ends-consonant",
+        "population-10000000-50000000"
+      ]
+    },
+    {
+      "countryCodes": [
+        "NR",
+        "PW",
+        "WS",
+        "TO",
+        "TV"
+      ],
+      "hintIds": [
+        "geo-no-land-neighbours",
+        "geo-pacific-coast",
+        "name-first-n-z",
+        "population-0-1000000"
+      ]
+    },
+    {
+      "countryCodes": [
+        "MK",
+        "RS"
+      ],
+      "hintIds": [
+        "geo-no-ocean-coast",
+        "geo-un-location-southern-europe",
+        "name-first-n-z",
+        "population-1000000-10000000"
+      ]
+    },
+    {
+      "countryCodes": [
+        "PL",
+        "SE"
+      ],
+      "hintIds": [
+        "area-100000-500000",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-neighbour-in-europe",
+        "name-up-to-six"
+      ]
+    },
+    {
+      "countryCodes": [
+        "RW",
+        "TJ",
+        "ZW"
+      ],
+      "hintIds": [
+        "geo-no-ocean-coast",
+        "geo-three-or-four-land-neighbours",
+        "name-first-n-z",
+        "population-10000000-50000000"
+      ]
+    },
+    {
+      "countryCodes": [
+        "KN",
+        "LC",
+        "VC"
+      ],
+      "hintIds": [
+        "geo-island-country",
+        "geo-no-land-neighbours",
+        "name-first-n-z",
+        "population-0-1000000"
+      ]
+    },
+    {
+      "countryCodes": [
+        "SM",
+        "VA"
+      ],
+      "hintIds": [
+        "geo-all-larger-land-neighbours",
+        "geo-no-ocean-coast",
+        "name-first-n-z",
+        "population-0-1000000"
+      ]
+    },
+    {
+      "countryCodes": [
+        "SB",
+        "VU"
+      ],
+      "hintIds": [
+        "area-10000-100000",
+        "geo-no-land-neighbours",
+        "geo-pacific-coast",
+        "name-first-n-z"
+      ]
+    },
+    {
+      "countryCodes": [
+        "SO",
+        "VE"
+      ],
+      "hintIds": [
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours",
+        "name-first-n-z",
+        "population-10000000-50000000"
+      ]
+    },
+    {
+      "countryCodes": [
+        "SS",
+        "ZM"
+      ],
+      "hintIds": [
+        "geo-no-ocean-coast",
+        "geo-smaller-and-larger-land-neighbours",
+        "name-first-n-z",
+        "population-10000000-50000000"
+      ]
+    }
+  ],
+  "phraseReviews": [
+    {
+      "id": "area-10000-100000",
+      "text": "Land area from 10,000 to under 100,000 km².",
+      "assignedCountryCodes": [
+        "BS",
+        "BZ",
+        "BT",
+        "FJ",
+        "ME",
+        "SB",
+        "VU"
+      ],
+      "assignedCount": 7,
+      "activePoolMatchCounts": {
+        "1": 7,
+        "2": 29,
+        "3": 57
+      },
+      "decision": "keep",
+      "use": "A precise land-size band; useful for players with scale knowledge, weaker as a location cue for novices.",
+      "findingIds": [
+        "P3-numeric-copy"
+      ]
+    },
+    {
+      "id": "area-100000-500000",
+      "text": "Land area from 100,000 to under 500,000 km².",
+      "assignedCountryCodes": [
+        "BD",
+        "BG",
+        "CU",
+        "FI",
+        "DE",
+        "GR",
+        "GY",
+        "IS",
+        "IT",
+        "JP",
+        "MY",
+        "MA",
+        "NZ",
+        "NO",
+        "OM",
+        "PY",
+        "PH",
+        "PL",
+        "ES",
+        "SR",
+        "SE",
+        "UG",
+        "GB",
+        "UY",
+        "VN"
+      ],
+      "assignedCount": 25,
+      "activePoolMatchCounts": {
+        "1": 16,
+        "2": 39,
+        "3": 54
+      },
+      "decision": "keep",
+      "use": "A precise land-size band; useful for players with scale knowledge, weaker as a location cue for novices.",
+      "findingIds": [
+        "P3-numeric-copy"
+      ]
+    },
+    {
+      "id": "area-1500000-plus",
+      "text": "Land area of at least 1,500,000 km².",
+      "assignedCountryCodes": [
+        "BR",
+        "CN",
+        "IN",
+        "ID",
+        "US"
+      ],
+      "assignedCount": 5,
+      "activePoolMatchCounts": {
+        "1": 10,
+        "2": 17,
+        "3": 18
+      },
+      "decision": "keep",
+      "use": "A recognizable very-large-country filter without claiming an exact rank.",
+      "findingIds": []
+    },
+    {
+      "id": "area-500000-1500000",
+      "text": "Land area from 500,000 to under 1,500,000 km².",
+      "assignedCountryCodes": [
+        "ET",
+        "MM",
+        "NG",
+        "PK",
+        "TZ"
+      ],
+      "assignedCount": 5,
+      "activePoolMatchCounts": {
+        "1": 11,
+        "2": 23,
+        "3": 32
+      },
+      "decision": "keep",
+      "use": "A precise land-size band; useful for players with scale knowledge, weaker as a location cue for novices.",
+      "findingIds": [
+        "P3-numeric-copy"
+      ]
+    },
+    {
+      "id": "geo-all-larger-land-neighbours",
+      "text": "All its land neighbours are larger by land area.",
+      "assignedCountryCodes": [
+        "BZ",
+        "EC",
+        "SV",
+        "GQ",
+        "EE",
+        "GM",
+        "GW",
+        "HT",
+        "KW",
+        "LI",
+        "MD",
+        "PG",
+        "QA",
+        "SM",
+        "SL",
+        "SK",
+        "TL",
+        "AE",
+        "UY",
+        "VA"
+      ],
+      "assignedCount": 20,
+      "activePoolMatchCounts": {
+        "1": 4,
+        "2": 15,
+        "3": 35
+      },
+      "decision": "keep",
+      "use": "A stronger small-country-versus-neighbours relation than an at-least-one comparison. Basic wording fits the requested style.",
+      "findingIds": []
+    },
+    {
+      "id": "geo-all-neighbours-in-africa",
+      "text": "All its land neighbours are in Africa.",
+      "assignedCountryCodes": [
+        "CD",
+        "DJ",
+        "GQ",
+        "SZ",
+        "GM",
+        "GN",
+        "GW",
+        "CI",
+        "LS",
+        "MZ",
+        "CG",
+        "SL",
+        "TG"
+      ],
+      "assignedCount": 13,
+      "activePoolMatchCounts": {
+        "1": 3,
+        "2": 14,
+        "3": 39
+      },
+      "decision": "keep",
+      "use": "A basic continent-scale cue. Indirect wording is less convenient than a direct location, but the meaning is accessible.",
+      "findingIds": []
+    },
+    {
+      "id": "geo-all-neighbours-in-americas",
+      "text": "All its land neighbours are in the Americas.",
+      "assignedCountryCodes": [
+        "CR",
+        "DO",
+        "HT"
+      ],
+      "assignedCount": 3,
+      "activePoolMatchCounts": {
+        "1": 5,
+        "2": 15,
+        "3": 19
+      },
+      "decision": "keep",
+      "use": "A plain continent-scale map cue, though it requires border knowledge and is very strong at Easy.",
+      "findingIds": []
+    },
+    {
+      "id": "geo-at-least-one-larger-land-neighbour",
+      "text": "Has a land neighbour that is larger by land area.",
+      "assignedCountryCodes": [
+        "CL",
+        "CR",
+        "FI",
+        "KR"
+      ],
+      "assignedCount": 4,
+      "activePoolMatchCounts": {
+        "1": 14,
+        "2": 44,
+        "3": 82
+      },
+      "decision": "acceptable-with-watch",
+      "use": "Literal meaning is clear; often usable only after the player already knows the target’s region.",
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "id": "geo-at-least-one-smaller-land-neighbour",
+      "text": "Has a land neighbour that is smaller by land area.",
+      "assignedCountryCodes": [
+        "AR",
+        "AT",
+        "CO",
+        "CD",
+        "DO",
+        "KE",
+        "NI",
+        "NG",
+        "NO",
+        "PE",
+        "PL",
+        "ZA",
+        "SD",
+        "SE",
+        "TR",
+        "UA"
+      ],
+      "assignedCount": 16,
+      "activePoolMatchCounts": {
+        "1": 12,
+        "2": 33,
+        "3": 53
+      },
+      "decision": "acceptable-with-watch",
+      "use": "Literal meaning is clear; knowing just one smaller neighbour gives a weak first-guess cue for many continental countries.",
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "id": "geo-atlantic-coast",
+      "text": "Has an Atlantic coast.",
+      "assignedCountryCodes": [
+        "AR",
+        "BR",
+        "CV",
+        "CU",
+        "FR",
+        "IS",
+        "IE",
+        "MR",
+        "MA",
+        "NG",
+        "PT",
+        "SN",
+        "ZA",
+        "ES",
+        "ST",
+        "GB",
+        "UY"
+      ],
+      "assignedCount": 17,
+      "activePoolMatchCounts": {
+        "1": 11,
+        "2": 18,
+        "3": 32
+      },
+      "decision": "keep",
+      "use": "A named ocean or sea gives an understandable map edge to explore, without a famous landmark giveaway.",
+      "findingIds": []
+    },
+    {
+      "id": "geo-baltic-coast",
+      "text": "Has a Baltic Sea coast.",
+      "assignedCountryCodes": [
+        "DK",
+        "DE"
+      ],
+      "assignedCount": 2,
+      "activePoolMatchCounts": {
+        "1": 5,
+        "2": 7,
+        "3": 9
+      },
+      "decision": "keep",
+      "use": "A named ocean or sea gives an understandable map edge to explore, without a famous landmark giveaway.",
+      "findingIds": []
+    },
+    {
+      "id": "geo-five-or-six-land-neighbours",
+      "text": "Has five or six land neighbours.",
+      "assignedCountryCodes": [
+        "AZ",
+        "BO",
+        "BG",
+        "CM",
+        "CO",
+        "HR",
+        "ET",
+        "IQ",
+        "IT",
+        "KZ",
+        "LA",
+        "LY",
+        "MM",
+        "PE",
+        "RO",
+        "SN",
+        "CH",
+        "SY",
+        "UG",
+        "UZ"
+      ],
+      "assignedCount": 20,
+      "activePoolMatchCounts": {
+        "1": 7,
+        "2": 21,
+        "3": 33
+      },
+      "decision": "keep",
+      "use": "A concrete border-count cue. Ranges avoid requiring an exact count; exact one/two is still simple when the border is familiar.",
+      "findingIds": []
+    },
+    {
+      "id": "geo-indian-ocean-coast",
+      "text": "Has a coast on the Indian Ocean or its seas.",
+      "assignedCountryCodes": [
+        "AU",
+        "BH",
+        "BD",
+        "KM",
+        "EG",
+        "IN",
+        "ID",
+        "IR",
+        "IQ",
+        "IL",
+        "JO",
+        "KE",
+        "KW",
+        "MG",
+        "MY",
+        "MV",
+        "MU",
+        "MM",
+        "PK",
+        "QA",
+        "SA",
+        "SC",
+        "LK",
+        "SD",
+        "TZ",
+        "TH",
+        "AE",
+        "YE"
+      ],
+      "assignedCount": 28,
+      "activePoolMatchCounts": {
+        "1": 8,
+        "2": 24,
+        "3": 34
+      },
+      "decision": "revise",
+      "use": "The open-ocean examples are intuitive; indirect marginal-sea examples require ocean taxonomy rather than simple map knowledge.",
+      "findingIds": [
+        "P1-ocean-seas"
+      ]
+    },
+    {
+      "id": "geo-island-country",
+      "text": "An island country.",
+      "assignedCountryCodes": [
+        "AG",
+        "BS",
+        "BH",
+        "BB",
+        "BN",
+        "CY",
+        "DM",
+        "GD",
+        "MT",
+        "KN",
+        "LC",
+        "VC",
+        "TL",
+        "TT"
+      ],
+      "assignedCount": 14,
+      "activePoolMatchCounts": {
+        "1": 8,
+        "2": 16,
+        "3": 46
+      },
+      "decision": "acceptable-with-watch",
+      "use": "Gives a clear island-first strategy, but overlaps with no-border alternatives and may suggest a whole island for shared-island targets.",
+      "findingIds": [
+        "P2-island-overlap",
+        "P2-shared-island"
+      ]
+    },
+    {
+      "id": "geo-island-country-asia",
+      "text": "An island country in Asia.",
+      "assignedCountryCodes": [
+        "JP",
+        "SG"
+      ],
+      "assignedCount": 2,
+      "activePoolMatchCounts": {
+        "1": 4,
+        "2": 5,
+        "3": 10
+      },
+      "decision": "keep",
+      "use": "A plain regional location or island-location cue; the player can choose a sensible first region without decoding wordplay.",
+      "findingIds": [
+        "P2-easy-strength"
+      ]
+    },
+    {
+      "id": "geo-mediterranean-coast",
+      "text": "Has a Mediterranean coast.",
+      "assignedCountryCodes": [
+        "AL",
+        "DZ",
+        "BA",
+        "HR",
+        "CY",
+        "GR",
+        "IT",
+        "LB",
+        "LY",
+        "MC",
+        "ME",
+        "PS",
+        "SI",
+        "SY",
+        "TN"
+      ],
+      "assignedCount": 15,
+      "activePoolMatchCounts": {
+        "1": 7,
+        "2": 16,
+        "3": 22
+      },
+      "decision": "keep",
+      "use": "A named ocean or sea gives an understandable map edge to explore, without a famous landmark giveaway.",
+      "findingIds": []
+    },
+    {
+      "id": "geo-neighbour-in-asia",
+      "text": "Has a land neighbour in Asia.",
+      "assignedCountryCodes": [
+        "PG"
+      ],
+      "assignedCount": 1,
+      "activePoolMatchCounts": {
+        "1": 4,
+        "2": 15,
+        "3": 20
+      },
+      "decision": "revise-selected-assignments",
+      "use": "The Papua New Guinea assignment needs a hidden whole-country continent convention.",
+      "findingIds": [
+        "P1-neighbour-continent"
+      ]
+    },
+    {
+      "id": "geo-neighbour-in-europe",
+      "text": "Has a land neighbour in Europe.",
+      "assignedCountryCodes": [
+        "AT",
+        "MN",
+        "KP",
+        "PL",
+        "RU",
+        "SE",
+        "TR",
+        "UA"
+      ],
+      "assignedCount": 8,
+      "activePoolMatchCounts": {
+        "1": 8,
+        "2": 16,
+        "3": 24
+      },
+      "decision": "revise-selected-assignments",
+      "use": "Works as a rough European map cue for European targets, but becomes misleading where a distant transcontinental neighbour is classified by its whole-country label.",
+      "findingIds": [
+        "P1-neighbour-continent",
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "id": "geo-no-land-neighbours",
+      "text": "Has no land neighbours.",
+      "assignedCountryCodes": [
+        "AG",
+        "AU",
+        "BS",
+        "BB",
+        "CV",
+        "KM",
+        "DM",
+        "FJ",
+        "GD",
+        "IS",
+        "JM",
+        "KI",
+        "MG",
+        "MV",
+        "MT",
+        "MH",
+        "MU",
+        "FM",
+        "NR",
+        "NZ",
+        "PW",
+        "KN",
+        "LC",
+        "VC",
+        "WS",
+        "SC",
+        "SB",
+        "LK",
+        "ST",
+        "TO",
+        "TT",
+        "TV",
+        "VU"
+      ],
+      "assignedCount": 33,
+      "activePoolMatchCounts": {
+        "1": 4,
+        "2": 9,
+        "3": 35
+      },
+      "decision": "keep",
+      "use": "A concrete, quick map constraint. Still useful for beginners, with overlap caveats. Its partial catalog has four confirmed Easy matches and an upper bound of fourteen; it is not an exhaustive four-answer shortlist.",
+      "findingIds": [
+        "P2-island-overlap"
+      ],
+      "activePoolMaximumCounts": {
+        "1": 14,
+        "2": 27,
+        "3": 59
+      }
+    },
+    {
+      "id": "geo-no-ocean-coast",
+      "text": "Is landlocked.",
+      "assignedCountryCodes": [
+        "AF",
+        "AD",
+        "AM",
+        "BY",
+        "BT",
+        "BF",
+        "CF",
+        "TD",
+        "SZ",
+        "HU",
+        "KZ",
+        "KG",
+        "LA",
+        "LS",
+        "LI",
+        "LU",
+        "MW",
+        "ML",
+        "MD",
+        "MN",
+        "NP",
+        "NE",
+        "MK",
+        "PY",
+        "RW",
+        "SM",
+        "RS",
+        "SK",
+        "SS",
+        "TJ",
+        "TM",
+        "UZ",
+        "VA",
+        "ZM",
+        "ZW"
+      ],
+      "assignedCount": 35,
+      "activePoolMatchCounts": {
+        "1": 2,
+        "2": 19,
+        "3": 44
+      },
+      "decision": "keep",
+      "use": "Landlocked is a familiar geographic trait and offers an inland strategy without a slogan or capital giveaway.",
+      "findingIds": []
+    },
+    {
+      "id": "geo-north-america",
+      "text": "In North America.",
+      "assignedCountryCodes": [
+        "CA",
+        "CU",
+        "JM",
+        "MX",
+        "US"
+      ],
+      "assignedCount": 5,
+      "activePoolMatchCounts": {
+        "1": 5,
+        "2": 11,
+        "3": 23
+      },
+      "decision": "acceptable-with-watch",
+      "use": "An immediate place clue for mainland examples; Caribbean examples depend on the broader continental convention.",
+      "findingIds": [
+        "P2-north-america"
+      ]
+    },
+    {
+      "id": "geo-north-sea-coast",
+      "text": "Has a North Sea coast.",
+      "assignedCountryCodes": [
+        "BE",
+        "NL"
+      ],
+      "assignedCount": 2,
+      "activePoolMatchCounts": {
+        "1": 5,
+        "2": 7,
+        "3": 7
+      },
+      "decision": "keep",
+      "use": "A named ocean or sea gives an understandable map edge to explore, without a famous landmark giveaway.",
+      "findingIds": []
+    },
+    {
+      "id": "geo-one-land-neighbour",
+      "text": "Has exactly one land neighbour.",
+      "assignedCountryCodes": [
+        "BN",
+        "MC"
+      ],
+      "assignedCount": 2,
+      "activePoolMatchCounts": {
+        "1": 3,
+        "2": 7,
+        "3": 14
+      },
+      "decision": "keep",
+      "use": "A concrete border-count cue. Ranges avoid requiring an exact count; exact one/two is still simple when the border is familiar.",
+      "findingIds": []
+    },
+    {
+      "id": "geo-pacific-coast",
+      "text": "Has a Pacific coast.",
+      "assignedCountryCodes": [
+        "KH",
+        "CA",
+        "CN",
+        "EC",
+        "SV",
+        "FJ",
+        "JP",
+        "KI",
+        "MH",
+        "FM",
+        "NR",
+        "NZ",
+        "NI",
+        "PW",
+        "PA",
+        "PH",
+        "WS",
+        "SB",
+        "KR",
+        "TO",
+        "TV",
+        "US",
+        "VU"
+      ],
+      "assignedCount": 23,
+      "activePoolMatchCounts": {
+        "1": 18,
+        "2": 23,
+        "3": 36
+      },
+      "decision": "keep",
+      "use": "A named ocean or sea gives an understandable map edge to explore, without a famous landmark giveaway.",
+      "findingIds": []
+    },
+    {
+      "id": "geo-region-africa",
+      "text": "In Africa.",
+      "assignedCountryCodes": [
+        "MA"
+      ],
+      "assignedCount": 1,
+      "activePoolMatchCounts": {
+        "1": 5,
+        "2": 22,
+        "3": 54
+      },
+      "decision": "keep",
+      "use": "Very basic location hint. Few Easy African answers make it strong at that tier rather than intrinsically vague.",
+      "findingIds": []
+    },
+    {
+      "id": "geo-region-asia",
+      "text": "In Asia.",
+      "assignedCountryCodes": [
+        "IN"
+      ],
+      "assignedCount": 1,
+      "activePoolMatchCounts": {
+        "1": 11,
+        "2": 35,
+        "3": 48
+      },
+      "decision": "keep",
+      "use": "Broad but practical first-guess geography: the player can start on a continent without knowing a statistic.",
+      "findingIds": []
+    },
+    {
+      "id": "geo-seven-or-more-land-neighbours",
+      "text": "Has at least seven land neighbours.",
+      "assignedCountryCodes": [
+        "BR",
+        "CN",
+        "DE",
+        "HU",
+        "IR",
+        "ML",
+        "NE",
+        "RU",
+        "SA"
+      ],
+      "assignedCount": 9,
+      "activePoolMatchCounts": {
+        "1": 8,
+        "2": 14,
+        "3": 17
+      },
+      "decision": "keep",
+      "use": "A concrete border-count cue. Ranges avoid requiring an exact count; exact one/two is still simple when the border is familiar.",
+      "findingIds": []
+    },
+    {
+      "id": "geo-smaller-and-larger-land-neighbours",
+      "text": "Has both smaller and larger land neighbours by land area.",
+      "assignedCountryCodes": [
+        "AO",
+        "AZ",
+        "BY",
+        "BJ",
+        "BO",
+        "BW",
+        "BF",
+        "BI",
+        "CM",
+        "CF",
+        "TD",
+        "CZ",
+        "ER",
+        "ET",
+        "GA",
+        "GE",
+        "GH",
+        "GT",
+        "GN",
+        "GY",
+        "HN",
+        "CI",
+        "LV",
+        "LR",
+        "LT",
+        "MZ",
+        "NA",
+        "OM",
+        "PA",
+        "CG",
+        "SO",
+        "SS",
+        "TZ",
+        "UG",
+        "VE",
+        "YE",
+        "ZM"
+      ],
+      "assignedCount": 37,
+      "activePoolMatchCounts": {
+        "1": 10,
+        "2": 29,
+        "3": 47
+      },
+      "decision": "acceptable-with-watch",
+      "use": "Clear relationship, but two relative-area checks require substantial map knowledge without locating a region.",
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "id": "geo-three-or-four-land-neighbours",
+      "text": "Has three or four land neighbours.",
+      "assignedCountryCodes": [
+        "AO",
+        "AM",
+        "BE",
+        "BJ",
+        "BA",
+        "BW",
+        "BI",
+        "KH",
+        "CL",
+        "CZ",
+        "DJ",
+        "EG",
+        "ER",
+        "FI",
+        "GA",
+        "GE",
+        "GH",
+        "GR",
+        "GT",
+        "GY",
+        "HN",
+        "ID",
+        "KG",
+        "LV",
+        "LR",
+        "LT",
+        "LU",
+        "MW",
+        "MX",
+        "NA",
+        "KP",
+        "NO",
+        "OM",
+        "PY",
+        "RW",
+        "SI",
+        "SO",
+        "SR",
+        "TJ",
+        "TH",
+        "TG",
+        "TM",
+        "VE",
+        "VN",
+        "ZW"
+      ],
+      "assignedCount": 45,
+      "activePoolMatchCounts": {
+        "1": 10,
+        "2": 29,
+        "3": 46
+      },
+      "decision": "keep",
+      "use": "A concrete border-count cue. Ranges avoid requiring an exact count; exact one/two is still simple when the border is familiar.",
+      "findingIds": []
+    },
+    {
+      "id": "geo-two-land-neighbours",
+      "text": "Has exactly two land neighbours.",
+      "assignedCountryCodes": [
+        "AD",
+        "BD",
+        "BZ",
+        "BT",
+        "EE",
+        "NP",
+        "TN"
+      ],
+      "assignedCount": 7,
+      "activePoolMatchCounts": {
+        "1": 3,
+        "2": 12,
+        "3": 26
+      },
+      "decision": "keep",
+      "use": "A concrete border-count cue. Ranges avoid requiring an exact count; exact one/two is still simple when the border is familiar.",
+      "findingIds": []
+    },
+    {
+      "id": "geo-un-location-eastern-europe",
+      "text": "In Eastern Europe.",
+      "assignedCountryCodes": [
+        "BG",
+        "RO"
+      ],
+      "assignedCount": 2,
+      "activePoolMatchCounts": {
+        "1": 3,
+        "2": 7,
+        "3": 10
+      },
+      "decision": "keep",
+      "use": "A plain regional location or island-location cue; the player can choose a sensible first region without decoding wordplay.",
+      "findingIds": []
+    },
+    {
+      "id": "geo-un-location-northern-africa",
+      "text": "In North Africa.",
+      "assignedCountryCodes": [
+        "DZ"
+      ],
+      "assignedCount": 1,
+      "activePoolMatchCounts": {
+        "1": 2,
+        "2": 6,
+        "3": 6
+      },
+      "decision": "keep",
+      "use": "A plain regional location or island-location cue; the player can choose a sensible first region without decoding wordplay.",
+      "findingIds": []
+    },
+    {
+      "id": "geo-un-location-northern-europe",
+      "text": "In Northern Europe.",
+      "assignedCountryCodes": [
+        "DK",
+        "IE",
+        "GB"
+      ],
+      "assignedCount": 3,
+      "activePoolMatchCounts": {
+        "1": 5,
+        "2": 8,
+        "3": 10
+      },
+      "decision": "keep",
+      "use": "A plain regional location or island-location cue; the player can choose a sensible first region without decoding wordplay.",
+      "findingIds": []
+    },
+    {
+      "id": "geo-un-location-south-america",
+      "text": "In South America.",
+      "assignedCountryCodes": [
+        "SR"
+      ],
+      "assignedCount": 1,
+      "activePoolMatchCounts": {
+        "1": 5,
+        "2": 10,
+        "3": 12
+      },
+      "decision": "keep",
+      "use": "A plain regional location or island-location cue; the player can choose a sensible first region without decoding wordplay.",
+      "findingIds": []
+    },
+    {
+      "id": "geo-un-location-south-eastern-asia",
+      "text": "In Southeast Asia.",
+      "assignedCountryCodes": [
+        "MY",
+        "PH",
+        "SG",
+        "VN"
+      ],
+      "assignedCount": 4,
+      "activePoolMatchCounts": {
+        "1": 6,
+        "2": 8,
+        "3": 11
+      },
+      "decision": "keep",
+      "use": "A plain regional location or island-location cue; the player can choose a sensible first region without decoding wordplay.",
+      "findingIds": []
+    },
+    {
+      "id": "geo-un-location-southern-asia",
+      "text": "In South Asia.",
+      "assignedCountryCodes": [
+        "AF",
+        "PK"
+      ],
+      "assignedCount": 2,
+      "activePoolMatchCounts": {
+        "1": 1,
+        "2": 7,
+        "3": 9
+      },
+      "decision": "keep",
+      "use": "A plain regional location or island-location cue; the player can choose a sensible first region without decoding wordplay.",
+      "findingIds": []
+    },
+    {
+      "id": "geo-un-location-southern-europe",
+      "text": "In Southern Europe.",
+      "assignedCountryCodes": [
+        "AL",
+        "ME",
+        "MK",
+        "PT",
+        "RS",
+        "ES"
+      ],
+      "assignedCount": 6,
+      "activePoolMatchCounts": {
+        "1": 4,
+        "2": 8,
+        "3": 15
+      },
+      "decision": "keep",
+      "use": "A plain regional location or island-location cue; the player can choose a sensible first region without decoding wordplay.",
+      "findingIds": [
+        "P2-easy-strength"
+      ]
+    },
+    {
+      "id": "geo-un-location-western-africa",
+      "text": "In West Africa.",
+      "assignedCountryCodes": [
+        "MR"
+      ],
+      "assignedCount": 1,
+      "activePoolMatchCounts": {
+        "1": 1,
+        "2": 3,
+        "3": 16
+      },
+      "decision": "keep",
+      "use": "A plain regional location or island-location cue; the player can choose a sensible first region without decoding wordplay.",
+      "findingIds": []
+    },
+    {
+      "id": "geo-un-location-western-asia",
+      "text": "In West Asia.",
+      "assignedCountryCodes": [
+        "IL",
+        "JO",
+        "LB",
+        "PS"
+      ],
+      "assignedCount": 4,
+      "activePoolMatchCounts": {
+        "1": 1,
+        "2": 13,
+        "3": 18
+      },
+      "decision": "keep",
+      "use": "A plain regional location or island-location cue; the player can choose a sensible first region without decoding wordplay.",
+      "findingIds": []
+    },
+    {
+      "id": "geo-un-location-western-europe",
+      "text": "In Western Europe.",
+      "assignedCountryCodes": [
+        "FR",
+        "NL",
+        "CH"
+      ],
+      "assignedCount": 3,
+      "activePoolMatchCounts": {
+        "1": 5,
+        "2": 6,
+        "3": 9
+      },
+      "decision": "keep",
+      "use": "A plain regional location or island-location cue; the player can choose a sensible first region without decoding wordplay.",
+      "findingIds": []
+    },
+    {
+      "id": "name-ends-consonant",
+      "text": "The name ends with a consonant.",
+      "assignedCountryCodes": [
+        "AF",
+        "AZ",
+        "BS",
+        "BH",
+        "BD",
+        "BB",
+        "BY",
+        "BE",
+        "BJ",
+        "BT",
+        "CM",
+        "CF",
+        "TD",
+        "KM",
+        "CY",
+        "DK",
+        "DO",
+        "EC",
+        "SV",
+        "FI",
+        "GA",
+        "DE",
+        "HN",
+        "HU",
+        "IS",
+        "IR",
+        "IQ",
+        "IE",
+        "IL",
+        "CI",
+        "JO",
+        "KZ",
+        "KW",
+        "KG",
+        "LA",
+        "LB",
+        "LI",
+        "LU",
+        "MG",
+        "MV",
+        "MH",
+        "MU",
+        "MM",
+        "NL",
+        "NZ",
+        "PH",
+        "PT",
+        "CH",
+        "TH",
+        "GB",
+        "US",
+        "VN"
+      ],
+      "assignedCount": 52,
+      "activePoolMatchCounts": {
+        "1": 20,
+        "2": 50,
+        "3": 80
+      },
+      "decision": "keep",
+      "use": "A direct spelling filter usable without obscure wordplay. Help defines the displayed name.",
+      "findingIds": [
+        "P3-visible-name"
+      ]
+    },
+    {
+      "id": "name-first-a-m",
+      "text": "First letter is not in the second half of the alphabet.",
+      "assignedCountryCodes": [
+        "AR",
+        "ID"
+      ],
+      "assignedCount": 2,
+      "activePoolMatchCounts": {
+        "1": 24,
+        "2": 63,
+        "3": 117
+      },
+      "decision": "optional-polish",
+      "use": "A useful mild alphabet-half filter, made unnecessarily indirect by a negative sentence.",
+      "findingIds": [
+        "P2-double-negative"
+      ]
+    },
+    {
+      "id": "name-first-n-z",
+      "text": "First letter comes after M.",
+      "assignedCountryCodes": [
+        "NA",
+        "NR",
+        "NP",
+        "NI",
+        "NE",
+        "NG",
+        "KP",
+        "MK",
+        "OM",
+        "PK",
+        "PW",
+        "PS",
+        "PA",
+        "PG",
+        "PY",
+        "QA",
+        "CG",
+        "RO",
+        "RW",
+        "KN",
+        "LC",
+        "VC",
+        "WS",
+        "SM",
+        "SA",
+        "SN",
+        "RS",
+        "SC",
+        "SL",
+        "SG",
+        "SK",
+        "SI",
+        "SB",
+        "SO",
+        "ZA",
+        "KR",
+        "SS",
+        "LK",
+        "SD",
+        "SR",
+        "SY",
+        "ST",
+        "TJ",
+        "TZ",
+        "TL",
+        "TG",
+        "TO",
+        "TT",
+        "TN",
+        "TM",
+        "TV",
+        "TR",
+        "UG",
+        "UA",
+        "AE",
+        "UY",
+        "UZ",
+        "VU",
+        "VA",
+        "VE",
+        "YE",
+        "ZM",
+        "ZW"
+      ],
+      "assignedCount": 63,
+      "activePoolMatchCounts": {
+        "1": 21,
+        "2": 47,
+        "3": 78
+      },
+      "decision": "keep",
+      "use": "A direct, mildly wicked alphabet-half filter, matching the user’s acceptable style.",
+      "findingIds": [
+        "P3-visible-name"
+      ]
+    },
+    {
+      "id": "name-has-e",
+      "text": "The name contains E.",
+      "assignedCountryCodes": [
+        "DZ",
+        "AM",
+        "BZ",
+        "BA",
+        "BN",
+        "CV",
+        "CZ",
+        "GQ",
+        "ER",
+        "EE",
+        "SZ",
+        "ET",
+        "GE",
+        "GD",
+        "GT",
+        "GN",
+        "LR",
+        "FM",
+        "MZ"
+      ],
+      "assignedCount": 19,
+      "activePoolMatchCounts": {
+        "1": 24,
+        "2": 51,
+        "3": 86
+      },
+      "decision": "keep",
+      "use": "A direct spelling filter usable without obscure wordplay. Help defines the displayed name.",
+      "findingIds": [
+        "P3-visible-name"
+      ]
+    },
+    {
+      "id": "name-has-o",
+      "text": "The name contains O.",
+      "assignedCountryCodes": [
+        "AD",
+        "BO",
+        "BW",
+        "KH",
+        "HR",
+        "DJ",
+        "DM",
+        "MD",
+        "MN"
+      ],
+      "assignedCount": 9,
+      "activePoolMatchCounts": {
+        "1": 12,
+        "2": 30,
+        "3": 65
+      },
+      "decision": "keep",
+      "use": "A direct spelling filter usable without obscure wordplay. Help defines the displayed name.",
+      "findingIds": [
+        "P3-visible-name"
+      ]
+    },
+    {
+      "id": "name-last-n-z",
+      "text": "The name ends with a letter from N to Z.",
+      "assignedCountryCodes": [
+        "BF",
+        "CD",
+        "GW",
+        "LS",
+        "MC",
+        "ME"
+      ],
+      "assignedCount": 6,
+      "activePoolMatchCounts": {
+        "1": 13,
+        "2": 35,
+        "3": 76
+      },
+      "decision": "acceptable-with-watch",
+      "use": "A clear last-letter half filter; more spelling work than an initial-letter hint, but not the rejected first-versus-last puzzle.",
+      "findingIds": [
+        "P3-last-alphabet-half"
+      ]
+    },
+    {
+      "id": "name-no-e",
+      "text": "The name contains no E.",
+      "assignedCountryCodes": [
+        "AL",
+        "AG",
+        "AU",
+        "AT",
+        "BG",
+        "BI",
+        "CO",
+        "CR",
+        "JM",
+        "KI",
+        "LT",
+        "MY",
+        "MR",
+        "MA"
+      ],
+      "assignedCount": 14,
+      "activePoolMatchCounts": {
+        "1": 21,
+        "2": 59,
+        "3": 109
+      },
+      "decision": "keep",
+      "use": "A direct spelling filter usable without obscure wordplay. Help defines the displayed name.",
+      "findingIds": [
+        "P3-visible-name"
+      ]
+    },
+    {
+      "id": "name-up-to-six",
+      "text": "The name has six letters or fewer.",
+      "assignedCountryCodes": [
+        "AO",
+        "BR",
+        "CA",
+        "CL",
+        "CN",
+        "CU",
+        "EG",
+        "FJ",
+        "FR",
+        "GM",
+        "GH",
+        "GR",
+        "GY",
+        "HT",
+        "IN",
+        "IT",
+        "JP",
+        "KE",
+        "LV",
+        "LY",
+        "MW",
+        "ML",
+        "MT",
+        "MX",
+        "NO",
+        "PE",
+        "PL",
+        "RU",
+        "ES",
+        "SE"
+      ],
+      "assignedCount": 30,
+      "activePoolMatchCounts": {
+        "1": 19,
+        "2": 36,
+        "3": 63
+      },
+      "decision": "keep",
+      "use": "A quick spelling/length filter; Help correctly excludes spaces and hyphens.",
+      "findingIds": [
+        "P3-visible-name"
+      ]
+    },
+    {
+      "id": "population-0-1000000",
+      "text": "Population below 1 million.",
+      "assignedCountryCodes": [
+        "AD",
+        "AG",
+        "BB",
+        "BN",
+        "CV",
+        "KM",
+        "DM",
+        "GD",
+        "KI",
+        "LI",
+        "LU",
+        "MV",
+        "MT",
+        "MH",
+        "FM",
+        "MC",
+        "NR",
+        "PW",
+        "KN",
+        "LC",
+        "VC",
+        "WS",
+        "SM",
+        "SC",
+        "ST",
+        "TO",
+        "TV",
+        "VA"
+      ],
+      "assignedCount": 28,
+      "activePoolMatchCounts": {
+        "1": 0,
+        "2": 1,
+        "3": 38
+      },
+      "decision": "keep",
+      "use": "An intuitive small-population cue for Hard answers; it suggests small states without identifying one.",
+      "findingIds": []
+    },
+    {
+      "id": "population-1000000-10000000",
+      "text": "Population from 1 million to under 10 million.",
+      "assignedCountryCodes": [
+        "AL",
+        "AM",
+        "AT",
+        "BH",
+        "BY",
+        "BA",
+        "BW",
+        "CF",
+        "CR",
+        "HR",
+        "CY",
+        "DK",
+        "DJ",
+        "SV",
+        "GQ",
+        "ER",
+        "EE",
+        "SZ",
+        "GA",
+        "GM",
+        "GE",
+        "GW",
+        "HU",
+        "IE",
+        "JM",
+        "KW",
+        "KG",
+        "LA",
+        "LV",
+        "LB",
+        "LS",
+        "LR",
+        "LY",
+        "LT",
+        "MR",
+        "MU",
+        "MD",
+        "MN",
+        "NA",
+        "NI",
+        "MK",
+        "PS",
+        "PA",
+        "QA",
+        "CG",
+        "RS",
+        "SL",
+        "SG",
+        "SK",
+        "SI",
+        "CH",
+        "TL",
+        "TG",
+        "TT",
+        "TM"
+      ],
+      "assignedCount": 55,
+      "activePoolMatchCounts": {
+        "1": 8,
+        "2": 30,
+        "3": 62
+      },
+      "decision": "keep",
+      "use": "An approximate size cue that supports the existing population comparison mechanic, though a novice may not know which opening countries fit.",
+      "findingIds": [
+        "P3-numeric-copy"
+      ]
+    },
+    {
+      "id": "population-10000000-50000000",
+      "text": "Population from 10 million to under 50 million.",
+      "assignedCountryCodes": [
+        "AF",
+        "DZ",
+        "AO",
+        "AR",
+        "AU",
+        "AZ",
+        "BE",
+        "BJ",
+        "BO",
+        "BF",
+        "BI",
+        "KH",
+        "CM",
+        "CA",
+        "TD",
+        "CL",
+        "CZ",
+        "DO",
+        "EC",
+        "GH",
+        "GT",
+        "GN",
+        "HT",
+        "HN",
+        "IQ",
+        "IL",
+        "CI",
+        "JO",
+        "KZ",
+        "MG",
+        "MW",
+        "ML",
+        "MZ",
+        "NP",
+        "NL",
+        "NE",
+        "KP",
+        "PG",
+        "PE",
+        "PT",
+        "RO",
+        "RW",
+        "SA",
+        "SN",
+        "SO",
+        "SS",
+        "LK",
+        "SY",
+        "TJ",
+        "TN",
+        "UA",
+        "AE",
+        "UZ",
+        "VE",
+        "YE",
+        "ZM",
+        "ZW"
+      ],
+      "assignedCount": 57,
+      "activePoolMatchCounts": {
+        "1": 15,
+        "2": 49,
+        "3": 64
+      },
+      "decision": "keep",
+      "use": "An approximate size cue that supports the existing population comparison mechanic, though a novice may not know which opening countries fit.",
+      "findingIds": [
+        "P3-numeric-copy"
+      ]
+    },
+    {
+      "id": "population-50000000-150000000",
+      "text": "Population from 50 million to under 150 million.",
+      "assignedCountryCodes": [
+        "CO",
+        "CD",
+        "EG",
+        "FR",
+        "IR",
+        "KE",
+        "MX",
+        "RU",
+        "ZA",
+        "KR",
+        "SD",
+        "TH",
+        "TR"
+      ],
+      "assignedCount": 13,
+      "activePoolMatchCounts": {
+        "1": 16,
+        "2": 22,
+        "3": 23
+      },
+      "decision": "keep",
+      "use": "An approximate size cue that supports the existing population comparison mechanic, though a novice may not know which opening countries fit.",
+      "findingIds": [
+        "P3-numeric-copy"
+      ]
+    }
+  ],
+  "countryReviews": [
+    {
+      "code": "AF",
+      "name": "Afghanistan",
+      "startingTier": 2,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-no-ocean-coast",
+        "geo-un-location-southern-asia"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "AL",
+      "name": "Albania",
+      "startingTier": 2,
+      "hintIds": [
+        "name-no-e",
+        "population-1000000-10000000",
+        "geo-mediterranean-coast",
+        "geo-un-location-southern-europe"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "DZ",
+      "name": "Algeria",
+      "startingTier": 2,
+      "hintIds": [
+        "name-has-e",
+        "population-10000000-50000000",
+        "geo-mediterranean-coast",
+        "geo-un-location-northern-africa"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "AD",
+      "name": "Andorra",
+      "startingTier": 3,
+      "hintIds": [
+        "name-has-o",
+        "population-0-1000000",
+        "geo-no-ocean-coast",
+        "geo-two-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "AO",
+      "name": "Angola",
+      "startingTier": 2,
+      "hintIds": [
+        "name-up-to-six",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "GH"
+      ]
+    },
+    {
+      "code": "AG",
+      "name": "Antigua and Barbuda",
+      "startingTier": 3,
+      "hintIds": [
+        "name-no-e",
+        "population-0-1000000",
+        "geo-no-land-neighbours",
+        "geo-island-country"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-island-overlap"
+      ]
+    },
+    {
+      "code": "AR",
+      "name": "Argentina",
+      "startingTier": 1,
+      "hintIds": [
+        "name-first-a-m",
+        "population-10000000-50000000",
+        "geo-atlantic-coast",
+        "geo-at-least-one-smaller-land-neighbour"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-double-negative",
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "AM",
+      "name": "Armenia",
+      "startingTier": 2,
+      "hintIds": [
+        "name-has-e",
+        "population-1000000-10000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-no-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "AU",
+      "name": "Australia",
+      "startingTier": 1,
+      "hintIds": [
+        "name-no-e",
+        "population-10000000-50000000",
+        "geo-indian-ocean-coast",
+        "geo-no-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas"
+      ]
+    },
+    {
+      "code": "AT",
+      "name": "Austria",
+      "startingTier": 1,
+      "hintIds": [
+        "name-no-e",
+        "population-1000000-10000000",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-neighbour-in-europe"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "AZ",
+      "name": "Azerbaijan",
+      "startingTier": 2,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-five-or-six-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "CM"
+      ]
+    },
+    {
+      "code": "BS",
+      "name": "Bahamas",
+      "startingTier": 3,
+      "hintIds": [
+        "name-ends-consonant",
+        "area-10000-100000",
+        "geo-no-land-neighbours",
+        "geo-island-country"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-island-overlap"
+      ]
+    },
+    {
+      "code": "BH",
+      "name": "Bahrain",
+      "startingTier": 3,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-indian-ocean-coast",
+        "geo-island-country"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas"
+      ]
+    },
+    {
+      "code": "BD",
+      "name": "Bangladesh",
+      "startingTier": 2,
+      "hintIds": [
+        "name-ends-consonant",
+        "area-100000-500000",
+        "geo-indian-ocean-coast",
+        "geo-two-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas"
+      ]
+    },
+    {
+      "code": "BB",
+      "name": "Barbados",
+      "startingTier": 3,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-0-1000000",
+        "geo-no-land-neighbours",
+        "geo-island-country"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-island-overlap"
+      ]
+    },
+    {
+      "code": "BY",
+      "name": "Belarus",
+      "startingTier": 3,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-no-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "CF"
+      ]
+    },
+    {
+      "code": "BE",
+      "name": "Belgium",
+      "startingTier": 2,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-north-sea-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "BZ",
+      "name": "Belize",
+      "startingTier": 3,
+      "hintIds": [
+        "name-has-e",
+        "area-10000-100000",
+        "geo-all-larger-land-neighbours",
+        "geo-two-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "BJ",
+      "name": "Benin",
+      "startingTier": 3,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "HN"
+      ]
+    },
+    {
+      "code": "BT",
+      "name": "Bhutan",
+      "startingTier": 3,
+      "hintIds": [
+        "name-ends-consonant",
+        "area-10000-100000",
+        "geo-no-ocean-coast",
+        "geo-two-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "BO",
+      "name": "Bolivia",
+      "startingTier": 2,
+      "hintIds": [
+        "name-has-o",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-five-or-six-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "BA",
+      "name": "Bosnia and Herzegovina",
+      "startingTier": 2,
+      "hintIds": [
+        "name-has-e",
+        "population-1000000-10000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-mediterranean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "BW",
+      "name": "Botswana",
+      "startingTier": 2,
+      "hintIds": [
+        "name-has-o",
+        "population-1000000-10000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "BR",
+      "name": "Brazil",
+      "startingTier": 1,
+      "hintIds": [
+        "name-up-to-six",
+        "area-1500000-plus",
+        "geo-atlantic-coast",
+        "geo-seven-or-more-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "BN",
+      "name": "Brunei",
+      "startingTier": 3,
+      "hintIds": [
+        "name-has-e",
+        "population-0-1000000",
+        "geo-island-country",
+        "geo-one-land-neighbour"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-shared-island"
+      ]
+    },
+    {
+      "code": "BG",
+      "name": "Bulgaria",
+      "startingTier": 2,
+      "hintIds": [
+        "name-no-e",
+        "area-100000-500000",
+        "geo-five-or-six-land-neighbours",
+        "geo-un-location-eastern-europe"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "BF",
+      "name": "Burkina Faso",
+      "startingTier": 3,
+      "hintIds": [
+        "name-last-n-z",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-no-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort",
+        "P3-last-alphabet-half"
+      ]
+    },
+    {
+      "code": "BI",
+      "name": "Burundi",
+      "startingTier": 3,
+      "hintIds": [
+        "name-no-e",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "KH",
+      "name": "Cambodia",
+      "startingTier": 2,
+      "hintIds": [
+        "name-has-o",
+        "population-10000000-50000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-pacific-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "CM",
+      "name": "Cameroon",
+      "startingTier": 2,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-five-or-six-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "AZ"
+      ]
+    },
+    {
+      "code": "CA",
+      "name": "Canada",
+      "startingTier": 1,
+      "hintIds": [
+        "name-up-to-six",
+        "population-10000000-50000000",
+        "geo-north-america",
+        "geo-pacific-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "CV",
+      "name": "Cape Verde",
+      "startingTier": 3,
+      "hintIds": [
+        "name-has-e",
+        "population-0-1000000",
+        "geo-no-land-neighbours",
+        "geo-atlantic-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P3-visible-name"
+      ]
+    },
+    {
+      "code": "CF",
+      "name": "Central African Republic",
+      "startingTier": 3,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-no-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "BY"
+      ]
+    },
+    {
+      "code": "TD",
+      "name": "Chad",
+      "startingTier": 3,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-no-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "CL",
+      "name": "Chile",
+      "startingTier": 1,
+      "hintIds": [
+        "name-up-to-six",
+        "population-10000000-50000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-at-least-one-larger-land-neighbour"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "CN",
+      "name": "China",
+      "startingTier": 1,
+      "hintIds": [
+        "name-up-to-six",
+        "area-1500000-plus",
+        "geo-seven-or-more-land-neighbours",
+        "geo-pacific-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "CO",
+      "name": "Colombia",
+      "startingTier": 1,
+      "hintIds": [
+        "name-no-e",
+        "population-50000000-150000000",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-five-or-six-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "KM",
+      "name": "Comoros",
+      "startingTier": 3,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-0-1000000",
+        "geo-no-land-neighbours",
+        "geo-indian-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "MV"
+      ]
+    },
+    {
+      "code": "CR",
+      "name": "Costa Rica",
+      "startingTier": 1,
+      "hintIds": [
+        "name-no-e",
+        "population-1000000-10000000",
+        "geo-at-least-one-larger-land-neighbour",
+        "geo-all-neighbours-in-americas"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "HR",
+      "name": "Croatia",
+      "startingTier": 3,
+      "hintIds": [
+        "name-has-o",
+        "population-1000000-10000000",
+        "geo-five-or-six-land-neighbours",
+        "geo-mediterranean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "CU",
+      "name": "Cuba",
+      "startingTier": 1,
+      "hintIds": [
+        "name-up-to-six",
+        "area-100000-500000",
+        "geo-atlantic-coast",
+        "geo-north-america"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-north-america"
+      ]
+    },
+    {
+      "code": "CY",
+      "name": "Cyprus",
+      "startingTier": 3,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-island-country",
+        "geo-mediterranean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "CZ",
+      "name": "Czechia",
+      "startingTier": 2,
+      "hintIds": [
+        "name-has-e",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "GT"
+      ]
+    },
+    {
+      "code": "CD",
+      "name": "DR Congo",
+      "startingTier": 3,
+      "hintIds": [
+        "name-last-n-z",
+        "population-50000000-150000000",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-all-neighbours-in-africa"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort",
+        "P3-last-alphabet-half",
+        "P3-visible-name"
+      ]
+    },
+    {
+      "code": "DK",
+      "name": "Denmark",
+      "startingTier": 2,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-un-location-northern-europe",
+        "geo-baltic-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "DJ",
+      "name": "Djibouti",
+      "startingTier": 3,
+      "hintIds": [
+        "name-has-o",
+        "population-1000000-10000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-all-neighbours-in-africa"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "DM",
+      "name": "Dominica",
+      "startingTier": 3,
+      "hintIds": [
+        "name-has-o",
+        "population-0-1000000",
+        "geo-no-land-neighbours",
+        "geo-island-country"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-island-overlap"
+      ]
+    },
+    {
+      "code": "DO",
+      "name": "Dominican Republic",
+      "startingTier": 2,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-all-neighbours-in-americas"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "EC",
+      "name": "Ecuador",
+      "startingTier": 2,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-pacific-coast",
+        "geo-all-larger-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "EG",
+      "name": "Egypt",
+      "startingTier": 1,
+      "hintIds": [
+        "name-up-to-six",
+        "population-50000000-150000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-indian-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas"
+      ]
+    },
+    {
+      "code": "SV",
+      "name": "El Salvador",
+      "startingTier": 3,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-pacific-coast",
+        "geo-all-larger-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "GQ",
+      "name": "Equatorial Guinea",
+      "startingTier": 3,
+      "hintIds": [
+        "name-has-e",
+        "population-1000000-10000000",
+        "geo-all-neighbours-in-africa",
+        "geo-all-larger-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "ER",
+      "name": "Eritrea",
+      "startingTier": 3,
+      "hintIds": [
+        "name-has-e",
+        "population-1000000-10000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "GE",
+        "LR"
+      ]
+    },
+    {
+      "code": "EE",
+      "name": "Estonia",
+      "startingTier": 3,
+      "hintIds": [
+        "name-has-e",
+        "population-1000000-10000000",
+        "geo-all-larger-land-neighbours",
+        "geo-two-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "SZ",
+      "name": "Eswatini",
+      "startingTier": 3,
+      "hintIds": [
+        "name-has-e",
+        "population-1000000-10000000",
+        "geo-no-ocean-coast",
+        "geo-all-neighbours-in-africa"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "ET",
+      "name": "Ethiopia",
+      "startingTier": 2,
+      "hintIds": [
+        "name-has-e",
+        "area-500000-1500000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-five-or-six-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "FJ",
+      "name": "Fiji",
+      "startingTier": 3,
+      "hintIds": [
+        "name-up-to-six",
+        "area-10000-100000",
+        "geo-pacific-coast",
+        "geo-no-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "FI",
+      "name": "Finland",
+      "startingTier": 1,
+      "hintIds": [
+        "name-ends-consonant",
+        "area-100000-500000",
+        "geo-three-or-four-land-neighbours",
+        "geo-at-least-one-larger-land-neighbour"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "FR",
+      "name": "France",
+      "startingTier": 1,
+      "hintIds": [
+        "name-up-to-six",
+        "population-50000000-150000000",
+        "geo-atlantic-coast",
+        "geo-un-location-western-europe"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "GA",
+      "name": "Gabon",
+      "startingTier": 3,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "GM",
+      "name": "Gambia",
+      "startingTier": 3,
+      "hintIds": [
+        "name-up-to-six",
+        "population-1000000-10000000",
+        "geo-all-neighbours-in-africa",
+        "geo-all-larger-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "GE",
+      "name": "Georgia",
+      "startingTier": 2,
+      "hintIds": [
+        "name-has-e",
+        "population-1000000-10000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "ER",
+        "LR"
+      ]
+    },
+    {
+      "code": "DE",
+      "name": "Germany",
+      "startingTier": 1,
+      "hintIds": [
+        "name-ends-consonant",
+        "area-100000-500000",
+        "geo-seven-or-more-land-neighbours",
+        "geo-baltic-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "GH",
+      "name": "Ghana",
+      "startingTier": 2,
+      "hintIds": [
+        "name-up-to-six",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "AO"
+      ]
+    },
+    {
+      "code": "GR",
+      "name": "Greece",
+      "startingTier": 1,
+      "hintIds": [
+        "name-up-to-six",
+        "area-100000-500000",
+        "geo-three-or-four-land-neighbours",
+        "geo-mediterranean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "GD",
+      "name": "Grenada",
+      "startingTier": 3,
+      "hintIds": [
+        "name-has-e",
+        "population-0-1000000",
+        "geo-no-land-neighbours",
+        "geo-island-country"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-island-overlap"
+      ]
+    },
+    {
+      "code": "GT",
+      "name": "Guatemala",
+      "startingTier": 2,
+      "hintIds": [
+        "name-has-e",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "CZ"
+      ]
+    },
+    {
+      "code": "GN",
+      "name": "Guinea",
+      "startingTier": 3,
+      "hintIds": [
+        "name-has-e",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-all-neighbours-in-africa"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "MZ"
+      ]
+    },
+    {
+      "code": "GW",
+      "name": "Guinea-Bissau",
+      "startingTier": 3,
+      "hintIds": [
+        "name-last-n-z",
+        "population-1000000-10000000",
+        "geo-all-neighbours-in-africa",
+        "geo-all-larger-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P3-last-alphabet-half"
+      ]
+    },
+    {
+      "code": "GY",
+      "name": "Guyana",
+      "startingTier": 3,
+      "hintIds": [
+        "name-up-to-six",
+        "area-100000-500000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "HT",
+      "name": "Haiti",
+      "startingTier": 2,
+      "hintIds": [
+        "name-up-to-six",
+        "population-10000000-50000000",
+        "geo-all-larger-land-neighbours",
+        "geo-all-neighbours-in-americas"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "HN",
+      "name": "Honduras",
+      "startingTier": 2,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "BJ"
+      ]
+    },
+    {
+      "code": "HU",
+      "name": "Hungary",
+      "startingTier": 2,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-no-ocean-coast",
+        "geo-seven-or-more-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "IS",
+      "name": "Iceland",
+      "startingTier": 2,
+      "hintIds": [
+        "name-ends-consonant",
+        "area-100000-500000",
+        "geo-atlantic-coast",
+        "geo-no-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "IN",
+      "name": "India",
+      "startingTier": 1,
+      "hintIds": [
+        "name-up-to-six",
+        "area-1500000-plus",
+        "geo-indian-ocean-coast",
+        "geo-region-asia"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas"
+      ]
+    },
+    {
+      "code": "ID",
+      "name": "Indonesia",
+      "startingTier": 1,
+      "hintIds": [
+        "name-first-a-m",
+        "area-1500000-plus",
+        "geo-three-or-four-land-neighbours",
+        "geo-indian-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas",
+        "P2-double-negative"
+      ]
+    },
+    {
+      "code": "IR",
+      "name": "Iran",
+      "startingTier": 2,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-50000000-150000000",
+        "geo-indian-ocean-coast",
+        "geo-seven-or-more-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas"
+      ]
+    },
+    {
+      "code": "IQ",
+      "name": "Iraq",
+      "startingTier": 2,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-indian-ocean-coast",
+        "geo-five-or-six-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas"
+      ]
+    },
+    {
+      "code": "IE",
+      "name": "Ireland",
+      "startingTier": 1,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-atlantic-coast",
+        "geo-un-location-northern-europe"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "IL",
+      "name": "Israel",
+      "startingTier": 2,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-indian-ocean-coast",
+        "geo-un-location-western-asia"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "JO"
+      ]
+    },
+    {
+      "code": "IT",
+      "name": "Italy",
+      "startingTier": 1,
+      "hintIds": [
+        "name-up-to-six",
+        "area-100000-500000",
+        "geo-five-or-six-land-neighbours",
+        "geo-mediterranean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "CI",
+      "name": "Ivory Coast",
+      "startingTier": 3,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-all-neighbours-in-africa"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort",
+        "P3-visible-name"
+      ]
+    },
+    {
+      "code": "JM",
+      "name": "Jamaica",
+      "startingTier": 2,
+      "hintIds": [
+        "name-no-e",
+        "population-1000000-10000000",
+        "geo-north-america",
+        "geo-no-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-north-america"
+      ]
+    },
+    {
+      "code": "JP",
+      "name": "Japan",
+      "startingTier": 1,
+      "hintIds": [
+        "name-up-to-six",
+        "area-100000-500000",
+        "geo-pacific-coast",
+        "geo-island-country-asia"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-easy-strength"
+      ]
+    },
+    {
+      "code": "JO",
+      "name": "Jordan",
+      "startingTier": 2,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-indian-ocean-coast",
+        "geo-un-location-western-asia"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "IL"
+      ]
+    },
+    {
+      "code": "KZ",
+      "name": "Kazakhstan",
+      "startingTier": 2,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-five-or-six-land-neighbours",
+        "geo-no-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "KE",
+      "name": "Kenya",
+      "startingTier": 1,
+      "hintIds": [
+        "name-up-to-six",
+        "population-50000000-150000000",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-indian-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas",
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "KI",
+      "name": "Kiribati",
+      "startingTier": 3,
+      "hintIds": [
+        "name-no-e",
+        "population-0-1000000",
+        "geo-pacific-coast",
+        "geo-no-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "KW",
+      "name": "Kuwait",
+      "startingTier": 3,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-all-larger-land-neighbours",
+        "geo-indian-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas"
+      ]
+    },
+    {
+      "code": "KG",
+      "name": "Kyrgyzstan",
+      "startingTier": 3,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-no-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "LA",
+      "name": "Laos",
+      "startingTier": 3,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-no-ocean-coast",
+        "geo-five-or-six-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "LV",
+      "name": "Latvia",
+      "startingTier": 3,
+      "hintIds": [
+        "name-up-to-six",
+        "population-1000000-10000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "LB",
+      "name": "Lebanon",
+      "startingTier": 2,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-mediterranean-coast",
+        "geo-un-location-western-asia"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "LS",
+      "name": "Lesotho",
+      "startingTier": 3,
+      "hintIds": [
+        "name-last-n-z",
+        "population-1000000-10000000",
+        "geo-no-ocean-coast",
+        "geo-all-neighbours-in-africa"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P3-last-alphabet-half"
+      ]
+    },
+    {
+      "code": "LR",
+      "name": "Liberia",
+      "startingTier": 3,
+      "hintIds": [
+        "name-has-e",
+        "population-1000000-10000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "ER",
+        "GE"
+      ]
+    },
+    {
+      "code": "LY",
+      "name": "Libya",
+      "startingTier": 2,
+      "hintIds": [
+        "name-up-to-six",
+        "population-1000000-10000000",
+        "geo-five-or-six-land-neighbours",
+        "geo-mediterranean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "LI",
+      "name": "Liechtenstein",
+      "startingTier": 3,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-0-1000000",
+        "geo-no-ocean-coast",
+        "geo-all-larger-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "LT",
+      "name": "Lithuania",
+      "startingTier": 2,
+      "hintIds": [
+        "name-no-e",
+        "population-1000000-10000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "LU",
+      "name": "Luxembourg",
+      "startingTier": 3,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-0-1000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-no-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "MG",
+      "name": "Madagascar",
+      "startingTier": 2,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-indian-ocean-coast",
+        "geo-no-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas"
+      ]
+    },
+    {
+      "code": "MW",
+      "name": "Malawi",
+      "startingTier": 3,
+      "hintIds": [
+        "name-up-to-six",
+        "population-10000000-50000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-no-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "MY",
+      "name": "Malaysia",
+      "startingTier": 1,
+      "hintIds": [
+        "name-no-e",
+        "area-100000-500000",
+        "geo-indian-ocean-coast",
+        "geo-un-location-south-eastern-asia"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas"
+      ]
+    },
+    {
+      "code": "MV",
+      "name": "Maldives",
+      "startingTier": 3,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-0-1000000",
+        "geo-no-land-neighbours",
+        "geo-indian-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "KM"
+      ]
+    },
+    {
+      "code": "ML",
+      "name": "Mali",
+      "startingTier": 3,
+      "hintIds": [
+        "name-up-to-six",
+        "population-10000000-50000000",
+        "geo-no-ocean-coast",
+        "geo-seven-or-more-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "MT",
+      "name": "Malta",
+      "startingTier": 3,
+      "hintIds": [
+        "name-up-to-six",
+        "population-0-1000000",
+        "geo-no-land-neighbours",
+        "geo-island-country"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-island-overlap"
+      ]
+    },
+    {
+      "code": "MH",
+      "name": "Marshall Islands",
+      "startingTier": 3,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-0-1000000",
+        "geo-pacific-coast",
+        "geo-no-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "MR",
+      "name": "Mauritania",
+      "startingTier": 3,
+      "hintIds": [
+        "name-no-e",
+        "population-1000000-10000000",
+        "geo-atlantic-coast",
+        "geo-un-location-western-africa"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "MU",
+      "name": "Mauritius",
+      "startingTier": 2,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-indian-ocean-coast",
+        "geo-no-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas"
+      ]
+    },
+    {
+      "code": "MX",
+      "name": "Mexico",
+      "startingTier": 1,
+      "hintIds": [
+        "name-up-to-six",
+        "population-50000000-150000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-north-america"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "FM",
+      "name": "Micronesia",
+      "startingTier": 3,
+      "hintIds": [
+        "name-has-e",
+        "population-0-1000000",
+        "geo-pacific-coast",
+        "geo-no-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "MD",
+      "name": "Moldova",
+      "startingTier": 3,
+      "hintIds": [
+        "name-has-o",
+        "population-1000000-10000000",
+        "geo-no-ocean-coast",
+        "geo-all-larger-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "MC",
+      "name": "Monaco",
+      "startingTier": 3,
+      "hintIds": [
+        "name-last-n-z",
+        "population-0-1000000",
+        "geo-mediterranean-coast",
+        "geo-one-land-neighbour"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P3-last-alphabet-half"
+      ]
+    },
+    {
+      "code": "MN",
+      "name": "Mongolia",
+      "startingTier": 2,
+      "hintIds": [
+        "name-has-o",
+        "population-1000000-10000000",
+        "geo-no-ocean-coast",
+        "geo-neighbour-in-europe"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-neighbour-continent"
+      ]
+    },
+    {
+      "code": "ME",
+      "name": "Montenegro",
+      "startingTier": 3,
+      "hintIds": [
+        "name-last-n-z",
+        "area-10000-100000",
+        "geo-mediterranean-coast",
+        "geo-un-location-southern-europe"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P3-last-alphabet-half"
+      ]
+    },
+    {
+      "code": "MA",
+      "name": "Morocco",
+      "startingTier": 1,
+      "hintIds": [
+        "name-no-e",
+        "area-100000-500000",
+        "geo-atlantic-coast",
+        "geo-region-africa"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "MZ",
+      "name": "Mozambique",
+      "startingTier": 3,
+      "hintIds": [
+        "name-has-e",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-all-neighbours-in-africa"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "GN"
+      ]
+    },
+    {
+      "code": "MM",
+      "name": "Myanmar",
+      "startingTier": 2,
+      "hintIds": [
+        "name-ends-consonant",
+        "area-500000-1500000",
+        "geo-indian-ocean-coast",
+        "geo-five-or-six-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas"
+      ]
+    },
+    {
+      "code": "NA",
+      "name": "Namibia",
+      "startingTier": 2,
+      "hintIds": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "NR",
+      "name": "Nauru",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-0-1000000",
+        "geo-pacific-coast",
+        "geo-no-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "PW",
+        "WS",
+        "TO",
+        "TV"
+      ]
+    },
+    {
+      "code": "NP",
+      "name": "Nepal",
+      "startingTier": 2,
+      "hintIds": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-no-ocean-coast",
+        "geo-two-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "NL",
+      "name": "Netherlands",
+      "startingTier": 1,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-north-sea-coast",
+        "geo-un-location-western-europe"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "NZ",
+      "name": "New Zealand",
+      "startingTier": 1,
+      "hintIds": [
+        "name-ends-consonant",
+        "area-100000-500000",
+        "geo-pacific-coast",
+        "geo-no-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "NI",
+      "name": "Nicaragua",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-pacific-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "NE",
+      "name": "Niger",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-no-ocean-coast",
+        "geo-seven-or-more-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "NG",
+      "name": "Nigeria",
+      "startingTier": 1,
+      "hintIds": [
+        "name-first-n-z",
+        "area-500000-1500000",
+        "geo-atlantic-coast",
+        "geo-at-least-one-smaller-land-neighbour"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "KP",
+      "name": "North Korea",
+      "startingTier": 2,
+      "hintIds": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-neighbour-in-europe"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-neighbour-continent"
+      ]
+    },
+    {
+      "code": "MK",
+      "name": "North Macedonia",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-no-ocean-coast",
+        "geo-un-location-southern-europe"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "RS"
+      ]
+    },
+    {
+      "code": "NO",
+      "name": "Norway",
+      "startingTier": 1,
+      "hintIds": [
+        "name-up-to-six",
+        "area-100000-500000",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-three-or-four-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "OM",
+      "name": "Oman",
+      "startingTier": 2,
+      "hintIds": [
+        "name-first-n-z",
+        "area-100000-500000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "PK",
+      "name": "Pakistan",
+      "startingTier": 2,
+      "hintIds": [
+        "name-first-n-z",
+        "area-500000-1500000",
+        "geo-indian-ocean-coast",
+        "geo-un-location-southern-asia"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas"
+      ]
+    },
+    {
+      "code": "PW",
+      "name": "Palau",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-0-1000000",
+        "geo-pacific-coast",
+        "geo-no-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "NR",
+        "WS",
+        "TO",
+        "TV"
+      ]
+    },
+    {
+      "code": "PS",
+      "name": "Palestine",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-mediterranean-coast",
+        "geo-un-location-western-asia"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "PA",
+      "name": "Panama",
+      "startingTier": 2,
+      "hintIds": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-pacific-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "PG",
+      "name": "Papua New Guinea",
+      "startingTier": 2,
+      "hintIds": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-all-larger-land-neighbours",
+        "geo-neighbour-in-asia"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-neighbour-continent"
+      ]
+    },
+    {
+      "code": "PY",
+      "name": "Paraguay",
+      "startingTier": 2,
+      "hintIds": [
+        "name-first-n-z",
+        "area-100000-500000",
+        "geo-three-or-four-land-neighbours",
+        "geo-no-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "PE",
+      "name": "Peru",
+      "startingTier": 1,
+      "hintIds": [
+        "name-up-to-six",
+        "population-10000000-50000000",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-five-or-six-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "PH",
+      "name": "Philippines",
+      "startingTier": 1,
+      "hintIds": [
+        "name-ends-consonant",
+        "area-100000-500000",
+        "geo-un-location-south-eastern-asia",
+        "geo-pacific-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "PL",
+      "name": "Poland",
+      "startingTier": 1,
+      "hintIds": [
+        "name-up-to-six",
+        "area-100000-500000",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-neighbour-in-europe"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "SE"
+      ]
+    },
+    {
+      "code": "PT",
+      "name": "Portugal",
+      "startingTier": 1,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-atlantic-coast",
+        "geo-un-location-southern-europe"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-easy-strength"
+      ]
+    },
+    {
+      "code": "QA",
+      "name": "Qatar",
+      "startingTier": 2,
+      "hintIds": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-indian-ocean-coast",
+        "geo-all-larger-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas"
+      ]
+    },
+    {
+      "code": "CG",
+      "name": "Republic of the Congo",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-all-neighbours-in-africa"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort",
+        "P3-visible-name"
+      ]
+    },
+    {
+      "code": "RO",
+      "name": "Romania",
+      "startingTier": 2,
+      "hintIds": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-five-or-six-land-neighbours",
+        "geo-un-location-eastern-europe"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "RU",
+      "name": "Russia",
+      "startingTier": 1,
+      "hintIds": [
+        "name-up-to-six",
+        "population-50000000-150000000",
+        "geo-neighbour-in-europe",
+        "geo-seven-or-more-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "RW",
+      "name": "Rwanda",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-no-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "TJ",
+        "ZW"
+      ]
+    },
+    {
+      "code": "KN",
+      "name": "Saint Kitts and Nevis",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-0-1000000",
+        "geo-no-land-neighbours",
+        "geo-island-country"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-island-overlap",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "LC",
+        "VC"
+      ]
+    },
+    {
+      "code": "LC",
+      "name": "Saint Lucia",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-0-1000000",
+        "geo-no-land-neighbours",
+        "geo-island-country"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-island-overlap",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "KN",
+        "VC"
+      ]
+    },
+    {
+      "code": "VC",
+      "name": "Saint Vincent and the Grenadines",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-0-1000000",
+        "geo-no-land-neighbours",
+        "geo-island-country"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-island-overlap",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "KN",
+        "LC"
+      ]
+    },
+    {
+      "code": "WS",
+      "name": "Samoa",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-0-1000000",
+        "geo-pacific-coast",
+        "geo-no-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "NR",
+        "PW",
+        "TO",
+        "TV"
+      ]
+    },
+    {
+      "code": "SM",
+      "name": "San Marino",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-0-1000000",
+        "geo-no-ocean-coast",
+        "geo-all-larger-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "VA"
+      ]
+    },
+    {
+      "code": "SA",
+      "name": "Saudi Arabia",
+      "startingTier": 2,
+      "hintIds": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-indian-ocean-coast",
+        "geo-seven-or-more-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas"
+      ]
+    },
+    {
+      "code": "SN",
+      "name": "Senegal",
+      "startingTier": 2,
+      "hintIds": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-five-or-six-land-neighbours",
+        "geo-atlantic-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "RS",
+      "name": "Serbia",
+      "startingTier": 2,
+      "hintIds": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-no-ocean-coast",
+        "geo-un-location-southern-europe"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "MK"
+      ]
+    },
+    {
+      "code": "SC",
+      "name": "Seychelles",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-0-1000000",
+        "geo-no-land-neighbours",
+        "geo-indian-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas"
+      ]
+    },
+    {
+      "code": "SL",
+      "name": "Sierra Leone",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-all-neighbours-in-africa",
+        "geo-all-larger-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "SG",
+      "name": "Singapore",
+      "startingTier": 1,
+      "hintIds": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-un-location-south-eastern-asia",
+        "geo-island-country-asia"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-easy-strength"
+      ]
+    },
+    {
+      "code": "SK",
+      "name": "Slovakia",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-no-ocean-coast",
+        "geo-all-larger-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "SI",
+      "name": "Slovenia",
+      "startingTier": 2,
+      "hintIds": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-mediterranean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "SB",
+      "name": "Solomon Islands",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "area-10000-100000",
+        "geo-pacific-coast",
+        "geo-no-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "VU"
+      ]
+    },
+    {
+      "code": "SO",
+      "name": "Somalia",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "VE"
+      ]
+    },
+    {
+      "code": "ZA",
+      "name": "South Africa",
+      "startingTier": 1,
+      "hintIds": [
+        "name-first-n-z",
+        "population-50000000-150000000",
+        "geo-atlantic-coast",
+        "geo-at-least-one-smaller-land-neighbour"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "KR",
+      "name": "South Korea",
+      "startingTier": 1,
+      "hintIds": [
+        "name-first-n-z",
+        "population-50000000-150000000",
+        "geo-at-least-one-larger-land-neighbour",
+        "geo-pacific-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "SS",
+      "name": "South Sudan",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-no-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "ZM"
+      ]
+    },
+    {
+      "code": "ES",
+      "name": "Spain",
+      "startingTier": 1,
+      "hintIds": [
+        "name-up-to-six",
+        "area-100000-500000",
+        "geo-atlantic-coast",
+        "geo-un-location-southern-europe"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-easy-strength"
+      ]
+    },
+    {
+      "code": "LK",
+      "name": "Sri Lanka",
+      "startingTier": 2,
+      "hintIds": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-indian-ocean-coast",
+        "geo-no-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas"
+      ]
+    },
+    {
+      "code": "SD",
+      "name": "Sudan",
+      "startingTier": 2,
+      "hintIds": [
+        "name-first-n-z",
+        "population-50000000-150000000",
+        "geo-indian-ocean-coast",
+        "geo-at-least-one-smaller-land-neighbour"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas",
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "SR",
+      "name": "Suriname",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "area-100000-500000",
+        "geo-three-or-four-land-neighbours",
+        "geo-un-location-south-america"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "SE",
+      "name": "Sweden",
+      "startingTier": 1,
+      "hintIds": [
+        "name-up-to-six",
+        "area-100000-500000",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-neighbour-in-europe"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "PL"
+      ]
+    },
+    {
+      "code": "CH",
+      "name": "Switzerland",
+      "startingTier": 1,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-five-or-six-land-neighbours",
+        "geo-un-location-western-europe"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "SY",
+      "name": "Syria",
+      "startingTier": 2,
+      "hintIds": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-five-or-six-land-neighbours",
+        "geo-mediterranean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "ST",
+      "name": "São Tomé and Príncipe",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-0-1000000",
+        "geo-no-land-neighbours",
+        "geo-atlantic-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P3-visible-name"
+      ]
+    },
+    {
+      "code": "TJ",
+      "name": "Tajikistan",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-no-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "RW",
+        "ZW"
+      ]
+    },
+    {
+      "code": "TZ",
+      "name": "Tanzania",
+      "startingTier": 2,
+      "hintIds": [
+        "name-first-n-z",
+        "area-500000-1500000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-indian-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas",
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "TH",
+      "name": "Thailand",
+      "startingTier": 1,
+      "hintIds": [
+        "name-ends-consonant",
+        "population-50000000-150000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-indian-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas"
+      ]
+    },
+    {
+      "code": "TL",
+      "name": "Timor-Leste",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-all-larger-land-neighbours",
+        "geo-island-country"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-shared-island"
+      ]
+    },
+    {
+      "code": "TG",
+      "name": "Togo",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-all-neighbours-in-africa"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "TO",
+      "name": "Tonga",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-0-1000000",
+        "geo-pacific-coast",
+        "geo-no-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "NR",
+        "PW",
+        "WS",
+        "TV"
+      ]
+    },
+    {
+      "code": "TT",
+      "name": "Trinidad and Tobago",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-no-land-neighbours",
+        "geo-island-country"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-island-overlap"
+      ]
+    },
+    {
+      "code": "TN",
+      "name": "Tunisia",
+      "startingTier": 2,
+      "hintIds": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-mediterranean-coast",
+        "geo-two-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "TM",
+      "name": "Turkmenistan",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-no-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "TV",
+      "name": "Tuvalu",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-0-1000000",
+        "geo-pacific-coast",
+        "geo-no-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "NR",
+        "PW",
+        "WS",
+        "TO"
+      ]
+    },
+    {
+      "code": "TR",
+      "name": "Türkiye",
+      "startingTier": 1,
+      "hintIds": [
+        "name-first-n-z",
+        "population-50000000-150000000",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-neighbour-in-europe"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort",
+        "P3-visible-name"
+      ]
+    },
+    {
+      "code": "UG",
+      "name": "Uganda",
+      "startingTier": 2,
+      "hintIds": [
+        "name-first-n-z",
+        "area-100000-500000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-five-or-six-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "UA",
+      "name": "Ukraine",
+      "startingTier": 1,
+      "hintIds": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-neighbour-in-europe"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "AE",
+      "name": "United Arab Emirates",
+      "startingTier": 2,
+      "hintIds": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-indian-ocean-coast",
+        "geo-all-larger-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas"
+      ]
+    },
+    {
+      "code": "GB",
+      "name": "United Kingdom",
+      "startingTier": 1,
+      "hintIds": [
+        "name-ends-consonant",
+        "area-100000-500000",
+        "geo-atlantic-coast",
+        "geo-un-location-northern-europe"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "US",
+      "name": "United States",
+      "startingTier": 1,
+      "hintIds": [
+        "name-ends-consonant",
+        "area-1500000-plus",
+        "geo-north-america",
+        "geo-pacific-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "UY",
+      "name": "Uruguay",
+      "startingTier": 2,
+      "hintIds": [
+        "name-first-n-z",
+        "area-100000-500000",
+        "geo-atlantic-coast",
+        "geo-all-larger-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "UZ",
+      "name": "Uzbekistan",
+      "startingTier": 2,
+      "hintIds": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-five-or-six-land-neighbours",
+        "geo-no-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "VU",
+      "name": "Vanuatu",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "area-10000-100000",
+        "geo-pacific-coast",
+        "geo-no-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "SB"
+      ]
+    },
+    {
+      "code": "VA",
+      "name": "Vatican City",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-0-1000000",
+        "geo-no-ocean-coast",
+        "geo-all-larger-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "SM"
+      ]
+    },
+    {
+      "code": "VE",
+      "name": "Venezuela",
+      "startingTier": 2,
+      "hintIds": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "SO"
+      ]
+    },
+    {
+      "code": "VN",
+      "name": "Vietnam",
+      "startingTier": 1,
+      "hintIds": [
+        "name-ends-consonant",
+        "area-100000-500000",
+        "geo-three-or-four-land-neighbours",
+        "geo-un-location-south-eastern-asia"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": []
+    },
+    {
+      "code": "YE",
+      "name": "Yemen",
+      "startingTier": 3,
+      "hintIds": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-indian-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": true,
+      "findingIds": [
+        "P1-ocean-seas",
+        "P2-neighbour-area-effort"
+      ]
+    },
+    {
+      "code": "ZM",
+      "name": "Zambia",
+      "startingTier": 2,
+      "hintIds": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-no-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-neighbour-area-effort",
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "SS"
+      ]
+    },
+    {
+      "code": "ZW",
+      "name": "Zimbabwe",
+      "startingTier": 2,
+      "hintIds": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-no-ocean-coast"
+      ],
+      "reviewed": true,
+      "requiredClarityChange": false,
+      "findingIds": [
+        "P2-template-repetition"
+      ],
+      "sameSetAs": [
+        "RW",
+        "TJ"
+      ]
+    }
+  ],
+  "implementationBoundary": "Review only. No bank, game, source or test files changed. Replacement suggestions need target truth and active-pool checks except the meaning-preserving A–M copy change."
+}

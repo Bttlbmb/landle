@@ -1,0 +1,81 @@
+Independent starting-hint accuracy review — 3 October 2026
+
+Review scope
+The reviewer did not draft the country geography classifications or the general hint predicates. The review compares every country with independent GeoNames countryInfo records, downloads the primary World Bank snapshots again, checks the intended meanings of the English-name predicates, and researches geographic scope exceptions against official government/UN sources. Matching aggregate sources are corroboration, not proof that their shared border conventions are current.
+
+Numeric facts
+All 194 World Bank population values (2024) and land-area values (2023) in data.js match a newly downloaded primary API response exactly. Both responses report lastupdated 2026-07-13. Vatican City's 882 residents are confirmed by its official report dated 31 December 2024. The game compares land area, excluding inland water, rather than total territorial area. Thus Canada is smaller than the United States by the game's stored land-area measure. Do not silently substitute familiar total-area rankings.
+https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?date=2024&format=json&per_page=400
+https://api.worldbank.org/v2/country/all/indicator/AG.LND.TOTL.K2?date=2023&format=json&per_page=400
+https://www.vaticanstate.va/en/state-and-government/general-informations/population.html
+
+Geographic corrections and exclusions
+1. Canada and Denmark acquired a land border on Hans Island in 2022. Both downloaded aggregate datasets still omit it. The corrected Canada neighbour record is US/DK. Denmark's mainland/Kingdom geographic scope needs an explicit convention; count/comparison hints for Denmark are excluded.
+https://canada.um.dk/en/the-arctic
+2. Sri Lanka has no natural land border with India. The mledoze record incorrectly includes India. A Sri Lankan Ministry of Education publication describes their separation by the Palk Strait. Excluding artificial causeways is a clear and consistent convention.
+https://www.e-thaksalawa.moe.gov.lk/moodle/pluginfile.php/15933/mod_resource/content/2/chapter%204.pdf
+3. Botswana and Zambia share the Kazungula boundary. GeoNames omits it on both sides; the game draft retains it. Namibia also borders Zambia at Katima Mulilo.
+https://www.gov.bw/botswana-zambia-take-lead-africas-integration-0?page=1
+https://namibiatradeportal.gov.na/general-trade-information/facilitating-cross-border-trade
+4. Hong Kong and Macao are internal regions rather than separate sovereign land neighbours of China. Filter their codes from sovereign-country counts. Kashmir-related claims create inconsistent India/Pakistan/Afghanistan conventions: omit exact counts and neighbour-area claims for those cases.
+https://unstats.un.org/unsd/methodology/m49/
+5. France's overseas territory borders Brazil/Suriname and Saint-Martin borders the Kingdom of the Netherlands. Mainland-only France counts are misleading without a qualifier. France/Netherlands neighbour comparisons and counts are omitted.
+https://www.defense.gouv.fr/terre/actualites/mission-trijonction-jusquaux-trois-frontieres
+https://www.interieur.gouv.fr/actualites/communiques-de-presse/signature-dun-accord-entre-france-et-pays-bas-relatif-a-frontiere-commune-a-saint-martin
+6. UK sovereign bases on Cyprus and Gibraltar complicate a UK/Ireland-only count; Cyprus also has sovereign base boundaries. Suppress exact counts/comparisons for those cases.
+https://www.gov.uk/government/publications/permanent-joint-operating-bases-pjobs/fd
+7. Serbia/Kosovo recognition changes several Balkan neighbour lists. GeoNames even lists both Serbia and Kosovo as Albania's neighbours. Suppress affected exact counts/comparisons. The Serbian government describes a different sovereignty convention from a Kosovo-separate roster.
+https://www.mfa.rs/en/republic-serbia
+8. Western Sahara and Palestine/Israel boundary conventions should not be inferred solely by filtering the 195-country game roster. Suppress affected exact counts/comparisons.
+https://www.un.org/sg/en/content/former-secretary-general/statement/2016-08-28/statement-attributable-the-spokesman-for-the-secretary-general-western-sahara
+https://www.ochaopt.org/sites/default/files/Westbank_access-july-2025.pdf
+9. Bahrain and Singapore causeways are artificial connections; wording about natural land borders can confuse players. Suppress counts rather than requiring a legal/geographic distinction in a short clue.
+https://www.ica.gov.sg/about-us/our-heritage/Room/border-security-immigration?target=item4
+10. GeoNames counts the US/Cuba Guantanamo perimeter; mledoze does not. Cuba retains ultimate sovereignty under the lease while the US exercises jurisdiction and control. Suppress exact counts/comparisons for US/Cuba rather than choosing silently.
+https://history.state.gov/historicaldocuments/frus1961-63v10/d301
+
+Wording and classification
+Landlocked does not mean no coastline: Azerbaijan, Kazakhstan and Turkmenistan have Caspian shores. 'Has no ocean coastline' is accurate. The UN list independently confirms all 32 developing landlocked countries. Its list does not include the 12 other European countries, so it cannot be cited alone as proof of all 44 records.
+https://www.un.org/en/landlocked/about-landlocked-developing-countries
+The UN M49 hierarchy independently covers all 195 records. Its regional scheme differs from mledoze for Cyprus (Western Asia vs Europe), South Sudan (Eastern Africa vs Middle Africa), Mexico and some European subdivisions. Regional clues must identify the game convention, not imply there is a single universal continental/subregional scheme.
+Name hints use the game's displayed names, including DR Congo, Ivory Coast, Cape Verde and Türkiye. Decompose/ignore diacritics for letter identity. Spaces and hyphens are not letters. A hyphenated name is not two space-separated words. A/E/I/O/U defines vowels. Do not use the rejected alphabetic first/last comparison or 'No letter appears twice'.
+
+Limitations
+The independent aggregate neighbour comparison is a country-by-country corroboration exercise, not 195 separately researched national boundary histories. Sensitive or ambiguous count/comparison hints are omitted. World-map PDF fetches returned 403, so their URLs cannot alone justify claiming that a visual audit was completed. Any further manual sea/coast classification needs its own primary evidence and semantic inspection. Review the final bank again after new geographic groups are added.
+
+Final review — 2026-10-03
+The final frozen bank was re-evaluated: 195 countries, 780 selected hints and every one of the 86 catalog entries pass the accuracy checks. Review authority is contentSha256 c97649815d6f7669761b014a47d0e8772dbc1625f15d7ec113850cba87aaa2a8. No remaining incorrect positive memberships were found. The JSON review contains per-country coverage and per-catalog results, rather than checking selected assignments alone.
+
+The final wording is 'Is landlocked.' All 44 positive memberships were checked, combining the UN's 32 developing countries with the 12 other European landlocked countries and independent geographic corroboration. Regional hints now follow UN M49 rather than the game's prior mledoze grouping; Cyprus is in Western Asia and is excluded from Europe/island-Europe clues. Subregional and continent boundaries remain classification conventions, especially for transcontinental countries.
+
+All 46 positive island-country memberships are supported by primary source groups: FAO Caribbean countries, the UN Pacific countries, NIH Indian Ocean and Atlantic/Mediterranean island descriptors, and national profiles for Bahrain, Brunei, Singapore, New Zealand, Papua New Guinea, Timor-Leste and the UK. The Brunei District PDF returned a 404 in web fetching; its factual claim was independently confirmed by Brunei's Ministry of Foreign Affairs:
+https://www.mfa.gov.bn/taipei/SitePages/visitbrunei.aspx
+https://www.mfa.gov.sg/about-singapore/
+https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D008521
+https://meshb.nlm.nih.gov/record/ui?ui=D001266
+https://culture.gov.bh/en/visitingbahrain/about_bahrain/
+https://teara.govt.nz/en/natural-environment/page-1
+https://test.anbg.gov.au/cpbr/anhsir/anhsir-manual/papuasia.html
+https://timor-leste.gov.tl/?lang=en&p=91
+https://www.gov.uk/government/publications/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world-html
+
+All eight specific sea/coast catalog groups were inspected as positive memberships against primary sources. North Sea assignments match OSPAR's country/sea table; France's North Sea shore is additionally explicit in the official Dunkirk tourism profile. Sweden is not assigned that clue; its broader Greater North Sea interpretation appears only in the fairness upper bound. The Indian Ocean clue explicitly includes its seas, so Persian Gulf and Red Sea countries are accurate. FAO's country reviews explicitly distinguish these national coasts from distant-water fishing fleets. The Pacific coast clue follows FAO's marginal-sea convention. Atlantic matches are conservative confirmed memberships, not a claim that unlisted countries lack an Atlantic shore.
+https://www.ospar.org/documents?v=57929
+https://www.dunkirk-tourism.com/things-to-do/the-great-outdoors/seaside-resorts/
+https://www.fao.org/4/a0477e/a0477e00.htm
+https://www.fao.org/4/a0477e/a0477e06.htm
+https://www.fao.org/4/a1465e/a1465e00.htm
+https://atlantic-turtles.cms.int/
+https://www.fao.org/4/w3840e/W3840e01.htm
+https://www.fao.org/docrep/014/i1926e/i1926e.pdf
+https://www.visitportugal.com/en/content/about-portugal
+
+Palestine's Mediterranean shore is true via Gaza. The catalog's older UNISPAL page did not fetch; separate UNCTAD 2024 reporting explicitly describes Gaza's Mediterranean shore. This corroboration is recorded in the JSON sourceChecks, so a failed link was not treated as proof:
+https://www.un.org/unispal/document/unctad-report-10sep24/
+https://www.un.org/unispal/wp-content/uploads/2025/09/Environmental-Impact-of-the-Escalation-of-Conflict-in-the-Gaza-Strip-2-compressed.pdf
+
+For this Palestine corroboration the primary search-indexed UNCTAD/UNEP text was inspected. A later full web open of the 2024 UNCTAD page returned 403; it was not represented as a fully opened source. The indexed text explicitly identifies the Mediterranean Sea off Gaza's shore, agreeing with the earlier OCHA geographic evidence.
+
+Russia and Brazil's robust 'all land neighbours are smaller by land area' additions were independently recalculated from primary World Bank areas and the separate GeoNames neighbour lists. Russia's fourteen neighbours are all smaller. Brazil's ten include France via French Guiana; comparing whole France instead of the territory still leaves France much smaller than Brazil. Thus these two ordering claims remain accurate despite a neighbouring country's own boundary-count scope ambiguity.
+
+Final limitations are explicit in the JSON report. Numeric/name predicates were exhaustively re-evaluated for all 195 countries. Geographic sources were checked by claim family and country membership; this does not mean 195 separate national-boundary histories were researched. Conservative geographic omissions and possibleExtraMatches are not asserted false/true facts; they exist only to avoid unsupported assignments and to widen fairness upper bounds. A review pass applies only to the recorded content hash.

@@ -1,0 +1,37 @@
+Ländle starter-hint revision and renewed evaluation — 4 October 2026
+
+Exported bank: cd447208aa27e101b96c3e864d3988451ba01a21e687a618b6711f56ccbfe6ed
+Shared selector: 383cda6bf5725b6468791303efd2526500c9483b322fcaad6af078e1eac0b56d
+
+Result
+195 countries; 780 curated examples; 63 distinct playable phrases.
+2,588 reviewed alternative assignments, 9–17 per country across allowed tiers.
+At each country's own starting tier, 8–17 alternatives are eligible before exclusions.
+The bank is reviewed, exported and integrated in the local game and static build.
+
+Changes
+- Gameplay uses all eligible reviewed alternatives, with roughly 25% name, 25% numerical and 50% geography selection.
+- Four examples per country remain one name, one population/land-area and two distinct, non-nested geography facts. Identical example sets fell from 18 groups covering 42 countries to three pairs.
+- Neighbour-size groups include all supported positives from the permitted border graph. A neighbour's own ambiguous border count no longer discards its known area comparison. All-smaller is reachable for 11 countries, including Indonesia, Iran and Saudi Arabia.
+- Suriname's adjoining French Guiana versus sovereign-France area scope remains conservative. Broad one-larger-neighbour wording is omitted because its upper bound exceeds the breadth cap.
+- Hidden neighbour-continent and Indian Ocean-system conventions, the programme-only Pacific island list, and duplicate Caribbean shortlists are excluded from play.
+- Pacific coast wording explicitly includes its seas. American wording names North/Central America and the Caribbean; the South/West Asia union avoids a surprising narrow Iran label. Cyprus's revealed Asia label agrees with the hints.
+- Atlantic upper bounds include reviewed marginal-sea and overseas scopes without creating unreviewed direct-coast assignments.
+- Every round saves immutable previous-answer exclusions. Visible hints, browser tools and Help use that same available answer pool. Guesses and shared-tab resume preserve the hint.
+- Every hint needs at least four confirmed matches and no more than 70% declared possible matches. Medium/Hard require at least seven possible answers, including uncertain extras. Both complete and partial six-answer loopholes are closed.
+
+Renewed agent assessments
+- revised-accuracy-review.json: passed for the exported hash, no open findings. All 195 countries, all examples/alternatives, general predicates, regional groups, border groups and area comparisons checked. Independent runtime oracle covered 350 base cases, 51,800 singleton exclusions, 5,650 targeted triples and 192,064 seeded selections.
+- revised-fairness-review.json: passed for the bank and shared selector hashes, no open blockers. 358,400 seeded draws and 7,020 target/exclusion checks across 761 representative scenarios passed. No singleton phrases or surviving Medium/Hard possible sets of six or fewer.
+- revised-player-review.json: editorially ready with nonblocking notes, all 63 phrases and 195 sets assessed individually. The reviewer declares earlier drafting involvement and does not independently certify facts.
+
+Integration verification
+- 72 automated tests passed.
+- 27 isolated browser scenarios passed, including all eligible Japan alternatives, stable guesses/tab updates, actual-pool Help lists, GR→IT→PT→Easy Spain and FR→BE→Hard Netherlands regressions.
+- Static build passed and includes the same reviewed selector, hint bank, local assets and source/licence pages.
+- Browser screenshots and detailed results are in artifacts/audit/.
+
+Remaining limits
+Some small island countries share alternatives, and neighbour comparisons assume map/size knowledge. Geographic primary research is targeted rather than a fresh national-boundary survey for every country. Conservative partial lists are not exhaustive geographic shortlists. Human win rates and player familiarity have not been measured by these mechanical checks.
+
+The previous reviewed bank and certificates are preserved under archive/c9764981/.

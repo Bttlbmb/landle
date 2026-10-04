@@ -1,0 +1,71 @@
+Geography clarity revision — 2026-10-04
+
+Scope: geography-draft.json only. No bank, assembly, runtime, app, test or review certificate changes. Existing 195 records, memberships, sources, rules and possible-extra lists are preserved. Existing group memberships are preserved. One new positive-existence conjunction was subsequently added, using existing records and independent primary-profile reads for India and Pakistan; details below.
+
+Display policy: the root assembler must exclude displaySafe:false groups. Their memberships and provenance remain in the draft for audit; they are not playable candidates.
+
+Changed groups (exact IDs):
+- neighbour-in-africa: displaySafe:false; "Has a land neighbour in Africa." retained only as provenance. Do not display. These memberships use whole-country game region labels; the plain wording can imply the physical border is on that continent. Prefer a direct region, border-count or relative-area fact.
+- all-neighbours-in-africa: displaySafe:false; "All its land neighbours are in Africa." retained only as provenance. Do not display. These memberships use whole-country game region labels; the plain wording can imply the physical border is on that continent. Prefer a direct region, border-count or relative-area fact.
+- neighbour-in-americas: displaySafe:false; "Has a land neighbour in the Americas." retained only as provenance. Do not display. These memberships use whole-country game region labels; the plain wording can imply the physical border is on that continent. Prefer a direct region, border-count or relative-area fact.
+- all-neighbours-in-americas: displaySafe:false; "All its land neighbours are in the Americas." retained only as provenance. Do not display. These memberships use whole-country game region labels; the plain wording can imply the physical border is on that continent. Prefer a direct region, border-count or relative-area fact.
+- neighbour-in-asia: displaySafe:false; "Has a land neighbour in Asia." retained only as provenance. Do not display. These memberships use whole-country game region labels; the plain wording can imply the physical border is on that continent. Prefer a direct region, border-count or relative-area fact.
+- all-neighbours-in-asia: displaySafe:false; "All its land neighbours are in Asia." retained only as provenance. Do not display. These memberships use whole-country game region labels; the plain wording can imply the physical border is on that continent. Prefer a direct region, border-count or relative-area fact.
+- neighbour-in-europe: displaySafe:false; "Has a land neighbour in Europe." retained only as provenance. Do not display. These memberships use whole-country game region labels; the plain wording can imply the physical border is on that continent. Prefer a direct region, border-count or relative-area fact.
+- all-neighbours-in-europe: displaySafe:false; "All its land neighbours are in Europe." retained only as provenance. Do not display. These memberships use whole-country game region labels; the plain wording can imply the physical border is on that continent. Prefer a direct region, border-count or relative-area fact.
+- pacific-coast: "Has a Pacific coast." -> "Has a coast on the Pacific Ocean or one of its seas."; codes/sources/possible extras unchanged.
+- indian-ocean-coast: displaySafe:false; "Has a coast on the Indian Ocean or its seas." retained only as provenance. Do not display. The umbrella includes the Red Sea, Persian Gulf, Gulf of Oman and other marginal seas. Use an existing named-sea, direct-region, island-location or border fact instead; no long Help definition is needed.
+
+Retained requested style: all-smaller-land-neighbours remains unchanged, including Russia/Brazil robust ordering overrides and all eight confirmed members. Island-country wording remains conventional. No slogans or Help definitions added.
+
+Existing safe alternatives:
+- Named sea/coast groups: red-sea-or-aden-coast (9 confirmed), mediterranean-coast (22), black-sea-coast (6), baltic-coast (9), north-sea-coast (7).
+- Direct island/location groups: indian-ocean-island (6), caribbean-island (13), pacific-island (11), all UN M49 broad and subregional groups.
+- Existing border-count ranges, exact one/two, all-larger and all-smaller groups remain selectable after root computes current-pool eligibility.
+- revision.alternativePlans provides exact target membership-filtered recommendations for the affected countries; no recommendation adds a new membership.
+
+Unresolved own-tier geography coverage:
+- IN India (tier 1): eligible safe groups region-asia; dimensions location. Only region-Asia is eligible at Easy after disabling the ocean umbrella. Use additional name/population/land-area choices or independently add a new verified fact; do not restore the ambiguous umbrella to force two geography dimensions.
+- PK Pakistan (tier 2): eligible safe groups region-asia, un-location-southern-asia; dimensions location. At Medium, the existing safe choices are region-Asia and South-Asia, both location. General size/name hints remain available; a genuinely new coast fact would need independent source and pool checks.
+- Every other country has at least two eligible safe geography groups from distinct data dimensions under the current 45/110/195 pools, min4 matches, max70%, and conservative possible-extra bounds. Data dimensions alone do not guarantee editorial variety; root is revising selection.
+
+Record content SHA-256 before and after: fb8a022adbfa636ee0b94367e5905e175794e35815c536e5601856ceec0d18e7
+This is a drafting revision, not an independent accuracy or fairness certificate. A different agent should verify changed wording, disabled selection, and generated-bank eligibility.
+
+New conjunction — coast-and-land-neighbours
+Exact text: "Has an ocean coast and land neighbours."
+Dimension: coast-and-borders
+Confirmed codes (112): AL, DZ, AO, AR, BD, BE, BZ, BJ, BA, BR, BN, BG, KH, CM, CA, CL, CN, CO, CR, HR, CD, DK, DJ, DO, EC, EG, SV, GQ, ER, EE, FI, FR, GA, GM, GE, DE, GH, GR, GT, GN, GW, GY, HT, HN, IN, ID, IR, IQ, IE, IL, IT, CI, JO, KE, KW, LV, LB, LR, LY, LT, MY, MR, MX, MC, ME, MA, MZ, MM, NA, NL, NI, NG, KP, NO, OM, PK, PS, PA, PG, PE, PL, PT, QA, CG, RO, RU, SA, SN, SL, SI, SO, ZA, KR, ES, SD, SR, SE, SY, TZ, TH, TL, TG, TN, TR, UA, AE, GB, US, UY, VE, VN, YE
+Possible-extra codes: BH, CU, CY, SG
+Derivation: existing landlocked:false records plus at least one named indisputable sovereign natural-land-neighbour witness. Exact-count permission is not required for positive existence. Witnesses and per-country source lists are stored in membershipDerivation.confirmedWitnesses. No exact counts, maritime boundaries or artificial links are asserted.
+New independently read primary profiles:
+- India: https://www.cgihambantota.gov.in/page/fact-sheet-india/ — Geography/Border Countries and Coastline support ocean-access coastline and Bangladesh as a land neighbour. The disputed claimed Afghanistan boundary is not used.
+- Pakistan: https://invest.gov.pk/pakistan-at-a-glance — General information Geography and Coastline support Arabian Sea coast and Iran as a land neighbour. No Kashmir boundary or exact count is used.
+Root selection limit: tier1 37 confirmed/39 maximum of45; tier2 80 confirmed/82 maximum of110; tier3 112 confirmed/116 maximum of195. Only Hard currently passes max70%. India Easy and Pakistan Medium gaps remain; do not claim closure without a separately verified narrower clue or explicit policy decision.
+All nine displaySafe:false groups remain disabled. All existing records and all-smaller-neighbours fact remain unchanged. Different agent to verify membership and player usefulness.
+
+Rejected broad conjunction: coast-and-land-neighbours is now displaySafe:false because its breadth is too vague for the intended starter list.
+Stronger proposal assessed but not added: "Has at least three land neighbours and an ocean coast." Seed confirmed members use allowed existing counts>=3 plus separately sourced India/Pakistan positive lower bounds. Provisional metrics: tier1 24 confirmed/31 maximum of45; tier2 51 confirmed/62 maximum of110; tier3 67 confirmed/81 maximum of195. Scope-ambiguous possible-extra candidates: AL, DZ, FR, IL, JO, MY, MR, ME, MA, NL, PS, ES, GB, US. Denmark has at most two under documented whole-Kingdom scope; Bahrain, Singapore, Cuba and Cyprus cannot reach three under the documented natural-sovereign-border possibilities and are excluded from upper bounds. Await root decision if Easy exceeds70%.
+
+Final stronger conjunction added — three-plus-land-neighbours-and-sea-coast
+Exact text: "Has at least three land neighbours and a sea coast."
+Dimension: coast-and-borders
+Confirmed codes (70): AO, AR, BE, BJ, BA, BR, BG, KH, CM, CL, CN, CO, HR, CD, DJ, EG, ER, FI, GA, GE, DE, GH, GR, GT, GN, GY, HN, ID, IR, IQ, IT, CI, KE, LV, LR, LY, LT, MX, MZ, MM, NA, NG, KP, NO, OM, PE, PL, CG, RO, RU, SA, SN, SI, SO, ZA, SD, SR, SY, TZ, TH, TG, TR, UA, VE, VN, IN, PK, AZ, KZ, TM
+Possible-extra codes (15): AL, DZ, FR, IL, JO, MY, MR, ME, MA, NL, PS, ES, GB, US, UZ
+Derivation: existing validated non-landlocked >=3 records, robust separately sourced India/Pakistan lower bounds, and Caspian littoral AZ/KZ/TM combined with their validated >=3 records. Landlocked is not treated as absence of a sea coast.
+India official witnesses: Bangladesh, Bhutan, Nepal. Pakistan official witnesses: India, Iran, Afghanistan. No exact disputed total is asserted.
+Fresh Caspian primary source: https://www.unep.org/news-and-stories/press-release/boost-caspian-sea-protection-new-environmental-rules-come-force — names the five littoral states, including Azerbaijan/Kazakhstan/Turkmenistan.
+Aral upper-bound source: https://www.undp.org/uzbekistan/blog/beyond-disappearing-lake-what-aral-sea-can-teach-us-about-human-security — Uzbekistan retained only as possible extra; literal sea-coast interpretation cannot understate breadth.
+Conservative >=3 scope extras use the documented territory/base/enclave cases. Denmark and BH/SG/CU/CY are explicitly excluded because none can reach3 under the documented possible scopes. Full reasons are in membershipDerivation.
+Final current-pool counts: tier1 24 confirmed/31 maximum of45; tier2 53 confirmed/65 maximum of110; tier3 70 confirmed/85 maximum of195. All three pass min4/max70%; no policy change.
+Current unresolved own-tier geography coverage: none. India Easy and Pakistan Medium now each have at least two eligible safe groups from distinct data dimensions. Root owns final selection, and a separate agent must check membership and player usefulness.
+The broader coast-and-land-neighbours proposal remains displaySafe:false; all eight neighbour-location and Indian Ocean umbrella groups remain displaySafe:false. All195 records, existing group memberships and all-smaller-land-neighbours remain unchanged.
+
+Jordan positive lower bound independently verified and promoted — 2026-10-04
+Changed only three-plus-land-neighbours-and-sea-coast membership: JO moved from possibleExtraCodes to confirmed codes; other country memberships and all195 records unchanged.
+Primary sources read independently:
+- https://www.jiacc.gov.jo/EN/Pages/About_Jordan — Overview/Area and Geography explicitly identify Saudi Arabia, Iraq and Syria land borders and a Gulf of Aqaba coastline.
+- https://jordan.gov.jo/En/Pages/About_Jordan — Geography corroborates those three neighbouring states and Aqaba sea access/Red Sea shore.
+Only sea-coast existence and at least3 land-neighbour lower bound are asserted. Ignore the source’s total-count phrasing, coastline-length differences, maritime Egypt relation and Israel/Palestine western-border convention.
+Final conjunction confirmed/maximum counts: tier1 24/31 of45; tier2 54/65 of110; tier3 71/85 of195. Maximum breadth unchanged.
+Jordan candidate pair: un-location-western-asia + three-plus-land-neighbours-and-sea-coast. Root owns current7-match eligibility and regenerated-bank validation; no threshold or exact-count permissions changed.

@@ -1,0 +1,1174 @@
+Ländle starting hints
+195 countries; four suggested alternatives each.
+Each clue stands alone. Use one per round; eligibility is reviewed separately for each difficulty.
+Name clues use the displayed English name. Accents do not change letter identity; spaces and hyphens are not letters.
+
+Afghanistan
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+  - In South Asia. [Medium, Hard]
+
+Albania
+  - The name contains no E. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has a Mediterranean coast. [Easy, Medium, Hard]
+  - In Southern Europe. [Easy, Medium, Hard]
+
+Algeria
+  - The name contains E. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has a Mediterranean coast. [Easy, Medium, Hard]
+  - In North Africa. [Medium, Hard]
+
+Andorra
+  - The name contains O. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Is landlocked. [Medium, Hard]
+  - Has exactly two land neighbours. [Medium, Hard]
+
+Angola
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+
+Antigua and Barbuda
+  - The name contains no E. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+  - An island country. [Easy, Medium, Hard]
+
+Argentina
+  - First letter is not in the second half of the alphabet. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has an Atlantic coast. [Easy, Medium, Hard]
+  - Has a land neighbour that is smaller by land area. [Easy, Medium, Hard]
+
+Armenia
+  - The name contains E. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+
+Australia
+  - The name contains no E. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+
+Austria
+  - The name contains no E. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has a land neighbour that is smaller by land area. [Easy, Medium, Hard]
+  - Has a land neighbour in Europe. [Easy, Medium, Hard]
+
+Azerbaijan
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has five or six land neighbours. [Easy, Medium, Hard]
+
+Bahamas
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Land area from 10,000 to under 100,000 km². [Easy, Medium, Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+  - An island country. [Easy, Medium, Hard]
+
+Bahrain
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+  - An island country. [Easy, Medium, Hard]
+
+Bangladesh
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Land area from 100,000 to under 500,000 km². [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+  - Has exactly two land neighbours. [Medium, Hard]
+
+Barbados
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+  - An island country. [Easy, Medium, Hard]
+
+Belarus
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+
+Belgium
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+  - Has a North Sea coast. [Easy, Medium, Hard]
+
+Belize
+  - The name contains E. [Easy, Medium, Hard]
+  - Land area from 10,000 to under 100,000 km². [Easy, Medium, Hard]
+  - All its land neighbours are larger by land area. [Easy, Medium, Hard]
+  - Has exactly two land neighbours. [Medium, Hard]
+
+Benin
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+
+Bhutan
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Land area from 10,000 to under 100,000 km². [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+  - Has exactly two land neighbours. [Medium, Hard]
+
+Bolivia
+  - The name contains O. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has five or six land neighbours. [Easy, Medium, Hard]
+
+Bosnia and Herzegovina
+  - The name contains E. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+  - Has a Mediterranean coast. [Easy, Medium, Hard]
+
+Botswana
+  - The name contains O. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+
+Brazil
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Land area of at least 1,500,000 km². [Easy, Medium, Hard]
+  - Has an Atlantic coast. [Easy, Medium, Hard]
+  - Has at least seven land neighbours. [Easy, Medium, Hard]
+
+Brunei
+  - The name contains E. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - An island country. [Easy, Medium, Hard]
+  - Has exactly one land neighbour. [Medium, Hard]
+
+Bulgaria
+  - The name contains no E. [Easy, Medium, Hard]
+  - Land area from 100,000 to under 500,000 km². [Easy, Medium, Hard]
+  - Has five or six land neighbours. [Easy, Medium, Hard]
+  - In Eastern Europe. [Medium, Hard]
+
+Burkina Faso
+  - The name ends with a letter from N to Z. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+
+Burundi
+  - The name contains no E. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+
+Cambodia
+  - The name contains O. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+  - Has a Pacific coast. [Easy, Medium, Hard]
+
+Cameroon
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has five or six land neighbours. [Easy, Medium, Hard]
+
+Canada
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - In North America. [Easy, Medium, Hard]
+  - Has a Pacific coast. [Easy, Medium, Hard]
+
+Cape Verde
+  - The name contains E. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+  - Has an Atlantic coast. [Easy, Medium, Hard]
+
+Central African Republic
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+
+Chad
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+
+Chile
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+  - Has a land neighbour that is larger by land area. [Easy, Medium, Hard]
+
+China
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Land area of at least 1,500,000 km². [Easy, Medium, Hard]
+  - Has at least seven land neighbours. [Easy, Medium, Hard]
+  - Has a Pacific coast. [Easy, Medium, Hard]
+
+Colombia
+  - The name contains no E. [Easy, Medium, Hard]
+  - Population from 50 million to under 150 million. [Easy, Medium, Hard]
+  - Has a land neighbour that is smaller by land area. [Easy, Medium, Hard]
+  - Has five or six land neighbours. [Easy, Medium, Hard]
+
+Comoros
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+
+Costa Rica
+  - The name contains no E. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has a land neighbour that is larger by land area. [Easy, Medium, Hard]
+  - All its land neighbours are in the Americas. [Easy, Medium, Hard]
+
+Croatia
+  - The name contains O. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has five or six land neighbours. [Easy, Medium, Hard]
+  - Has a Mediterranean coast. [Easy, Medium, Hard]
+
+Cuba
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Land area from 100,000 to under 500,000 km². [Easy, Medium, Hard]
+  - Has an Atlantic coast. [Easy, Medium, Hard]
+  - In North America. [Easy, Medium, Hard]
+
+Cyprus
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - An island country. [Easy, Medium, Hard]
+  - Has a Mediterranean coast. [Easy, Medium, Hard]
+
+Czechia
+  - The name contains E. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+
+DR Congo
+  - The name ends with a letter from N to Z. [Easy, Medium, Hard]
+  - Population from 50 million to under 150 million. [Easy, Medium, Hard]
+  - Has a land neighbour that is smaller by land area. [Easy, Medium, Hard]
+  - All its land neighbours are in Africa. [Medium, Hard]
+
+Denmark
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - In Northern Europe. [Easy, Medium, Hard]
+  - Has a Baltic Sea coast. [Easy, Medium, Hard]
+
+Djibouti
+  - The name contains O. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+  - All its land neighbours are in Africa. [Medium, Hard]
+
+Dominica
+  - The name contains O. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+  - An island country. [Easy, Medium, Hard]
+
+Dominican Republic
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has a land neighbour that is smaller by land area. [Easy, Medium, Hard]
+  - All its land neighbours are in the Americas. [Easy, Medium, Hard]
+
+Ecuador
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has a Pacific coast. [Easy, Medium, Hard]
+  - All its land neighbours are larger by land area. [Easy, Medium, Hard]
+
+Egypt
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Population from 50 million to under 150 million. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+
+El Salvador
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has a Pacific coast. [Easy, Medium, Hard]
+  - All its land neighbours are larger by land area. [Easy, Medium, Hard]
+
+Equatorial Guinea
+  - The name contains E. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - All its land neighbours are in Africa. [Medium, Hard]
+  - All its land neighbours are larger by land area. [Easy, Medium, Hard]
+
+Eritrea
+  - The name contains E. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+
+Estonia
+  - The name contains E. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - All its land neighbours are larger by land area. [Easy, Medium, Hard]
+  - Has exactly two land neighbours. [Medium, Hard]
+
+Eswatini
+  - The name contains E. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+  - All its land neighbours are in Africa. [Medium, Hard]
+
+Ethiopia
+  - The name contains E. [Easy, Medium, Hard]
+  - Land area from 500,000 to under 1,500,000 km². [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has five or six land neighbours. [Easy, Medium, Hard]
+
+Fiji
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Land area from 10,000 to under 100,000 km². [Easy, Medium, Hard]
+  - Has a Pacific coast. [Easy, Medium, Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+
+Finland
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Land area from 100,000 to under 500,000 km². [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+  - Has a land neighbour that is larger by land area. [Easy, Medium, Hard]
+
+France
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Population from 50 million to under 150 million. [Easy, Medium, Hard]
+  - Has an Atlantic coast. [Easy, Medium, Hard]
+  - In Western Europe. [Easy, Medium, Hard]
+
+Gabon
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+
+Gambia
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - All its land neighbours are in Africa. [Medium, Hard]
+  - All its land neighbours are larger by land area. [Easy, Medium, Hard]
+
+Georgia
+  - The name contains E. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+
+Germany
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Land area from 100,000 to under 500,000 km². [Easy, Medium, Hard]
+  - Has at least seven land neighbours. [Easy, Medium, Hard]
+  - Has a Baltic Sea coast. [Easy, Medium, Hard]
+
+Ghana
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+
+Greece
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Land area from 100,000 to under 500,000 km². [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+  - Has a Mediterranean coast. [Easy, Medium, Hard]
+
+Grenada
+  - The name contains E. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+  - An island country. [Easy, Medium, Hard]
+
+Guatemala
+  - The name contains E. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+
+Guinea
+  - The name contains E. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - All its land neighbours are in Africa. [Medium, Hard]
+
+Guinea-Bissau
+  - The name ends with a letter from N to Z. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - All its land neighbours are in Africa. [Medium, Hard]
+  - All its land neighbours are larger by land area. [Easy, Medium, Hard]
+
+Guyana
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Land area from 100,000 to under 500,000 km². [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+
+Haiti
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - All its land neighbours are larger by land area. [Easy, Medium, Hard]
+  - All its land neighbours are in the Americas. [Easy, Medium, Hard]
+
+Honduras
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+
+Hungary
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+  - Has at least seven land neighbours. [Easy, Medium, Hard]
+
+Iceland
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Land area from 100,000 to under 500,000 km². [Easy, Medium, Hard]
+  - Has an Atlantic coast. [Easy, Medium, Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+
+India
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Land area of at least 1,500,000 km². [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+  - In Asia. [Easy, Medium, Hard]
+
+Indonesia
+  - First letter is not in the second half of the alphabet. [Easy, Medium, Hard]
+  - Land area of at least 1,500,000 km². [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+
+Iran
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 50 million to under 150 million. [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+  - Has at least seven land neighbours. [Easy, Medium, Hard]
+
+Iraq
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+  - Has five or six land neighbours. [Easy, Medium, Hard]
+
+Ireland
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has an Atlantic coast. [Easy, Medium, Hard]
+  - In Northern Europe. [Easy, Medium, Hard]
+
+Israel
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+  - In West Asia. [Medium, Hard]
+
+Italy
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Land area from 100,000 to under 500,000 km². [Easy, Medium, Hard]
+  - Has five or six land neighbours. [Easy, Medium, Hard]
+  - Has a Mediterranean coast. [Easy, Medium, Hard]
+
+Ivory Coast
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - All its land neighbours are in Africa. [Medium, Hard]
+
+Jamaica
+  - The name contains no E. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - In North America. [Easy, Medium, Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+
+Japan
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Land area from 100,000 to under 500,000 km². [Easy, Medium, Hard]
+  - Has a Pacific coast. [Easy, Medium, Hard]
+  - An island country in Asia. [Easy, Medium, Hard]
+
+Jordan
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+  - In West Asia. [Medium, Hard]
+
+Kazakhstan
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has five or six land neighbours. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+
+Kenya
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Population from 50 million to under 150 million. [Easy, Medium, Hard]
+  - Has a land neighbour that is smaller by land area. [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+
+Kiribati
+  - The name contains no E. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Has a Pacific coast. [Easy, Medium, Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+
+Kuwait
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - All its land neighbours are larger by land area. [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+
+Kyrgyzstan
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+
+Laos
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+  - Has five or six land neighbours. [Easy, Medium, Hard]
+
+Latvia
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+
+Lebanon
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has a Mediterranean coast. [Easy, Medium, Hard]
+  - In West Asia. [Medium, Hard]
+
+Lesotho
+  - The name ends with a letter from N to Z. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+  - All its land neighbours are in Africa. [Medium, Hard]
+
+Liberia
+  - The name contains E. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+
+Libya
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has five or six land neighbours. [Easy, Medium, Hard]
+  - Has a Mediterranean coast. [Easy, Medium, Hard]
+
+Liechtenstein
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Is landlocked. [Medium, Hard]
+  - All its land neighbours are larger by land area. [Easy, Medium, Hard]
+
+Lithuania
+  - The name contains no E. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+
+Luxembourg
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+
+Madagascar
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+
+Malawi
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+
+Malaysia
+  - The name contains no E. [Easy, Medium, Hard]
+  - Land area from 100,000 to under 500,000 km². [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+  - In Southeast Asia. [Easy, Medium, Hard]
+
+Maldives
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+
+Mali
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+  - Has at least seven land neighbours. [Easy, Medium, Hard]
+
+Malta
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+  - An island country. [Easy, Medium, Hard]
+
+Marshall Islands
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Has a Pacific coast. [Easy, Medium, Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+
+Mauritania
+  - The name contains no E. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has an Atlantic coast. [Easy, Medium, Hard]
+  - In West Africa. [Hard]
+
+Mauritius
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+
+Mexico
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Population from 50 million to under 150 million. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+  - In North America. [Easy, Medium, Hard]
+
+Micronesia
+  - The name contains E. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Has a Pacific coast. [Easy, Medium, Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+
+Moldova
+  - The name contains O. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+  - All its land neighbours are larger by land area. [Easy, Medium, Hard]
+
+Monaco
+  - The name ends with a letter from N to Z. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Has a Mediterranean coast. [Easy, Medium, Hard]
+  - Has exactly one land neighbour. [Medium, Hard]
+
+Mongolia
+  - The name contains O. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+  - Has a land neighbour in Europe. [Easy, Medium, Hard]
+
+Montenegro
+  - The name ends with a letter from N to Z. [Easy, Medium, Hard]
+  - Land area from 10,000 to under 100,000 km². [Easy, Medium, Hard]
+  - Has a Mediterranean coast. [Easy, Medium, Hard]
+  - In Southern Europe. [Easy, Medium, Hard]
+
+Morocco
+  - The name contains no E. [Easy, Medium, Hard]
+  - Land area from 100,000 to under 500,000 km². [Easy, Medium, Hard]
+  - Has an Atlantic coast. [Easy, Medium, Hard]
+  - In Africa. [Easy, Medium, Hard]
+
+Mozambique
+  - The name contains E. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - All its land neighbours are in Africa. [Medium, Hard]
+
+Myanmar
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Land area from 500,000 to under 1,500,000 km². [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+  - Has five or six land neighbours. [Easy, Medium, Hard]
+
+Namibia
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+
+Nauru
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Has a Pacific coast. [Easy, Medium, Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+
+Nepal
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+  - Has exactly two land neighbours. [Medium, Hard]
+
+Netherlands
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has a North Sea coast. [Easy, Medium, Hard]
+  - In Western Europe. [Easy, Medium, Hard]
+
+New Zealand
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Land area from 100,000 to under 500,000 km². [Easy, Medium, Hard]
+  - Has a Pacific coast. [Easy, Medium, Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+
+Nicaragua
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has a land neighbour that is smaller by land area. [Easy, Medium, Hard]
+  - Has a Pacific coast. [Easy, Medium, Hard]
+
+Niger
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+  - Has at least seven land neighbours. [Easy, Medium, Hard]
+
+Nigeria
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Land area from 500,000 to under 1,500,000 km². [Easy, Medium, Hard]
+  - Has an Atlantic coast. [Easy, Medium, Hard]
+  - Has a land neighbour that is smaller by land area. [Easy, Medium, Hard]
+
+North Korea
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+  - Has a land neighbour in Europe. [Easy, Medium, Hard]
+
+North Macedonia
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+  - In Southern Europe. [Easy, Medium, Hard]
+
+Norway
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Land area from 100,000 to under 500,000 km². [Easy, Medium, Hard]
+  - Has a land neighbour that is smaller by land area. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+
+Oman
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Land area from 100,000 to under 500,000 km². [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+
+Pakistan
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Land area from 500,000 to under 1,500,000 km². [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+  - In South Asia. [Medium, Hard]
+
+Palau
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Has a Pacific coast. [Easy, Medium, Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+
+Palestine
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has a Mediterranean coast. [Easy, Medium, Hard]
+  - In West Asia. [Medium, Hard]
+
+Panama
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has a Pacific coast. [Easy, Medium, Hard]
+
+Papua New Guinea
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - All its land neighbours are larger by land area. [Easy, Medium, Hard]
+  - Has a land neighbour in Asia. [Easy, Medium, Hard]
+
+Paraguay
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Land area from 100,000 to under 500,000 km². [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+
+Peru
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has a land neighbour that is smaller by land area. [Easy, Medium, Hard]
+  - Has five or six land neighbours. [Easy, Medium, Hard]
+
+Philippines
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Land area from 100,000 to under 500,000 km². [Easy, Medium, Hard]
+  - In Southeast Asia. [Easy, Medium, Hard]
+  - Has a Pacific coast. [Easy, Medium, Hard]
+
+Poland
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Land area from 100,000 to under 500,000 km². [Easy, Medium, Hard]
+  - Has a land neighbour that is smaller by land area. [Easy, Medium, Hard]
+  - Has a land neighbour in Europe. [Easy, Medium, Hard]
+
+Portugal
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has an Atlantic coast. [Easy, Medium, Hard]
+  - In Southern Europe. [Easy, Medium, Hard]
+
+Qatar
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+  - All its land neighbours are larger by land area. [Easy, Medium, Hard]
+
+Republic of the Congo
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - All its land neighbours are in Africa. [Medium, Hard]
+
+Romania
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has five or six land neighbours. [Easy, Medium, Hard]
+  - In Eastern Europe. [Medium, Hard]
+
+Russia
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Population from 50 million to under 150 million. [Easy, Medium, Hard]
+  - Has a land neighbour in Europe. [Easy, Medium, Hard]
+  - Has at least seven land neighbours. [Easy, Medium, Hard]
+
+Rwanda
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+
+Saint Kitts and Nevis
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+  - An island country. [Easy, Medium, Hard]
+
+Saint Lucia
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+  - An island country. [Easy, Medium, Hard]
+
+Saint Vincent and the Grenadines
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+  - An island country. [Easy, Medium, Hard]
+
+Samoa
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Has a Pacific coast. [Easy, Medium, Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+
+San Marino
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Is landlocked. [Medium, Hard]
+  - All its land neighbours are larger by land area. [Easy, Medium, Hard]
+
+Saudi Arabia
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+  - Has at least seven land neighbours. [Easy, Medium, Hard]
+
+Senegal
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has five or six land neighbours. [Easy, Medium, Hard]
+  - Has an Atlantic coast. [Easy, Medium, Hard]
+
+Serbia
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+  - In Southern Europe. [Easy, Medium, Hard]
+
+Seychelles
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+
+Sierra Leone
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - All its land neighbours are in Africa. [Medium, Hard]
+  - All its land neighbours are larger by land area. [Easy, Medium, Hard]
+
+Singapore
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - In Southeast Asia. [Easy, Medium, Hard]
+  - An island country in Asia. [Easy, Medium, Hard]
+
+Slovakia
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+  - All its land neighbours are larger by land area. [Easy, Medium, Hard]
+
+Slovenia
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+  - Has a Mediterranean coast. [Easy, Medium, Hard]
+
+Solomon Islands
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Land area from 10,000 to under 100,000 km². [Easy, Medium, Hard]
+  - Has a Pacific coast. [Easy, Medium, Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+
+Somalia
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+
+South Africa
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 50 million to under 150 million. [Easy, Medium, Hard]
+  - Has an Atlantic coast. [Easy, Medium, Hard]
+  - Has a land neighbour that is smaller by land area. [Easy, Medium, Hard]
+
+South Korea
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 50 million to under 150 million. [Easy, Medium, Hard]
+  - Has a land neighbour that is larger by land area. [Easy, Medium, Hard]
+  - Has a Pacific coast. [Easy, Medium, Hard]
+
+South Sudan
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+
+Spain
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Land area from 100,000 to under 500,000 km². [Easy, Medium, Hard]
+  - Has an Atlantic coast. [Easy, Medium, Hard]
+  - In Southern Europe. [Easy, Medium, Hard]
+
+Sri Lanka
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+
+Sudan
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 50 million to under 150 million. [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+  - Has a land neighbour that is smaller by land area. [Easy, Medium, Hard]
+
+Suriname
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Land area from 100,000 to under 500,000 km². [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+  - In South America. [Easy, Medium, Hard]
+
+Sweden
+  - The name has six letters or fewer. [Easy, Medium, Hard]
+  - Land area from 100,000 to under 500,000 km². [Easy, Medium, Hard]
+  - Has a land neighbour that is smaller by land area. [Easy, Medium, Hard]
+  - Has a land neighbour in Europe. [Easy, Medium, Hard]
+
+Switzerland
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has five or six land neighbours. [Easy, Medium, Hard]
+  - In Western Europe. [Easy, Medium, Hard]
+
+Syria
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has five or six land neighbours. [Easy, Medium, Hard]
+  - Has a Mediterranean coast. [Easy, Medium, Hard]
+
+São Tomé and Príncipe
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+  - Has an Atlantic coast. [Easy, Medium, Hard]
+
+Tajikistan
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+
+Tanzania
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Land area from 500,000 to under 1,500,000 km². [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+
+Thailand
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Population from 50 million to under 150 million. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+
+Timor-Leste
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - All its land neighbours are larger by land area. [Easy, Medium, Hard]
+  - An island country. [Easy, Medium, Hard]
+
+Togo
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+  - All its land neighbours are in Africa. [Medium, Hard]
+
+Tonga
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Has a Pacific coast. [Easy, Medium, Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+
+Trinidad and Tobago
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+  - An island country. [Easy, Medium, Hard]
+
+Tunisia
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has a Mediterranean coast. [Easy, Medium, Hard]
+  - Has exactly two land neighbours. [Medium, Hard]
+
+Turkmenistan
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 1 million to under 10 million. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+
+Tuvalu
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Has a Pacific coast. [Easy, Medium, Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+
+Türkiye
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 50 million to under 150 million. [Easy, Medium, Hard]
+  - Has a land neighbour that is smaller by land area. [Easy, Medium, Hard]
+  - Has a land neighbour in Europe. [Easy, Medium, Hard]
+
+Uganda
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Land area from 100,000 to under 500,000 km². [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has five or six land neighbours. [Easy, Medium, Hard]
+
+Ukraine
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has a land neighbour that is smaller by land area. [Easy, Medium, Hard]
+  - Has a land neighbour in Europe. [Easy, Medium, Hard]
+
+United Arab Emirates
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+  - All its land neighbours are larger by land area. [Easy, Medium, Hard]
+
+United Kingdom
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Land area from 100,000 to under 500,000 km². [Easy, Medium, Hard]
+  - Has an Atlantic coast. [Easy, Medium, Hard]
+  - In Northern Europe. [Easy, Medium, Hard]
+
+United States
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Land area of at least 1,500,000 km². [Easy, Medium, Hard]
+  - In North America. [Easy, Medium, Hard]
+  - Has a Pacific coast. [Easy, Medium, Hard]
+
+Uruguay
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Land area from 100,000 to under 500,000 km². [Easy, Medium, Hard]
+  - Has an Atlantic coast. [Easy, Medium, Hard]
+  - All its land neighbours are larger by land area. [Easy, Medium, Hard]
+
+Uzbekistan
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has five or six land neighbours. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+
+Vanuatu
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Land area from 10,000 to under 100,000 km². [Easy, Medium, Hard]
+  - Has a Pacific coast. [Easy, Medium, Hard]
+  - Has no land neighbours. [Easy, Medium, Hard]
+
+Vatican City
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population below 1 million. [Hard]
+  - Is landlocked. [Medium, Hard]
+  - All its land neighbours are larger by land area. [Easy, Medium, Hard]
+
+Venezuela
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+
+Vietnam
+  - The name ends with a consonant. [Easy, Medium, Hard]
+  - Land area from 100,000 to under 500,000 km². [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+  - In Southeast Asia. [Easy, Medium, Hard]
+
+Yemen
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Has a coast on the Indian Ocean or its seas. [Easy, Medium, Hard]
+
+Zambia
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has both smaller and larger land neighbours by land area. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]
+
+Zimbabwe
+  - First letter comes after M. [Easy, Medium, Hard]
+  - Population from 10 million to under 50 million. [Easy, Medium, Hard]
+  - Has three or four land neighbours. [Easy, Medium, Hard]
+  - Is landlocked. [Medium, Hard]

@@ -1,0 +1,8341 @@
+{
+  "version": 1,
+  "assembled": "2026-10-03",
+  "status": "reviewed",
+  "rules": {
+    "minimumMatches": 4,
+    "maximumFraction": 0.7,
+    "pools": {
+      "1": 45,
+      "2": 110,
+      "3": 195
+    },
+    "hintsPerCountry": 4
+  },
+  "nameConvention": "Use the displayed English country name; accents do not change letter identity, spaces/hyphens are not letters, and vowels are A/E/I/O/U.",
+  "attribution": [
+    {
+      "source": "mledoze/countries contributors",
+      "license": "ODbL-1.0",
+      "url": "https://github.com/mledoze/countries",
+      "localLicense": "../../DATA_LICENSE.txt"
+    },
+    {
+      "source": "World Bank, World Development Indicators",
+      "license": "CC-BY-4.0",
+      "populationYear": 2024,
+      "landAreaYear": 2023
+    },
+    {
+      "source": "Vatican City official population and geography publications; additional official and UN geography sources are cited per clue."
+    }
+  ],
+  "sourceSnapshot": {
+    "url": "https://raw.githubusercontent.com/mledoze/countries/master/countries.json",
+    "sha256": "913e5d716f9dc6b59881ee23488d47f5fda52070d1a34cac5fa327c9e61d8f7c"
+  },
+  "sourceAlternatives": {
+    "https://www.information.gov.bn/PublishingImages/SitePages/Publication%20Lists/Brunei%20District.pdf": "https://www.mfa.gov.bn/taipei/SitePages/visitbrunei.aspx"
+  },
+  "catalog": [
+    {
+      "id": "name-first-a-m",
+      "text": "First letter is not in the second half of the alphabet.",
+      "family": "name",
+      "kind": "general",
+      "dimension": "name",
+      "matches": [
+        "AF",
+        "AL",
+        "DZ",
+        "AD",
+        "AO",
+        "AG",
+        "AR",
+        "AM",
+        "AU",
+        "AT",
+        "AZ",
+        "BS",
+        "BH",
+        "BD",
+        "BB",
+        "BY",
+        "BE",
+        "BZ",
+        "BJ",
+        "BT",
+        "BO",
+        "BA",
+        "BW",
+        "BR",
+        "BN",
+        "BG",
+        "BF",
+        "BI",
+        "KH",
+        "CM",
+        "CA",
+        "CV",
+        "CF",
+        "TD",
+        "CL",
+        "CN",
+        "CO",
+        "KM",
+        "CR",
+        "HR",
+        "CU",
+        "CY",
+        "CZ",
+        "CD",
+        "DK",
+        "DJ",
+        "DM",
+        "DO",
+        "EC",
+        "EG",
+        "SV",
+        "GQ",
+        "ER",
+        "EE",
+        "SZ",
+        "ET",
+        "FJ",
+        "FI",
+        "FR",
+        "GA",
+        "GM",
+        "GE",
+        "DE",
+        "GH",
+        "GR",
+        "GD",
+        "GT",
+        "GN",
+        "GW",
+        "GY",
+        "HT",
+        "HN",
+        "HU",
+        "IS",
+        "IN",
+        "ID",
+        "IR",
+        "IQ",
+        "IE",
+        "IL",
+        "IT",
+        "CI",
+        "JM",
+        "JP",
+        "JO",
+        "KZ",
+        "KE",
+        "KI",
+        "KW",
+        "KG",
+        "LA",
+        "LV",
+        "LB",
+        "LS",
+        "LR",
+        "LY",
+        "LI",
+        "LT",
+        "LU",
+        "MG",
+        "MW",
+        "MY",
+        "MV",
+        "ML",
+        "MT",
+        "MH",
+        "MR",
+        "MU",
+        "MX",
+        "FM",
+        "MD",
+        "MC",
+        "MN",
+        "ME",
+        "MA",
+        "MZ",
+        "MM"
+      ],
+      "counts": {
+        "1": 24,
+        "2": 63,
+        "3": 117
+      },
+      "maximumCounts": {
+        "1": 24,
+        "2": 63,
+        "3": 117
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://github.com/mledoze/countries"
+      ],
+      "notes": [
+        "Use the displayed English name. Ignore accents, spaces and hyphens when counting letters. Vowels are A, E, I, O and U."
+      ]
+    },
+    {
+      "id": "name-first-n-z",
+      "text": "First letter comes after M.",
+      "family": "name",
+      "kind": "general",
+      "dimension": "name",
+      "matches": [
+        "NA",
+        "NR",
+        "NP",
+        "NL",
+        "NZ",
+        "NI",
+        "NE",
+        "NG",
+        "KP",
+        "MK",
+        "NO",
+        "OM",
+        "PK",
+        "PW",
+        "PS",
+        "PA",
+        "PG",
+        "PY",
+        "PE",
+        "PH",
+        "PL",
+        "PT",
+        "QA",
+        "CG",
+        "RO",
+        "RU",
+        "RW",
+        "KN",
+        "LC",
+        "VC",
+        "WS",
+        "SM",
+        "SA",
+        "SN",
+        "RS",
+        "SC",
+        "SL",
+        "SG",
+        "SK",
+        "SI",
+        "SB",
+        "SO",
+        "ZA",
+        "KR",
+        "SS",
+        "ES",
+        "LK",
+        "SD",
+        "SR",
+        "SE",
+        "CH",
+        "SY",
+        "ST",
+        "TJ",
+        "TZ",
+        "TH",
+        "TL",
+        "TG",
+        "TO",
+        "TT",
+        "TN",
+        "TM",
+        "TV",
+        "TR",
+        "UG",
+        "UA",
+        "AE",
+        "GB",
+        "US",
+        "UY",
+        "UZ",
+        "VU",
+        "VA",
+        "VE",
+        "VN",
+        "YE",
+        "ZM",
+        "ZW"
+      ],
+      "counts": {
+        "1": 21,
+        "2": 47,
+        "3": 78
+      },
+      "maximumCounts": {
+        "1": 21,
+        "2": 47,
+        "3": 78
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://github.com/mledoze/countries"
+      ],
+      "notes": [
+        "Use the displayed English name. Ignore accents, spaces and hyphens when counting letters. Vowels are A, E, I, O and U."
+      ]
+    },
+    {
+      "id": "name-last-a-m",
+      "text": "The name ends with a letter from A to M.",
+      "family": "name",
+      "kind": "general",
+      "dimension": "name",
+      "matches": [
+        "AL",
+        "DZ",
+        "AD",
+        "AO",
+        "AG",
+        "AR",
+        "AM",
+        "AU",
+        "AT",
+        "BD",
+        "BE",
+        "BZ",
+        "BO",
+        "BA",
+        "BW",
+        "BR",
+        "BN",
+        "BG",
+        "BI",
+        "KH",
+        "CA",
+        "CV",
+        "CF",
+        "TD",
+        "CL",
+        "CN",
+        "CO",
+        "CR",
+        "HR",
+        "CU",
+        "CZ",
+        "DK",
+        "DJ",
+        "DM",
+        "DO",
+        "GQ",
+        "ER",
+        "EE",
+        "SZ",
+        "ET",
+        "FJ",
+        "FI",
+        "FR",
+        "GM",
+        "GE",
+        "GH",
+        "GR",
+        "GD",
+        "GT",
+        "GN",
+        "GY",
+        "HT",
+        "IS",
+        "IN",
+        "ID",
+        "IE",
+        "IL",
+        "JM",
+        "KE",
+        "KI",
+        "LV",
+        "LR",
+        "LY",
+        "LT",
+        "LU",
+        "MW",
+        "MY",
+        "ML",
+        "MT",
+        "MR",
+        "FM",
+        "MD",
+        "MN",
+        "MZ",
+        "NA",
+        "NP",
+        "NZ",
+        "NI",
+        "NG",
+        "KP",
+        "MK",
+        "PS",
+        "PA",
+        "PG",
+        "PL",
+        "PT",
+        "RO",
+        "RU",
+        "RW",
+        "LC",
+        "WS",
+        "SA",
+        "SN",
+        "RS",
+        "SL",
+        "SG",
+        "SK",
+        "SI",
+        "SO",
+        "ZA",
+        "KR",
+        "LK",
+        "SR",
+        "CH",
+        "SY",
+        "ST",
+        "TZ",
+        "TH",
+        "TL",
+        "TO",
+        "TN",
+        "TR",
+        "UG",
+        "UA",
+        "GB",
+        "VE",
+        "VN",
+        "ZM",
+        "ZW"
+      ],
+      "counts": {
+        "1": 32,
+        "2": 75,
+        "3": 119
+      },
+      "maximumCounts": {
+        "1": 32,
+        "2": 75,
+        "3": 119
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        2,
+        3
+      ],
+      "sources": [
+        "https://github.com/mledoze/countries"
+      ],
+      "notes": [
+        "Use the displayed English name. Ignore accents, spaces and hyphens when counting letters. Vowels are A, E, I, O and U."
+      ]
+    },
+    {
+      "id": "name-last-n-z",
+      "text": "The name ends with a letter from N to Z.",
+      "family": "name",
+      "kind": "general",
+      "dimension": "name",
+      "matches": [
+        "AF",
+        "AZ",
+        "BS",
+        "BH",
+        "BB",
+        "BY",
+        "BJ",
+        "BT",
+        "BF",
+        "CM",
+        "KM",
+        "CY",
+        "CD",
+        "EC",
+        "EG",
+        "SV",
+        "GA",
+        "DE",
+        "GW",
+        "HN",
+        "HU",
+        "IR",
+        "IQ",
+        "IT",
+        "CI",
+        "JP",
+        "JO",
+        "KZ",
+        "KW",
+        "KG",
+        "LA",
+        "LB",
+        "LS",
+        "LI",
+        "MG",
+        "MV",
+        "MH",
+        "MU",
+        "MX",
+        "MC",
+        "ME",
+        "MA",
+        "MM",
+        "NR",
+        "NL",
+        "NE",
+        "NO",
+        "OM",
+        "PK",
+        "PW",
+        "PY",
+        "PE",
+        "PH",
+        "QA",
+        "CG",
+        "KN",
+        "VC",
+        "SM",
+        "SC",
+        "SB",
+        "SS",
+        "ES",
+        "SD",
+        "SE",
+        "TJ",
+        "TG",
+        "TT",
+        "TM",
+        "TV",
+        "AE",
+        "US",
+        "UY",
+        "UZ",
+        "VU",
+        "VA",
+        "YE"
+      ],
+      "counts": {
+        "1": 13,
+        "2": 35,
+        "3": 76
+      },
+      "maximumCounts": {
+        "1": 13,
+        "2": 35,
+        "3": 76
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://github.com/mledoze/countries"
+      ],
+      "notes": [
+        "Use the displayed English name. Ignore accents, spaces and hyphens when counting letters. Vowels are A, E, I, O and U."
+      ]
+    },
+    {
+      "id": "name-over-six",
+      "text": "The name has more than six letters.",
+      "family": "name",
+      "kind": "general",
+      "dimension": "name",
+      "matches": [
+        "AF",
+        "AL",
+        "DZ",
+        "AD",
+        "AG",
+        "AR",
+        "AM",
+        "AU",
+        "AT",
+        "AZ",
+        "BS",
+        "BH",
+        "BD",
+        "BB",
+        "BY",
+        "BE",
+        "BO",
+        "BA",
+        "BW",
+        "BG",
+        "BF",
+        "BI",
+        "KH",
+        "CM",
+        "CV",
+        "CF",
+        "CO",
+        "KM",
+        "CR",
+        "HR",
+        "CZ",
+        "CD",
+        "DK",
+        "DJ",
+        "DM",
+        "DO",
+        "EC",
+        "SV",
+        "GQ",
+        "ER",
+        "EE",
+        "SZ",
+        "ET",
+        "FI",
+        "GE",
+        "DE",
+        "GD",
+        "GT",
+        "GW",
+        "HN",
+        "HU",
+        "IS",
+        "ID",
+        "IE",
+        "CI",
+        "JM",
+        "KZ",
+        "KI",
+        "KG",
+        "LB",
+        "LS",
+        "LR",
+        "LI",
+        "LT",
+        "LU",
+        "MG",
+        "MY",
+        "MV",
+        "MH",
+        "MR",
+        "MU",
+        "FM",
+        "MD",
+        "MN",
+        "ME",
+        "MA",
+        "MZ",
+        "MM",
+        "NA",
+        "NL",
+        "NZ",
+        "NI",
+        "NG",
+        "KP",
+        "MK",
+        "PK",
+        "PS",
+        "PG",
+        "PY",
+        "PH",
+        "PT",
+        "CG",
+        "RO",
+        "KN",
+        "LC",
+        "VC",
+        "SM",
+        "SA",
+        "SN",
+        "SC",
+        "SL",
+        "SG",
+        "SK",
+        "SI",
+        "SB",
+        "SO",
+        "ZA",
+        "KR",
+        "SS",
+        "LK",
+        "SR",
+        "CH",
+        "ST",
+        "TJ",
+        "TZ",
+        "TH",
+        "TL",
+        "TT",
+        "TN",
+        "TM",
+        "TR",
+        "UA",
+        "AE",
+        "GB",
+        "US",
+        "UY",
+        "UZ",
+        "VU",
+        "VA",
+        "VE",
+        "VN",
+        "ZW"
+      ],
+      "counts": {
+        "1": 26,
+        "2": 74,
+        "3": 132
+      },
+      "maximumCounts": {
+        "1": 26,
+        "2": 74,
+        "3": 132
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://github.com/mledoze/countries"
+      ],
+      "notes": [
+        "Use the displayed English name. Ignore accents, spaces and hyphens when counting letters. Vowels are A, E, I, O and U."
+      ]
+    },
+    {
+      "id": "name-up-to-six",
+      "text": "The name has six letters or fewer.",
+      "family": "name",
+      "kind": "general",
+      "dimension": "name",
+      "matches": [
+        "AO",
+        "BZ",
+        "BJ",
+        "BT",
+        "BR",
+        "BN",
+        "CA",
+        "TD",
+        "CL",
+        "CN",
+        "CU",
+        "CY",
+        "EG",
+        "FJ",
+        "FR",
+        "GA",
+        "GM",
+        "GH",
+        "GR",
+        "GN",
+        "GY",
+        "HT",
+        "IN",
+        "IR",
+        "IQ",
+        "IL",
+        "IT",
+        "JP",
+        "JO",
+        "KE",
+        "KW",
+        "LA",
+        "LV",
+        "LY",
+        "MW",
+        "ML",
+        "MT",
+        "MX",
+        "MC",
+        "NR",
+        "NP",
+        "NE",
+        "NO",
+        "OM",
+        "PW",
+        "PA",
+        "PE",
+        "PL",
+        "QA",
+        "RU",
+        "RW",
+        "WS",
+        "RS",
+        "ES",
+        "SD",
+        "SE",
+        "SY",
+        "TG",
+        "TO",
+        "TV",
+        "UG",
+        "YE",
+        "ZM"
+      ],
+      "counts": {
+        "1": 19,
+        "2": 36,
+        "3": 63
+      },
+      "maximumCounts": {
+        "1": 19,
+        "2": 36,
+        "3": 63
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://github.com/mledoze/countries"
+      ],
+      "notes": [
+        "Use the displayed English name. Ignore accents, spaces and hyphens when counting letters. Vowels are A, E, I, O and U."
+      ]
+    },
+    {
+      "id": "name-ends-vowel",
+      "text": "The name ends with a vowel.",
+      "family": "name",
+      "kind": "general",
+      "dimension": "name",
+      "matches": [
+        "AL",
+        "DZ",
+        "AD",
+        "AO",
+        "AG",
+        "AR",
+        "AM",
+        "AU",
+        "AT",
+        "BZ",
+        "BO",
+        "BA",
+        "BW",
+        "BN",
+        "BG",
+        "BF",
+        "BI",
+        "KH",
+        "CA",
+        "CV",
+        "CL",
+        "CN",
+        "CO",
+        "CR",
+        "HR",
+        "CU",
+        "CZ",
+        "CD",
+        "DJ",
+        "DM",
+        "GQ",
+        "ER",
+        "EE",
+        "SZ",
+        "ET",
+        "FJ",
+        "FR",
+        "GM",
+        "GE",
+        "GH",
+        "GR",
+        "GD",
+        "GT",
+        "GN",
+        "GW",
+        "GY",
+        "HT",
+        "IN",
+        "ID",
+        "JM",
+        "KE",
+        "KI",
+        "LV",
+        "LS",
+        "LR",
+        "LY",
+        "LT",
+        "MW",
+        "MY",
+        "ML",
+        "MT",
+        "MR",
+        "MX",
+        "FM",
+        "MD",
+        "MC",
+        "MN",
+        "ME",
+        "MA",
+        "MZ",
+        "NA",
+        "NR",
+        "NI",
+        "NG",
+        "KP",
+        "MK",
+        "PW",
+        "PS",
+        "PA",
+        "PG",
+        "PE",
+        "CG",
+        "RO",
+        "RU",
+        "RW",
+        "LC",
+        "WS",
+        "SM",
+        "SA",
+        "RS",
+        "SL",
+        "SG",
+        "SK",
+        "SI",
+        "SO",
+        "ZA",
+        "KR",
+        "LK",
+        "SR",
+        "SY",
+        "ST",
+        "TZ",
+        "TL",
+        "TG",
+        "TO",
+        "TT",
+        "TN",
+        "TV",
+        "TR",
+        "UG",
+        "UA",
+        "VU",
+        "VE",
+        "ZM",
+        "ZW"
+      ],
+      "counts": {
+        "1": 25,
+        "2": 60,
+        "3": 115
+      },
+      "maximumCounts": {
+        "1": 25,
+        "2": 60,
+        "3": 115
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://github.com/mledoze/countries"
+      ],
+      "notes": [
+        "Use the displayed English name. Ignore accents, spaces and hyphens when counting letters. Vowels are A, E, I, O and U."
+      ]
+    },
+    {
+      "id": "name-ends-consonant",
+      "text": "The name ends with a consonant.",
+      "family": "name",
+      "kind": "general",
+      "dimension": "name",
+      "matches": [
+        "AF",
+        "AZ",
+        "BS",
+        "BH",
+        "BD",
+        "BB",
+        "BY",
+        "BE",
+        "BJ",
+        "BT",
+        "BR",
+        "CM",
+        "CF",
+        "TD",
+        "KM",
+        "CY",
+        "DK",
+        "DO",
+        "EC",
+        "EG",
+        "SV",
+        "FI",
+        "GA",
+        "DE",
+        "HN",
+        "HU",
+        "IS",
+        "IR",
+        "IQ",
+        "IE",
+        "IL",
+        "IT",
+        "CI",
+        "JP",
+        "JO",
+        "KZ",
+        "KW",
+        "KG",
+        "LA",
+        "LB",
+        "LI",
+        "LU",
+        "MG",
+        "MV",
+        "MH",
+        "MU",
+        "MM",
+        "NP",
+        "NL",
+        "NZ",
+        "NE",
+        "NO",
+        "OM",
+        "PK",
+        "PY",
+        "PH",
+        "PL",
+        "PT",
+        "QA",
+        "KN",
+        "VC",
+        "SN",
+        "SC",
+        "SB",
+        "SS",
+        "ES",
+        "SD",
+        "SE",
+        "CH",
+        "TJ",
+        "TH",
+        "TM",
+        "AE",
+        "GB",
+        "US",
+        "UY",
+        "UZ",
+        "VA",
+        "VN",
+        "YE"
+      ],
+      "counts": {
+        "1": 20,
+        "2": 50,
+        "3": 80
+      },
+      "maximumCounts": {
+        "1": 20,
+        "2": 50,
+        "3": 80
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://github.com/mledoze/countries"
+      ],
+      "notes": [
+        "Use the displayed English name. Ignore accents, spaces and hyphens when counting letters. Vowels are A, E, I, O and U."
+      ]
+    },
+    {
+      "id": "name-vowel-consonant",
+      "text": "The name starts with a vowel and ends with a consonant.",
+      "family": "name",
+      "kind": "general",
+      "dimension": "name",
+      "matches": [
+        "AF",
+        "AZ",
+        "EC",
+        "EG",
+        "SV",
+        "IS",
+        "IR",
+        "IQ",
+        "IE",
+        "IL",
+        "IT",
+        "CI",
+        "OM",
+        "AE",
+        "GB",
+        "US",
+        "UY",
+        "UZ"
+      ],
+      "counts": {
+        "1": 5,
+        "2": 16,
+        "3": 18
+      },
+      "maximumCounts": {
+        "1": 5,
+        "2": 16,
+        "3": 18
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://github.com/mledoze/countries"
+      ],
+      "notes": [
+        "Use the displayed English name. Ignore accents, spaces and hyphens when counting letters. Vowels are A, E, I, O and U."
+      ]
+    },
+    {
+      "id": "name-has-space",
+      "text": "The name contains a space.",
+      "family": "name",
+      "kind": "general",
+      "dimension": "name",
+      "matches": [
+        "AG",
+        "BA",
+        "BF",
+        "CV",
+        "CF",
+        "CR",
+        "CD",
+        "DO",
+        "SV",
+        "GQ",
+        "CI",
+        "MH",
+        "NZ",
+        "KP",
+        "MK",
+        "PG",
+        "CG",
+        "KN",
+        "LC",
+        "VC",
+        "SM",
+        "SA",
+        "SL",
+        "SB",
+        "ZA",
+        "KR",
+        "SS",
+        "LK",
+        "ST",
+        "TT",
+        "AE",
+        "GB",
+        "US",
+        "VA"
+      ],
+      "counts": {
+        "1": 6,
+        "2": 13,
+        "3": 34
+      },
+      "maximumCounts": {
+        "1": 6,
+        "2": 13,
+        "3": 34
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://github.com/mledoze/countries"
+      ],
+      "notes": [
+        "Use the displayed English name. Ignore accents, spaces and hyphens when counting letters. Vowels are A, E, I, O and U."
+      ]
+    },
+    {
+      "id": "name-no-e",
+      "text": "The name contains no E.",
+      "family": "name",
+      "kind": "general",
+      "dimension": "name",
+      "matches": [
+        "AF",
+        "AL",
+        "AD",
+        "AO",
+        "AG",
+        "AU",
+        "AT",
+        "BS",
+        "BH",
+        "BB",
+        "BT",
+        "BO",
+        "BW",
+        "BR",
+        "BG",
+        "BF",
+        "BI",
+        "KH",
+        "CA",
+        "TD",
+        "CN",
+        "CO",
+        "KM",
+        "CR",
+        "HR",
+        "CU",
+        "CY",
+        "CD",
+        "DJ",
+        "DM",
+        "FJ",
+        "FI",
+        "GA",
+        "GM",
+        "GH",
+        "GY",
+        "HT",
+        "HN",
+        "HU",
+        "IN",
+        "IR",
+        "IQ",
+        "IT",
+        "CI",
+        "JM",
+        "JP",
+        "JO",
+        "KZ",
+        "KI",
+        "KW",
+        "KG",
+        "LA",
+        "LV",
+        "LY",
+        "LT",
+        "MG",
+        "MW",
+        "MY",
+        "ML",
+        "MT",
+        "MH",
+        "MR",
+        "MU",
+        "MD",
+        "MC",
+        "MN",
+        "MA",
+        "MM",
+        "NA",
+        "NR",
+        "NI",
+        "NO",
+        "OM",
+        "PK",
+        "PW",
+        "PA",
+        "PY",
+        "PL",
+        "PT",
+        "QA",
+        "RO",
+        "RU",
+        "RW",
+        "LC",
+        "WS",
+        "SM",
+        "SA",
+        "SK",
+        "SB",
+        "SO",
+        "ZA",
+        "SS",
+        "ES",
+        "LK",
+        "SD",
+        "SY",
+        "TJ",
+        "TZ",
+        "TH",
+        "TG",
+        "TO",
+        "TT",
+        "TN",
+        "TV",
+        "UG",
+        "UY",
+        "VU",
+        "VA",
+        "ZM"
+      ],
+      "counts": {
+        "1": 21,
+        "2": 59,
+        "3": 109
+      },
+      "maximumCounts": {
+        "1": 21,
+        "2": 59,
+        "3": 109
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://github.com/mledoze/countries"
+      ],
+      "notes": [
+        "Use the displayed English name. Ignore accents, spaces and hyphens when counting letters. Vowels are A, E, I, O and U."
+      ]
+    },
+    {
+      "id": "name-has-e",
+      "text": "The name contains E.",
+      "family": "name",
+      "kind": "general",
+      "dimension": "name",
+      "matches": [
+        "DZ",
+        "AR",
+        "AM",
+        "AZ",
+        "BD",
+        "BY",
+        "BE",
+        "BZ",
+        "BJ",
+        "BA",
+        "BN",
+        "CM",
+        "CV",
+        "CF",
+        "CL",
+        "CZ",
+        "DK",
+        "DO",
+        "EC",
+        "EG",
+        "SV",
+        "GQ",
+        "ER",
+        "EE",
+        "SZ",
+        "ET",
+        "FR",
+        "GE",
+        "DE",
+        "GR",
+        "GD",
+        "GT",
+        "GN",
+        "GW",
+        "IS",
+        "ID",
+        "IE",
+        "IL",
+        "KE",
+        "LB",
+        "LS",
+        "LR",
+        "LI",
+        "LU",
+        "MV",
+        "MX",
+        "FM",
+        "ME",
+        "MZ",
+        "NP",
+        "NL",
+        "NZ",
+        "NE",
+        "NG",
+        "KP",
+        "MK",
+        "PS",
+        "PG",
+        "PE",
+        "PH",
+        "CG",
+        "KN",
+        "VC",
+        "SN",
+        "RS",
+        "SC",
+        "SL",
+        "SG",
+        "SI",
+        "KR",
+        "SR",
+        "SE",
+        "CH",
+        "ST",
+        "TL",
+        "TM",
+        "TR",
+        "UA",
+        "AE",
+        "GB",
+        "US",
+        "UZ",
+        "VE",
+        "VN",
+        "YE",
+        "ZW"
+      ],
+      "counts": {
+        "1": 24,
+        "2": 51,
+        "3": 86
+      },
+      "maximumCounts": {
+        "1": 24,
+        "2": 51,
+        "3": 86
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://github.com/mledoze/countries"
+      ],
+      "notes": [
+        "Use the displayed English name. Ignore accents, spaces and hyphens when counting letters. Vowels are A, E, I, O and U."
+      ]
+    },
+    {
+      "id": "name-no-a",
+      "text": "The name contains no A.",
+      "family": "name",
+      "kind": "general",
+      "dimension": "name",
+      "matches": [
+        "BE",
+        "BZ",
+        "BJ",
+        "BN",
+        "BI",
+        "CL",
+        "KM",
+        "CY",
+        "CD",
+        "DJ",
+        "EG",
+        "FJ",
+        "GR",
+        "LS",
+        "LI",
+        "LU",
+        "MX",
+        "ME",
+        "MA",
+        "NE",
+        "PE",
+        "PH",
+        "CG",
+        "SC",
+        "SE",
+        "TL",
+        "TG",
+        "TR",
+        "GB",
+        "YE"
+      ],
+      "counts": {
+        "1": 10,
+        "2": 11,
+        "3": 30
+      },
+      "maximumCounts": {
+        "1": 10,
+        "2": 11,
+        "3": 30
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://github.com/mledoze/countries"
+      ],
+      "notes": [
+        "Use the displayed English name. Ignore accents, spaces and hyphens when counting letters. Vowels are A, E, I, O and U."
+      ]
+    },
+    {
+      "id": "name-has-o",
+      "text": "The name contains O.",
+      "family": "name",
+      "kind": "general",
+      "dimension": "name",
+      "matches": [
+        "AD",
+        "AO",
+        "BB",
+        "BO",
+        "BA",
+        "BW",
+        "BF",
+        "KH",
+        "CM",
+        "CO",
+        "KM",
+        "CR",
+        "HR",
+        "CD",
+        "DJ",
+        "DM",
+        "DO",
+        "EC",
+        "SV",
+        "GQ",
+        "EE",
+        "ET",
+        "GA",
+        "GE",
+        "HN",
+        "ID",
+        "CI",
+        "JO",
+        "LA",
+        "LB",
+        "LS",
+        "LU",
+        "MX",
+        "FM",
+        "MD",
+        "MC",
+        "MN",
+        "ME",
+        "MA",
+        "MZ",
+        "KP",
+        "MK",
+        "NO",
+        "OM",
+        "PL",
+        "PT",
+        "CG",
+        "RO",
+        "WS",
+        "SM",
+        "SL",
+        "SG",
+        "SK",
+        "SI",
+        "SB",
+        "SO",
+        "ZA",
+        "KR",
+        "SS",
+        "ST",
+        "TL",
+        "TG",
+        "TO",
+        "TT",
+        "GB"
+      ],
+      "counts": {
+        "1": 12,
+        "2": 30,
+        "3": 65
+      },
+      "maximumCounts": {
+        "1": 12,
+        "2": 30,
+        "3": 65
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://github.com/mledoze/countries"
+      ],
+      "notes": [
+        "Use the displayed English name. Ignore accents, spaces and hyphens when counting letters. Vowels are A, E, I, O and U."
+      ]
+    },
+    {
+      "id": "population-0-1000000",
+      "text": "Population below 1 million.",
+      "family": "population",
+      "kind": "general",
+      "dimension": "population",
+      "matches": [
+        "AD",
+        "AG",
+        "BS",
+        "BB",
+        "BZ",
+        "BT",
+        "BN",
+        "CV",
+        "KM",
+        "DM",
+        "FJ",
+        "GD",
+        "GY",
+        "IS",
+        "KI",
+        "LI",
+        "LU",
+        "MV",
+        "MT",
+        "MH",
+        "FM",
+        "MC",
+        "ME",
+        "NR",
+        "PW",
+        "KN",
+        "LC",
+        "VC",
+        "WS",
+        "SM",
+        "SC",
+        "SB",
+        "SR",
+        "ST",
+        "TO",
+        "TV",
+        "VU",
+        "VA"
+      ],
+      "counts": {
+        "1": 0,
+        "2": 1,
+        "3": 38
+      },
+      "maximumCounts": {
+        "1": 0,
+        "2": 1,
+        "3": 38
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        3
+      ],
+      "sources": [
+        "https://data.worldbank.org/indicator/SP.POP.TOTL",
+        "https://www.vaticanstate.va/en/state-and-government/general-informations/population.html"
+      ],
+      "notes": [
+        "Uses the embedded 2024 snapshot.",
+        "Vatican City uses its official population and geography publications."
+      ],
+      "range": {
+        "field": "population",
+        "low": 0,
+        "high": 1000000
+      }
+    },
+    {
+      "id": "population-1000000-10000000",
+      "text": "Population from 1 million to under 10 million.",
+      "family": "population",
+      "kind": "general",
+      "dimension": "population",
+      "matches": [
+        "AL",
+        "AM",
+        "AT",
+        "BH",
+        "BY",
+        "BA",
+        "BW",
+        "BG",
+        "CF",
+        "CR",
+        "HR",
+        "CY",
+        "DK",
+        "DJ",
+        "SV",
+        "GQ",
+        "ER",
+        "EE",
+        "SZ",
+        "FI",
+        "GA",
+        "GM",
+        "GE",
+        "GW",
+        "HU",
+        "IE",
+        "JM",
+        "KW",
+        "KG",
+        "LA",
+        "LV",
+        "LB",
+        "LS",
+        "LR",
+        "LY",
+        "LT",
+        "MR",
+        "MU",
+        "MD",
+        "MN",
+        "NA",
+        "NZ",
+        "NI",
+        "MK",
+        "NO",
+        "OM",
+        "PS",
+        "PA",
+        "PY",
+        "QA",
+        "CG",
+        "RS",
+        "SL",
+        "SG",
+        "SK",
+        "SI",
+        "CH",
+        "TL",
+        "TG",
+        "TT",
+        "TM",
+        "UY"
+      ],
+      "counts": {
+        "1": 8,
+        "2": 30,
+        "3": 62
+      },
+      "maximumCounts": {
+        "1": 8,
+        "2": 30,
+        "3": 62
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://data.worldbank.org/indicator/SP.POP.TOTL"
+      ],
+      "notes": [
+        "Uses the embedded 2024 snapshot."
+      ],
+      "range": {
+        "field": "population",
+        "low": 1000000,
+        "high": 10000000
+      }
+    },
+    {
+      "id": "population-10000000-50000000",
+      "text": "Population from 10 million to under 50 million.",
+      "family": "population",
+      "kind": "general",
+      "dimension": "population",
+      "matches": [
+        "AF",
+        "DZ",
+        "AO",
+        "AR",
+        "AU",
+        "AZ",
+        "BE",
+        "BJ",
+        "BO",
+        "BF",
+        "BI",
+        "KH",
+        "CM",
+        "CA",
+        "TD",
+        "CL",
+        "CU",
+        "CZ",
+        "DO",
+        "EC",
+        "GH",
+        "GR",
+        "GT",
+        "GN",
+        "HT",
+        "HN",
+        "IQ",
+        "IL",
+        "CI",
+        "JO",
+        "KZ",
+        "MG",
+        "MW",
+        "MY",
+        "ML",
+        "MA",
+        "MZ",
+        "NP",
+        "NL",
+        "NE",
+        "KP",
+        "PG",
+        "PE",
+        "PL",
+        "PT",
+        "RO",
+        "RW",
+        "SA",
+        "SN",
+        "SO",
+        "SS",
+        "ES",
+        "LK",
+        "SE",
+        "SY",
+        "TJ",
+        "TN",
+        "UA",
+        "AE",
+        "UZ",
+        "VE",
+        "YE",
+        "ZM",
+        "ZW"
+      ],
+      "counts": {
+        "1": 15,
+        "2": 49,
+        "3": 64
+      },
+      "maximumCounts": {
+        "1": 15,
+        "2": 49,
+        "3": 64
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://data.worldbank.org/indicator/SP.POP.TOTL"
+      ],
+      "notes": [
+        "Uses the embedded 2024 snapshot."
+      ],
+      "range": {
+        "field": "population",
+        "low": 10000000,
+        "high": 50000000
+      }
+    },
+    {
+      "id": "population-50000000-150000000",
+      "text": "Population from 50 million to under 150 million.",
+      "family": "population",
+      "kind": "general",
+      "dimension": "population",
+      "matches": [
+        "CO",
+        "CD",
+        "EG",
+        "ET",
+        "FR",
+        "DE",
+        "IR",
+        "IT",
+        "JP",
+        "KE",
+        "MX",
+        "MM",
+        "PH",
+        "RU",
+        "ZA",
+        "KR",
+        "SD",
+        "TZ",
+        "TH",
+        "TR",
+        "UG",
+        "GB",
+        "VN"
+      ],
+      "counts": {
+        "1": 16,
+        "2": 22,
+        "3": 23
+      },
+      "maximumCounts": {
+        "1": 16,
+        "2": 22,
+        "3": 23
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://data.worldbank.org/indicator/SP.POP.TOTL"
+      ],
+      "notes": [
+        "Uses the embedded 2024 snapshot."
+      ],
+      "range": {
+        "field": "population",
+        "low": 50000000,
+        "high": 150000000
+      }
+    },
+    {
+      "id": "population-150000000-plus",
+      "text": "Population of at least 150 million.",
+      "family": "population",
+      "kind": "general",
+      "dimension": "population",
+      "matches": [
+        "BD",
+        "BR",
+        "CN",
+        "IN",
+        "ID",
+        "NG",
+        "PK",
+        "US"
+      ],
+      "counts": {
+        "1": 6,
+        "2": 8,
+        "3": 8
+      },
+      "maximumCounts": {
+        "1": 6,
+        "2": 8,
+        "3": 8
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://data.worldbank.org/indicator/SP.POP.TOTL"
+      ],
+      "notes": [
+        "Uses the embedded 2024 snapshot."
+      ],
+      "range": {
+        "field": "population",
+        "low": 150000000,
+        "high": null
+      }
+    },
+    {
+      "id": "area-0-10000",
+      "text": "Land area below 10,000 km².",
+      "family": "area",
+      "kind": "general",
+      "dimension": "area",
+      "matches": [
+        "AD",
+        "AG",
+        "BH",
+        "BB",
+        "BN",
+        "CV",
+        "KM",
+        "CY",
+        "DM",
+        "GD",
+        "KI",
+        "LI",
+        "LU",
+        "MV",
+        "MT",
+        "MH",
+        "MU",
+        "FM",
+        "MC",
+        "NR",
+        "PW",
+        "PS",
+        "KN",
+        "LC",
+        "VC",
+        "WS",
+        "SM",
+        "SC",
+        "SG",
+        "ST",
+        "TO",
+        "TT",
+        "TV",
+        "VA"
+      ],
+      "counts": {
+        "1": 1,
+        "2": 2,
+        "3": 34
+      },
+      "maximumCounts": {
+        "1": 1,
+        "2": 2,
+        "3": 34
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        3
+      ],
+      "sources": [
+        "https://data.worldbank.org/indicator/AG.LND.TOTL.K2",
+        "https://www.vaticanstate.va/en/state-and-government/general-informations/geography.html"
+      ],
+      "notes": [
+        "Uses the embedded 2023 snapshot; inland water is excluded.",
+        "Vatican City uses its official population and geography publications."
+      ],
+      "range": {
+        "field": "area",
+        "low": 0,
+        "high": 10000
+      }
+    },
+    {
+      "id": "area-10000-100000",
+      "text": "Land area from 10,000 to under 100,000 km².",
+      "family": "area",
+      "kind": "general",
+      "dimension": "area",
+      "matches": [
+        "AL",
+        "AM",
+        "AT",
+        "AZ",
+        "BS",
+        "BE",
+        "BZ",
+        "BT",
+        "BA",
+        "BI",
+        "CR",
+        "HR",
+        "CZ",
+        "DK",
+        "DJ",
+        "DO",
+        "SV",
+        "GQ",
+        "EE",
+        "SZ",
+        "FJ",
+        "GM",
+        "GE",
+        "GW",
+        "HT",
+        "HU",
+        "IE",
+        "IL",
+        "JM",
+        "JO",
+        "KW",
+        "LV",
+        "LB",
+        "LS",
+        "LR",
+        "LT",
+        "MW",
+        "MD",
+        "ME",
+        "NL",
+        "MK",
+        "PA",
+        "PT",
+        "QA",
+        "RW",
+        "RS",
+        "SL",
+        "SK",
+        "SI",
+        "SB",
+        "KR",
+        "LK",
+        "CH",
+        "TL",
+        "TG",
+        "AE",
+        "VU"
+      ],
+      "counts": {
+        "1": 7,
+        "2": 29,
+        "3": 57
+      },
+      "maximumCounts": {
+        "1": 7,
+        "2": 29,
+        "3": 57
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://data.worldbank.org/indicator/AG.LND.TOTL.K2"
+      ],
+      "notes": [
+        "Uses the embedded 2023 snapshot; inland water is excluded."
+      ],
+      "range": {
+        "field": "area",
+        "low": 10000,
+        "high": 100000
+      }
+    },
+    {
+      "id": "area-100000-500000",
+      "text": "Land area from 100,000 to under 500,000 km².",
+      "family": "area",
+      "kind": "general",
+      "dimension": "area",
+      "matches": [
+        "BD",
+        "BY",
+        "BJ",
+        "BG",
+        "BF",
+        "KH",
+        "CM",
+        "CU",
+        "EC",
+        "ER",
+        "FI",
+        "GA",
+        "DE",
+        "GH",
+        "GR",
+        "GT",
+        "GN",
+        "GY",
+        "HN",
+        "IS",
+        "IQ",
+        "IT",
+        "CI",
+        "JP",
+        "KG",
+        "LA",
+        "MY",
+        "MA",
+        "NP",
+        "NZ",
+        "NI",
+        "KP",
+        "NO",
+        "OM",
+        "PG",
+        "PY",
+        "PH",
+        "PL",
+        "CG",
+        "RO",
+        "SN",
+        "ES",
+        "SR",
+        "SE",
+        "SY",
+        "TJ",
+        "TN",
+        "TM",
+        "UG",
+        "GB",
+        "UY",
+        "UZ",
+        "VN",
+        "ZW"
+      ],
+      "counts": {
+        "1": 16,
+        "2": 39,
+        "3": 54
+      },
+      "maximumCounts": {
+        "1": 16,
+        "2": 39,
+        "3": 54
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://data.worldbank.org/indicator/AG.LND.TOTL.K2"
+      ],
+      "notes": [
+        "Uses the embedded 2023 snapshot; inland water is excluded."
+      ],
+      "range": {
+        "field": "area",
+        "low": 100000,
+        "high": 500000
+      }
+    },
+    {
+      "id": "area-500000-1500000",
+      "text": "Land area from 500,000 to under 1,500,000 km².",
+      "family": "area",
+      "kind": "general",
+      "dimension": "area",
+      "matches": [
+        "AF",
+        "AO",
+        "BO",
+        "BW",
+        "CF",
+        "TD",
+        "CL",
+        "CO",
+        "EG",
+        "ET",
+        "FR",
+        "KE",
+        "MG",
+        "ML",
+        "MR",
+        "MZ",
+        "MM",
+        "NA",
+        "NE",
+        "NG",
+        "PK",
+        "PE",
+        "SO",
+        "ZA",
+        "SS",
+        "TZ",
+        "TH",
+        "TR",
+        "UA",
+        "VE",
+        "YE",
+        "ZM"
+      ],
+      "counts": {
+        "1": 11,
+        "2": 23,
+        "3": 32
+      },
+      "maximumCounts": {
+        "1": 11,
+        "2": 23,
+        "3": 32
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://data.worldbank.org/indicator/AG.LND.TOTL.K2"
+      ],
+      "notes": [
+        "Uses the embedded 2023 snapshot; inland water is excluded."
+      ],
+      "range": {
+        "field": "area",
+        "low": 500000,
+        "high": 1500000
+      }
+    },
+    {
+      "id": "area-1500000-plus",
+      "text": "Land area of at least 1,500,000 km².",
+      "family": "area",
+      "kind": "general",
+      "dimension": "area",
+      "matches": [
+        "DZ",
+        "AR",
+        "AU",
+        "BR",
+        "CA",
+        "CN",
+        "CD",
+        "IN",
+        "ID",
+        "IR",
+        "KZ",
+        "LY",
+        "MX",
+        "MN",
+        "RU",
+        "SA",
+        "SD",
+        "US"
+      ],
+      "counts": {
+        "1": 10,
+        "2": 17,
+        "3": 18
+      },
+      "maximumCounts": {
+        "1": 10,
+        "2": 17,
+        "3": 18
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://data.worldbank.org/indicator/AG.LND.TOTL.K2"
+      ],
+      "notes": [
+        "Uses the embedded 2023 snapshot; inland water is excluded."
+      ],
+      "range": {
+        "field": "area",
+        "low": 1500000,
+        "high": null
+      }
+    },
+    {
+      "id": "geo-no-ocean-coast",
+      "text": "Is landlocked.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "coast",
+      "matches": [
+        "AF",
+        "AD",
+        "AM",
+        "AT",
+        "AZ",
+        "BY",
+        "BT",
+        "BO",
+        "BW",
+        "BF",
+        "BI",
+        "CF",
+        "TD",
+        "CZ",
+        "SZ",
+        "ET",
+        "HU",
+        "KZ",
+        "KG",
+        "LA",
+        "LS",
+        "LI",
+        "LU",
+        "MW",
+        "ML",
+        "MD",
+        "MN",
+        "NP",
+        "NE",
+        "MK",
+        "PY",
+        "RW",
+        "SM",
+        "RS",
+        "SK",
+        "SS",
+        "CH",
+        "TJ",
+        "TM",
+        "UG",
+        "UZ",
+        "VA",
+        "ZM",
+        "ZW"
+      ],
+      "counts": {
+        "1": 2,
+        "2": 19,
+        "3": 44
+      },
+      "maximumCounts": {
+        "1": 2,
+        "2": 19,
+        "3": 44
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        2,
+        3
+      ],
+      "sources": [
+        "https://github.com/mledoze/countries/blob/master/countries.json",
+        "https://www.cgihambantota.gov.in/page/fact-sheet-india/",
+        "https://www.gov.bw/know-botswana?page=1",
+        "https://www.gov.uk/foreign-travel-advice/kosovo/entry-requirements",
+        "https://namibiatradeportal.gov.na/general-trade-information/facilitating-cross-border-trade"
+      ],
+      "notes": [
+        "Landlocked does not mean no inland-sea shoreline: Azerbaijan, Kazakhstan and Turkmenistan border the Caspian Sea."
+      ],
+      "rule": {
+        "field": "landlocked",
+        "equals": true
+      }
+    },
+    {
+      "id": "geo-no-land-neighbours",
+      "text": "Has no land neighbours.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "borders",
+      "matches": [
+        "AG",
+        "AU",
+        "BS",
+        "BB",
+        "CV",
+        "KM",
+        "DM",
+        "FJ",
+        "GD",
+        "IS",
+        "JM",
+        "JP",
+        "KI",
+        "MG",
+        "MV",
+        "MT",
+        "MH",
+        "MU",
+        "FM",
+        "NR",
+        "NZ",
+        "PW",
+        "PH",
+        "KN",
+        "LC",
+        "VC",
+        "WS",
+        "SC",
+        "SB",
+        "LK",
+        "ST",
+        "TO",
+        "TT",
+        "TV",
+        "VU"
+      ],
+      "counts": {
+        "1": 4,
+        "2": 9,
+        "3": 35
+      },
+      "maximumCounts": {
+        "1": 14,
+        "2": 27,
+        "3": 59
+      },
+      "possibleExtraMatches": [
+        "AF",
+        "AL",
+        "DZ",
+        "BH",
+        "CU",
+        "CY",
+        "DK",
+        "FR",
+        "IN",
+        "IL",
+        "JO",
+        "MY",
+        "MR",
+        "ME",
+        "MA",
+        "NL",
+        "MK",
+        "PK",
+        "PS",
+        "RS",
+        "SG",
+        "ES",
+        "GB",
+        "US"
+      ],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://github.com/mledoze/countries/blob/master/countries.json",
+        "https://www.mfa.gov.lk/en/national-profile-and-geography"
+      ],
+      "notes": [
+        "Only countries with unambiguous sovereign natural-land-neighbour conventions are included."
+      ]
+    },
+    {
+      "id": "geo-one-land-neighbour",
+      "text": "Has exactly one land neighbour.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "borders",
+      "matches": [
+        "BN",
+        "DO",
+        "GM",
+        "HT",
+        "IE",
+        "LS",
+        "MC",
+        "PG",
+        "PT",
+        "QA",
+        "SM",
+        "KR",
+        "TL",
+        "VA"
+      ],
+      "counts": {
+        "1": 3,
+        "2": 7,
+        "3": 14
+      },
+      "maximumCounts": {
+        "1": 13,
+        "2": 25,
+        "3": 38
+      },
+      "possibleExtraMatches": [
+        "AF",
+        "AL",
+        "DZ",
+        "BH",
+        "CU",
+        "CY",
+        "DK",
+        "FR",
+        "IN",
+        "IL",
+        "JO",
+        "MY",
+        "MR",
+        "ME",
+        "MA",
+        "NL",
+        "MK",
+        "PK",
+        "PS",
+        "RS",
+        "SG",
+        "ES",
+        "GB",
+        "US"
+      ],
+      "eligibleTiers": [
+        2,
+        3
+      ],
+      "sources": [
+        "https://github.com/mledoze/countries/blob/master/countries.json"
+      ],
+      "notes": [
+        "Only countries with unambiguous sovereign natural-land-neighbour conventions are included."
+      ]
+    },
+    {
+      "id": "geo-two-land-neighbours",
+      "text": "Has exactly two land neighbours.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "borders",
+      "matches": [
+        "AD",
+        "BD",
+        "BZ",
+        "BT",
+        "CA",
+        "CR",
+        "EC",
+        "SV",
+        "GQ",
+        "EE",
+        "SZ",
+        "GW",
+        "KW",
+        "LB",
+        "LI",
+        "MD",
+        "MN",
+        "NP",
+        "NI",
+        "PA",
+        "SL",
+        "SE",
+        "TN",
+        "AE",
+        "UY",
+        "YE"
+      ],
+      "counts": {
+        "1": 3,
+        "2": 12,
+        "3": 26
+      },
+      "maximumCounts": {
+        "1": 13,
+        "2": 30,
+        "3": 50
+      },
+      "possibleExtraMatches": [
+        "AF",
+        "AL",
+        "DZ",
+        "BH",
+        "CU",
+        "CY",
+        "DK",
+        "FR",
+        "IN",
+        "IL",
+        "JO",
+        "MY",
+        "MR",
+        "ME",
+        "MA",
+        "NL",
+        "MK",
+        "PK",
+        "PS",
+        "RS",
+        "SG",
+        "ES",
+        "GB",
+        "US"
+      ],
+      "eligibleTiers": [
+        2,
+        3
+      ],
+      "sources": [
+        "https://github.com/mledoze/countries/blob/master/countries.json",
+        "https://canada.um.dk/en/the-arctic"
+      ],
+      "notes": [
+        "Only countries with unambiguous sovereign natural-land-neighbour conventions are included."
+      ]
+    },
+    {
+      "id": "geo-three-or-four-land-neighbours",
+      "text": "Has three or four land neighbours.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "borders",
+      "matches": [
+        "AO",
+        "AM",
+        "BE",
+        "BJ",
+        "BA",
+        "BW",
+        "BI",
+        "KH",
+        "CL",
+        "CZ",
+        "DJ",
+        "EG",
+        "ER",
+        "FI",
+        "GA",
+        "GE",
+        "GH",
+        "GR",
+        "GT",
+        "GY",
+        "HN",
+        "ID",
+        "KG",
+        "LV",
+        "LR",
+        "LT",
+        "LU",
+        "MW",
+        "MX",
+        "NA",
+        "NG",
+        "KP",
+        "NO",
+        "OM",
+        "PY",
+        "RW",
+        "SI",
+        "SO",
+        "SR",
+        "TJ",
+        "TH",
+        "TG",
+        "TM",
+        "VE",
+        "VN",
+        "ZW"
+      ],
+      "counts": {
+        "1": 10,
+        "2": 29,
+        "3": 46
+      },
+      "maximumCounts": {
+        "1": 20,
+        "2": 47,
+        "3": 70
+      },
+      "possibleExtraMatches": [
+        "AF",
+        "AL",
+        "DZ",
+        "BH",
+        "CU",
+        "CY",
+        "DK",
+        "FR",
+        "IN",
+        "IL",
+        "JO",
+        "MY",
+        "MR",
+        "ME",
+        "MA",
+        "NL",
+        "MK",
+        "PK",
+        "PS",
+        "RS",
+        "SG",
+        "ES",
+        "GB",
+        "US"
+      ],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://github.com/mledoze/countries/blob/master/countries.json",
+        "https://www.gov.bw/know-botswana?page=1",
+        "https://namibiatradeportal.gov.na/general-trade-information/facilitating-cross-border-trade"
+      ],
+      "notes": [
+        "Only countries with unambiguous sovereign natural-land-neighbour conventions are included."
+      ]
+    },
+    {
+      "id": "geo-five-or-six-land-neighbours",
+      "text": "Has five or six land neighbours.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "borders",
+      "matches": [
+        "AR",
+        "AZ",
+        "BY",
+        "BO",
+        "BG",
+        "BF",
+        "CM",
+        "CF",
+        "TD",
+        "CO",
+        "HR",
+        "ET",
+        "GN",
+        "IQ",
+        "IT",
+        "CI",
+        "KZ",
+        "KE",
+        "LA",
+        "LY",
+        "MZ",
+        "MM",
+        "PE",
+        "CG",
+        "RO",
+        "SN",
+        "SK",
+        "ZA",
+        "SS",
+        "CH",
+        "SY",
+        "UG",
+        "UZ"
+      ],
+      "counts": {
+        "1": 7,
+        "2": 21,
+        "3": 33
+      },
+      "maximumCounts": {
+        "1": 17,
+        "2": 39,
+        "3": 57
+      },
+      "possibleExtraMatches": [
+        "AF",
+        "AL",
+        "DZ",
+        "BH",
+        "CU",
+        "CY",
+        "DK",
+        "FR",
+        "IN",
+        "IL",
+        "JO",
+        "MY",
+        "MR",
+        "ME",
+        "MA",
+        "NL",
+        "MK",
+        "PK",
+        "PS",
+        "RS",
+        "SG",
+        "ES",
+        "GB",
+        "US"
+      ],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://github.com/mledoze/countries/blob/master/countries.json"
+      ],
+      "notes": [
+        "Only countries with unambiguous sovereign natural-land-neighbour conventions are included."
+      ]
+    },
+    {
+      "id": "geo-seven-or-more-land-neighbours",
+      "text": "Has at least seven land neighbours.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "borders",
+      "matches": [
+        "AT",
+        "BR",
+        "CN",
+        "CD",
+        "DE",
+        "HU",
+        "IR",
+        "ML",
+        "NE",
+        "PL",
+        "RU",
+        "SA",
+        "SD",
+        "TZ",
+        "TR",
+        "UA",
+        "ZM"
+      ],
+      "counts": {
+        "1": 8,
+        "2": 14,
+        "3": 17
+      },
+      "maximumCounts": {
+        "1": 18,
+        "2": 32,
+        "3": 41
+      },
+      "possibleExtraMatches": [
+        "AF",
+        "AL",
+        "DZ",
+        "BH",
+        "CU",
+        "CY",
+        "DK",
+        "FR",
+        "IN",
+        "IL",
+        "JO",
+        "MY",
+        "MR",
+        "ME",
+        "MA",
+        "NL",
+        "MK",
+        "PK",
+        "PS",
+        "RS",
+        "SG",
+        "ES",
+        "GB",
+        "US"
+      ],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://github.com/mledoze/countries/blob/master/countries.json",
+        "https://in.china-embassy.gov.cn/eng/xwfw/xxfb/201212/t20121228_2373721.htm",
+        "https://namibiatradeportal.gov.na/general-trade-information/facilitating-cross-border-trade"
+      ],
+      "notes": [
+        "Only countries with unambiguous sovereign natural-land-neighbour conventions are included."
+      ]
+    },
+    {
+      "id": "geo-all-smaller-land-neighbours",
+      "text": "All its land neighbours are smaller by land area.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "neighbour-area",
+      "matches": [
+        "BR",
+        "CD",
+        "DO",
+        "NI",
+        "RU",
+        "ZA",
+        "SD",
+        "SE"
+      ],
+      "counts": {
+        "1": 4,
+        "2": 6,
+        "3": 8
+      },
+      "maximumCounts": {
+        "1": 15,
+        "2": 25,
+        "3": 33
+      },
+      "possibleExtraMatches": [
+        "AF",
+        "AL",
+        "DZ",
+        "BH",
+        "CN",
+        "CU",
+        "CY",
+        "DK",
+        "FR",
+        "IN",
+        "IL",
+        "JO",
+        "MY",
+        "MR",
+        "ME",
+        "MA",
+        "NL",
+        "MK",
+        "PK",
+        "PS",
+        "RS",
+        "SG",
+        "ES",
+        "GB",
+        "US"
+      ],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://github.com/mledoze/countries/blob/master/countries.json",
+        "https://data.worldbank.org/indicator/AG.LND.TOTL.K2",
+        "https://www.gov.br/planejamento/pt-br/assuntos/noticias/2024/novembro/ministerio-do-planejamento-lanca-o-relatorio-2024-do-projeto-rotas-de-integracao-sul-americana",
+        "https://www.defense.gouv.fr/terre/actualites/mission-trijonction-jusquaux-trois-frontieres"
+      ],
+      "notes": [
+        "Comparison uses the 2023 World Bank land-area snapshot in data.js. Skips any missing neighbouring territory or ambiguous geographic scope.",
+        "Independent accuracy review approved two robust overrides: Russia’s14neighbourcountriesareallsmallerthanRussia; Brazil’s10neighboursincludeFranceviaFrenchGuiana,andwholeFranceorFrenchGuianaarebothfarbelowBrazil’slandarea. The neighbour’s own count-scope ambiguity does not invalidate its smaller-area ordering."
+      ]
+    },
+    {
+      "id": "geo-all-larger-land-neighbours",
+      "text": "All its land neighbours are larger by land area.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "neighbour-area",
+      "matches": [
+        "AM",
+        "BZ",
+        "KH",
+        "CL",
+        "CR",
+        "DJ",
+        "EC",
+        "SV",
+        "GQ",
+        "EE",
+        "SZ",
+        "FI",
+        "GM",
+        "GW",
+        "HT",
+        "KW",
+        "LS",
+        "LI",
+        "MW",
+        "MD",
+        "PG",
+        "PY",
+        "QA",
+        "RW",
+        "SM",
+        "SL",
+        "SK",
+        "SI",
+        "KR",
+        "TL",
+        "TG",
+        "AE",
+        "UY",
+        "VA",
+        "ZW"
+      ],
+      "counts": {
+        "1": 4,
+        "2": 15,
+        "3": 35
+      },
+      "maximumCounts": {
+        "1": 15,
+        "2": 34,
+        "3": 60
+      },
+      "possibleExtraMatches": [
+        "AF",
+        "AL",
+        "DZ",
+        "BH",
+        "CN",
+        "CU",
+        "CY",
+        "DK",
+        "FR",
+        "IN",
+        "IL",
+        "JO",
+        "MY",
+        "MR",
+        "ME",
+        "MA",
+        "NL",
+        "MK",
+        "PK",
+        "PS",
+        "RS",
+        "SG",
+        "ES",
+        "GB",
+        "US"
+      ],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://github.com/mledoze/countries/blob/master/countries.json",
+        "https://data.worldbank.org/indicator/AG.LND.TOTL.K2"
+      ],
+      "notes": [
+        "Comparison uses the 2023 World Bank land-area snapshot in data.js. Skips any missing neighbouring territory or ambiguous geographic scope."
+      ]
+    },
+    {
+      "id": "geo-smaller-and-larger-land-neighbours",
+      "text": "Has both smaller and larger land neighbours by land area.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "neighbour-area",
+      "matches": [
+        "AO",
+        "AR",
+        "AT",
+        "AZ",
+        "BY",
+        "BJ",
+        "BO",
+        "BW",
+        "BF",
+        "BI",
+        "CM",
+        "CF",
+        "TD",
+        "CO",
+        "CZ",
+        "ER",
+        "ET",
+        "GA",
+        "GE",
+        "GH",
+        "GT",
+        "GN",
+        "GY",
+        "HN",
+        "CI",
+        "KE",
+        "LV",
+        "LR",
+        "LT",
+        "MZ",
+        "NA",
+        "NG",
+        "NO",
+        "OM",
+        "PA",
+        "PE",
+        "PL",
+        "CG",
+        "SO",
+        "SS",
+        "TZ",
+        "TR",
+        "UG",
+        "UA",
+        "VE",
+        "YE",
+        "ZM"
+      ],
+      "counts": {
+        "1": 10,
+        "2": 29,
+        "3": 47
+      },
+      "maximumCounts": {
+        "1": 21,
+        "2": 48,
+        "3": 72
+      },
+      "possibleExtraMatches": [
+        "AF",
+        "AL",
+        "DZ",
+        "BH",
+        "CN",
+        "CU",
+        "CY",
+        "DK",
+        "FR",
+        "IN",
+        "IL",
+        "JO",
+        "MY",
+        "MR",
+        "ME",
+        "MA",
+        "NL",
+        "MK",
+        "PK",
+        "PS",
+        "RS",
+        "SG",
+        "ES",
+        "GB",
+        "US"
+      ],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://github.com/mledoze/countries/blob/master/countries.json",
+        "https://data.worldbank.org/indicator/AG.LND.TOTL.K2"
+      ],
+      "notes": [
+        "Comparison uses the 2023 World Bank land-area snapshot in data.js. Skips any missing neighbouring territory or ambiguous geographic scope."
+      ]
+    },
+    {
+      "id": "geo-at-least-one-smaller-land-neighbour",
+      "text": "Has a land neighbour that is smaller by land area.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "neighbour-area",
+      "matches": [
+        "AO",
+        "AR",
+        "AT",
+        "AZ",
+        "BY",
+        "BJ",
+        "BO",
+        "BW",
+        "BF",
+        "BI",
+        "CM",
+        "CF",
+        "TD",
+        "CO",
+        "CZ",
+        "CD",
+        "DO",
+        "ER",
+        "ET",
+        "GA",
+        "GE",
+        "GH",
+        "GT",
+        "GN",
+        "GY",
+        "HN",
+        "CI",
+        "KE",
+        "LV",
+        "LR",
+        "LT",
+        "MZ",
+        "NA",
+        "NI",
+        "NG",
+        "NO",
+        "OM",
+        "PA",
+        "PE",
+        "PL",
+        "CG",
+        "SO",
+        "ZA",
+        "SS",
+        "SD",
+        "SE",
+        "TZ",
+        "TR",
+        "UG",
+        "UA",
+        "VE",
+        "YE",
+        "ZM"
+      ],
+      "counts": {
+        "1": 12,
+        "2": 33,
+        "3": 53
+      },
+      "maximumCounts": {
+        "1": 23,
+        "2": 52,
+        "3": 78
+      },
+      "possibleExtraMatches": [
+        "AF",
+        "AL",
+        "DZ",
+        "BH",
+        "CN",
+        "CU",
+        "CY",
+        "DK",
+        "FR",
+        "IN",
+        "IL",
+        "JO",
+        "MY",
+        "MR",
+        "ME",
+        "MA",
+        "NL",
+        "MK",
+        "PK",
+        "PS",
+        "RS",
+        "SG",
+        "ES",
+        "GB",
+        "US"
+      ],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://github.com/mledoze/countries/blob/master/countries.json",
+        "https://data.worldbank.org/indicator/AG.LND.TOTL.K2"
+      ],
+      "notes": [
+        "Comparison uses the 2023 World Bank land-area snapshot in data.js. Skips any missing neighbouring territory or ambiguous geographic scope."
+      ]
+    },
+    {
+      "id": "geo-at-least-one-larger-land-neighbour",
+      "text": "Has a land neighbour that is larger by land area.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "neighbour-area",
+      "matches": [
+        "AO",
+        "AR",
+        "AM",
+        "AT",
+        "AZ",
+        "BY",
+        "BZ",
+        "BJ",
+        "BO",
+        "BW",
+        "BF",
+        "BI",
+        "KH",
+        "CM",
+        "CF",
+        "TD",
+        "CL",
+        "CO",
+        "CR",
+        "CZ",
+        "DJ",
+        "EC",
+        "SV",
+        "GQ",
+        "ER",
+        "EE",
+        "SZ",
+        "ET",
+        "FI",
+        "GA",
+        "GM",
+        "GE",
+        "GH",
+        "GT",
+        "GN",
+        "GW",
+        "GY",
+        "HT",
+        "HN",
+        "CI",
+        "KE",
+        "KW",
+        "LV",
+        "LS",
+        "LR",
+        "LI",
+        "LT",
+        "MW",
+        "MD",
+        "MZ",
+        "NA",
+        "NG",
+        "NO",
+        "OM",
+        "PA",
+        "PG",
+        "PY",
+        "PE",
+        "PL",
+        "QA",
+        "CG",
+        "RW",
+        "SM",
+        "SL",
+        "SK",
+        "SI",
+        "SO",
+        "KR",
+        "SS",
+        "TZ",
+        "TL",
+        "TG",
+        "TR",
+        "UG",
+        "UA",
+        "AE",
+        "UY",
+        "VA",
+        "VE",
+        "YE",
+        "ZM",
+        "ZW"
+      ],
+      "counts": {
+        "1": 14,
+        "2": 44,
+        "3": 82
+      },
+      "maximumCounts": {
+        "1": 25,
+        "2": 63,
+        "3": 107
+      },
+      "possibleExtraMatches": [
+        "AF",
+        "AL",
+        "DZ",
+        "BH",
+        "CN",
+        "CU",
+        "CY",
+        "DK",
+        "FR",
+        "IN",
+        "IL",
+        "JO",
+        "MY",
+        "MR",
+        "ME",
+        "MA",
+        "NL",
+        "MK",
+        "PK",
+        "PS",
+        "RS",
+        "SG",
+        "ES",
+        "GB",
+        "US"
+      ],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://github.com/mledoze/countries/blob/master/countries.json",
+        "https://data.worldbank.org/indicator/AG.LND.TOTL.K2"
+      ],
+      "notes": [
+        "Comparison uses the 2023 World Bank land-area snapshot in data.js. Skips any missing neighbouring territory or ambiguous geographic scope."
+      ]
+    },
+    {
+      "id": "geo-caribbean-island",
+      "text": "An island country in the Caribbean.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "AG",
+        "BS",
+        "BB",
+        "CU",
+        "DM",
+        "DO",
+        "GD",
+        "HT",
+        "JM",
+        "KN",
+        "LC",
+        "VC",
+        "TT"
+      ],
+      "counts": {
+        "1": 1,
+        "2": 4,
+        "3": 13
+      },
+      "maximumCounts": {
+        "1": 1,
+        "2": 4,
+        "3": 13
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        2,
+        3
+      ],
+      "sources": [
+        "https://www.fao.org/4/y1997e/y1997e15.htm"
+      ],
+      "notes": [
+        "Regional Caribbean classification includes Bahamas and Barbados, although neither lies within the Caribbean Sea."
+      ]
+    },
+    {
+      "id": "geo-pacific-island",
+      "text": "An island country in the Pacific.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "FJ",
+        "KI",
+        "MH",
+        "FM",
+        "NR",
+        "PW",
+        "WS",
+        "SB",
+        "TO",
+        "TV",
+        "VU"
+      ],
+      "counts": {
+        "1": 0,
+        "2": 0,
+        "3": 11
+      },
+      "maximumCounts": {
+        "1": 0,
+        "2": 0,
+        "3": 11
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        3
+      ],
+      "sources": [
+        "https://pacific.un.org/en/about/about-the-un"
+      ],
+      "notes": [
+        "UN Pacific multi-country offices list; deliberately excludes continent Australia and does not assume East Timor/Indonesia classification."
+      ]
+    },
+    {
+      "id": "geo-island-country",
+      "text": "An island country.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "island",
+      "matches": [
+        "AG",
+        "BS",
+        "BH",
+        "BB",
+        "BN",
+        "CV",
+        "KM",
+        "CU",
+        "CY",
+        "DM",
+        "DO",
+        "FJ",
+        "GD",
+        "HT",
+        "IS",
+        "ID",
+        "IE",
+        "JM",
+        "JP",
+        "KI",
+        "MG",
+        "MV",
+        "MT",
+        "MH",
+        "MU",
+        "FM",
+        "NR",
+        "NZ",
+        "PW",
+        "PG",
+        "PH",
+        "KN",
+        "LC",
+        "VC",
+        "WS",
+        "SC",
+        "SG",
+        "SB",
+        "LK",
+        "ST",
+        "TL",
+        "TO",
+        "TT",
+        "TV",
+        "GB",
+        "VU"
+      ],
+      "counts": {
+        "1": 8,
+        "2": 16,
+        "3": 46
+      },
+      "maximumCounts": {
+        "1": 8,
+        "2": 16,
+        "3": 46
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://www.fao.org/4/y1997e/y1997e15.htm",
+        "https://pacific.un.org/en/about/about-the-un",
+        "https://www.mfa.gov.lk/en/national-profile-and-geography",
+        "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D008521",
+        "https://www.mfa.gov.sg/about-singapore/",
+        "https://www.information.gov.bn/PublishingImages/SitePages/Publication%20Lists/Brunei%20District.pdf",
+        "https://meshb.nlm.nih.gov/record/ui?ui=D001266",
+        "https://culture.gov.bh/en/visitingbahrain/about_bahrain/",
+        "https://teara.govt.nz/en/natural-environment/page-1",
+        "https://test.anbg.gov.au/cpbr/anhsir/anhsir-manual/papuasia.html",
+        "https://timor-leste.gov.tl/?lang=en&p=91",
+        "https://www.gov.uk/government/publications/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world-html"
+      ],
+      "notes": [
+        "Island status independently confirmed by FAO Caribbean13, UN Pacific11, NIH IndianOcean6 and NIH Islands/Atlantic/Mediterranean descriptors; official national profiles cover Bahrain, Brunei, Singapore, New Zealand, Papua New Guinea, Timor-Leste and UK. Countries occupying part of an island are included; Australia is excluded as a continent. This is not inferred from zero land neighbours."
+      ]
+    },
+    {
+      "id": "geo-region-africa",
+      "text": "In Africa.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "DZ",
+        "AO",
+        "BJ",
+        "BW",
+        "BF",
+        "BI",
+        "CM",
+        "CV",
+        "CF",
+        "TD",
+        "KM",
+        "CD",
+        "DJ",
+        "EG",
+        "GQ",
+        "ER",
+        "SZ",
+        "ET",
+        "GA",
+        "GM",
+        "GH",
+        "GN",
+        "GW",
+        "CI",
+        "KE",
+        "LS",
+        "LR",
+        "LY",
+        "MG",
+        "MW",
+        "ML",
+        "MR",
+        "MU",
+        "MA",
+        "MZ",
+        "NA",
+        "NE",
+        "NG",
+        "CG",
+        "RW",
+        "SN",
+        "SC",
+        "SL",
+        "SO",
+        "ZA",
+        "SS",
+        "SD",
+        "ST",
+        "TZ",
+        "TG",
+        "TN",
+        "UG",
+        "ZM",
+        "ZW"
+      ],
+      "counts": {
+        "1": 5,
+        "2": 22,
+        "3": 54
+      },
+      "maximumCounts": {
+        "1": 5,
+        "2": 22,
+        "3": 54
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/"
+      ],
+      "notes": [
+        "Geographic broad region follows UN M49. Cyprus is in Western Asia. This is source geography, independent of the existing game region label."
+      ]
+    },
+    {
+      "id": "geo-region-americas",
+      "text": "In the Americas.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "AG",
+        "AR",
+        "BS",
+        "BB",
+        "BZ",
+        "BO",
+        "BR",
+        "CA",
+        "CL",
+        "CO",
+        "CR",
+        "CU",
+        "DM",
+        "DO",
+        "EC",
+        "SV",
+        "GD",
+        "GT",
+        "GY",
+        "HT",
+        "HN",
+        "JM",
+        "MX",
+        "NI",
+        "PA",
+        "PY",
+        "PE",
+        "KN",
+        "LC",
+        "VC",
+        "SR",
+        "TT",
+        "US",
+        "UY",
+        "VE"
+      ],
+      "counts": {
+        "1": 10,
+        "2": 21,
+        "3": 35
+      },
+      "maximumCounts": {
+        "1": 10,
+        "2": 21,
+        "3": 35
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/"
+      ],
+      "notes": [
+        "Geographic broad region follows UN M49. Cyprus is in Western Asia. This is source geography, independent of the existing game region label."
+      ]
+    },
+    {
+      "id": "geo-region-asia",
+      "text": "In Asia.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "AF",
+        "AM",
+        "AZ",
+        "BH",
+        "BD",
+        "BT",
+        "BN",
+        "KH",
+        "CN",
+        "CY",
+        "GE",
+        "IN",
+        "ID",
+        "IR",
+        "IQ",
+        "IL",
+        "JP",
+        "JO",
+        "KZ",
+        "KW",
+        "KG",
+        "LA",
+        "LB",
+        "MY",
+        "MV",
+        "MN",
+        "MM",
+        "NP",
+        "KP",
+        "OM",
+        "PK",
+        "PS",
+        "PH",
+        "QA",
+        "SA",
+        "SG",
+        "KR",
+        "LK",
+        "SY",
+        "TJ",
+        "TH",
+        "TL",
+        "TM",
+        "TR",
+        "AE",
+        "UZ",
+        "VN",
+        "YE"
+      ],
+      "counts": {
+        "1": 11,
+        "2": 35,
+        "3": 48
+      },
+      "maximumCounts": {
+        "1": 11,
+        "2": 35,
+        "3": 48
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/"
+      ],
+      "notes": [
+        "Geographic broad region follows UN M49. Cyprus is in Western Asia. This is source geography, independent of the existing game region label."
+      ]
+    },
+    {
+      "id": "geo-region-europe",
+      "text": "In Europe.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "AL",
+        "AD",
+        "AT",
+        "BY",
+        "BE",
+        "BA",
+        "BG",
+        "HR",
+        "CZ",
+        "DK",
+        "EE",
+        "FI",
+        "FR",
+        "DE",
+        "GR",
+        "HU",
+        "IS",
+        "IE",
+        "IT",
+        "LV",
+        "LI",
+        "LT",
+        "LU",
+        "MT",
+        "MD",
+        "MC",
+        "ME",
+        "NL",
+        "MK",
+        "NO",
+        "PL",
+        "PT",
+        "RO",
+        "RU",
+        "SM",
+        "RS",
+        "SK",
+        "SI",
+        "ES",
+        "SE",
+        "CH",
+        "UA",
+        "GB",
+        "VA"
+      ],
+      "counts": {
+        "1": 17,
+        "2": 29,
+        "3": 44
+      },
+      "maximumCounts": {
+        "1": 17,
+        "2": 29,
+        "3": 44
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/"
+      ],
+      "notes": [
+        "Geographic broad region follows UN M49. Cyprus is in Western Asia. This is source geography, independent of the existing game region label."
+      ]
+    },
+    {
+      "id": "geo-region-oceania",
+      "text": "In Oceania.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "AU",
+        "FJ",
+        "KI",
+        "MH",
+        "FM",
+        "NR",
+        "NZ",
+        "PW",
+        "PG",
+        "WS",
+        "SB",
+        "TO",
+        "TV",
+        "VU"
+      ],
+      "counts": {
+        "1": 2,
+        "2": 3,
+        "3": 14
+      },
+      "maximumCounts": {
+        "1": 2,
+        "2": 3,
+        "3": 14
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/"
+      ],
+      "notes": [
+        "Geographic broad region follows UN M49. Cyprus is in Western Asia. This is source geography, independent of the existing game region label."
+      ]
+    },
+    {
+      "id": "geo-neighbour-in-africa",
+      "text": "Has a land neighbour in Africa.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "neighbour-location",
+      "matches": [
+        "AO",
+        "BJ",
+        "BW",
+        "BF",
+        "BI",
+        "CM",
+        "CF",
+        "TD",
+        "CD",
+        "DJ",
+        "GQ",
+        "ER",
+        "SZ",
+        "ET",
+        "GA",
+        "GM",
+        "GH",
+        "GN",
+        "GW",
+        "CI",
+        "KE",
+        "LS",
+        "LR",
+        "MW",
+        "MZ",
+        "NA",
+        "NG",
+        "CG",
+        "RW",
+        "SL",
+        "SO",
+        "ZA",
+        "SS",
+        "SD",
+        "TZ",
+        "TG",
+        "UG",
+        "ZM",
+        "ZW"
+      ],
+      "counts": {
+        "1": 3,
+        "2": 14,
+        "3": 39
+      },
+      "maximumCounts": {
+        "1": 13,
+        "2": 32,
+        "3": 63
+      },
+      "possibleExtraMatches": [
+        "AF",
+        "AL",
+        "DZ",
+        "BH",
+        "CU",
+        "CY",
+        "DK",
+        "FR",
+        "IN",
+        "IL",
+        "JO",
+        "MY",
+        "MR",
+        "ME",
+        "MA",
+        "NL",
+        "MK",
+        "PK",
+        "PS",
+        "RS",
+        "SG",
+        "ES",
+        "GB",
+        "US"
+      ],
+      "eligibleTiers": [
+        2,
+        3
+      ],
+      "sources": [
+        "https://data.worldbank.org/indicator/AG.LND.TOTL.K2",
+        "https://unstats.un.org/unsd/methodology/m49/overview/",
+        "https://github.com/mledoze/countries/blob/master/countries.json"
+      ],
+      "notes": [
+        "Uses the established game region classification; ignores any country with ambiguous whole-country/territory border scope."
+      ]
+    },
+    {
+      "id": "geo-all-neighbours-in-africa",
+      "text": "All its land neighbours are in Africa.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "neighbour-location",
+      "matches": [
+        "AO",
+        "BJ",
+        "BW",
+        "BF",
+        "BI",
+        "CM",
+        "CF",
+        "TD",
+        "CD",
+        "DJ",
+        "GQ",
+        "ER",
+        "SZ",
+        "ET",
+        "GA",
+        "GM",
+        "GH",
+        "GN",
+        "GW",
+        "CI",
+        "KE",
+        "LS",
+        "LR",
+        "MW",
+        "MZ",
+        "NA",
+        "NG",
+        "CG",
+        "RW",
+        "SL",
+        "SO",
+        "ZA",
+        "SS",
+        "SD",
+        "TZ",
+        "TG",
+        "UG",
+        "ZM",
+        "ZW"
+      ],
+      "counts": {
+        "1": 3,
+        "2": 14,
+        "3": 39
+      },
+      "maximumCounts": {
+        "1": 13,
+        "2": 32,
+        "3": 63
+      },
+      "possibleExtraMatches": [
+        "AF",
+        "AL",
+        "DZ",
+        "BH",
+        "CU",
+        "CY",
+        "DK",
+        "FR",
+        "IN",
+        "IL",
+        "JO",
+        "MY",
+        "MR",
+        "ME",
+        "MA",
+        "NL",
+        "MK",
+        "PK",
+        "PS",
+        "RS",
+        "SG",
+        "ES",
+        "GB",
+        "US"
+      ],
+      "eligibleTiers": [
+        2,
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/",
+        "https://github.com/mledoze/countries/blob/master/countries.json"
+      ],
+      "notes": [
+        "Requires at least one neighbour and a complete unambiguous neighbour list."
+      ]
+    },
+    {
+      "id": "geo-neighbour-in-americas",
+      "text": "Has a land neighbour in the Americas.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "neighbour-location",
+      "matches": [
+        "AR",
+        "BZ",
+        "BO",
+        "CL",
+        "CO",
+        "CR",
+        "DO",
+        "EC",
+        "SV",
+        "GT",
+        "GY",
+        "HT",
+        "HN",
+        "NI",
+        "PA",
+        "PY",
+        "PE",
+        "UY",
+        "VE"
+      ],
+      "counts": {
+        "1": 5,
+        "2": 15,
+        "3": 19
+      },
+      "maximumCounts": {
+        "1": 15,
+        "2": 33,
+        "3": 43
+      },
+      "possibleExtraMatches": [
+        "AF",
+        "AL",
+        "DZ",
+        "BH",
+        "CU",
+        "CY",
+        "DK",
+        "FR",
+        "IN",
+        "IL",
+        "JO",
+        "MY",
+        "MR",
+        "ME",
+        "MA",
+        "NL",
+        "MK",
+        "PK",
+        "PS",
+        "RS",
+        "SG",
+        "ES",
+        "GB",
+        "US"
+      ],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://data.worldbank.org/indicator/AG.LND.TOTL.K2",
+        "https://unstats.un.org/unsd/methodology/m49/overview/",
+        "https://github.com/mledoze/countries/blob/master/countries.json"
+      ],
+      "notes": [
+        "Uses the established game region classification; ignores any country with ambiguous whole-country/territory border scope."
+      ]
+    },
+    {
+      "id": "geo-all-neighbours-in-americas",
+      "text": "All its land neighbours are in the Americas.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "neighbour-location",
+      "matches": [
+        "AR",
+        "BZ",
+        "BO",
+        "CL",
+        "CO",
+        "CR",
+        "DO",
+        "EC",
+        "SV",
+        "GT",
+        "GY",
+        "HT",
+        "HN",
+        "NI",
+        "PA",
+        "PY",
+        "PE",
+        "UY",
+        "VE"
+      ],
+      "counts": {
+        "1": 5,
+        "2": 15,
+        "3": 19
+      },
+      "maximumCounts": {
+        "1": 15,
+        "2": 33,
+        "3": 43
+      },
+      "possibleExtraMatches": [
+        "AF",
+        "AL",
+        "DZ",
+        "BH",
+        "CU",
+        "CY",
+        "DK",
+        "FR",
+        "IN",
+        "IL",
+        "JO",
+        "MY",
+        "MR",
+        "ME",
+        "MA",
+        "NL",
+        "MK",
+        "PK",
+        "PS",
+        "RS",
+        "SG",
+        "ES",
+        "GB",
+        "US"
+      ],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/",
+        "https://github.com/mledoze/countries/blob/master/countries.json"
+      ],
+      "notes": [
+        "Requires at least one neighbour and a complete unambiguous neighbour list."
+      ]
+    },
+    {
+      "id": "geo-neighbour-in-asia",
+      "text": "Has a land neighbour in Asia.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "neighbour-location",
+      "matches": [
+        "AM",
+        "AZ",
+        "KH",
+        "GE",
+        "KZ",
+        "KW",
+        "KG",
+        "LA",
+        "MN",
+        "KP",
+        "OM",
+        "PG",
+        "QA",
+        "RU",
+        "KR",
+        "TL",
+        "TR",
+        "AE",
+        "VN",
+        "YE"
+      ],
+      "counts": {
+        "1": 4,
+        "2": 15,
+        "3": 20
+      },
+      "maximumCounts": {
+        "1": 14,
+        "2": 33,
+        "3": 44
+      },
+      "possibleExtraMatches": [
+        "AF",
+        "AL",
+        "DZ",
+        "BH",
+        "CU",
+        "CY",
+        "DK",
+        "FR",
+        "IN",
+        "IL",
+        "JO",
+        "MY",
+        "MR",
+        "ME",
+        "MA",
+        "NL",
+        "MK",
+        "PK",
+        "PS",
+        "RS",
+        "SG",
+        "ES",
+        "GB",
+        "US"
+      ],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://data.worldbank.org/indicator/AG.LND.TOTL.K2",
+        "https://unstats.un.org/unsd/methodology/m49/overview/",
+        "https://github.com/mledoze/countries/blob/master/countries.json"
+      ],
+      "notes": [
+        "Uses the established game region classification; ignores any country with ambiguous whole-country/territory border scope."
+      ]
+    },
+    {
+      "id": "geo-all-neighbours-in-asia",
+      "text": "All its land neighbours are in Asia.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "neighbour-location",
+      "matches": [
+        "AM",
+        "KH",
+        "KW",
+        "KG",
+        "LA",
+        "OM",
+        "PG",
+        "QA",
+        "KR",
+        "TL",
+        "AE",
+        "VN",
+        "YE"
+      ],
+      "counts": {
+        "1": 2,
+        "2": 8,
+        "3": 13
+      },
+      "maximumCounts": {
+        "1": 12,
+        "2": 26,
+        "3": 37
+      },
+      "possibleExtraMatches": [
+        "AF",
+        "AL",
+        "DZ",
+        "BH",
+        "CU",
+        "CY",
+        "DK",
+        "FR",
+        "IN",
+        "IL",
+        "JO",
+        "MY",
+        "MR",
+        "ME",
+        "MA",
+        "NL",
+        "MK",
+        "PK",
+        "PS",
+        "RS",
+        "SG",
+        "ES",
+        "GB",
+        "US"
+      ],
+      "eligibleTiers": [
+        2,
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/",
+        "https://github.com/mledoze/countries/blob/master/countries.json"
+      ],
+      "notes": [
+        "Requires at least one neighbour and a complete unambiguous neighbour list."
+      ]
+    },
+    {
+      "id": "geo-neighbour-in-europe",
+      "text": "Has a land neighbour in Europe.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "neighbour-location",
+      "matches": [
+        "AT",
+        "AZ",
+        "BY",
+        "CZ",
+        "EE",
+        "FI",
+        "GE",
+        "KZ",
+        "LV",
+        "LI",
+        "LT",
+        "MD",
+        "MN",
+        "KP",
+        "NO",
+        "PL",
+        "RU",
+        "SM",
+        "SK",
+        "SI",
+        "SE",
+        "TR",
+        "UA",
+        "VA"
+      ],
+      "counts": {
+        "1": 8,
+        "2": 16,
+        "3": 24
+      },
+      "maximumCounts": {
+        "1": 18,
+        "2": 34,
+        "3": 48
+      },
+      "possibleExtraMatches": [
+        "AF",
+        "AL",
+        "DZ",
+        "BH",
+        "CU",
+        "CY",
+        "DK",
+        "FR",
+        "IN",
+        "IL",
+        "JO",
+        "MY",
+        "MR",
+        "ME",
+        "MA",
+        "NL",
+        "MK",
+        "PK",
+        "PS",
+        "RS",
+        "SG",
+        "ES",
+        "GB",
+        "US"
+      ],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://data.worldbank.org/indicator/AG.LND.TOTL.K2",
+        "https://unstats.un.org/unsd/methodology/m49/overview/",
+        "https://github.com/mledoze/countries/blob/master/countries.json"
+      ],
+      "notes": [
+        "Uses the established game region classification; ignores any country with ambiguous whole-country/territory border scope."
+      ]
+    },
+    {
+      "id": "geo-all-neighbours-in-europe",
+      "text": "All its land neighbours are in Europe.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "neighbour-location",
+      "matches": [
+        "AT",
+        "BY",
+        "CZ",
+        "EE",
+        "FI",
+        "LV",
+        "LI",
+        "LT",
+        "MD",
+        "NO",
+        "PL",
+        "SM",
+        "SK",
+        "SI",
+        "SE",
+        "UA",
+        "VA"
+      ],
+      "counts": {
+        "1": 6,
+        "2": 9,
+        "3": 17
+      },
+      "maximumCounts": {
+        "1": 16,
+        "2": 27,
+        "3": 41
+      },
+      "possibleExtraMatches": [
+        "AF",
+        "AL",
+        "DZ",
+        "BH",
+        "CU",
+        "CY",
+        "DK",
+        "FR",
+        "IN",
+        "IL",
+        "JO",
+        "MY",
+        "MR",
+        "ME",
+        "MA",
+        "NL",
+        "MK",
+        "PK",
+        "PS",
+        "RS",
+        "SG",
+        "ES",
+        "GB",
+        "US"
+      ],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/",
+        "https://github.com/mledoze/countries/blob/master/countries.json"
+      ],
+      "notes": [
+        "Requires at least one neighbour and a complete unambiguous neighbour list."
+      ]
+    },
+    {
+      "id": "geo-un-location-northern-africa",
+      "text": "In North Africa.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "DZ",
+        "EG",
+        "LY",
+        "MA",
+        "SD",
+        "TN"
+      ],
+      "counts": {
+        "1": 2,
+        "2": 6,
+        "3": 6
+      },
+      "maximumCounts": {
+        "1": 2,
+        "2": 6,
+        "3": 6
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        2,
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/"
+      ],
+      "notes": [
+        "UN M49 geographic classification. Cyprus is geographically grouped in Western Asia here although the game labels its broad region Europe; do not combine those labels in one clue."
+      ]
+    },
+    {
+      "id": "geo-un-location-eastern-africa",
+      "text": "In East Africa.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "BI",
+        "KM",
+        "DJ",
+        "ER",
+        "ET",
+        "KE",
+        "MG",
+        "MW",
+        "MU",
+        "MZ",
+        "RW",
+        "SC",
+        "SO",
+        "SS",
+        "TZ",
+        "UG",
+        "ZM",
+        "ZW"
+      ],
+      "counts": {
+        "1": 1,
+        "2": 8,
+        "3": 18
+      },
+      "maximumCounts": {
+        "1": 1,
+        "2": 8,
+        "3": 18
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        2,
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/"
+      ],
+      "notes": [
+        "UN M49 geographic classification. Cyprus is geographically grouped in Western Asia here although the game labels its broad region Europe; do not combine those labels in one clue."
+      ]
+    },
+    {
+      "id": "geo-un-location-middle-africa",
+      "text": "In Central Africa.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "AO",
+        "CM",
+        "CF",
+        "TD",
+        "CD",
+        "GQ",
+        "GA",
+        "CG",
+        "ST"
+      ],
+      "counts": {
+        "1": 0,
+        "2": 2,
+        "3": 9
+      },
+      "maximumCounts": {
+        "1": 0,
+        "2": 2,
+        "3": 9
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/"
+      ],
+      "notes": [
+        "UN M49 geographic classification. Cyprus is geographically grouped in Western Asia here although the game labels its broad region Europe; do not combine those labels in one clue."
+      ]
+    },
+    {
+      "id": "geo-un-location-southern-africa",
+      "text": "In Southern Africa.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "BW",
+        "SZ",
+        "LS",
+        "NA",
+        "ZA"
+      ],
+      "counts": {
+        "1": 1,
+        "2": 3,
+        "3": 5
+      },
+      "maximumCounts": {
+        "1": 1,
+        "2": 3,
+        "3": 5
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/"
+      ],
+      "notes": [
+        "UN M49 geographic classification. Cyprus is geographically grouped in Western Asia here although the game labels its broad region Europe; do not combine those labels in one clue."
+      ]
+    },
+    {
+      "id": "geo-un-location-western-africa",
+      "text": "In West Africa.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "BJ",
+        "BF",
+        "CV",
+        "GM",
+        "GH",
+        "GN",
+        "GW",
+        "CI",
+        "LR",
+        "ML",
+        "MR",
+        "NE",
+        "NG",
+        "SN",
+        "SL",
+        "TG"
+      ],
+      "counts": {
+        "1": 1,
+        "2": 3,
+        "3": 16
+      },
+      "maximumCounts": {
+        "1": 1,
+        "2": 3,
+        "3": 16
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/"
+      ],
+      "notes": [
+        "UN M49 geographic classification. Cyprus is geographically grouped in Western Asia here although the game labels its broad region Europe; do not combine those labels in one clue."
+      ]
+    },
+    {
+      "id": "geo-un-location-caribbean",
+      "text": "In the Caribbean.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "AG",
+        "BS",
+        "BB",
+        "CU",
+        "DM",
+        "DO",
+        "GD",
+        "HT",
+        "JM",
+        "KN",
+        "LC",
+        "VC",
+        "TT"
+      ],
+      "counts": {
+        "1": 1,
+        "2": 4,
+        "3": 13
+      },
+      "maximumCounts": {
+        "1": 1,
+        "2": 4,
+        "3": 13
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        2,
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/"
+      ],
+      "notes": [
+        "UN M49 geographic classification. Cyprus is geographically grouped in Western Asia here although the game labels its broad region Europe; do not combine those labels in one clue."
+      ]
+    },
+    {
+      "id": "geo-un-location-central-america",
+      "text": "In Central America.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "BZ",
+        "CR",
+        "SV",
+        "GT",
+        "HN",
+        "MX",
+        "NI",
+        "PA"
+      ],
+      "counts": {
+        "1": 2,
+        "2": 5,
+        "3": 8
+      },
+      "maximumCounts": {
+        "1": 2,
+        "2": 5,
+        "3": 8
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        2,
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/"
+      ],
+      "notes": [
+        "UN M49 geographic classification. Cyprus is geographically grouped in Western Asia here although the game labels its broad region Europe; do not combine those labels in one clue."
+      ]
+    },
+    {
+      "id": "geo-un-location-south-america",
+      "text": "In South America.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "AR",
+        "BO",
+        "BR",
+        "CL",
+        "CO",
+        "EC",
+        "GY",
+        "PY",
+        "PE",
+        "SR",
+        "UY",
+        "VE"
+      ],
+      "counts": {
+        "1": 5,
+        "2": 10,
+        "3": 12
+      },
+      "maximumCounts": {
+        "1": 5,
+        "2": 10,
+        "3": 12
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/"
+      ],
+      "notes": [
+        "UN M49 geographic classification. Cyprus is geographically grouped in Western Asia here although the game labels its broad region Europe; do not combine those labels in one clue."
+      ]
+    },
+    {
+      "id": "geo-un-location-central-asia",
+      "text": "In Central Asia.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "KZ",
+        "KG",
+        "TJ",
+        "TM",
+        "UZ"
+      ],
+      "counts": {
+        "1": 0,
+        "2": 2,
+        "3": 5
+      },
+      "maximumCounts": {
+        "1": 0,
+        "2": 2,
+        "3": 5
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/"
+      ],
+      "notes": [
+        "UN M49 geographic classification. Cyprus is geographically grouped in Western Asia here although the game labels its broad region Europe; do not combine those labels in one clue."
+      ]
+    },
+    {
+      "id": "geo-un-location-eastern-asia",
+      "text": "In East Asia.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "CN",
+        "JP",
+        "MN",
+        "KP",
+        "KR"
+      ],
+      "counts": {
+        "1": 3,
+        "2": 5,
+        "3": 5
+      },
+      "maximumCounts": {
+        "1": 3,
+        "2": 5,
+        "3": 5
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        2,
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/"
+      ],
+      "notes": [
+        "UN M49 geographic classification. Cyprus is geographically grouped in Western Asia here although the game labels its broad region Europe; do not combine those labels in one clue."
+      ]
+    },
+    {
+      "id": "geo-un-location-south-eastern-asia",
+      "text": "In Southeast Asia.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "BN",
+        "KH",
+        "ID",
+        "LA",
+        "MY",
+        "MM",
+        "PH",
+        "SG",
+        "TH",
+        "TL",
+        "VN"
+      ],
+      "counts": {
+        "1": 6,
+        "2": 8,
+        "3": 11
+      },
+      "maximumCounts": {
+        "1": 6,
+        "2": 8,
+        "3": 11
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/"
+      ],
+      "notes": [
+        "UN M49 geographic classification. Cyprus is geographically grouped in Western Asia here although the game labels its broad region Europe; do not combine those labels in one clue."
+      ]
+    },
+    {
+      "id": "geo-un-location-southern-asia",
+      "text": "In South Asia.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "AF",
+        "BD",
+        "BT",
+        "IN",
+        "IR",
+        "MV",
+        "NP",
+        "PK",
+        "LK"
+      ],
+      "counts": {
+        "1": 1,
+        "2": 7,
+        "3": 9
+      },
+      "maximumCounts": {
+        "1": 1,
+        "2": 7,
+        "3": 9
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        2,
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/"
+      ],
+      "notes": [
+        "UN M49 geographic classification. Cyprus is geographically grouped in Western Asia here although the game labels its broad region Europe; do not combine those labels in one clue."
+      ]
+    },
+    {
+      "id": "geo-un-location-western-asia",
+      "text": "In West Asia.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "AM",
+        "AZ",
+        "BH",
+        "CY",
+        "GE",
+        "IQ",
+        "IL",
+        "JO",
+        "KW",
+        "LB",
+        "OM",
+        "PS",
+        "QA",
+        "SA",
+        "SY",
+        "TR",
+        "AE",
+        "YE"
+      ],
+      "counts": {
+        "1": 1,
+        "2": 13,
+        "3": 18
+      },
+      "maximumCounts": {
+        "1": 1,
+        "2": 13,
+        "3": 18
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        2,
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/"
+      ],
+      "notes": [
+        "UN M49 geographic classification. Cyprus is geographically grouped in Western Asia here although the game labels its broad region Europe; do not combine those labels in one clue."
+      ]
+    },
+    {
+      "id": "geo-un-location-eastern-europe",
+      "text": "In Eastern Europe.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "BY",
+        "BG",
+        "CZ",
+        "HU",
+        "MD",
+        "PL",
+        "RO",
+        "RU",
+        "SK",
+        "UA"
+      ],
+      "counts": {
+        "1": 3,
+        "2": 7,
+        "3": 10
+      },
+      "maximumCounts": {
+        "1": 3,
+        "2": 7,
+        "3": 10
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        2,
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/"
+      ],
+      "notes": [
+        "UN M49 geographic classification. Cyprus is geographically grouped in Western Asia here although the game labels its broad region Europe; do not combine those labels in one clue."
+      ]
+    },
+    {
+      "id": "geo-un-location-northern-europe",
+      "text": "In Northern Europe.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "DK",
+        "EE",
+        "FI",
+        "IS",
+        "IE",
+        "LV",
+        "LT",
+        "NO",
+        "SE",
+        "GB"
+      ],
+      "counts": {
+        "1": 5,
+        "2": 8,
+        "3": 10
+      },
+      "maximumCounts": {
+        "1": 5,
+        "2": 8,
+        "3": 10
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/"
+      ],
+      "notes": [
+        "UN M49 geographic classification. Cyprus is geographically grouped in Western Asia here although the game labels its broad region Europe; do not combine those labels in one clue."
+      ]
+    },
+    {
+      "id": "geo-un-location-southern-europe",
+      "text": "In Southern Europe.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "AL",
+        "AD",
+        "BA",
+        "HR",
+        "GR",
+        "IT",
+        "MT",
+        "ME",
+        "MK",
+        "PT",
+        "SM",
+        "RS",
+        "SI",
+        "ES",
+        "VA"
+      ],
+      "counts": {
+        "1": 4,
+        "2": 8,
+        "3": 15
+      },
+      "maximumCounts": {
+        "1": 4,
+        "2": 8,
+        "3": 15
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/"
+      ],
+      "notes": [
+        "UN M49 geographic classification. Cyprus is geographically grouped in Western Asia here although the game labels its broad region Europe; do not combine those labels in one clue."
+      ]
+    },
+    {
+      "id": "geo-un-location-western-europe",
+      "text": "In Western Europe.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "AT",
+        "BE",
+        "FR",
+        "DE",
+        "LI",
+        "LU",
+        "MC",
+        "NL",
+        "CH"
+      ],
+      "counts": {
+        "1": 5,
+        "2": 6,
+        "3": 9
+      },
+      "maximumCounts": {
+        "1": 5,
+        "2": 6,
+        "3": 9
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/"
+      ],
+      "notes": [
+        "UN M49 geographic classification. Cyprus is geographically grouped in Western Asia here although the game labels its broad region Europe; do not combine those labels in one clue."
+      ]
+    },
+    {
+      "id": "geo-un-location-melanesia",
+      "text": "In Melanesia.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "FJ",
+        "PG",
+        "SB",
+        "VU"
+      ],
+      "counts": {
+        "1": 0,
+        "2": 1,
+        "3": 4
+      },
+      "maximumCounts": {
+        "1": 0,
+        "2": 1,
+        "3": 4
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/"
+      ],
+      "notes": [
+        "UN M49 geographic classification. Cyprus is geographically grouped in Western Asia here although the game labels its broad region Europe; do not combine those labels in one clue."
+      ]
+    },
+    {
+      "id": "geo-un-location-micronesia",
+      "text": "In the Micronesian region of the Pacific.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "KI",
+        "MH",
+        "FM",
+        "NR",
+        "PW"
+      ],
+      "counts": {
+        "1": 0,
+        "2": 0,
+        "3": 5
+      },
+      "maximumCounts": {
+        "1": 0,
+        "2": 0,
+        "3": 5
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/"
+      ],
+      "notes": [
+        "UN M49 geographic classification. Cyprus is geographically grouped in Western Asia here although the game labels its broad region Europe; do not combine those labels in one clue."
+      ]
+    },
+    {
+      "id": "geo-north-america",
+      "text": "In North America.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "location",
+      "matches": [
+        "AG",
+        "BS",
+        "BB",
+        "BZ",
+        "CA",
+        "CR",
+        "CU",
+        "DM",
+        "DO",
+        "SV",
+        "GD",
+        "GT",
+        "HT",
+        "HN",
+        "JM",
+        "MX",
+        "NI",
+        "PA",
+        "KN",
+        "LC",
+        "VC",
+        "TT",
+        "US"
+      ],
+      "counts": {
+        "1": 5,
+        "2": 11,
+        "3": 23
+      },
+      "maximumCounts": {
+        "1": 5,
+        "2": 11,
+        "3": 23
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://unstats.un.org/unsd/methodology/m49/overview/"
+      ],
+      "notes": [
+        "North America includes Northern America, Central America and the Caribbean under the UN M49 definition."
+      ]
+    },
+    {
+      "id": "geo-mediterranean-coast",
+      "text": "Has a Mediterranean coast.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "coast",
+      "matches": [
+        "AL",
+        "DZ",
+        "BA",
+        "HR",
+        "CY",
+        "EG",
+        "FR",
+        "GR",
+        "IL",
+        "IT",
+        "LB",
+        "LY",
+        "MT",
+        "MC",
+        "ME",
+        "MA",
+        "PS",
+        "SI",
+        "ES",
+        "SY",
+        "TN",
+        "TR"
+      ],
+      "counts": {
+        "1": 7,
+        "2": 16,
+        "3": 22
+      },
+      "maximumCounts": {
+        "1": 8,
+        "2": 17,
+        "3": 23
+      },
+      "possibleExtraMatches": [
+        "GB"
+      ],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://www.unep.org/unepmap/node/19634",
+        "https://www.un.org/unispal/document/auto-insert-181120/"
+      ],
+      "notes": [
+        "UNEP lists21Mediterranean nationalcoasts; UNCTAD identifies Gaza’s Mediterranean coast (Palestine). UK overseas-territory coasts are conservatively omitted."
+      ]
+    },
+    {
+      "id": "geo-baltic-coast",
+      "text": "Has a Baltic Sea coast.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "coast",
+      "matches": [
+        "DK",
+        "EE",
+        "FI",
+        "DE",
+        "LV",
+        "LT",
+        "PL",
+        "RU",
+        "SE"
+      ],
+      "counts": {
+        "1": 5,
+        "2": 7,
+        "3": 9
+      },
+      "maximumCounts": {
+        "1": 5,
+        "2": 7,
+        "3": 9
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://helcom.fi/wp-content/uploads/2019/08/Pearls-of-the-Baltic-Sea.pdf"
+      ],
+      "notes": [
+        "All nine Baltic riparian states are explicitly listed by HELCOM."
+      ]
+    },
+    {
+      "id": "geo-black-sea-coast",
+      "text": "Has a Black Sea coast.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "coast",
+      "matches": [
+        "BG",
+        "GE",
+        "RO",
+        "RU",
+        "TR",
+        "UA"
+      ],
+      "counts": {
+        "1": 3,
+        "2": 6,
+        "3": 6
+      },
+      "maximumCounts": {
+        "1": 3,
+        "2": 6,
+        "3": 6
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        2,
+        3
+      ],
+      "sources": [
+        "https://www.fao.org/in-action/fao-turkey-partnership/projects/project-detail/en/c/1236308/"
+      ],
+      "notes": [
+        "FAO explicitly lists the six countries surrounding the Black Sea."
+      ]
+    },
+    {
+      "id": "geo-red-sea-or-aden-coast",
+      "text": "Has a Red Sea or Gulf of Aden coast.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "coast",
+      "matches": [
+        "DJ",
+        "EG",
+        "ER",
+        "IL",
+        "JO",
+        "SA",
+        "SO",
+        "SD",
+        "YE"
+      ],
+      "counts": {
+        "1": 1,
+        "2": 5,
+        "3": 9
+      },
+      "maximumCounts": {
+        "1": 1,
+        "2": 5,
+        "3": 9
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        2,
+        3
+      ],
+      "sources": [
+        "https://persga.org/",
+        "https://unfccc.int/resource/docs/natc/erinc1.pdf",
+        "https://www.gov.il/en/pages/risk?chapterIndex=2"
+      ],
+      "notes": [
+        "Includes Gulf of Aqaba/Eilat as part of the Red Sea. Somalia is included for the Gulf of Aden."
+      ]
+    },
+    {
+      "id": "geo-indian-ocean-island",
+      "text": "An island country in the Indian Ocean.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "island-location",
+      "matches": [
+        "KM",
+        "MG",
+        "MV",
+        "MU",
+        "SC",
+        "LK"
+      ],
+      "counts": {
+        "1": 0,
+        "2": 3,
+        "3": 6
+      },
+      "maximumCounts": {
+        "1": 0,
+        "2": 3,
+        "3": 6
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        3
+      ],
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/mesh/68007195",
+        "https://tourism.gov.sc/?p=9013",
+        "https://www.mfa.gov.lk/en/national-profile-and-geography"
+      ],
+      "notes": [
+        "NIH MeSH Indian Ocean Islands lists Comoros, Madagascar, Maldives, Mauritius, Seychelles and Sri Lanka; Seychelles government confirms the western Indian Ocean island destinations."
+      ]
+    },
+    {
+      "id": "geo-island-country-africa",
+      "text": "An island country in Africa.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "island-location",
+      "matches": [
+        "CV",
+        "KM",
+        "MG",
+        "MU",
+        "SC",
+        "ST"
+      ],
+      "counts": {
+        "1": 0,
+        "2": 2,
+        "3": 6
+      },
+      "maximumCounts": {
+        "1": 0,
+        "2": 2,
+        "3": 6
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        3
+      ],
+      "sources": [
+        "https://www.fao.org/4/y1997e/y1997e15.htm",
+        "https://pacific.un.org/en/about/about-the-un",
+        "https://www.mfa.gov.lk/en/national-profile-and-geography",
+        "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D008521",
+        "https://www.mfa.gov.sg/about-singapore/",
+        "https://www.information.gov.bn/PublishingImages/SitePages/Publication%20Lists/Brunei%20District.pdf",
+        "https://meshb.nlm.nih.gov/record/ui?ui=D001266",
+        "https://culture.gov.bh/en/visitingbahrain/about_bahrain/",
+        "https://teara.govt.nz/en/natural-environment/page-1",
+        "https://test.anbg.gov.au/cpbr/anhsir/anhsir-manual/papuasia.html",
+        "https://timor-leste.gov.tl/?lang=en&p=91",
+        "https://www.gov.uk/government/publications/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world-html"
+      ],
+      "notes": [
+        "Combines independently confirmed island status with UN M49 geography."
+      ]
+    },
+    {
+      "id": "geo-island-country-europe",
+      "text": "An island country in Europe.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "island-location",
+      "matches": [
+        "IS",
+        "IE",
+        "MT",
+        "GB"
+      ],
+      "counts": {
+        "1": 2,
+        "2": 3,
+        "3": 4
+      },
+      "maximumCounts": {
+        "1": 2,
+        "2": 3,
+        "3": 4
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        3
+      ],
+      "sources": [
+        "https://www.fao.org/4/y1997e/y1997e15.htm",
+        "https://pacific.un.org/en/about/about-the-un",
+        "https://www.mfa.gov.lk/en/national-profile-and-geography",
+        "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D008521",
+        "https://www.mfa.gov.sg/about-singapore/",
+        "https://www.information.gov.bn/PublishingImages/SitePages/Publication%20Lists/Brunei%20District.pdf",
+        "https://meshb.nlm.nih.gov/record/ui?ui=D001266",
+        "https://culture.gov.bh/en/visitingbahrain/about_bahrain/",
+        "https://teara.govt.nz/en/natural-environment/page-1",
+        "https://test.anbg.gov.au/cpbr/anhsir/anhsir-manual/papuasia.html",
+        "https://timor-leste.gov.tl/?lang=en&p=91",
+        "https://www.gov.uk/government/publications/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world-html"
+      ],
+      "notes": [
+        "Combines independently confirmed island status with UN M49 geography."
+      ]
+    },
+    {
+      "id": "geo-island-country-asia",
+      "text": "An island country in Asia.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "island-location",
+      "matches": [
+        "BH",
+        "BN",
+        "CY",
+        "ID",
+        "JP",
+        "MV",
+        "PH",
+        "SG",
+        "LK",
+        "TL"
+      ],
+      "counts": {
+        "1": 4,
+        "2": 5,
+        "3": 10
+      },
+      "maximumCounts": {
+        "1": 4,
+        "2": 5,
+        "3": 10
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://www.fao.org/4/y1997e/y1997e15.htm",
+        "https://pacific.un.org/en/about/about-the-un",
+        "https://www.mfa.gov.lk/en/national-profile-and-geography",
+        "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D008521",
+        "https://www.mfa.gov.sg/about-singapore/",
+        "https://www.information.gov.bn/PublishingImages/SitePages/Publication%20Lists/Brunei%20District.pdf",
+        "https://meshb.nlm.nih.gov/record/ui?ui=D001266",
+        "https://culture.gov.bh/en/visitingbahrain/about_bahrain/",
+        "https://teara.govt.nz/en/natural-environment/page-1",
+        "https://test.anbg.gov.au/cpbr/anhsir/anhsir-manual/papuasia.html",
+        "https://timor-leste.gov.tl/?lang=en&p=91",
+        "https://www.gov.uk/government/publications/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world-html"
+      ],
+      "notes": [
+        "Combines independently confirmed island status with UN M49 geography."
+      ]
+    },
+    {
+      "id": "geo-island-country-americas",
+      "text": "An island country in the Americas.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "island-location",
+      "matches": [
+        "AG",
+        "BS",
+        "BB",
+        "CU",
+        "DM",
+        "DO",
+        "GD",
+        "HT",
+        "JM",
+        "KN",
+        "LC",
+        "VC",
+        "TT"
+      ],
+      "counts": {
+        "1": 1,
+        "2": 4,
+        "3": 13
+      },
+      "maximumCounts": {
+        "1": 1,
+        "2": 4,
+        "3": 13
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        2,
+        3
+      ],
+      "sources": [
+        "https://www.fao.org/4/y1997e/y1997e15.htm",
+        "https://pacific.un.org/en/about/about-the-un",
+        "https://www.mfa.gov.lk/en/national-profile-and-geography",
+        "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D008521",
+        "https://www.mfa.gov.sg/about-singapore/",
+        "https://www.information.gov.bn/PublishingImages/SitePages/Publication%20Lists/Brunei%20District.pdf",
+        "https://meshb.nlm.nih.gov/record/ui?ui=D001266",
+        "https://culture.gov.bh/en/visitingbahrain/about_bahrain/",
+        "https://teara.govt.nz/en/natural-environment/page-1",
+        "https://test.anbg.gov.au/cpbr/anhsir/anhsir-manual/papuasia.html",
+        "https://timor-leste.gov.tl/?lang=en&p=91",
+        "https://www.gov.uk/government/publications/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world-html"
+      ],
+      "notes": [
+        "Combines independently confirmed island status with UN M49 geography."
+      ]
+    },
+    {
+      "id": "geo-island-country-oceania",
+      "text": "An island country in Oceania.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "island-location",
+      "matches": [
+        "FJ",
+        "KI",
+        "MH",
+        "FM",
+        "NR",
+        "NZ",
+        "PW",
+        "PG",
+        "WS",
+        "SB",
+        "TO",
+        "TV",
+        "VU"
+      ],
+      "counts": {
+        "1": 1,
+        "2": 2,
+        "3": 13
+      },
+      "maximumCounts": {
+        "1": 1,
+        "2": 2,
+        "3": 13
+      },
+      "possibleExtraMatches": [],
+      "eligibleTiers": [
+        3
+      ],
+      "sources": [
+        "https://www.fao.org/4/y1997e/y1997e15.htm",
+        "https://pacific.un.org/en/about/about-the-un",
+        "https://www.mfa.gov.lk/en/national-profile-and-geography",
+        "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D008521",
+        "https://www.mfa.gov.sg/about-singapore/",
+        "https://www.information.gov.bn/PublishingImages/SitePages/Publication%20Lists/Brunei%20District.pdf",
+        "https://meshb.nlm.nih.gov/record/ui?ui=D001266",
+        "https://culture.gov.bh/en/visitingbahrain/about_bahrain/",
+        "https://teara.govt.nz/en/natural-environment/page-1",
+        "https://test.anbg.gov.au/cpbr/anhsir/anhsir-manual/papuasia.html",
+        "https://timor-leste.gov.tl/?lang=en&p=91",
+        "https://www.gov.uk/government/publications/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world-html"
+      ],
+      "notes": [
+        "Combines independently confirmed island status with UN M49 geography."
+      ]
+    },
+    {
+      "id": "geo-pacific-coast",
+      "text": "Has a Pacific coast.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "coast",
+      "matches": [
+        "AU",
+        "KH",
+        "CA",
+        "CL",
+        "CN",
+        "CO",
+        "CR",
+        "EC",
+        "SV",
+        "FJ",
+        "GT",
+        "HN",
+        "ID",
+        "JP",
+        "KI",
+        "MY",
+        "MH",
+        "MX",
+        "FM",
+        "NR",
+        "NZ",
+        "NI",
+        "PW",
+        "PA",
+        "PE",
+        "PH",
+        "RU",
+        "WS",
+        "SB",
+        "KR",
+        "TH",
+        "TO",
+        "TV",
+        "US",
+        "VU",
+        "VN"
+      ],
+      "counts": {
+        "1": 18,
+        "2": 23,
+        "3": 36
+      },
+      "maximumCounts": {
+        "1": 21,
+        "2": 28,
+        "3": 43
+      },
+      "possibleExtraMatches": [
+        "BN",
+        "SG",
+        "TL",
+        "PG",
+        "KP",
+        "FR",
+        "GB"
+      ],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://www.fao.org/4/a1465e/a1465e00.htm",
+        "https://pacific.un.org/en/about/about-the-un"
+      ],
+      "notes": [
+        "FAO Pacific coastal-country review lists the first set explicitly, supplemented by the UN Pacific island-country list. Includes marginal Pacific seas as classified by FAO. This is a conservative verified membership list, not an exhaustive list of every Pacific coast."
+      ]
+    },
+    {
+      "id": "geo-north-sea-coast",
+      "text": "Has a North Sea coast.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "coast",
+      "matches": [
+        "BE",
+        "DK",
+        "FR",
+        "DE",
+        "NL",
+        "NO",
+        "GB"
+      ],
+      "counts": {
+        "1": 5,
+        "2": 7,
+        "3": 7
+      },
+      "maximumCounts": {
+        "1": 6,
+        "2": 8,
+        "3": 8
+      },
+      "possibleExtraMatches": [
+        "SE"
+      ],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://www.ospar.org/documents?v=57929",
+        "https://www.ospar.org/convention/the-north-east-atlantic/ii"
+      ],
+      "notes": [
+        "OSPAR Table1 explicitly identifies North Sea coastal areas for Belgium, Denmark, Germany, Netherlands, Norway and UK; France borders its southern entrance in the Dover Strait. Sweden is excluded because OSPAR lists only Kattegat/Skagerrak coasts; Greater North Sea would include it.",
+        "Sweden only fits the broader Greater North Sea convention, included as a fairness upper-bound possibility but not assigned the plain North Sea clue."
+      ]
+    },
+    {
+      "id": "geo-indian-ocean-coast",
+      "text": "Has a coast on the Indian Ocean or its seas.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "coast",
+      "matches": [
+        "AU",
+        "BH",
+        "BD",
+        "KM",
+        "DJ",
+        "EG",
+        "ER",
+        "IN",
+        "ID",
+        "IR",
+        "IQ",
+        "IL",
+        "JO",
+        "KE",
+        "KW",
+        "MG",
+        "MY",
+        "MV",
+        "MU",
+        "MZ",
+        "MM",
+        "OM",
+        "PK",
+        "QA",
+        "SA",
+        "SC",
+        "SO",
+        "ZA",
+        "LK",
+        "SD",
+        "TZ",
+        "TH",
+        "AE",
+        "YE"
+      ],
+      "counts": {
+        "1": 8,
+        "2": 24,
+        "3": 34
+      },
+      "maximumCounts": {
+        "1": 11,
+        "2": 27,
+        "3": 38
+      },
+      "possibleExtraMatches": [
+        "FR",
+        "GB",
+        "SG",
+        "TL"
+      ],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://www.fao.org/4/a0477e/a0477e00.htm",
+        "https://www.fao.org/4/a0477e/a0477e06.htm",
+        "https://www.ncbi.nlm.nih.gov/mesh/68007195"
+      ],
+      "notes": [
+        "Explicitly includes the Red Sea, Persian Gulf, Arabian Sea, Gulf of Oman, Gulf of Aden and Andaman Sea, as FAO does. Source lists national coasts, not countries merely operating distant-water fishing fleets."
+      ]
+    },
+    {
+      "id": "geo-atlantic-coast",
+      "text": "Has an Atlantic coast.",
+      "family": "geography",
+      "kind": "specific",
+      "dimension": "coast",
+      "matches": [
+        "AO",
+        "AR",
+        "BJ",
+        "BR",
+        "CM",
+        "CV",
+        "CU",
+        "GQ",
+        "FR",
+        "GA",
+        "GM",
+        "GH",
+        "GN",
+        "GW",
+        "IS",
+        "IE",
+        "CI",
+        "LR",
+        "MR",
+        "MA",
+        "NA",
+        "NG",
+        "PT",
+        "CG",
+        "SN",
+        "SL",
+        "ZA",
+        "ES",
+        "ST",
+        "TG",
+        "GB",
+        "UY"
+      ],
+      "counts": {
+        "1": 11,
+        "2": 18,
+        "3": 32
+      },
+      "maximumCounts": {
+        "1": 17,
+        "2": 31,
+        "3": 59
+      },
+      "possibleExtraMatches": [
+        "CD",
+        "CA",
+        "US",
+        "BS",
+        "BB",
+        "AG",
+        "DM",
+        "DO",
+        "GD",
+        "HT",
+        "KN",
+        "LC",
+        "VC",
+        "TT",
+        "GY",
+        "SR",
+        "VE",
+        "NO",
+        "BZ",
+        "CO",
+        "CR",
+        "GT",
+        "HN",
+        "MX",
+        "NI",
+        "PA",
+        "JM"
+      ],
+      "eligibleTiers": [
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        "https://atlantic-turtles.cms.int/",
+        "https://www.ospar.org/documents?v=57929",
+        "https://www.fao.org/4/w3840e/W3840e01.htm",
+        "https://www.fao.org/docrep/014/i1926e/i1926e.pdf",
+        "https://www.visitportugal.com/en/content/about-portugal"
+      ],
+      "notes": [
+        "Conservative verified list: CMS Atlantic Coast of Africa treaty range states, OSPAR Atlantic coastal areas, FAO Argentina/Brazil/Uruguay coastal list and FAO Cuba profile. Atlantic marginal seas are excluded unless the country also has a direct Atlantic coast.",
+        "possibleExtraCodes conservatively lists unassigned countries that may satisfy Atlantic coast under direct or marginal-sea conventions; use them only for fairness upper bounds, not as sourced assignments."
+      ]
+    }
+  ],
+  "countries": [
+    {
+      "code": "AF",
+      "name": "Afghanistan",
+      "tier": 2,
+      "hints": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-no-ocean-coast",
+        "geo-un-location-southern-asia"
+      ]
+    },
+    {
+      "code": "AL",
+      "name": "Albania",
+      "tier": 2,
+      "hints": [
+        "name-no-e",
+        "population-1000000-10000000",
+        "geo-mediterranean-coast",
+        "geo-un-location-southern-europe"
+      ]
+    },
+    {
+      "code": "DZ",
+      "name": "Algeria",
+      "tier": 2,
+      "hints": [
+        "name-has-e",
+        "population-10000000-50000000",
+        "geo-mediterranean-coast",
+        "geo-un-location-northern-africa"
+      ]
+    },
+    {
+      "code": "AD",
+      "name": "Andorra",
+      "tier": 3,
+      "hints": [
+        "name-has-o",
+        "population-0-1000000",
+        "geo-no-ocean-coast",
+        "geo-two-land-neighbours"
+      ]
+    },
+    {
+      "code": "AO",
+      "name": "Angola",
+      "tier": 2,
+      "hints": [
+        "name-up-to-six",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ]
+    },
+    {
+      "code": "AG",
+      "name": "Antigua and Barbuda",
+      "tier": 3,
+      "hints": [
+        "name-no-e",
+        "population-0-1000000",
+        "geo-no-land-neighbours",
+        "geo-island-country"
+      ]
+    },
+    {
+      "code": "AR",
+      "name": "Argentina",
+      "tier": 1,
+      "hints": [
+        "name-first-a-m",
+        "population-10000000-50000000",
+        "geo-atlantic-coast",
+        "geo-at-least-one-smaller-land-neighbour"
+      ]
+    },
+    {
+      "code": "AM",
+      "name": "Armenia",
+      "tier": 2,
+      "hints": [
+        "name-has-e",
+        "population-1000000-10000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-no-ocean-coast"
+      ]
+    },
+    {
+      "code": "AU",
+      "name": "Australia",
+      "tier": 1,
+      "hints": [
+        "name-no-e",
+        "population-10000000-50000000",
+        "geo-indian-ocean-coast",
+        "geo-no-land-neighbours"
+      ]
+    },
+    {
+      "code": "AT",
+      "name": "Austria",
+      "tier": 1,
+      "hints": [
+        "name-no-e",
+        "population-1000000-10000000",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-neighbour-in-europe"
+      ]
+    },
+    {
+      "code": "AZ",
+      "name": "Azerbaijan",
+      "tier": 2,
+      "hints": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-five-or-six-land-neighbours"
+      ]
+    },
+    {
+      "code": "BS",
+      "name": "Bahamas",
+      "tier": 3,
+      "hints": [
+        "name-ends-consonant",
+        "area-10000-100000",
+        "geo-no-land-neighbours",
+        "geo-island-country"
+      ]
+    },
+    {
+      "code": "BH",
+      "name": "Bahrain",
+      "tier": 3,
+      "hints": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-indian-ocean-coast",
+        "geo-island-country"
+      ]
+    },
+    {
+      "code": "BD",
+      "name": "Bangladesh",
+      "tier": 2,
+      "hints": [
+        "name-ends-consonant",
+        "area-100000-500000",
+        "geo-indian-ocean-coast",
+        "geo-two-land-neighbours"
+      ]
+    },
+    {
+      "code": "BB",
+      "name": "Barbados",
+      "tier": 3,
+      "hints": [
+        "name-ends-consonant",
+        "population-0-1000000",
+        "geo-no-land-neighbours",
+        "geo-island-country"
+      ]
+    },
+    {
+      "code": "BY",
+      "name": "Belarus",
+      "tier": 3,
+      "hints": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-no-ocean-coast"
+      ]
+    },
+    {
+      "code": "BE",
+      "name": "Belgium",
+      "tier": 2,
+      "hints": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-north-sea-coast"
+      ]
+    },
+    {
+      "code": "BZ",
+      "name": "Belize",
+      "tier": 3,
+      "hints": [
+        "name-has-e",
+        "area-10000-100000",
+        "geo-all-larger-land-neighbours",
+        "geo-two-land-neighbours"
+      ]
+    },
+    {
+      "code": "BJ",
+      "name": "Benin",
+      "tier": 3,
+      "hints": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ]
+    },
+    {
+      "code": "BT",
+      "name": "Bhutan",
+      "tier": 3,
+      "hints": [
+        "name-ends-consonant",
+        "area-10000-100000",
+        "geo-no-ocean-coast",
+        "geo-two-land-neighbours"
+      ]
+    },
+    {
+      "code": "BO",
+      "name": "Bolivia",
+      "tier": 2,
+      "hints": [
+        "name-has-o",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-five-or-six-land-neighbours"
+      ]
+    },
+    {
+      "code": "BA",
+      "name": "Bosnia and Herzegovina",
+      "tier": 2,
+      "hints": [
+        "name-has-e",
+        "population-1000000-10000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-mediterranean-coast"
+      ]
+    },
+    {
+      "code": "BW",
+      "name": "Botswana",
+      "tier": 2,
+      "hints": [
+        "name-has-o",
+        "population-1000000-10000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ]
+    },
+    {
+      "code": "BR",
+      "name": "Brazil",
+      "tier": 1,
+      "hints": [
+        "name-up-to-six",
+        "area-1500000-plus",
+        "geo-atlantic-coast",
+        "geo-seven-or-more-land-neighbours"
+      ]
+    },
+    {
+      "code": "BN",
+      "name": "Brunei",
+      "tier": 3,
+      "hints": [
+        "name-has-e",
+        "population-0-1000000",
+        "geo-island-country",
+        "geo-one-land-neighbour"
+      ]
+    },
+    {
+      "code": "BG",
+      "name": "Bulgaria",
+      "tier": 2,
+      "hints": [
+        "name-no-e",
+        "area-100000-500000",
+        "geo-five-or-six-land-neighbours",
+        "geo-un-location-eastern-europe"
+      ]
+    },
+    {
+      "code": "BF",
+      "name": "Burkina Faso",
+      "tier": 3,
+      "hints": [
+        "name-last-n-z",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-no-ocean-coast"
+      ]
+    },
+    {
+      "code": "BI",
+      "name": "Burundi",
+      "tier": 3,
+      "hints": [
+        "name-no-e",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ]
+    },
+    {
+      "code": "KH",
+      "name": "Cambodia",
+      "tier": 2,
+      "hints": [
+        "name-has-o",
+        "population-10000000-50000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-pacific-coast"
+      ]
+    },
+    {
+      "code": "CM",
+      "name": "Cameroon",
+      "tier": 2,
+      "hints": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-five-or-six-land-neighbours"
+      ]
+    },
+    {
+      "code": "CA",
+      "name": "Canada",
+      "tier": 1,
+      "hints": [
+        "name-up-to-six",
+        "population-10000000-50000000",
+        "geo-north-america",
+        "geo-pacific-coast"
+      ]
+    },
+    {
+      "code": "CV",
+      "name": "Cape Verde",
+      "tier": 3,
+      "hints": [
+        "name-has-e",
+        "population-0-1000000",
+        "geo-no-land-neighbours",
+        "geo-atlantic-coast"
+      ]
+    },
+    {
+      "code": "CF",
+      "name": "Central African Republic",
+      "tier": 3,
+      "hints": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-no-ocean-coast"
+      ]
+    },
+    {
+      "code": "TD",
+      "name": "Chad",
+      "tier": 3,
+      "hints": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-no-ocean-coast"
+      ]
+    },
+    {
+      "code": "CL",
+      "name": "Chile",
+      "tier": 1,
+      "hints": [
+        "name-up-to-six",
+        "population-10000000-50000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-at-least-one-larger-land-neighbour"
+      ]
+    },
+    {
+      "code": "CN",
+      "name": "China",
+      "tier": 1,
+      "hints": [
+        "name-up-to-six",
+        "area-1500000-plus",
+        "geo-seven-or-more-land-neighbours",
+        "geo-pacific-coast"
+      ]
+    },
+    {
+      "code": "CO",
+      "name": "Colombia",
+      "tier": 1,
+      "hints": [
+        "name-no-e",
+        "population-50000000-150000000",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-five-or-six-land-neighbours"
+      ]
+    },
+    {
+      "code": "KM",
+      "name": "Comoros",
+      "tier": 3,
+      "hints": [
+        "name-ends-consonant",
+        "population-0-1000000",
+        "geo-no-land-neighbours",
+        "geo-indian-ocean-coast"
+      ]
+    },
+    {
+      "code": "CR",
+      "name": "Costa Rica",
+      "tier": 1,
+      "hints": [
+        "name-no-e",
+        "population-1000000-10000000",
+        "geo-at-least-one-larger-land-neighbour",
+        "geo-all-neighbours-in-americas"
+      ]
+    },
+    {
+      "code": "HR",
+      "name": "Croatia",
+      "tier": 3,
+      "hints": [
+        "name-has-o",
+        "population-1000000-10000000",
+        "geo-five-or-six-land-neighbours",
+        "geo-mediterranean-coast"
+      ]
+    },
+    {
+      "code": "CU",
+      "name": "Cuba",
+      "tier": 1,
+      "hints": [
+        "name-up-to-six",
+        "area-100000-500000",
+        "geo-atlantic-coast",
+        "geo-north-america"
+      ]
+    },
+    {
+      "code": "CY",
+      "name": "Cyprus",
+      "tier": 3,
+      "hints": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-island-country",
+        "geo-mediterranean-coast"
+      ]
+    },
+    {
+      "code": "CZ",
+      "name": "Czechia",
+      "tier": 2,
+      "hints": [
+        "name-has-e",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ]
+    },
+    {
+      "code": "CD",
+      "name": "DR Congo",
+      "tier": 3,
+      "hints": [
+        "name-last-n-z",
+        "population-50000000-150000000",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-all-neighbours-in-africa"
+      ]
+    },
+    {
+      "code": "DK",
+      "name": "Denmark",
+      "tier": 2,
+      "hints": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-un-location-northern-europe",
+        "geo-baltic-coast"
+      ]
+    },
+    {
+      "code": "DJ",
+      "name": "Djibouti",
+      "tier": 3,
+      "hints": [
+        "name-has-o",
+        "population-1000000-10000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-all-neighbours-in-africa"
+      ]
+    },
+    {
+      "code": "DM",
+      "name": "Dominica",
+      "tier": 3,
+      "hints": [
+        "name-has-o",
+        "population-0-1000000",
+        "geo-no-land-neighbours",
+        "geo-island-country"
+      ]
+    },
+    {
+      "code": "DO",
+      "name": "Dominican Republic",
+      "tier": 2,
+      "hints": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-all-neighbours-in-americas"
+      ]
+    },
+    {
+      "code": "EC",
+      "name": "Ecuador",
+      "tier": 2,
+      "hints": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-pacific-coast",
+        "geo-all-larger-land-neighbours"
+      ]
+    },
+    {
+      "code": "EG",
+      "name": "Egypt",
+      "tier": 1,
+      "hints": [
+        "name-up-to-six",
+        "population-50000000-150000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-indian-ocean-coast"
+      ]
+    },
+    {
+      "code": "SV",
+      "name": "El Salvador",
+      "tier": 3,
+      "hints": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-pacific-coast",
+        "geo-all-larger-land-neighbours"
+      ]
+    },
+    {
+      "code": "GQ",
+      "name": "Equatorial Guinea",
+      "tier": 3,
+      "hints": [
+        "name-has-e",
+        "population-1000000-10000000",
+        "geo-all-neighbours-in-africa",
+        "geo-all-larger-land-neighbours"
+      ]
+    },
+    {
+      "code": "ER",
+      "name": "Eritrea",
+      "tier": 3,
+      "hints": [
+        "name-has-e",
+        "population-1000000-10000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ]
+    },
+    {
+      "code": "EE",
+      "name": "Estonia",
+      "tier": 3,
+      "hints": [
+        "name-has-e",
+        "population-1000000-10000000",
+        "geo-all-larger-land-neighbours",
+        "geo-two-land-neighbours"
+      ]
+    },
+    {
+      "code": "SZ",
+      "name": "Eswatini",
+      "tier": 3,
+      "hints": [
+        "name-has-e",
+        "population-1000000-10000000",
+        "geo-no-ocean-coast",
+        "geo-all-neighbours-in-africa"
+      ]
+    },
+    {
+      "code": "ET",
+      "name": "Ethiopia",
+      "tier": 2,
+      "hints": [
+        "name-has-e",
+        "area-500000-1500000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-five-or-six-land-neighbours"
+      ]
+    },
+    {
+      "code": "FJ",
+      "name": "Fiji",
+      "tier": 3,
+      "hints": [
+        "name-up-to-six",
+        "area-10000-100000",
+        "geo-pacific-coast",
+        "geo-no-land-neighbours"
+      ]
+    },
+    {
+      "code": "FI",
+      "name": "Finland",
+      "tier": 1,
+      "hints": [
+        "name-ends-consonant",
+        "area-100000-500000",
+        "geo-three-or-four-land-neighbours",
+        "geo-at-least-one-larger-land-neighbour"
+      ]
+    },
+    {
+      "code": "FR",
+      "name": "France",
+      "tier": 1,
+      "hints": [
+        "name-up-to-six",
+        "population-50000000-150000000",
+        "geo-atlantic-coast",
+        "geo-un-location-western-europe"
+      ]
+    },
+    {
+      "code": "GA",
+      "name": "Gabon",
+      "tier": 3,
+      "hints": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ]
+    },
+    {
+      "code": "GM",
+      "name": "Gambia",
+      "tier": 3,
+      "hints": [
+        "name-up-to-six",
+        "population-1000000-10000000",
+        "geo-all-neighbours-in-africa",
+        "geo-all-larger-land-neighbours"
+      ]
+    },
+    {
+      "code": "GE",
+      "name": "Georgia",
+      "tier": 2,
+      "hints": [
+        "name-has-e",
+        "population-1000000-10000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ]
+    },
+    {
+      "code": "DE",
+      "name": "Germany",
+      "tier": 1,
+      "hints": [
+        "name-ends-consonant",
+        "area-100000-500000",
+        "geo-seven-or-more-land-neighbours",
+        "geo-baltic-coast"
+      ]
+    },
+    {
+      "code": "GH",
+      "name": "Ghana",
+      "tier": 2,
+      "hints": [
+        "name-up-to-six",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ]
+    },
+    {
+      "code": "GR",
+      "name": "Greece",
+      "tier": 1,
+      "hints": [
+        "name-up-to-six",
+        "area-100000-500000",
+        "geo-three-or-four-land-neighbours",
+        "geo-mediterranean-coast"
+      ]
+    },
+    {
+      "code": "GD",
+      "name": "Grenada",
+      "tier": 3,
+      "hints": [
+        "name-has-e",
+        "population-0-1000000",
+        "geo-no-land-neighbours",
+        "geo-island-country"
+      ]
+    },
+    {
+      "code": "GT",
+      "name": "Guatemala",
+      "tier": 2,
+      "hints": [
+        "name-has-e",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ]
+    },
+    {
+      "code": "GN",
+      "name": "Guinea",
+      "tier": 3,
+      "hints": [
+        "name-has-e",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-all-neighbours-in-africa"
+      ]
+    },
+    {
+      "code": "GW",
+      "name": "Guinea-Bissau",
+      "tier": 3,
+      "hints": [
+        "name-last-n-z",
+        "population-1000000-10000000",
+        "geo-all-neighbours-in-africa",
+        "geo-all-larger-land-neighbours"
+      ]
+    },
+    {
+      "code": "GY",
+      "name": "Guyana",
+      "tier": 3,
+      "hints": [
+        "name-up-to-six",
+        "area-100000-500000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ]
+    },
+    {
+      "code": "HT",
+      "name": "Haiti",
+      "tier": 2,
+      "hints": [
+        "name-up-to-six",
+        "population-10000000-50000000",
+        "geo-all-larger-land-neighbours",
+        "geo-all-neighbours-in-americas"
+      ]
+    },
+    {
+      "code": "HN",
+      "name": "Honduras",
+      "tier": 2,
+      "hints": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ]
+    },
+    {
+      "code": "HU",
+      "name": "Hungary",
+      "tier": 2,
+      "hints": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-no-ocean-coast",
+        "geo-seven-or-more-land-neighbours"
+      ]
+    },
+    {
+      "code": "IS",
+      "name": "Iceland",
+      "tier": 2,
+      "hints": [
+        "name-ends-consonant",
+        "area-100000-500000",
+        "geo-atlantic-coast",
+        "geo-no-land-neighbours"
+      ]
+    },
+    {
+      "code": "IN",
+      "name": "India",
+      "tier": 1,
+      "hints": [
+        "name-up-to-six",
+        "area-1500000-plus",
+        "geo-indian-ocean-coast",
+        "geo-region-asia"
+      ]
+    },
+    {
+      "code": "ID",
+      "name": "Indonesia",
+      "tier": 1,
+      "hints": [
+        "name-first-a-m",
+        "area-1500000-plus",
+        "geo-three-or-four-land-neighbours",
+        "geo-indian-ocean-coast"
+      ]
+    },
+    {
+      "code": "IR",
+      "name": "Iran",
+      "tier": 2,
+      "hints": [
+        "name-ends-consonant",
+        "population-50000000-150000000",
+        "geo-indian-ocean-coast",
+        "geo-seven-or-more-land-neighbours"
+      ]
+    },
+    {
+      "code": "IQ",
+      "name": "Iraq",
+      "tier": 2,
+      "hints": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-indian-ocean-coast",
+        "geo-five-or-six-land-neighbours"
+      ]
+    },
+    {
+      "code": "IE",
+      "name": "Ireland",
+      "tier": 1,
+      "hints": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-atlantic-coast",
+        "geo-un-location-northern-europe"
+      ]
+    },
+    {
+      "code": "IL",
+      "name": "Israel",
+      "tier": 2,
+      "hints": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-indian-ocean-coast",
+        "geo-un-location-western-asia"
+      ]
+    },
+    {
+      "code": "IT",
+      "name": "Italy",
+      "tier": 1,
+      "hints": [
+        "name-up-to-six",
+        "area-100000-500000",
+        "geo-five-or-six-land-neighbours",
+        "geo-mediterranean-coast"
+      ]
+    },
+    {
+      "code": "CI",
+      "name": "Ivory Coast",
+      "tier": 3,
+      "hints": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-all-neighbours-in-africa"
+      ]
+    },
+    {
+      "code": "JM",
+      "name": "Jamaica",
+      "tier": 2,
+      "hints": [
+        "name-no-e",
+        "population-1000000-10000000",
+        "geo-north-america",
+        "geo-no-land-neighbours"
+      ]
+    },
+    {
+      "code": "JP",
+      "name": "Japan",
+      "tier": 1,
+      "hints": [
+        "name-up-to-six",
+        "area-100000-500000",
+        "geo-pacific-coast",
+        "geo-island-country-asia"
+      ]
+    },
+    {
+      "code": "JO",
+      "name": "Jordan",
+      "tier": 2,
+      "hints": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-indian-ocean-coast",
+        "geo-un-location-western-asia"
+      ]
+    },
+    {
+      "code": "KZ",
+      "name": "Kazakhstan",
+      "tier": 2,
+      "hints": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-five-or-six-land-neighbours",
+        "geo-no-ocean-coast"
+      ]
+    },
+    {
+      "code": "KE",
+      "name": "Kenya",
+      "tier": 1,
+      "hints": [
+        "name-up-to-six",
+        "population-50000000-150000000",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-indian-ocean-coast"
+      ]
+    },
+    {
+      "code": "KI",
+      "name": "Kiribati",
+      "tier": 3,
+      "hints": [
+        "name-no-e",
+        "population-0-1000000",
+        "geo-pacific-coast",
+        "geo-no-land-neighbours"
+      ]
+    },
+    {
+      "code": "KW",
+      "name": "Kuwait",
+      "tier": 3,
+      "hints": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-all-larger-land-neighbours",
+        "geo-indian-ocean-coast"
+      ]
+    },
+    {
+      "code": "KG",
+      "name": "Kyrgyzstan",
+      "tier": 3,
+      "hints": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-no-ocean-coast"
+      ]
+    },
+    {
+      "code": "LA",
+      "name": "Laos",
+      "tier": 3,
+      "hints": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-no-ocean-coast",
+        "geo-five-or-six-land-neighbours"
+      ]
+    },
+    {
+      "code": "LV",
+      "name": "Latvia",
+      "tier": 3,
+      "hints": [
+        "name-up-to-six",
+        "population-1000000-10000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ]
+    },
+    {
+      "code": "LB",
+      "name": "Lebanon",
+      "tier": 2,
+      "hints": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-mediterranean-coast",
+        "geo-un-location-western-asia"
+      ]
+    },
+    {
+      "code": "LS",
+      "name": "Lesotho",
+      "tier": 3,
+      "hints": [
+        "name-last-n-z",
+        "population-1000000-10000000",
+        "geo-no-ocean-coast",
+        "geo-all-neighbours-in-africa"
+      ]
+    },
+    {
+      "code": "LR",
+      "name": "Liberia",
+      "tier": 3,
+      "hints": [
+        "name-has-e",
+        "population-1000000-10000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ]
+    },
+    {
+      "code": "LY",
+      "name": "Libya",
+      "tier": 2,
+      "hints": [
+        "name-up-to-six",
+        "population-1000000-10000000",
+        "geo-five-or-six-land-neighbours",
+        "geo-mediterranean-coast"
+      ]
+    },
+    {
+      "code": "LI",
+      "name": "Liechtenstein",
+      "tier": 3,
+      "hints": [
+        "name-ends-consonant",
+        "population-0-1000000",
+        "geo-no-ocean-coast",
+        "geo-all-larger-land-neighbours"
+      ]
+    },
+    {
+      "code": "LT",
+      "name": "Lithuania",
+      "tier": 2,
+      "hints": [
+        "name-no-e",
+        "population-1000000-10000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ]
+    },
+    {
+      "code": "LU",
+      "name": "Luxembourg",
+      "tier": 3,
+      "hints": [
+        "name-ends-consonant",
+        "population-0-1000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-no-ocean-coast"
+      ]
+    },
+    {
+      "code": "MG",
+      "name": "Madagascar",
+      "tier": 2,
+      "hints": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-indian-ocean-coast",
+        "geo-no-land-neighbours"
+      ]
+    },
+    {
+      "code": "MW",
+      "name": "Malawi",
+      "tier": 3,
+      "hints": [
+        "name-up-to-six",
+        "population-10000000-50000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-no-ocean-coast"
+      ]
+    },
+    {
+      "code": "MY",
+      "name": "Malaysia",
+      "tier": 1,
+      "hints": [
+        "name-no-e",
+        "area-100000-500000",
+        "geo-indian-ocean-coast",
+        "geo-un-location-south-eastern-asia"
+      ]
+    },
+    {
+      "code": "MV",
+      "name": "Maldives",
+      "tier": 3,
+      "hints": [
+        "name-ends-consonant",
+        "population-0-1000000",
+        "geo-no-land-neighbours",
+        "geo-indian-ocean-coast"
+      ]
+    },
+    {
+      "code": "ML",
+      "name": "Mali",
+      "tier": 3,
+      "hints": [
+        "name-up-to-six",
+        "population-10000000-50000000",
+        "geo-no-ocean-coast",
+        "geo-seven-or-more-land-neighbours"
+      ]
+    },
+    {
+      "code": "MT",
+      "name": "Malta",
+      "tier": 3,
+      "hints": [
+        "name-up-to-six",
+        "population-0-1000000",
+        "geo-no-land-neighbours",
+        "geo-island-country"
+      ]
+    },
+    {
+      "code": "MH",
+      "name": "Marshall Islands",
+      "tier": 3,
+      "hints": [
+        "name-ends-consonant",
+        "population-0-1000000",
+        "geo-pacific-coast",
+        "geo-no-land-neighbours"
+      ]
+    },
+    {
+      "code": "MR",
+      "name": "Mauritania",
+      "tier": 3,
+      "hints": [
+        "name-no-e",
+        "population-1000000-10000000",
+        "geo-atlantic-coast",
+        "geo-un-location-western-africa"
+      ]
+    },
+    {
+      "code": "MU",
+      "name": "Mauritius",
+      "tier": 2,
+      "hints": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-indian-ocean-coast",
+        "geo-no-land-neighbours"
+      ]
+    },
+    {
+      "code": "MX",
+      "name": "Mexico",
+      "tier": 1,
+      "hints": [
+        "name-up-to-six",
+        "population-50000000-150000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-north-america"
+      ]
+    },
+    {
+      "code": "FM",
+      "name": "Micronesia",
+      "tier": 3,
+      "hints": [
+        "name-has-e",
+        "population-0-1000000",
+        "geo-pacific-coast",
+        "geo-no-land-neighbours"
+      ]
+    },
+    {
+      "code": "MD",
+      "name": "Moldova",
+      "tier": 3,
+      "hints": [
+        "name-has-o",
+        "population-1000000-10000000",
+        "geo-no-ocean-coast",
+        "geo-all-larger-land-neighbours"
+      ]
+    },
+    {
+      "code": "MC",
+      "name": "Monaco",
+      "tier": 3,
+      "hints": [
+        "name-last-n-z",
+        "population-0-1000000",
+        "geo-mediterranean-coast",
+        "geo-one-land-neighbour"
+      ]
+    },
+    {
+      "code": "MN",
+      "name": "Mongolia",
+      "tier": 2,
+      "hints": [
+        "name-has-o",
+        "population-1000000-10000000",
+        "geo-no-ocean-coast",
+        "geo-neighbour-in-europe"
+      ]
+    },
+    {
+      "code": "ME",
+      "name": "Montenegro",
+      "tier": 3,
+      "hints": [
+        "name-last-n-z",
+        "area-10000-100000",
+        "geo-mediterranean-coast",
+        "geo-un-location-southern-europe"
+      ]
+    },
+    {
+      "code": "MA",
+      "name": "Morocco",
+      "tier": 1,
+      "hints": [
+        "name-no-e",
+        "area-100000-500000",
+        "geo-atlantic-coast",
+        "geo-region-africa"
+      ]
+    },
+    {
+      "code": "MZ",
+      "name": "Mozambique",
+      "tier": 3,
+      "hints": [
+        "name-has-e",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-all-neighbours-in-africa"
+      ]
+    },
+    {
+      "code": "MM",
+      "name": "Myanmar",
+      "tier": 2,
+      "hints": [
+        "name-ends-consonant",
+        "area-500000-1500000",
+        "geo-indian-ocean-coast",
+        "geo-five-or-six-land-neighbours"
+      ]
+    },
+    {
+      "code": "NA",
+      "name": "Namibia",
+      "tier": 2,
+      "hints": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ]
+    },
+    {
+      "code": "NR",
+      "name": "Nauru",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-0-1000000",
+        "geo-pacific-coast",
+        "geo-no-land-neighbours"
+      ]
+    },
+    {
+      "code": "NP",
+      "name": "Nepal",
+      "tier": 2,
+      "hints": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-no-ocean-coast",
+        "geo-two-land-neighbours"
+      ]
+    },
+    {
+      "code": "NL",
+      "name": "Netherlands",
+      "tier": 1,
+      "hints": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-north-sea-coast",
+        "geo-un-location-western-europe"
+      ]
+    },
+    {
+      "code": "NZ",
+      "name": "New Zealand",
+      "tier": 1,
+      "hints": [
+        "name-ends-consonant",
+        "area-100000-500000",
+        "geo-pacific-coast",
+        "geo-no-land-neighbours"
+      ]
+    },
+    {
+      "code": "NI",
+      "name": "Nicaragua",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-pacific-coast"
+      ]
+    },
+    {
+      "code": "NE",
+      "name": "Niger",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-no-ocean-coast",
+        "geo-seven-or-more-land-neighbours"
+      ]
+    },
+    {
+      "code": "NG",
+      "name": "Nigeria",
+      "tier": 1,
+      "hints": [
+        "name-first-n-z",
+        "area-500000-1500000",
+        "geo-atlantic-coast",
+        "geo-at-least-one-smaller-land-neighbour"
+      ]
+    },
+    {
+      "code": "KP",
+      "name": "North Korea",
+      "tier": 2,
+      "hints": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-neighbour-in-europe"
+      ]
+    },
+    {
+      "code": "MK",
+      "name": "North Macedonia",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-no-ocean-coast",
+        "geo-un-location-southern-europe"
+      ]
+    },
+    {
+      "code": "NO",
+      "name": "Norway",
+      "tier": 1,
+      "hints": [
+        "name-up-to-six",
+        "area-100000-500000",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-three-or-four-land-neighbours"
+      ]
+    },
+    {
+      "code": "OM",
+      "name": "Oman",
+      "tier": 2,
+      "hints": [
+        "name-first-n-z",
+        "area-100000-500000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ]
+    },
+    {
+      "code": "PK",
+      "name": "Pakistan",
+      "tier": 2,
+      "hints": [
+        "name-first-n-z",
+        "area-500000-1500000",
+        "geo-indian-ocean-coast",
+        "geo-un-location-southern-asia"
+      ]
+    },
+    {
+      "code": "PW",
+      "name": "Palau",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-0-1000000",
+        "geo-pacific-coast",
+        "geo-no-land-neighbours"
+      ]
+    },
+    {
+      "code": "PS",
+      "name": "Palestine",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-mediterranean-coast",
+        "geo-un-location-western-asia"
+      ]
+    },
+    {
+      "code": "PA",
+      "name": "Panama",
+      "tier": 2,
+      "hints": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-pacific-coast"
+      ]
+    },
+    {
+      "code": "PG",
+      "name": "Papua New Guinea",
+      "tier": 2,
+      "hints": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-all-larger-land-neighbours",
+        "geo-neighbour-in-asia"
+      ]
+    },
+    {
+      "code": "PY",
+      "name": "Paraguay",
+      "tier": 2,
+      "hints": [
+        "name-first-n-z",
+        "area-100000-500000",
+        "geo-three-or-four-land-neighbours",
+        "geo-no-ocean-coast"
+      ]
+    },
+    {
+      "code": "PE",
+      "name": "Peru",
+      "tier": 1,
+      "hints": [
+        "name-up-to-six",
+        "population-10000000-50000000",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-five-or-six-land-neighbours"
+      ]
+    },
+    {
+      "code": "PH",
+      "name": "Philippines",
+      "tier": 1,
+      "hints": [
+        "name-ends-consonant",
+        "area-100000-500000",
+        "geo-un-location-south-eastern-asia",
+        "geo-pacific-coast"
+      ]
+    },
+    {
+      "code": "PL",
+      "name": "Poland",
+      "tier": 1,
+      "hints": [
+        "name-up-to-six",
+        "area-100000-500000",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-neighbour-in-europe"
+      ]
+    },
+    {
+      "code": "PT",
+      "name": "Portugal",
+      "tier": 1,
+      "hints": [
+        "name-ends-consonant",
+        "population-10000000-50000000",
+        "geo-atlantic-coast",
+        "geo-un-location-southern-europe"
+      ]
+    },
+    {
+      "code": "QA",
+      "name": "Qatar",
+      "tier": 2,
+      "hints": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-indian-ocean-coast",
+        "geo-all-larger-land-neighbours"
+      ]
+    },
+    {
+      "code": "CG",
+      "name": "Republic of the Congo",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-all-neighbours-in-africa"
+      ]
+    },
+    {
+      "code": "RO",
+      "name": "Romania",
+      "tier": 2,
+      "hints": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-five-or-six-land-neighbours",
+        "geo-un-location-eastern-europe"
+      ]
+    },
+    {
+      "code": "RU",
+      "name": "Russia",
+      "tier": 1,
+      "hints": [
+        "name-up-to-six",
+        "population-50000000-150000000",
+        "geo-neighbour-in-europe",
+        "geo-seven-or-more-land-neighbours"
+      ]
+    },
+    {
+      "code": "RW",
+      "name": "Rwanda",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-no-ocean-coast"
+      ]
+    },
+    {
+      "code": "KN",
+      "name": "Saint Kitts and Nevis",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-0-1000000",
+        "geo-no-land-neighbours",
+        "geo-island-country"
+      ]
+    },
+    {
+      "code": "LC",
+      "name": "Saint Lucia",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-0-1000000",
+        "geo-no-land-neighbours",
+        "geo-island-country"
+      ]
+    },
+    {
+      "code": "VC",
+      "name": "Saint Vincent and the Grenadines",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-0-1000000",
+        "geo-no-land-neighbours",
+        "geo-island-country"
+      ]
+    },
+    {
+      "code": "WS",
+      "name": "Samoa",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-0-1000000",
+        "geo-pacific-coast",
+        "geo-no-land-neighbours"
+      ]
+    },
+    {
+      "code": "SM",
+      "name": "San Marino",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-0-1000000",
+        "geo-no-ocean-coast",
+        "geo-all-larger-land-neighbours"
+      ]
+    },
+    {
+      "code": "SA",
+      "name": "Saudi Arabia",
+      "tier": 2,
+      "hints": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-indian-ocean-coast",
+        "geo-seven-or-more-land-neighbours"
+      ]
+    },
+    {
+      "code": "SN",
+      "name": "Senegal",
+      "tier": 2,
+      "hints": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-five-or-six-land-neighbours",
+        "geo-atlantic-coast"
+      ]
+    },
+    {
+      "code": "RS",
+      "name": "Serbia",
+      "tier": 2,
+      "hints": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-no-ocean-coast",
+        "geo-un-location-southern-europe"
+      ]
+    },
+    {
+      "code": "SC",
+      "name": "Seychelles",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-0-1000000",
+        "geo-no-land-neighbours",
+        "geo-indian-ocean-coast"
+      ]
+    },
+    {
+      "code": "SL",
+      "name": "Sierra Leone",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-all-neighbours-in-africa",
+        "geo-all-larger-land-neighbours"
+      ]
+    },
+    {
+      "code": "SG",
+      "name": "Singapore",
+      "tier": 1,
+      "hints": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-un-location-south-eastern-asia",
+        "geo-island-country-asia"
+      ]
+    },
+    {
+      "code": "SK",
+      "name": "Slovakia",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-no-ocean-coast",
+        "geo-all-larger-land-neighbours"
+      ]
+    },
+    {
+      "code": "SI",
+      "name": "Slovenia",
+      "tier": 2,
+      "hints": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-mediterranean-coast"
+      ]
+    },
+    {
+      "code": "SB",
+      "name": "Solomon Islands",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "area-10000-100000",
+        "geo-pacific-coast",
+        "geo-no-land-neighbours"
+      ]
+    },
+    {
+      "code": "SO",
+      "name": "Somalia",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ]
+    },
+    {
+      "code": "ZA",
+      "name": "South Africa",
+      "tier": 1,
+      "hints": [
+        "name-first-n-z",
+        "population-50000000-150000000",
+        "geo-atlantic-coast",
+        "geo-at-least-one-smaller-land-neighbour"
+      ]
+    },
+    {
+      "code": "KR",
+      "name": "South Korea",
+      "tier": 1,
+      "hints": [
+        "name-first-n-z",
+        "population-50000000-150000000",
+        "geo-at-least-one-larger-land-neighbour",
+        "geo-pacific-coast"
+      ]
+    },
+    {
+      "code": "SS",
+      "name": "South Sudan",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-no-ocean-coast"
+      ]
+    },
+    {
+      "code": "ES",
+      "name": "Spain",
+      "tier": 1,
+      "hints": [
+        "name-up-to-six",
+        "area-100000-500000",
+        "geo-atlantic-coast",
+        "geo-un-location-southern-europe"
+      ]
+    },
+    {
+      "code": "LK",
+      "name": "Sri Lanka",
+      "tier": 2,
+      "hints": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-indian-ocean-coast",
+        "geo-no-land-neighbours"
+      ]
+    },
+    {
+      "code": "SD",
+      "name": "Sudan",
+      "tier": 2,
+      "hints": [
+        "name-first-n-z",
+        "population-50000000-150000000",
+        "geo-indian-ocean-coast",
+        "geo-at-least-one-smaller-land-neighbour"
+      ]
+    },
+    {
+      "code": "SR",
+      "name": "Suriname",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "area-100000-500000",
+        "geo-three-or-four-land-neighbours",
+        "geo-un-location-south-america"
+      ]
+    },
+    {
+      "code": "SE",
+      "name": "Sweden",
+      "tier": 1,
+      "hints": [
+        "name-up-to-six",
+        "area-100000-500000",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-neighbour-in-europe"
+      ]
+    },
+    {
+      "code": "CH",
+      "name": "Switzerland",
+      "tier": 1,
+      "hints": [
+        "name-ends-consonant",
+        "population-1000000-10000000",
+        "geo-five-or-six-land-neighbours",
+        "geo-un-location-western-europe"
+      ]
+    },
+    {
+      "code": "SY",
+      "name": "Syria",
+      "tier": 2,
+      "hints": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-five-or-six-land-neighbours",
+        "geo-mediterranean-coast"
+      ]
+    },
+    {
+      "code": "ST",
+      "name": "São Tomé and Príncipe",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-0-1000000",
+        "geo-no-land-neighbours",
+        "geo-atlantic-coast"
+      ]
+    },
+    {
+      "code": "TJ",
+      "name": "Tajikistan",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-no-ocean-coast"
+      ]
+    },
+    {
+      "code": "TZ",
+      "name": "Tanzania",
+      "tier": 2,
+      "hints": [
+        "name-first-n-z",
+        "area-500000-1500000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-indian-ocean-coast"
+      ]
+    },
+    {
+      "code": "TH",
+      "name": "Thailand",
+      "tier": 1,
+      "hints": [
+        "name-ends-consonant",
+        "population-50000000-150000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-indian-ocean-coast"
+      ]
+    },
+    {
+      "code": "TL",
+      "name": "Timor-Leste",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-all-larger-land-neighbours",
+        "geo-island-country"
+      ]
+    },
+    {
+      "code": "TG",
+      "name": "Togo",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-all-neighbours-in-africa"
+      ]
+    },
+    {
+      "code": "TO",
+      "name": "Tonga",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-0-1000000",
+        "geo-pacific-coast",
+        "geo-no-land-neighbours"
+      ]
+    },
+    {
+      "code": "TT",
+      "name": "Trinidad and Tobago",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-no-land-neighbours",
+        "geo-island-country"
+      ]
+    },
+    {
+      "code": "TN",
+      "name": "Tunisia",
+      "tier": 2,
+      "hints": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-mediterranean-coast",
+        "geo-two-land-neighbours"
+      ]
+    },
+    {
+      "code": "TM",
+      "name": "Turkmenistan",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-1000000-10000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-no-ocean-coast"
+      ]
+    },
+    {
+      "code": "TV",
+      "name": "Tuvalu",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-0-1000000",
+        "geo-pacific-coast",
+        "geo-no-land-neighbours"
+      ]
+    },
+    {
+      "code": "TR",
+      "name": "Türkiye",
+      "tier": 1,
+      "hints": [
+        "name-first-n-z",
+        "population-50000000-150000000",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-neighbour-in-europe"
+      ]
+    },
+    {
+      "code": "UG",
+      "name": "Uganda",
+      "tier": 2,
+      "hints": [
+        "name-first-n-z",
+        "area-100000-500000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-five-or-six-land-neighbours"
+      ]
+    },
+    {
+      "code": "UA",
+      "name": "Ukraine",
+      "tier": 1,
+      "hints": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-at-least-one-smaller-land-neighbour",
+        "geo-neighbour-in-europe"
+      ]
+    },
+    {
+      "code": "AE",
+      "name": "United Arab Emirates",
+      "tier": 2,
+      "hints": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-indian-ocean-coast",
+        "geo-all-larger-land-neighbours"
+      ]
+    },
+    {
+      "code": "GB",
+      "name": "United Kingdom",
+      "tier": 1,
+      "hints": [
+        "name-ends-consonant",
+        "area-100000-500000",
+        "geo-atlantic-coast",
+        "geo-un-location-northern-europe"
+      ]
+    },
+    {
+      "code": "US",
+      "name": "United States",
+      "tier": 1,
+      "hints": [
+        "name-ends-consonant",
+        "area-1500000-plus",
+        "geo-north-america",
+        "geo-pacific-coast"
+      ]
+    },
+    {
+      "code": "UY",
+      "name": "Uruguay",
+      "tier": 2,
+      "hints": [
+        "name-first-n-z",
+        "area-100000-500000",
+        "geo-atlantic-coast",
+        "geo-all-larger-land-neighbours"
+      ]
+    },
+    {
+      "code": "UZ",
+      "name": "Uzbekistan",
+      "tier": 2,
+      "hints": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-five-or-six-land-neighbours",
+        "geo-no-ocean-coast"
+      ]
+    },
+    {
+      "code": "VU",
+      "name": "Vanuatu",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "area-10000-100000",
+        "geo-pacific-coast",
+        "geo-no-land-neighbours"
+      ]
+    },
+    {
+      "code": "VA",
+      "name": "Vatican City",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-0-1000000",
+        "geo-no-ocean-coast",
+        "geo-all-larger-land-neighbours"
+      ]
+    },
+    {
+      "code": "VE",
+      "name": "Venezuela",
+      "tier": 2,
+      "hints": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-three-or-four-land-neighbours"
+      ]
+    },
+    {
+      "code": "VN",
+      "name": "Vietnam",
+      "tier": 1,
+      "hints": [
+        "name-ends-consonant",
+        "area-100000-500000",
+        "geo-three-or-four-land-neighbours",
+        "geo-un-location-south-eastern-asia"
+      ]
+    },
+    {
+      "code": "YE",
+      "name": "Yemen",
+      "tier": 3,
+      "hints": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-indian-ocean-coast"
+      ]
+    },
+    {
+      "code": "ZM",
+      "name": "Zambia",
+      "tier": 2,
+      "hints": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-smaller-and-larger-land-neighbours",
+        "geo-no-ocean-coast"
+      ]
+    },
+    {
+      "code": "ZW",
+      "name": "Zimbabwe",
+      "tier": 2,
+      "hints": [
+        "name-first-n-z",
+        "population-10000000-50000000",
+        "geo-three-or-four-land-neighbours",
+        "geo-no-ocean-coast"
+      ]
+    }
+  ],
+  "unresolved": [],
+  "contentSha256": "c97649815d6f7669761b014a47d0e8772dbc1625f15d7ec113850cba87aaa2a8",
+  "reviews": [
+    {
+      "file": "accuracy-review.json",
+      "reviewer": "independent accuracy reviewer",
+      "reviewedContentSha256": "c97649815d6f7669761b014a47d0e8772dbc1625f15d7ec113850cba87aaa2a8"
+    },
+    {
+      "file": "fairness-review.json",
+      "reviewer": "independent fairness reviewer",
+      "reviewedContentSha256": "c97649815d6f7669761b014a47d0e8772dbc1625f15d7ec113850cba87aaa2a8"
+    }
+  ]
+}
