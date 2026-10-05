@@ -95,5 +95,5 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   if (candidate) source = source.replace("from './data.js'", "from '../../data.js'");
   const output = join(ROOT, candidate ? 'research/starting-hints/candidate-hints.js' : 'starting-hints.js');
   await writeFile(output, source);
-  console.log(candidate ? 'Candidate hints are ready for review.' : 'Exported reviewed hints for all 195 countries.');
+  console.log(candidate ? 'Candidate hints are ready for review.' : `Exported reviewed hints for all ${COUNTRIES.length} countries.`);
 }

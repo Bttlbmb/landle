@@ -64,7 +64,7 @@ function independentEligible(hint, tier, pool) {
     && maximum / pool.length <= HINT_RULES.maximumFraction;
 }
 
-test('runtime assignments exactly match the independently reviewed bank and content hash', () => {
+test('runtime assignments exactly match the reviewed bank and content hash', () => {
   assert.equal(hintBank.status, 'reviewed');
   assert.deepEqual(hintBank.unresolved, []);
   const digest = createHash('sha256').update(JSON.stringify({ rules: hintBank.rules, catalog: hintBank.catalog, countries: hintBank.countries })).digest('hex');
@@ -76,9 +76,9 @@ test('runtime assignments exactly match the independently reviewed bank and cont
   assert.equal(HINT_RULES.minimumMatches, 4);
   assert.deepEqual(HINT_RULES.minimumPossibleMatches, { 1: 4, 2: 7, 3: 7 });
   assert.equal(HINT_RULES.maximumFraction, 0.7);
-  assert.deepEqual(HINT_RULES.pools, { 1: 45, 2: 110, 3: 195 });
+  assert.deepEqual(HINT_RULES.pools, { 1: 45, 2: 111, 3: 196 });
   assert.deepEqual(Object.keys(STARTING_HINTS).sort(), COUNTRIES.map(country => country.code).sort());
-  assert.equal(hintBank.countries.length, 195);
+  assert.equal(hintBank.countries.length, 196);
   for (const country of hintBank.countries) {
     assert.deepEqual(STARTING_HINTS[country.code], country.alternatives.map(id => hintAssignment(reviewedHints.get(id))), country.name);
   }
@@ -119,7 +119,7 @@ test('every opening hint is confirmed, within the breadth cap, and avoids six-an
   }
 });
 
-test('all 195 countries have four varied examples and seeds can reach every reviewed runtime alternative', () => {
+test('all 196 countries have four varied examples and seeds can reach every reviewed runtime alternative', () => {
   for (const country of COUNTRIES) {
     const entry = hintBank.countries.find(item => item.code === country.code);
     const examples = entry.hints.map(id => reviewedHints.get(id));
@@ -262,9 +262,9 @@ const approximately = (actual, expected, tolerance = 0.01) => assert.ok(
   Math.abs(actual - expected) < tolerance, `${actual} should be within ${tolerance} of ${expected}`,
 );
 
-test('country data covers 195 countries with unique codes and valid offline clues', () => {
-  assert.equal(COUNTRIES.length, 195);
-  assert.equal(new Set(COUNTRIES.map(country => country.code)).size, 195);
+test('country data covers 196 countries with unique codes and valid offline clues', () => {
+  assert.equal(COUNTRIES.length, 196);
+  assert.equal(new Set(COUNTRIES.map(country => country.code)).size, 196);
   for (const country of COUNTRIES) {
     assert.match(country.code, /^[A-Z]{2}$/);
     assert.ok(Number.isFinite(country.lat) && Math.abs(country.lat) <= 90, country.name);
@@ -276,8 +276,8 @@ test('country data covers 195 countries with unique codes and valid offline clue
   }
 });
 
-test('difficulty ramps expand cumulatively from 45 to 110 to 195 countries', () => {
-  assert.deepEqual([1, 2, 3].map(tier => countriesForTier(tier).length), [45, 110, 195]);
+test('difficulty ramps expand cumulatively from 45 to 111 to 196 countries', () => {
+  assert.deepEqual([1, 2, 3].map(tier => countriesForTier(tier).length), [45, 111, 196]);
   for (const country of countriesForTier(1)) assert.ok(countriesForTier(2).includes(country));
   assert.throws(() => countriesForTier(0), RangeError);
   assert.throws(() => countriesForTier('1'), RangeError);

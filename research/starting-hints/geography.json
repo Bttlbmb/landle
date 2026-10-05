@@ -2,9 +2,9 @@
   "version": 2,
   "created": "2026-10-03",
   "conventions": {
-    "answerCountries": 195,
+    "answerCountries": 196,
     "borders": "Distinct sovereign natural land neighbours; disputed/overseas/causeway scope ambiguities excluded from count and area groups.",
-    "area": "2023 land area in data.js; no total-area comparisons.",
+    "area": "2023 land area in data.js; no total-area comparisons. Taiwan uses the explicitly documented 2021 CIA land-area archive.",
     "landlocked": "No coast opening onto an ocean; inland-sea shores do not change landlocked status."
   },
   "sources": {
@@ -30,7 +30,8 @@
     "caspianSeaCoast": "https://www.unep.org/news-and-stories/press-release/boost-caspian-sea-protection-new-environmental-rules-come-force",
     "aralSeaPossibleCoast": "https://www.undp.org/uzbekistan/blog/beyond-disappearing-lake-what-aral-sea-can-teach-us-about-human-security",
     "jordanPositiveLowerBound": "https://www.jiacc.gov.jo/EN/Pages/About_Jordan",
-    "jordanSeaCoast": "https://jordan.gov.jo/En/Pages/About_Jordan"
+    "jordanSeaCoast": "https://jordan.gov.jo/En/Pages/About_Jordan",
+    "taiwan": "https://www.cia.gov/the-world-factbook/about/archives/2021/static/826030ce49a2efae1e5291b73991738a/TW-summary.pdf"
   },
   "records": [
     {
@@ -4027,6 +4028,25 @@
       }
     },
     {
+      "code": "TW",
+      "name": "Taiwan",
+      "landlocked": false,
+      "borders": [],
+      "borderCountAllowed": true,
+      "neighbourAreaAllowed": true,
+      "sources": [
+        "https://github.com/mledoze/countries/blob/master/countries.json",
+        "https://www.cia.gov/the-world-factbook/about/archives/2021/static/826030ce49a2efae1e5291b73991738a/TW-summary.pdf"
+      ],
+      "notes": [
+        "Taiwan is an explicit answer-roster addition. Asia classification comes from the country snapshot, not a separate UN M49 entry."
+      ],
+      "geography": {
+        "region": "Asia",
+        "subregion": "Eastern Asia"
+      }
+    },
+    {
       "code": "TJ",
       "name": "Tajikistan",
       "landlocked": true,
@@ -4715,15 +4735,18 @@
         "TO",
         "TT",
         "TV",
-        "VU"
+        "VU",
+        "TW"
       ],
       "dimension": "borders",
       "sources": [
         "https://github.com/mledoze/countries/blob/master/countries.json",
-        "https://www.mfa.gov.lk/en/national-profile-and-geography"
+        "https://www.mfa.gov.lk/en/national-profile-and-geography",
+        "https://www.cia.gov/the-world-factbook/about/archives/2021/static/826030ce49a2efae1e5291b73991738a/TW-summary.pdf"
       ],
       "notes": [
-        "Only countries with unambiguous sovereign natural-land-neighbour conventions are included."
+        "Only countries with unambiguous sovereign natural-land-neighbour conventions are included.",
+        "Taiwan is included explicitly using the country snapshot and CIA geography archive; its Asia classification is not attributed to a separate UN M49 entry."
       ],
       "eligibleTiers": [
         1,
@@ -5312,7 +5335,8 @@
         "TT",
         "TV",
         "GB",
-        "VU"
+        "VU",
+        "TW"
       ],
       "dimension": "island",
       "sources": [
@@ -5327,10 +5351,12 @@
         "https://teara.govt.nz/en/natural-environment/page-1",
         "https://test.anbg.gov.au/cpbr/anhsir/anhsir-manual/papuasia.html",
         "https://timor-leste.gov.tl/?lang=en&p=91",
-        "https://www.gov.uk/government/publications/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world-html"
+        "https://www.gov.uk/government/publications/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world-html",
+        "https://www.cia.gov/the-world-factbook/about/archives/2021/static/826030ce49a2efae1e5291b73991738a/TW-summary.pdf"
       ],
       "notes": [
-        "Island status independently confirmed by FAO Caribbean13, UN Pacific11, NIH IndianOcean6 and NIH Islands/Atlantic/Mediterranean descriptors; official national profiles cover Bahrain, Brunei, Singapore, New Zealand, Papua New Guinea, Timor-Leste and UK. Countries occupying part of an island are included; Australia is excluded as a continent. This is not inferred from zero land neighbours."
+        "Island status independently confirmed by FAO Caribbean13, UN Pacific11, NIH IndianOcean6 and NIH Islands/Atlantic/Mediterranean descriptors; official national profiles cover Bahrain, Brunei, Singapore, New Zealand, Papua New Guinea, Timor-Leste and UK. Countries occupying part of an island are included; Australia is excluded as a continent. This is not inferred from zero land neighbours.",
+        "Taiwan is included explicitly using the country snapshot and CIA geography archive; its Asia classification is not attributed to a separate UN M49 entry."
       ],
       "eligibleTiers": [
         1,
@@ -5514,14 +5540,17 @@
         "AE",
         "UZ",
         "VN",
-        "YE"
+        "YE",
+        "TW"
       ],
       "dimension": "location",
       "sources": [
-        "https://unstats.un.org/unsd/methodology/m49/overview/"
+        "https://unstats.un.org/unsd/methodology/m49/overview/",
+        "https://www.cia.gov/the-world-factbook/about/archives/2021/static/826030ce49a2efae1e5291b73991738a/TW-summary.pdf"
       ],
       "notes": [
-        "Geographic broad region follows UN M49. Cyprus is in Western Asia. This is source geography, independent of the existing game region label."
+        "Geographic broad region follows UN M49. Cyprus is in Western Asia. This is source geography, independent of the existing game region label.",
+        "Taiwan is included explicitly using the country snapshot and CIA geography archive; its Asia classification is not attributed to a separate UN M49 entry."
       ],
       "eligibleTiers": [
         1,
@@ -6105,7 +6134,8 @@
         "PH",
         "SG",
         "LK",
-        "TL"
+        "TL",
+        "TW"
       ],
       "dimension": "island-location",
       "sources": [
@@ -6120,10 +6150,12 @@
         "https://teara.govt.nz/en/natural-environment/page-1",
         "https://test.anbg.gov.au/cpbr/anhsir/anhsir-manual/papuasia.html",
         "https://timor-leste.gov.tl/?lang=en&p=91",
-        "https://www.gov.uk/government/publications/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world-html"
+        "https://www.gov.uk/government/publications/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world-html",
+        "https://www.cia.gov/the-world-factbook/about/archives/2021/static/826030ce49a2efae1e5291b73991738a/TW-summary.pdf"
       ],
       "notes": [
-        "Combines independently confirmed island status with UN M49 geography."
+        "Combines independently confirmed island status with UN M49 geography.",
+        "Taiwan is included explicitly using the country snapshot and CIA geography archive; its Asia classification is not attributed to a separate UN M49 entry."
       ],
       "eligibleTiers": [
         1,
@@ -6210,16 +6242,19 @@
         "SB",
         "TO",
         "TV",
-        "VU"
+        "VU",
+        "TW"
       ],
       "dimension": "coast",
       "sources": [
         "https://www.fao.org/4/a1465e/a1465e00.htm",
-        "https://pacific.un.org/en/about/about-the-un"
+        "https://pacific.un.org/en/about/about-the-un",
+        "https://www.cia.gov/the-world-factbook/about/archives/2021/static/826030ce49a2efae1e5291b73991738a/TW-summary.pdf"
       ],
       "notes": [
         "FAO Pacific coastal-country review lists the first set explicitly, supplemented by the UN Pacific island-country list. Includes marginal Pacific seas as classified by FAO. This is a conservative verified membership list, not an exhaustive list of every Pacific coast.",
-        "Revision: wording explicitly includes Pacific seas, consistent with the existing FAO membership convention. Country memberships and conservative possible-extra list are unchanged."
+        "Revision: wording explicitly includes Pacific seas, consistent with the existing FAO membership convention. Country memberships and conservative possible-extra list are unchanged.",
+        "Taiwan is included explicitly using the country snapshot and CIA geography archive; its Asia classification is not attributed to a separate UN M49 entry."
       ],
       "eligibleTiers": [
         1,
@@ -7356,5 +7391,5 @@
       ]
     }
   ],
-  "revised": "2026-10-04"
+  "revised": "2026-10-05"
 }

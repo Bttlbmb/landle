@@ -2,11 +2,12 @@
 // Coordinates/names derived from mledoze/countries under ODbL 1.0.
 // Population: World Bank SP.POP.TOTL, 2024; land area: AG.LND.TOTL.K2, 2023 (CC BY 4.0).
 // Vatican population and land area use its official publications.
+// Taiwan: end-2024 household register population; 2021 CIA land-area archive.
 // Cyprus uses the UN M49 Asia region, consistent with its starting hints.
-export const DATA_VERSION = '2026-10-03';
+export const DATA_VERSION = '2026-10-05';
 export const POPULATION_YEAR = 2024;
 export const AREA_YEAR = 2023;
-// Records use ISO alpha-2 codes, degrees for lat/lon, residents for population,
+// Records use ISO alpha-2 codes, degrees for lat/lon, people for population (see source conventions),
 // and km² for land area. Tier 1–3 controls the cumulative answer pools.
 // Preserve this order for consistent answer pools.
 export const COUNTRIES = Object.freeze([
@@ -180,6 +181,7 @@ export const COUNTRIES = Object.freeze([
   {"code":"CH","name":"Switzerland","aliases":["CHE","Swiss Confederation","Schweiz","Suisse","Svizzera","Svizra"],"lat":47,"lon":8,"population":9005582,"area":39509.63,"region":"Europe","tier":1},
   {"code":"SY","name":"Syria","aliases":["SYR","Syrian Arab Republic","Al-Jumhūrīyah Al-ʻArabīyah As-Sūrīyah"],"lat":35,"lon":38,"population":24672760,"area":183630,"region":"Asia","tier":2},
   {"code":"ST","name":"São Tomé and Príncipe","aliases":["STP","Democratic Republic of São Tomé and Príncipe","República Democrática de São Tomé e Príncipe","Sao Tome"],"lat":1,"lon":7,"population":235536,"area":960,"region":"Africa","tier":3},
+  {"code":"TW","name":"Taiwan","aliases":["TWN","Republic of China (Taiwan)","Táiwān","Republic of China","中華民國","Zhōnghuá Mínguó","Chinese Taipei","臺灣","台湾","台灣","Formosa"],"lat":23.5,"lon":121,"population":23400220,"area":32260,"region":"Asia","tier":2},
   {"code":"TJ","name":"Tajikistan","aliases":["TJK","Republic of Tajikistan","Toçikiston","Ҷумҳурии Тоҷикистон","Çumhuriyi Toçikiston"],"lat":39,"lon":71,"population":10590927,"area":138790,"region":"Asia","tier":3},
   {"code":"TZ","name":"Tanzania","aliases":["TZA","United Republic of Tanzania","Tanzania, United Republic of","Jamhuri ya Muungano wa Tanzania"],"lat":-6,"lon":35,"population":68560157,"area":885800,"region":"Africa","tier":2},
   {"code":"TH","name":"Thailand","aliases":["THA","Kingdom of Thailand","Prathet","Thai","ราชอาณาจักรไทย","Ratcha Anachak Thai"],"lat":15,"lon":100,"population":71668011,"area":510890,"region":"Asia","tier":1},

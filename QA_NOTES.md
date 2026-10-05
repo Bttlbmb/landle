@@ -1,5 +1,7 @@
 # Verification notes
 
+The Taiwan addition on 5 October 2026 passed 93 unit tests and 49 Chromium browser scenarios, including Taiwan suggestions and a correct `TWN` answer in source, local export and GitHub Pages export. The rebuilt roster has 196 countries, with Taiwan available as a Medium/Hard answer and as a guess at every tier. The updated hint audit passed 761 exclusion scenarios and 6,882 excluded-target checks with no membership or breadth discrepancies. Source notes record Taiwan's population and land-area exceptions; the factual and fairness delta reviews were performed by the implementation owner, with the original independent certificates preserved separately.
+
 These checks cover the game rules, country data, saved progress and the main browser interactions. Run them after changing the corresponding code. Automated checks can catch many regressions; they do not establish how every player or physical phone will experience the game.
 
 On 5 October 2026, the cleanup passed all 87 unit tests, 41 Chromium browser scenarios and 18 keyboard scenarios each in WebKit and Chromium. The reviewed hint contents kept the same fingerprint. The unit suite fell from about 79 seconds to 1.4 seconds after removing repeated work from the checks. A local benchmark of 20,000 repeated hint selections fell from 1,318 ms to 27 ms with the pool already cached; this measures selection overhead, rather than the whole game.

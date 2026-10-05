@@ -544,9 +544,9 @@ function showHelp() {
       <p>Name hints use the displayed English country name in the suggestions. Accents count as ordinary letters; spaces and hyphens do not count as letters. Vowels are A, E, I, O and U.</p>
       <p>Very close: under 500 km<br>Close: 500 to under 2,000 km<br>Nearby: 2,000 to under 5,000 km<br>Far: 5,000 to under 10,000 km<br>Very far: 10,000 km or more</p>
       <h3>Levels and saved progress</h3>
-      <p>Easy starts with 45 possible answers. Medium expands the pool to 110. Hard includes all 195 countries in this game. The last 12 finished answers are excluded across journeys. Starting hints avoid wording from the last six rounds when an eligible alternative is available. You can guess any of the 195 countries in every round.</p>
+      <p>Easy starts with 45 possible answers. Medium expands the pool to 111. Hard includes all 196 countries in this game. The last 12 finished answers are excluded across journeys. Starting hints avoid wording from the last six rounds when an eligible alternative is available. You can guess any of the 196 countries in every round.</p>
       <p>Opening the game normally resumes your saved round. Only finished rounds count toward statistics; abandoning an unfinished round adds no loss. Progress and statistics are saved in this browser.</p>
-      <p class="dialog-footnote">Population uses fixed 2024 figures, and land area uses World Bank 2023 data. Vatican City uses its official 2024 resident count and official land area.<br>
+      <p class="dialog-footnote">Population uses fixed 2024 figures, and land area uses World Bank 2023 data. Vatican City uses its official 2024 resident count and official land area. Taiwan uses its 2024 household register total and the 2021 CIA land-area archive.<br>
       <a class="help-source-link" href="data-sources.html" target="_blank" rel="noopener">Data sources and attribution (opens in a new tab)</a><br>
       <a class="help-source-link" href="licence.html" target="_blank" rel="noopener">Database licence (opens in a new tab)</a></p>
     </details>`);

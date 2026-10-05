@@ -4,7 +4,7 @@ import { COUNTRIES } from '../data.js';
 import { findCountry } from '../geography.js';
 import { searchCountries } from '../country-search.js';
 
-test('exact codes outrank incidental name substrings in all 195 countries', () => {
+test('exact codes outrank incidental name substrings in all 196 countries', () => {
   for (const country of COUNTRIES) {
     assert.equal(searchCountries(country.code.toLowerCase())[0]?.code, country.code, country.code);
   }
@@ -55,4 +55,14 @@ test('suggestions rank exact matches before prefixes, then keep each group alpha
   assert.deepEqual(countries, [...alphabetically(prefixes), ...alphabetically(others)]);
   assert.equal(searchCountries('a', 2.9).length, 2);
   for (const limit of [0, -1, NaN]) assert.deepEqual(searchCountries('a', limit), []);
+});
+
+test('Taiwan names and codes resolve separately from China', () => {
+  for (const query of ['Taiwan', 'TW', 'TWN', 'Táiwān', 'Republic of China', 'Republic of China (Taiwan)', 'Chinese Taipei', '台灣', '臺灣', '台湾']) {
+    assert.equal(findCountry(query)?.code, 'TW', query);
+    assert.equal(searchCountries(query)[0]?.code, 'TW', query);
+  }
+  assert.equal(searchCountries('taiw')[0]?.code, 'TW');
+  assert.equal(findCountry('China')?.code, 'CN');
+  assert.equal(findCountry('CN')?.code, 'CN');
 });

@@ -1,14 +1,14 @@
 # Country data and clues
 
-Ländle uses a fixed set of country data assembled on **3 October 2026**. It does not fetch new figures while you play. This keeps the clues consistent, although newer estimates may differ.
+Ländle uses a fixed set of country data assembled on **3 October 2026**, with Taiwan added on **5 October 2026**. It does not fetch new figures while you play. This keeps the clues consistent, although newer estimates may differ.
 
 ## Which countries are included?
 
-The game covers **195 countries**: the 193 United Nations members, Palestine and Vatican City. It does not include every territory or settle questions of recognition. You can guess any of these countries in every round.
+The game covers **196 countries**: the 193 United Nations members, Palestine, Vatican City and Taiwan. It does not include every territory or settle questions of recognition. You can guess any of these countries in every round.
 
-Names, country codes, regions and geographic reference points come from [mledoze/countries](https://github.com/mledoze/countries), using its [countries.json](https://raw.githubusercontent.com/mledoze/countries/master/countries.json) snapshot. Its UN-member flag includes Vatican City; Palestine was added separately. Cyprus uses the [UN M49](https://unstats.un.org/unsd/methodology/m49/overview/) classification of Asia for both hints and the revealed region. Geographic, political and cultural groupings can differ.
+Names, country codes, regions and geographic reference points come from [mledoze/countries](https://github.com/mledoze/countries), using its [countries.json](https://raw.githubusercontent.com/mledoze/countries/master/countries.json) snapshot. Its UN-member flag includes Vatican City; Palestine and Taiwan were added separately. Cyprus uses the [UN M49](https://unstats.un.org/unsd/methodology/m49/overview/) classification of Asia for both hints and the revealed region. Geographic, political and cultural groupings can differ.
 
-Common alternative names, spellings and two- or three-letter country codes are accepted. “Congo” and “Korea” require selecting the intended country. Easy has 45 possible answers, Medium has 110, and Hard has all 195. These groups are editorial choices: a larger pool does not make every country harder to find. Recent answers and hint checks can reduce the pool; Help shows the remaining countries.
+Common alternative names, spellings and two- or three-letter country codes are accepted. “Congo” and “Korea” require selecting the intended country. Easy has 45 possible answers, Medium has 111, and Hard has all 196. These groups are editorial choices: a larger pool does not make every country harder to find. Recent answers and hint checks can reduce the pool; Help shows the remaining countries.
 
 ## Population and land area
 
@@ -19,13 +19,15 @@ For **194 countries**, these figures come from the World Bank's World Developmen
 | Resident population | 2024 | [Population, total — SP.POP.TOTL](https://data.worldbank.org/indicator/SP.POP.TOTL), via the [Indicators API](https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?date=2024&format=json&per_page=400) |
 | Land area in km² | 2023 | [Land area — AG.LND.TOTL.K2](https://data.worldbank.org/indicator/AG.LND.TOTL.K2), via the [Indicators API](https://api.worldbank.org/v2/country/all/indicator/AG.LND.TOTL.K2?date=2023&format=json&per_page=400) |
 
-Population counts residents. The World Bank draws on the UN Population Division, national statistical offices, Eurostat and the UN Statistics Division. These are estimates, and migration, conflict and later revisions can change them.
+The World Bank population series counts residents. The World Bank draws on the UN Population Division, national statistical offices, Eurostat and the UN Statistics Division. These are estimates, and migration, conflict and later revisions can change them.
 
 Land area excludes inland water, continental-shelf claims and exclusive economic zones. The figures come from FAOSTAT, maintained by the UN Food and Agriculture Organization. Its [methodology](https://databank.worldbank.org/metadataglossary/world-development-indicators/series/AG.LND.TOTL.K2) also acknowledges differences in how countries report their area.
 
 Excluding water can change familiar rankings. In this snapshot, Canada's **8,788,700 km² of land** is less than the United States' **9,147,420 km²** or China's **9,388,210 km²**. Rankings that include lakes can differ.
 
 **Vatican City** is absent from these World Bank series. It uses **882 residents**, including citizens and non-citizens, from the [official population report](https://www.vaticanstate.va/en/state-and-government/general-informations/population.html) dated 31 December 2024. Its **0.44 km²** comes from the [official geography publication](https://www.vaticanstate.va/en/state-and-government/general-informations/geography.html): 44 hectares.
+
+**Taiwan** is absent from these World Bank series. It uses **23,400,220 people** from the Ministry of the Interior's [December 2024 household register](https://www.ris.gov.tw/documents/data/5/2/DemographicQuarterly_Winter2024.pdf), Table 8. This is a year-end registered population, which differs from resident-population estimates. Its **32,260 km² of land** comes from the [CIA's 2021 geography archive](https://www.cia.gov/the-world-factbook/about/archives/2021/static/826030ce49a2efae1e5291b73991738a/TW-summary.pdf), excluding the separately reported 3,720 km² of water. This older archive is a documented exception to the 2023 land-area snapshot; the country database's total area is not used. The original CIA archive URL now redirects following retirement of the Factbook. Taiwan's name, codes, reference point and Asia region use the preserved country snapshot.
 
 ## What the clues mean
 

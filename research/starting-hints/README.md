@@ -44,3 +44,5 @@ Export and build verify the exact pair of certificates and their content fingerp
 ## Retained evidence
 
 The original current-bank review reports and fairness measurements are retained without rewriting their judgments. Their recorded paths and source-file fingerprints describe the original review run; files have since been consolidated or compressed. The bank's content fingerprint is unchanged by this cleanup. Git history retains removed versioned drafts, reviews and migration code.
+
+The Taiwan roster addition on 5 October 2026 has separate factual and fairness delta reports from the implementation owner. They explicitly record that this addition had no new independent editorial reviewer. The original independent certificates are preserved unchanged in `review-2026-10-04-accuracy.json` and `review-2026-10-04-fairness.json`; their verdicts apply only to the original content fingerprint. The current mechanical fairness measurements cover the 45/111/196-country pools.

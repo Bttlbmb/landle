@@ -171,7 +171,7 @@ async function openPage(width, height, context, path = '/') {
     assert.equal(board.text, board.expected, 'Visible hint uses the active country, round identity, and difficulty');
     assert.ok(board.eligible.some(hint => hint.text === board.text), 'Visible hint is an eligible reviewed clue for this country');
     assert.deepEqual(board.runtimeEligible, board.eligible, 'Runtime candidates match the reviewed bank');
-    assert.equal(board.countries, 195, 'All country hints load in the browser');
+    assert.equal(board.countries, 196, 'All country hints load in the browser');
     assert.ok(board.version && board.localModuleLoaded, 'Reviewed hints load from the local module');
     return board;
   };
@@ -887,6 +887,21 @@ try {
     await page.guess('Italy');
     assert.equal(await page.rows(), 1, 'Older HTML still loads the starter clue and playable board');
     checks.push({ check: 'older-html-without-start-over', path });
+    await page.close();
+  }
+
+  for (const path of ['/', '/dist/index.html', '/docs/index.html']) {
+    const page = await openPage(390, 844, undefined, path);
+    await page.fixture({ tier: 2, target: 'TW' });
+    await page.reviewedHint();
+    await page.fill('taiw');
+    assert.ok(await page.evaluate(() => document.querySelector('#country-options').textContent.includes('Taiwan')), 'Taiwan appears in suggestions');
+    await page.guess('TWN');
+    assert.equal(await page.rows(), 1, 'Taiwan code is accepted');
+    const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('landle-v1')));
+    assert.equal(saved.rounds[1].target, 'TW');
+    assert.equal(saved.rounds[1].won, true, 'Taiwan can be solved');
+    checks.push({ check: 'taiwan-suggestions-and-answer', path });
     await page.close();
   }
 

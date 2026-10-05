@@ -1,860 +1,94 @@
 {
-  "schemaVersion": 1,
-  "reviewer": "independent starter fairness second opinion",
-  "reviewType": "independent revised gameplay fairness review",
-  "reviewDate": "2026-10-04",
-  "generatedAt": "2026-10-03T23:20:21.835Z",
+  "reviewer": "Codex implementation-owner fairness delta review",
+  "reviewDate": "2026-10-05",
   "status": "passed",
-  "contentSha256": "cd447208aa27e101b96c3e864d3988451ba01a21e687a618b6711f56ccbfe6ed",
-  "reviewedContentSha256": "cd447208aa27e101b96c3e864d3988451ba01a21e687a618b6711f56ccbfe6ed",
-  "independentlyComputedContentSha256": "cd447208aa27e101b96c3e864d3988451ba01a21e687a618b6711f56ccbfe6ed",
-  "exportedHintBankVersion": "cd447208aa27e101b96c3e864d3988451ba01a21e687a618b6711f56ccbfe6ed",
-  "runtimeHelperSha256": "383cda6bf5725b6468791303efd2526500c9483b322fcaad6af078e1eac0b56d",
-  "assessment": "The revised bank and candidate selector pass the scoped quantitative fairness checks and address the avoidable shortlist, history, display-signature, concentration and duplicate-clue problems. This is a gameplay/editorial pass for this exact content and runtime implementation, with human playtesting still needed to establish enjoyable difficulty.",
-  "scope": {
-    "inspectedInputs": [
-      {
-        "path": "research/starting-hints/bank.json",
-        "sha256": "a150239d5b93a80a77c086985b872a561957128218b618cc0903d98833651871"
-      },
-      {
-        "path": "data.js",
-        "sha256": "9639699e679c2c47e51aeb0a6fc8991ef6b93fc5591b4ecd5f626341a99e48de"
-      },
-      {
-        "path": "hint-selection.js",
-        "sha256": "383cda6bf5725b6468791303efd2526500c9483b322fcaad6af078e1eac0b56d"
-      },
-      {
-        "path": "game-state.js",
-        "sha256": "03e5349f1913faaa8da6c33379cd801c946f684c3813d03d67b6550aad15fbe0"
-      },
-      {
-        "path": "research/starting-hints/candidate-selection.js",
-        "sha256": "4924a25ef4d5c525089aadd17d60f195ac0f85ddaef3ce7a2153d093601ae26f"
-      },
-      {
-        "path": "research/starting-hints/candidate-hints.js",
-        "sha256": "82a3bc9bc72578eca6ba0b26c954a6efc6c2a6c087b79011e301c7c052e87629"
-      },
-      {
-        "path": "research/starting-hints/revised-fairness-audit.mjs",
-        "sha256": "97595bc59bf24c54f46173585a6b4320c22a1042cef83153cc966f2aa6fcb2c6"
-      },
-      {
-        "path": "research/starting-hints/revised-fairness-lifecycle-audit.mjs",
-        "sha256": "a761229adcfa20e3cde5be8c9f689bcee7f3ad4a5977fb8e37b530eb69d709d2"
-      }
-    ],
-    "runtimeUnderReview": "research/starting-hints/candidate-selection.js delegates to the shared hint-selection.js helper and reads the candidate export. This certificate does not certify the old deployed geography.js/starting-hints.js wrapper before the final reviewed export is installed.",
-    "actualGameModel": "Only one opening hint is shown per round. The four hints in each country entry are concise examples; runtime chooses among every reviewed alternative eligible for the selected tier and actual available pool. Easy, Medium and Hard use cumulative 45, 110 and 195 target pools.",
-    "revisedBoundsPolicy": "A hint needs at least four confirmed matches, a declared possible union of at least four on Easy or seven on Medium/Hard, and a possible union no greater than 70% of the actual target pool. Excluded previous answers are removed from both counts and the denominator. Complete sets inherit the same lower bound because confirmed equals possible.",
-    "quantitativeMethod": "Reimplemented all 14 basic name predicates independently against the displayed English names. Parsed all 10 numeric predicates from displayed interval wording, rather than accepting stored range, matches or counts. Recounted geography confirmed and declared-extra unions against each tier, checked nominal eligibility, all country alternative assignments, candidate export projection and runtime candidate sets.",
-    "actualPoolMethod": "Constructed 761 representative nonempty exclusion sets from every verified/extra/outside class-count composition of up to three exclusions, plus the original GR/IT/PT history example. Checked runtime candidate equality for all targets affected by each eligibility change and representative unaffected targets: 7,020 target checks. These concrete set checks are representative, not an exhaustive enumeration of every historical journey.",
-    "selectionMethod": "Used 1,024 deterministic seeds per country/tier combination, totaling 358,400 draws. All advertised alternatives were reached. Object/text API agreement and country-code-copy stability were checked for the first eight seeds per combination. Separate hash bits select family and fact, avoiding the prior reachability correlation.",
-    "lifecycleMethod": "Exercised public state APIs for an Easy GR, Medium IT, Hard PT journey followed by Easy ES; JSON save/restore; a guess within the same round; legacy saves without exclusions; copied/frozen exclusion arrays; exclusion-order equivalence; and both complete and partial North Sea history closures.",
-    "frequencyAssumption": "Expected rates assume approximately uniform target selection and hash values and use full cumulative pools. Actual journey exclusions can alter the within-family choices and session rates. Expected confirmed breadth is a catalog lower-count metric, not the true geographical answer count or player difficulty.",
-    "geographyBoundary": "Geography truth sets and possible bounds come from the current reviewed catalog. This review independently recounts them and checks sources/notes/phrases for selection coherence; it does not prove that every country has been exhaustively geographically classified. A declared complete set is a catalog assertion. The independent factual/source review remains necessary.",
-    "independence": "The original findings were developed without reading previous review verdicts. This revised review uses those independently developed findings and current source/runtime inputs. Other revised accuracy/fairness verdict files and bank status labels were not used as evidence. No bank, app, state, deployed export or core test files were edited by this reviewer.",
-    "versionBoundary": "Selection identity is verified within this exact frozen bank/helper version. Round ID plus the saved exclusions preserves the hint through restore and guesses. Explicit new-round actions get a new identity. Cross-bank-version phrase stability is not promised because no selected hint ID is persisted.",
-    "externalFacts": "No new uncertain external factual claim is asserted by this review. Country references below describe embedded data/catalog membership or reproduced runtime behavior."
-  },
-  "verification": {
-    "status": "passed",
-    "generalPredicatesChecked": 24,
-    "independentNamePredicates": 14,
-    "independentNumericPredicates": 10,
-    "geographyCatalogEntriesRecounted": 39,
-    "countryCount": 195,
-    "catalogPhraseCount": 63,
-    "fourExampleCount": 780,
-    "alternativeAssignmentCount": 2588,
-    "fullPoolCountryTierCombinations": 350,
-    "seededDraws": 358400,
-    "textObjectAgreementSamples": 2800,
-    "countryCopyStabilitySamples": 2800,
-    "exclusionScenarioCount": 761,
-    "excludedTargetChecks": 7020,
-    "generalMembershipDiscrepancies": [],
-    "storedBoundsDiscrepancies": [],
-    "eligibilityAssignmentExportOrSelectionIssues": [],
-    "completeAtMostSixMediumHardCases": 0,
-    "possibleUnionAtMostSixMediumHardCases": 0,
-    "permittedPartialKnownAtMostSixCases": 86,
-    "allSourcesPresent": true,
-    "allPhraseTextsUnique": true,
-    "rejectedObscurePuzzleTextMatches": [],
-    "exampleFamilyOrDimensionIssues": [],
-    "exactEquivalentGeographyGroups": [],
-    "lifecycle": {
-      "status": "passed",
-      "historyExclusionReproduction": {
-        "previousJourney": [
-          "GR",
-          "IT",
-          "PT"
-        ],
-        "nextEasyTarget": "ES",
-        "persistedExcludedCodes": [
-          "GR",
-          "IT",
-          "PT"
-        ],
-        "staleSouthernEuropeHintSuppressed": true
-      },
-      "partialNorthSeaUnionOfSixSuppressed": true,
-      "completeNorthSeaUnionOfSixSuppressed": true,
-      "saveRestoreGuessAndExclusionIdentityChecksPassed": true,
-      "legacyJourneyContextRecovered": true,
-      "detailedEvidence": "research/starting-hints/revised-fairness-lifecycle-results.json"
-    },
-    "rawEvidenceFiles": [
-      "research/starting-hints/revised-fairness-audit-results.json",
-      "research/starting-hints/revised-fairness-lifecycle-results.json"
-    ]
-  },
-  "metrics": {
-    "catalogFamilies": {
-      "name": 14,
-      "population": 5,
-      "area": 5,
-      "geography": 39
-    },
-    "tierSummaries": [
+  "reviewedContentSha256": "7a7d7a797daf71aeda7783016eef3e90a887a0adb5a6c883d5458b8bad8c52af",
+  "contentSha256": "7a7d7a797daf71aeda7783016eef3e90a887a0adb5a6c883d5458b8bad8c52af",
+  "independence": "This Taiwan addition was reviewed by the implementation owner using primary sources and the separately implemented audit tools. The previous independent review is preserved in previousIndependentReviewFile and certifies only its original content hash.",
+  "scope": "Add Taiwan as a Medium/Hard answer; regenerate existing phrase memberships, counts and examples for 45/111/196 countries. No clue wording, selection weights or breadth thresholds changed.",
+  "limitations": [
+    "No new independent editorial reviewer or human playtest for this addition.",
+    "Taiwan population is year-end household registration rather than the World Bank resident series. Its land area uses the 2021 CIA archive; that original URL has since been retired."
+  ],
+  "checks": {
+    "evidence": "revised-fairness-audit-results.json.gz",
+    "issues": 0,
+    "exclusionScenarios": 761,
+    "excludedTargetChecks": 6882,
+    "tiers": [
       {
         "tier": 1,
-        "label": "Easy",
         "poolSize": 45,
-        "selectablePhrases": 46,
-        "selectablePhraseFamilies": {
-          "name": 13,
-          "numeric": 8,
-          "geography": 25
-        },
-        "alternativeAssignmentsInThisCumulativePool": 529,
-        "candidateCountRange": [
-          8,
-          15
-        ],
-        "meanCandidateCount": 11.755556,
-        "minimumDisplayCapableTargets": 4,
-        "displaySingletonPhraseCount": 0,
-        "expectedFamilyMix": {
-          "name": 0.25,
-          "numeric": 0.25,
-          "geography": 0.5
-        },
-        "expectedPopulationAreaMix": {
-          "population": 0.127778,
-          "area": 0.122222
-        },
-        "expectedDimensionMix": {
-          "name": 0.25,
-          "population": 0.127778,
-          "area": 0.122222,
-          "borders": 0.065384,
-          "neighbour-area": 0.06631,
-          "location": 0.176138,
-          "coast": 0.112712,
-          "coast-and-borders": 0.05205,
-          "island": 0.019167,
-          "island-location": 0.008241
-        },
-        "sampledFamilyMix": {
-          "name": 0.249913,
-          "numeric": 0.250087,
-          "geography": 0.5
-        },
         "sampledDraws": 46080,
-        "allAdvertisedAlternativesReached": true,
-        "broadNameRoundProbability": 0.115065,
-        "knownAtMostSixRoundProbability": 0.178069,
-        "completeAtMostSixRoundProbability": 0.127871,
-        "allSmallerSelection": {
-          "confirmedCount": 5,
-          "declaredPossibleCount": 16,
-          "displayCapableTargets": 5,
-          "expectedRoundProbability": 0.010093,
-          "sampledSelections": 483
-        },
-        "nameConcentration": {
-          "selectableNamePhrases": 13,
-          "topThree": [
-            {
-              "id": "name-ends-vowel",
-              "text": "The name ends with a vowel.",
-              "displayCapableTargets": 25,
-              "targetPoolFraction": 0.555556,
-              "expectedRoundProbability": 0.030013,
-              "expectedShareWithinNameFamily": 0.120052,
-              "sampledSelections": 1391
-            },
-            {
-              "id": "name-over-six",
-              "text": "The name has more than six letters.",
-              "displayCapableTargets": 26,
-              "targetPoolFraction": 0.577778,
-              "expectedRoundProbability": 0.029874,
-              "expectedShareWithinNameFamily": 0.119496,
-              "sampledSelections": 1391
-            },
-            {
-              "id": "name-first-a-m",
-              "text": "First letter is from A to M.",
-              "displayCapableTargets": 24,
-              "targetPoolFraction": 0.533333,
-              "expectedRoundProbability": 0.028677,
-              "expectedShareWithinNameFamily": 0.114708,
-              "sampledSelections": 1319
-            }
-          ],
-          "topTwoShareWithinNameFamily": 0.239548
-        }
+        "minimumDisplaySupport": 4,
+        "singletons": 0
       },
       {
         "tier": 2,
-        "label": "Medium",
-        "poolSize": 110,
-        "selectablePhrases": 52,
-        "selectablePhraseFamilies": {
-          "name": 14,
-          "numeric": 8,
-          "geography": 30
-        },
-        "alternativeAssignmentsInThisCumulativePool": 1371,
-        "candidateCountRange": [
-          9,
-          16
-        ],
-        "meanCandidateCount": 12.463636,
-        "minimumDisplayCapableTargets": 7,
-        "displaySingletonPhraseCount": 0,
-        "expectedFamilyMix": {
-          "name": 0.25,
-          "numeric": 0.25,
-          "geography": 0.5
-        },
-        "expectedPopulationAreaMix": {
-          "population": 0.126136,
-          "area": 0.123864
-        },
-        "expectedDimensionMix": {
-          "name": 0.25,
-          "population": 0.126136,
-          "area": 0.123864,
-          "coast": 0.089654,
-          "location": 0.19026,
-          "borders": 0.084459,
-          "neighbour-area": 0.072035,
-          "coast-and-borders": 0.046277,
-          "island": 0.017316
-        },
-        "sampledFamilyMix": {
-          "name": 0.250036,
-          "numeric": 0.249964,
-          "geography": 0.5
-        },
-        "sampledDraws": 112640,
-        "allAdvertisedAlternativesReached": true,
-        "broadNameRoundProbability": 0.136922,
-        "knownAtMostSixRoundProbability": 0,
-        "completeAtMostSixRoundProbability": 0,
-        "allSmallerSelection": {
-          "confirmedCount": 9,
-          "declaredPossibleCount": 28,
-          "displayCapableTargets": 9,
-          "expectedRoundProbability": 0.007587,
-          "sampledSelections": 877
-        },
-        "nameConcentration": {
-          "selectableNamePhrases": 14,
-          "topThree": [
-            {
-              "id": "name-last-a-m",
-              "text": "The name ends with a letter from A to M.",
-              "displayCapableTargets": 75,
-              "targetPoolFraction": 0.681818,
-              "expectedRoundProbability": 0.031216,
-              "expectedShareWithinNameFamily": 0.124864,
-              "sampledSelections": 3519
-            },
-            {
-              "id": "name-over-six",
-              "text": "The name has more than six letters.",
-              "displayCapableTargets": 74,
-              "targetPoolFraction": 0.672727,
-              "expectedRoundProbability": 0.030014,
-              "expectedShareWithinNameFamily": 0.120056,
-              "sampledSelections": 3363
-            },
-            {
-              "id": "name-first-a-m",
-              "text": "First letter is from A to M.",
-              "displayCapableTargets": 63,
-              "targetPoolFraction": 0.572727,
-              "expectedRoundProbability": 0.025909,
-              "expectedShareWithinNameFamily": 0.103636,
-              "sampledSelections": 2912
-            }
-          ],
-          "topTwoShareWithinNameFamily": 0.24492
+        "poolSize": 111,
+        "sampledDraws": 113664,
+        "minimumDisplaySupport": 7,
+        "singletons": 0,
+        "taiwan": {
+          "code": "TW",
+          "name": "Taiwan",
+          "candidateFacts": 11,
+          "bucketSizes": {
+            "name": 5,
+            "numeric": 2,
+            "geography": 4
+          },
+          "seedCount": 1024,
+          "reachedFactCount": 11,
+          "sampledFactCounts": {
+            "geo-no-land-neighbours": 122,
+            "area-10000-100000": 129,
+            "name-ends-consonant": 48,
+            "geo-pacific-coast": 129,
+            "geo-island-country": 128,
+            "population-10000000-50000000": 127,
+            "name-no-e": 55,
+            "geo-region-asia": 133,
+            "name-last-n-z": 48,
+            "name-up-to-six": 51,
+            "name-first-n-z": 54
+          }
         }
       },
       {
         "tier": 3,
-        "label": "Hard",
-        "poolSize": 195,
-        "selectablePhrases": 63,
-        "selectablePhraseFamilies": {
-          "name": 14,
-          "numeric": 10,
-          "geography": 39
-        },
-        "alternativeAssignmentsInThisCumulativePool": 2588,
-        "candidateCountRange": [
-          9,
-          17
-        ],
-        "meanCandidateCount": 13.271795,
-        "minimumDisplayCapableTargets": 7,
-        "displaySingletonPhraseCount": 0,
-        "expectedFamilyMix": {
-          "name": 0.25,
-          "numeric": 0.25,
-          "geography": 0.5
-        },
-        "expectedPopulationAreaMix": {
-          "population": 0.125,
-          "area": 0.125
-        },
-        "expectedDimensionMix": {
-          "name": 0.25,
-          "population": 0.125,
-          "area": 0.125,
-          "coast": 0.077953,
-          "location": 0.18709,
-          "borders": 0.078667,
-          "neighbour-area": 0.092719,
-          "coast-and-borders": 0.028875,
-          "island": 0.023344,
-          "island-location": 0.011353
-        },
-        "sampledFamilyMix": {
-          "name": 0.25005,
-          "numeric": 0.24995,
-          "geography": 0.5
-        },
-        "sampledDraws": 199680,
-        "allAdvertisedAlternativesReached": true,
-        "broadNameRoundProbability": 0.13524,
-        "knownAtMostSixRoundProbability": 0,
-        "completeAtMostSixRoundProbability": 0,
-        "allSmallerSelection": {
-          "confirmedCount": 11,
-          "declaredPossibleCount": 37,
-          "displayCapableTargets": 11,
-          "expectedRoundProbability": 0.004223,
-          "sampledSelections": 829
-        },
-        "nameConcentration": {
-          "selectableNamePhrases": 14,
-          "topThree": [
-            {
-              "id": "name-over-six",
-              "text": "The name has more than six letters.",
-              "displayCapableTargets": 132,
-              "targetPoolFraction": 0.676923,
-              "expectedRoundProbability": 0.029422,
-              "expectedShareWithinNameFamily": 0.117688,
-              "sampledSelections": 5830
-            },
-            {
-              "id": "name-last-a-m",
-              "text": "The name ends with a letter from A to M.",
-              "displayCapableTargets": 119,
-              "targetPoolFraction": 0.610256,
-              "expectedRoundProbability": 0.027566,
-              "expectedShareWithinNameFamily": 0.110264,
-              "sampledSelections": 5529
-            },
-            {
-              "id": "name-first-a-m",
-              "text": "First letter is from A to M.",
-              "displayCapableTargets": 117,
-              "targetPoolFraction": 0.6,
-              "expectedRoundProbability": 0.02672,
-              "expectedShareWithinNameFamily": 0.10688,
-              "sampledSelections": 5270
-            }
-          ],
-          "topTwoShareWithinNameFamily": 0.227952
+        "poolSize": 196,
+        "sampledDraws": 200704,
+        "minimumDisplaySupport": 7,
+        "singletons": 0,
+        "taiwan": {
+          "code": "TW",
+          "name": "Taiwan",
+          "candidateFacts": 12,
+          "bucketSizes": {
+            "name": 5,
+            "numeric": 2,
+            "geography": 5
+          },
+          "seedCount": 1024,
+          "reachedFactCount": 12,
+          "sampledFactCounts": {
+            "geo-no-land-neighbours": 109,
+            "name-last-n-z": 55,
+            "area-10000-100000": 128,
+            "geo-island-country": 102,
+            "name-up-to-six": 50,
+            "population-10000000-50000000": 127,
+            "geo-region-asia": 104,
+            "name-ends-consonant": 48,
+            "name-first-n-z": 57,
+            "geo-pacific-coast": 105,
+            "geo-island-country-asia": 92,
+            "name-no-e": 47
+          }
         }
       }
-    ],
-    "specialGeographyBounds": [
-      {
-        "id": "geo-all-smaller-land-neighbours",
-        "text": "All its land neighbours are smaller by land area.",
-        "independentlyRecountedConfirmed": {
-          "1": 5,
-          "2": 9,
-          "3": 11
-        },
-        "independentlyRecountedDeclaredPossible": {
-          "1": 16,
-          "2": 28,
-          "3": 37
-        },
-        "eligibleTiers": [
-          1,
-          2,
-          3
-        ]
-      },
-      {
-        "id": "geo-north-sea-coast",
-        "text": "Has a North Sea coast.",
-        "independentlyRecountedConfirmed": {
-          "1": 5,
-          "2": 7,
-          "3": 7
-        },
-        "independentlyRecountedDeclaredPossible": {
-          "1": 6,
-          "2": 8,
-          "3": 8
-        },
-        "eligibleTiers": [
-          1,
-          2,
-          3
-        ]
-      },
-      {
-        "id": "geo-atlantic-coast",
-        "text": "Has an Atlantic coast.",
-        "independentlyRecountedConfirmed": {
-          "1": 11,
-          "2": 18,
-          "3": 32
-        },
-        "independentlyRecountedDeclaredPossible": {
-          "1": 28,
-          "2": 57,
-          "3": 93
-        },
-        "eligibleTiers": [
-          1,
-          2,
-          3
-        ]
-      },
-      {
-        "id": "geo-three-plus-land-neighbours-and-sea-coast",
-        "text": "Has at least three land neighbours and a sea coast.",
-        "independentlyRecountedConfirmed": {
-          "1": 24,
-          "2": 54,
-          "3": 71
-        },
-        "independentlyRecountedDeclaredPossible": {
-          "1": 31,
-          "2": 65,
-          "3": 85
-        },
-        "eligibleTiers": [
-          1,
-          2,
-          3
-        ]
-      }
-    ],
-    "remainingPartialKnownShortlists": [
-      {
-        "tier": 2,
-        "id": "geo-north-sea-coast",
-        "representativeCases": 35,
-        "confirmedRange": [
-          6,
-          6
-        ],
-        "possibleRange": [
-          7,
-          7
-        ]
-      },
-      {
-        "tier": 2,
-        "id": "geo-one-land-neighbour",
-        "representativeCases": 23,
-        "confirmedRange": [
-          4,
-          6
-        ],
-        "possibleRange": [
-          22,
-          24
-        ]
-      },
-      {
-        "tier": 2,
-        "id": "geo-no-land-neighbours",
-        "representativeCases": 1,
-        "confirmedRange": [
-          6,
-          6
-        ],
-        "possibleRange": [
-          24,
-          24
-        ]
-      },
-      {
-        "tier": 2,
-        "id": "geo-all-smaller-land-neighbours",
-        "representativeCases": 1,
-        "confirmedRange": [
-          6,
-          6
-        ],
-        "possibleRange": [
-          25,
-          25
-        ]
-      },
-      {
-        "tier": 3,
-        "id": "geo-north-sea-coast",
-        "representativeCases": 26,
-        "confirmedRange": [
-          6,
-          6
-        ],
-        "possibleRange": [
-          7,
-          7
-        ]
-      }
-    ],
-    "duplicateFourExampleProfiles": [
-      {
-        "ids": [
-          "geo-three-plus-land-neighbours-and-sea-coast",
-          "geo-un-location-southern-europe",
-          "name-has-o",
-          "population-1000000-10000000"
-        ],
-        "countries": [
-          "Bosnia and Herzegovina",
-          "Croatia"
-        ]
-      },
-      {
-        "ids": [
-          "geo-island-country-oceania",
-          "geo-pacific-coast",
-          "name-last-n-z",
-          "population-0-1000000"
-        ],
-        "countries": [
-          "Nauru",
-          "Tuvalu"
-        ]
-      },
-      {
-        "ids": [
-          "geo-region-asia",
-          "geo-three-or-four-land-neighbours",
-          "name-first-n-z",
-          "population-10000000-50000000"
-        ],
-        "countries": [
-          "North Korea",
-          "Tajikistan"
-        ]
-      }
-    ],
-    "previouslySingletonPhraseExamples": [
-      {
-        "id": "geo-region-asia",
-        "text": "In Asia.",
-        "eligibleTiers": [
-          1,
-          2,
-          3
-        ],
-        "tierDisplaySupport": {
-          "1": 11,
-          "2": 35,
-          "3": 48
-        }
-      },
-      {
-        "id": "geo-region-africa",
-        "text": "In Africa.",
-        "eligibleTiers": [
-          1,
-          2,
-          3
-        ],
-        "tierDisplaySupport": {
-          "1": 5,
-          "2": 22,
-          "3": 54
-        }
-      },
-      {
-        "text": "In North Africa.",
-        "currentStatus": "retired from this catalog"
-      }
-    ],
-    "allSmaller": {
-      "id": "geo-all-smaller-land-neighbours",
-      "text": "All its land neighbours are smaller by land area.",
-      "confirmedCountries": [
-        {
-          "code": "BR",
-          "name": "Brazil"
-        },
-        {
-          "code": "CD",
-          "name": "DR Congo"
-        },
-        {
-          "code": "DO",
-          "name": "Dominican Republic"
-        },
-        {
-          "code": "ID",
-          "name": "Indonesia"
-        },
-        {
-          "code": "IR",
-          "name": "Iran"
-        },
-        {
-          "code": "NI",
-          "name": "Nicaragua"
-        },
-        {
-          "code": "RU",
-          "name": "Russia"
-        },
-        {
-          "code": "SA",
-          "name": "Saudi Arabia"
-        },
-        {
-          "code": "ZA",
-          "name": "South Africa"
-        },
-        {
-          "code": "SD",
-          "name": "Sudan"
-        },
-        {
-          "code": "SE",
-          "name": "Sweden"
-        }
-      ],
-      "fourExampleCountries": [
-        {
-          "code": "BR",
-          "name": "Brazil"
-        },
-        {
-          "code": "CD",
-          "name": "DR Congo"
-        },
-        {
-          "code": "DO",
-          "name": "Dominican Republic"
-        },
-        {
-          "code": "ID",
-          "name": "Indonesia"
-        },
-        {
-          "code": "IR",
-          "name": "Iran"
-        },
-        {
-          "code": "NI",
-          "name": "Nicaragua"
-        },
-        {
-          "code": "RU",
-          "name": "Russia"
-        },
-        {
-          "code": "SA",
-          "name": "Saudi Arabia"
-        },
-        {
-          "code": "ZA",
-          "name": "South Africa"
-        },
-        {
-          "code": "SD",
-          "name": "Sudan"
-        },
-        {
-          "code": "SE",
-          "name": "Sweden"
-        }
-      ],
-      "runtimeStatus": "Selectable and reached for every confirmed member in each tier where the member is available, subject to the current round exclusions. This fact is no longer lost behind a four-example-only runtime list."
-    },
-    "detailedEvidence": "The raw audit-results file preserves full phrase support, per-country alternatives, sampled fact frequencies and every tier distribution. The certificate reports the concentration and breadth summaries needed for the verdict."
+    ]
   },
-  "concreteFindings": [
-    {
-      "id": "REV-FAIR-01",
-      "severity": "medium",
-      "status": "resolved",
-      "hintIds": [
-        "geo-un-location-southern-europe",
-        "geo-north-sea-coast"
-      ],
-      "countryCodes": [
-        "ES",
-        "NL"
-      ],
-      "problem": "The original runtime ignored earlier answers when bounding opening clues. A GR/IT/PT journey could leave ES as the only Southern Europe answer in a fresh Easy round. An intermediate revision rejected complete small sets but still allowed a partial North Sea union of six after FR/BE were excluded on Hard.",
-      "proposedRemedy": "Persist the exact excluded target context and apply the confirmed minimum, possible-union minimum and breadth cap against the actual available pool. A partial union of six still fits within six guesses, so the possible-union minimum must apply to it too.",
-      "evidence": "Final state saves [GR, IT, PT] on the new Easy ES puzzle and suppresses Southern Europe. Final selector suppresses North Sea for NL after [FR, BE] (five confirmed, six possible), and after [SE, BE] (six confirmed, six possible). No eligible Medium/Hard union of at most six survived the representative scenarios."
-    },
-    {
-      "id": "REV-FAIR-02",
-      "severity": "medium",
-      "status": "resolved",
-      "countryCodes": [
-        "IN",
-        "MA",
-        "DZ"
-      ],
-      "problem": "The original four-choice assignment made some broad phrases display-capable for only one target in a tier. This was a repeat-play signature risk even when the factual truth set was broad; it was not a first-time factual giveaway.",
-      "proposedRemedy": "Use every reviewed eligible confirmed fact for each target, while retaining four concise country examples.",
-      "evidence": "The candidate export projects all 2,588 alternative assignments. Full-pool selectable phrases have at least 4, 7 and 7 display-capable targets on Easy, Medium and Hard. There are zero singleton display phrases, and every eligible phrase has display support equal to its confirmed membership in that tier."
-    },
-    {
-      "id": "REV-FAIR-03",
-      "severity": "medium",
-      "status": "resolved",
-      "hintIds": [
-        "name-first-n-z",
-        "name-ends-consonant",
-        "name-up-to-six"
-      ],
-      "problem": "The original name selection was concentrated in a few repeated clues: the two dominant Hard phrases accounted for about 59% of name outcomes, and 19 of 45 Easy countries used the short-name example.",
-      "proposedRemedy": "Keep basic spelling facts available and select within the name family separately from the family choice.",
-      "evidence": "All 14 name phrases are selectable on Hard. The most frequent Hard name phrase now has about 11.77% of name-family probability; the two most frequent account for about 22.80%. Every advertised name alternative was reached. The review found no repeated-letter or first-versus-last alphabetical puzzles."
-    },
-    {
-      "id": "REV-FAIR-04",
-      "severity": "medium",
-      "status": "resolved",
-      "hintIds": [
-        "geo-un-location-caribbean"
-      ],
-      "problem": "Three Caribbean geography phrases in an intermediate candidate represented identical verified and possible sets, which gave the same geographical fact extra sampling weight.",
-      "proposedRemedy": "Retain one plainly worded Caribbean option, or group equivalent membership facts before sampling.",
-      "evidence": "The final catalog retains “In the Caribbean.” and has zero exact equivalent geography groups under verified-plus-extra membership comparison. It is eligible only on Hard, where 13 targets can display it; the complete four-country Medium Caribbean group is excluded."
-    },
-    {
-      "id": "REV-FAIR-05",
-      "severity": "low",
-      "status": "resolved",
-      "hintIds": [
-        "geo-all-smaller-land-neighbours"
-      ],
-      "countryCodes": [
-        "BR",
-        "RU",
-        "ZA",
-        "SE"
-      ],
-      "problem": "The user’s example type, having only smaller neighbours, was in the catalog but never appeared among the original actual runtime choices.",
-      "proposedRemedy": "Include reviewed comparison facts among the runtime alternatives instead of requiring them to occupy a four-example slot.",
-      "evidence": "The corrected all-smaller clue has confirmed counts 5/9/11 and conservative possible counts 16/28/37. It is selectable on all tiers and was reached for every confirmed member. Its expected round share is about 1.01%/0.76%/0.42%; rare appearance is appropriate for a relatively uncommon fact, and it does not need to be an example for every country."
-    },
-    {
-      "id": "REV-FAIR-06",
-      "severity": "low",
-      "status": "resolved",
-      "problem": "The original Hard numeric family mostly showed population rather than land area, and location clues were only about 4.36% of all Hard openings.",
-      "proposedRemedy": "Sample all eligible facts within the fixed name, numeric and geography family shares, keeping different numeric and geographic dimensions available.",
-      "evidence": "Expected family shares are 25%/25%/50% for every full-pool target. Population and area each receive 12.5% of all Hard openings. Location receives about 17.61%/19.03%/18.71% of Easy/Medium/Hard openings. Sampled family totals match the intended balance closely."
-    },
-    {
-      "id": "REV-FAIR-07",
-      "severity": "low",
-      "status": "resolved",
-      "hintIds": [
-        "geo-three-plus-land-neighbours-and-sea-coast"
-      ],
-      "countryCodes": [
-        "IN",
-        "PK"
-      ],
-      "problem": "Very broad geography facts can provide too little useful orientation, while selecting only four examples can omit straightforward, slightly tricky facts for countries such as India and Pakistan.",
-      "proposedRemedy": "Use a concise reviewed geography conjunction where its possible breadth fits the selected pool, alongside broad region orientation.",
-      "evidence": "The coast-and-neighbours clue has recounted confirmed counts 24/54/71 and possible counts 31/65/85, and passes all three nominal breadth gates. It is available for confirmed India and Pakistan in their supported pools. Only one clue appears per round; the player is not expected to intersect the four examples."
-    }
-  ],
-  "nonBlockingObservations": [
-    {
-      "id": "REV-OBS-01",
-      "severity": "low",
-      "hintIds": [
-        "name-first-a-m",
-        "name-last-a-m",
-        "name-over-six"
-      ],
-      "problem": "Basic spelling variety improves replay diversity, but several phrases still leave more than half the tier pool. These broad name facts account for about 11.51%, 13.69% and 13.52% of all Easy, Medium and Hard openings. Passing a 70% cap does not make each phrase equally helpful or tricky.",
-      "proposedRemedy": "Keep the simple wording and current balance for initial playtesting. If players repeatedly find these openings empty, reduce their within-name weight or replace a few with other plainly sourced facts; do not add obscure letter puzzles or raise every threshold on count evidence alone."
-    },
-    {
-      "id": "REV-OBS-02",
-      "severity": "low",
-      "hintIds": [
-        "geo-no-land-neighbours",
-        "geo-island-country",
-        "geo-island-country-oceania",
-        "geo-all-smaller-land-neighbours",
-        "geo-at-least-one-smaller-land-neighbour"
-      ],
-      "problem": "Near-nested geography experiences remain: no land neighbours versus island status, a broad region versus an island in that region, and all-smaller versus at-least-one-smaller. Removing exact duplicate sets does not make every alternative feel distinct. Three pairs of countries still share their four example profiles, although those profiles no longer restrict runtime choice.",
-      "proposedRemedy": "Watch repetition by geography dimension during playtesting. If it feels repetitive, sample dimensions before phrases or modestly reduce nested facts. The current catalog has enough different dimensions that no further mandatory pruning is justified by set overlap alone."
-    },
-    {
-      "id": "REV-OBS-03",
-      "severity": "low",
-      "problem": "The policy intentionally retains partial facts with four to six confirmed members when the possible union is at least seven. The final representative checks contain 86 such fact/scenario records, mainly North Sea and border clues. A conservative upper bound of seven does not prove that seven countries actually satisfy the wording, or that players have an equally broad mental shortlist.",
-      "proposedRemedy": "Keep the explicit distinction between confirmed and possible counts. Revisit individual partial clues if factual classification or playtests show that their real answer set is within six guesses. The final audit does not support a blanket increase in the confirmed minimum for every partial geography fact."
-    }
-  ],
-  "strengths": [
-    "Runtime selection now retains useful simple facts that the four examples omit, including the all-smaller-neighbours comparison.",
-    "Every target in every full cumulative tier has name, numeric and geography choices; all advertised choices were reached and family weights are well balanced.",
-    "Difficulty uses the actual pool after saved exclusions, including lower and upper possible bounds, and closes both original and intermediate history shortlist failures.",
-    "Phrase support follows confirmed tier membership, removing singleton assignment signatures without pretending a phrase is equally likely for every supporting country.",
-    "Sources and notes are present, phrase texts are unique, and the wording remains basic without slogans or rejected letter puzzles.",
-    "Saved identity and exclusions preserve an opening throughout a round and restore, including legacy journey context."
-  ],
-  "limits": [
-    "No human playtest was conducted. Formal breadth, reachability and distribution do not establish enjoyment, familiarity or perceived difficulty.",
-    "Geography bounds are audited catalog claims, not an independent exhaustive geographic census. Conservative extras can include countries that do not ultimately satisfy a particular interpretation.",
-    "Medium/Hard possible-union minimum seven removes catalog-contained guaranteed enumeration within six guesses. It does not guarantee that the true factual answer set or a knowledgeable player’s shortlist always exceeds six.",
-    "Full-pool frequency summaries are expectations under uniform targets and hashing. History changes within-family choices; the exclusion suite checks representative count boundaries rather than every possible journey permutation.",
-    "Region and coastal scope conventions can affect player interpretation. This review relies on the separate factual/source review for those conventions and recommends ordinary playtesting of borderline wording.",
-    "This certificate binds the reviewed candidate and shared helper hashes. Deployment wiring and final exported artifacts should be checked by the implementation owner, and cross-version hint wording stability is outside the promise."
-  ],
-  "independentAuditNotes": [
-    "The review initially found nine representative partial North Sea cases with a possible union of at most six under the completeness-only rule. That finding was reproduced with a valid FR-to-BE journey and led to the final possible-union minimum. No passed certificate was issued for the earlier policy.",
-    "Possible-extra lists were unioned and deduplicated before every count, and tier membership was recomputed from current data.js. The updated Cyprus label changes the data hash but not the independently checked numeric/name membership.",
-    "The four example hints were checked for one name, one numeric and two geography facts across distinct dimensions; example quality was considered separately from the much larger runtime pool.",
-    "Nominal full-tier eligibility is checked before actual-pool filtering. The runtime only offers reviewed tier-eligible facts; it does not promote previously unreviewed facts because exclusions happen to lower their breadth.",
-    "The final status is based on the raw independent candidate and lifecycle audits for this exact content hash, not on prior review labels, stored counts or the default gate alone."
-  ]
+  "previousIndependentReviewFile": "review-2026-10-04-fairness.json"
 }

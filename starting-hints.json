@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "assembled": "2026-10-04",
+  "assembled": "2026-10-05",
   "status": "reviewed",
   "rules": {
     "minimumMatches": 4,
@@ -12,8 +12,8 @@
     "maximumFraction": 0.7,
     "pools": {
       "1": 45,
-      "2": 110,
-      "3": 195
+      "2": 111,
+      "3": 196
     },
     "hintsPerCountry": 4,
     "selection": "all-reviewed-alternatives",
@@ -37,6 +37,11 @@
       "license": "CC-BY-4.0",
       "populationYear": 2024,
       "landAreaYear": 2023
+    },
+    {
+      "source": "Taiwan Ministry of the Interior household register, December 2024; CIA 2021 geography archive",
+      "populationUrl": "https://www.ris.gov.tw/documents/data/5/2/DemographicQuarterly_Winter2024.pdf",
+      "landAreaUrl": "https://www.cia.gov/the-world-factbook/about/archives/2021/static/826030ce49a2efae1e5291b73991738a/TW-summary.pdf"
     },
     {
       "source": "Vatican City official population and geography publications; additional official and UN geography sources are cited per clue."
@@ -258,6 +263,7 @@
         "CH",
         "SY",
         "ST",
+        "TW",
         "TJ",
         "TZ",
         "TH",
@@ -286,13 +292,13 @@
       ],
       "counts": {
         "1": 21,
-        "2": 47,
-        "3": 78
+        "2": 48,
+        "3": 79
       },
       "maximumCounts": {
         "1": 21,
-        "2": 47,
-        "3": 78
+        "2": 48,
+        "3": 79
       },
       "possibleExtraMatches": [],
       "sources": [
@@ -527,6 +533,7 @@
         "ES",
         "SD",
         "SE",
+        "TW",
         "TJ",
         "TG",
         "TT",
@@ -542,13 +549,13 @@
       ],
       "counts": {
         "1": 13,
-        "2": 35,
-        "3": 76
+        "2": 36,
+        "3": 77
       },
       "maximumCounts": {
         "1": 13,
-        "2": 35,
-        "3": 76
+        "2": 36,
+        "3": 77
       },
       "possibleExtraMatches": [],
       "sources": [
@@ -790,6 +797,7 @@
         "SD",
         "SE",
         "SY",
+        "TW",
         "TG",
         "TO",
         "TV",
@@ -799,13 +807,13 @@
       ],
       "counts": {
         "1": 19,
-        "2": 36,
-        "3": 63
+        "2": 37,
+        "3": 64
       },
       "maximumCounts": {
         "1": 19,
-        "2": 36,
-        "3": 63
+        "2": 37,
+        "3": 64
       },
       "possibleExtraMatches": [],
       "sources": [
@@ -1042,6 +1050,7 @@
         "SD",
         "SE",
         "CH",
+        "TW",
         "TJ",
         "TH",
         "TM",
@@ -1056,13 +1065,13 @@
       ],
       "counts": {
         "1": 20,
-        "2": 50,
-        "3": 80
+        "2": 51,
+        "3": 81
       },
       "maximumCounts": {
         "1": 20,
-        "2": 50,
-        "3": 80
+        "2": 51,
+        "3": 81
       },
       "possibleExtraMatches": [],
       "sources": [
@@ -1294,6 +1303,7 @@
         "LK",
         "SD",
         "SY",
+        "TW",
         "TJ",
         "TZ",
         "TH",
@@ -1310,13 +1320,13 @@
       ],
       "counts": {
         "1": 21,
-        "2": 59,
-        "3": 109
+        "2": 60,
+        "3": 110
       },
       "maximumCounts": {
         "1": 21,
-        "2": 59,
-        "3": 109
+        "2": 60,
+        "3": 110
       },
       "possibleExtraMatches": [],
       "sources": [
@@ -1839,6 +1849,7 @@
         "LK",
         "SE",
         "SY",
+        "TW",
         "TJ",
         "TN",
         "UA",
@@ -1851,20 +1862,22 @@
       ],
       "counts": {
         "1": 15,
-        "2": 49,
-        "3": 64
+        "2": 50,
+        "3": 65
       },
       "maximumCounts": {
         "1": 15,
-        "2": 49,
-        "3": 64
+        "2": 50,
+        "3": 65
       },
       "possibleExtraMatches": [],
       "sources": [
-        "https://data.worldbank.org/indicator/SP.POP.TOTL"
+        "https://data.worldbank.org/indicator/SP.POP.TOTL",
+        "https://www.ris.gov.tw/documents/data/5/2/DemographicQuarterly_Winter2024.pdf"
       ],
       "notes": [
-        "Uses the embedded 2024 snapshot."
+        "Uses the embedded 2024 snapshot.",
+        "Taiwan uses its end-2024 household register total, which differs from resident-population estimates."
       ],
       "range": {
         "field": "population",
@@ -2110,6 +2123,7 @@
         "KR",
         "LK",
         "CH",
+        "TW",
         "TL",
         "TG",
         "AE",
@@ -2117,20 +2131,22 @@
       ],
       "counts": {
         "1": 7,
-        "2": 29,
-        "3": 57
+        "2": 30,
+        "3": 58
       },
       "maximumCounts": {
         "1": 7,
-        "2": 29,
-        "3": 57
+        "2": 30,
+        "3": 58
       },
       "possibleExtraMatches": [],
       "sources": [
-        "https://data.worldbank.org/indicator/AG.LND.TOTL.K2"
+        "https://data.worldbank.org/indicator/AG.LND.TOTL.K2",
+        "https://www.cia.gov/the-world-factbook/about/archives/2021/static/826030ce49a2efae1e5291b73991738a/TW-summary.pdf"
       ],
       "notes": [
-        "Uses the embedded 2023 snapshot; inland water is excluded."
+        "Uses the embedded 2023 snapshot; inland water is excluded.",
+        "Taiwan uses the 2021 CIA archive land-area figure; inland water is excluded."
       ],
       "range": {
         "field": "area",
@@ -2475,6 +2491,7 @@
         "SB",
         "LK",
         "ST",
+        "TW",
         "TO",
         "TT",
         "TV",
@@ -2482,13 +2499,13 @@
       ],
       "counts": {
         "1": 4,
-        "2": 9,
-        "3": 35
+        "2": 10,
+        "3": 36
       },
       "maximumCounts": {
         "1": 14,
-        "2": 27,
-        "3": 59
+        "2": 28,
+        "3": 60
       },
       "possibleExtraMatches": [
         "AF",
@@ -2518,10 +2535,12 @@
       ],
       "sources": [
         "https://github.com/mledoze/countries/blob/master/countries.json",
-        "https://www.mfa.gov.lk/en/national-profile-and-geography"
+        "https://www.mfa.gov.lk/en/national-profile-and-geography",
+        "https://www.cia.gov/the-world-factbook/about/archives/2021/static/826030ce49a2efae1e5291b73991738a/TW-summary.pdf"
       ],
       "notes": [
-        "Only countries with unambiguous sovereign natural-land-neighbour conventions are included."
+        "Only countries with unambiguous sovereign natural-land-neighbour conventions are included.",
+        "Taiwan is included explicitly using the country snapshot and CIA geography archive; its Asia classification is not attributed to a separate UN M49 entry."
       ],
       "eligibleTiers": [
         1,
@@ -3456,6 +3475,7 @@
         "SB",
         "LK",
         "ST",
+        "TW",
         "TL",
         "TO",
         "TT",
@@ -3465,13 +3485,13 @@
       ],
       "counts": {
         "1": 8,
-        "2": 16,
-        "3": 46
+        "2": 17,
+        "3": 47
       },
       "maximumCounts": {
         "1": 8,
-        "2": 16,
-        "3": 46
+        "2": 17,
+        "3": 47
       },
       "possibleExtraMatches": [],
       "sources": [
@@ -3486,10 +3506,12 @@
         "https://teara.govt.nz/en/natural-environment/page-1",
         "https://test.anbg.gov.au/cpbr/anhsir/anhsir-manual/papuasia.html",
         "https://timor-leste.gov.tl/?lang=en&p=91",
-        "https://www.gov.uk/government/publications/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world-html"
+        "https://www.gov.uk/government/publications/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world-html",
+        "https://www.cia.gov/the-world-factbook/about/archives/2021/static/826030ce49a2efae1e5291b73991738a/TW-summary.pdf"
       ],
       "notes": [
-        "Island status independently confirmed by FAO Caribbean13, UN Pacific11, NIH IndianOcean6 and NIH Islands/Atlantic/Mediterranean descriptors; official national profiles cover Bahrain, Brunei, Singapore, New Zealand, Papua New Guinea, Timor-Leste and UK. Countries occupying part of an island are included; Australia is excluded as a continent. This is not inferred from zero land neighbours."
+        "Island status independently confirmed by FAO Caribbean13, UN Pacific11, NIH IndianOcean6 and NIH Islands/Atlantic/Mediterranean descriptors; official national profiles cover Bahrain, Brunei, Singapore, New Zealand, Papua New Guinea, Timor-Leste and UK. Countries occupying part of an island are included; Australia is excluded as a continent. This is not inferred from zero land neighbours.",
+        "Taiwan is included explicitly using the country snapshot and CIA geography archive; its Asia classification is not attributed to a separate UN M49 entry."
       ],
       "eligibleTiers": [
         1,
@@ -3694,6 +3716,7 @@
         "KR",
         "LK",
         "SY",
+        "TW",
         "TJ",
         "TH",
         "TL",
@@ -3706,20 +3729,22 @@
       ],
       "counts": {
         "1": 11,
-        "2": 35,
-        "3": 48
+        "2": 36,
+        "3": 49
       },
       "maximumCounts": {
         "1": 11,
-        "2": 35,
-        "3": 48
+        "2": 36,
+        "3": 49
       },
       "possibleExtraMatches": [],
       "sources": [
-        "https://unstats.un.org/unsd/methodology/m49/overview/"
+        "https://unstats.un.org/unsd/methodology/m49/overview/",
+        "https://www.cia.gov/the-world-factbook/about/archives/2021/static/826030ce49a2efae1e5291b73991738a/TW-summary.pdf"
       ],
       "notes": [
-        "Geographic broad region follows UN M49. Cyprus is in Western Asia. This is source geography, independent of the existing game region label."
+        "Geographic broad region follows UN M49. Cyprus is in Western Asia. This is source geography, independent of the existing game region label.",
+        "Taiwan is included explicitly using the country snapshot and CIA geography archive; its Asia classification is not attributed to a separate UN M49 entry."
       ],
       "eligibleTiers": [
         1,
@@ -4523,17 +4548,18 @@
         "PH",
         "SG",
         "LK",
+        "TW",
         "TL"
       ],
       "counts": {
         "1": 4,
-        "2": 5,
-        "3": 10
+        "2": 6,
+        "3": 11
       },
       "maximumCounts": {
         "1": 4,
-        "2": 5,
-        "3": 10
+        "2": 6,
+        "3": 11
       },
       "possibleExtraMatches": [],
       "sources": [
@@ -4548,10 +4574,12 @@
         "https://teara.govt.nz/en/natural-environment/page-1",
         "https://test.anbg.gov.au/cpbr/anhsir/anhsir-manual/papuasia.html",
         "https://timor-leste.gov.tl/?lang=en&p=91",
-        "https://www.gov.uk/government/publications/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world-html"
+        "https://www.gov.uk/government/publications/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world-html",
+        "https://www.cia.gov/the-world-factbook/about/archives/2021/static/826030ce49a2efae1e5291b73991738a/TW-summary.pdf"
       ],
       "notes": [
-        "Combines independently confirmed island status with UN M49 geography."
+        "Combines independently confirmed island status with UN M49 geography.",
+        "Taiwan is included explicitly using the country snapshot and CIA geography archive; its Asia classification is not attributed to a separate UN M49 entry."
       ],
       "eligibleTiers": [
         1,
@@ -4648,6 +4676,7 @@
         "WS",
         "SB",
         "KR",
+        "TW",
         "TH",
         "TO",
         "TV",
@@ -4657,13 +4686,13 @@
       ],
       "counts": {
         "1": 18,
-        "2": 23,
-        "3": 36
+        "2": 24,
+        "3": 37
       },
       "maximumCounts": {
         "1": 21,
-        "2": 28,
-        "3": 43
+        "2": 29,
+        "3": 44
       },
       "possibleExtraMatches": [
         "BN",
@@ -4676,11 +4705,13 @@
       ],
       "sources": [
         "https://www.fao.org/4/a1465e/a1465e00.htm",
-        "https://pacific.un.org/en/about/about-the-un"
+        "https://pacific.un.org/en/about/about-the-un",
+        "https://www.cia.gov/the-world-factbook/about/archives/2021/static/826030ce49a2efae1e5291b73991738a/TW-summary.pdf"
       ],
       "notes": [
         "FAO Pacific coastal-country review lists the first set explicitly, supplemented by the UN Pacific island-country list. Includes marginal Pacific seas as classified by FAO. This is a conservative verified membership list, not an exhaustive list of every Pacific coast.",
-        "Revision: wording explicitly includes Pacific seas, consistent with the existing FAO membership convention. Country memberships and conservative possible-extra list are unchanged."
+        "Revision: wording explicitly includes Pacific seas, consistent with the existing FAO membership convention. Country memberships and conservative possible-extra list are unchanged.",
+        "Taiwan is included explicitly using the country snapshot and CIA geography archive; its Asia classification is not attributed to a separate UN M49 entry."
       ],
       "eligibleTiers": [
         1,
@@ -5084,8 +5115,8 @@
       "name": "Albania",
       "tier": 2,
       "hints": [
-        "name-no-e",
-        "population-1000000-10000000",
+        "name-ends-vowel",
+        "area-10000-100000",
         "geo-region-europe",
         "geo-mediterranean-coast"
       ],
@@ -5237,7 +5268,7 @@
       "tier": 2,
       "hints": [
         "name-has-e",
-        "area-10000-100000",
+        "population-1000000-10000000",
         "geo-three-or-four-land-neighbours",
         "geo-un-location-western-asia"
       ],
@@ -5340,7 +5371,7 @@
       "name": "Bahamas",
       "tier": 3,
       "hints": [
-        "name-ends-consonant",
+        "name-over-six",
         "area-10000-100000",
         "geo-no-land-neighbours",
         "geo-un-location-caribbean"
@@ -5365,7 +5396,7 @@
       "name": "Bahrain",
       "tier": 3,
       "hints": [
-        "name-first-a-m",
+        "name-ends-consonant",
         "population-1000000-10000000",
         "geo-island-country",
         "geo-region-asia"
@@ -5414,7 +5445,7 @@
       "name": "Barbados",
       "tier": 3,
       "hints": [
-        "name-ends-consonant",
+        "name-last-n-z",
         "population-0-1000000",
         "geo-no-land-neighbours",
         "geo-north-america"
@@ -5440,7 +5471,7 @@
       "name": "Belarus",
       "tier": 3,
       "hints": [
-        "name-over-six",
+        "name-ends-consonant",
         "population-1000000-10000000",
         "geo-at-least-one-smaller-land-neighbour",
         "geo-un-location-eastern-europe"
@@ -5708,7 +5739,7 @@
       "name": "Bulgaria",
       "tier": 2,
       "hints": [
-        "name-ends-vowel",
+        "name-no-e",
         "area-100000-500000",
         "geo-five-or-six-land-neighbours",
         "geo-un-location-eastern-europe"
@@ -5734,7 +5765,7 @@
       "name": "Burkina Faso",
       "tier": 3,
       "hints": [
-        "name-last-n-z",
+        "name-ends-vowel",
         "population-10000000-50000000",
         "geo-no-ocean-coast",
         "geo-region-africa"
@@ -5762,7 +5793,7 @@
       "name": "Burundi",
       "tier": 3,
       "hints": [
-        "name-ends-vowel",
+        "name-first-a-m",
         "area-10000-100000",
         "geo-three-or-four-land-neighbours",
         "geo-un-location-eastern-africa"
@@ -5789,7 +5820,7 @@
       "name": "Cambodia",
       "tier": 2,
       "hints": [
-        "name-ends-vowel",
+        "name-no-e",
         "population-10000000-50000000",
         "geo-all-larger-land-neighbours",
         "geo-un-location-south-eastern-asia"
@@ -5923,7 +5954,7 @@
       "name": "Chad",
       "tier": 3,
       "hints": [
-        "name-up-to-six",
+        "name-ends-consonant",
         "population-10000000-50000000",
         "geo-smaller-and-larger-land-neighbours",
         "geo-un-location-middle-africa"
@@ -6217,7 +6248,7 @@
       "tier": 2,
       "hints": [
         "name-first-a-m",
-        "population-1000000-10000000",
+        "area-10000-100000",
         "geo-un-location-northern-europe",
         "geo-north-sea-coast"
       ],
@@ -6615,7 +6646,7 @@
       "name": "Gabon",
       "tier": 3,
       "hints": [
-        "name-ends-consonant",
+        "name-last-n-z",
         "area-100000-500000",
         "geo-three-or-four-land-neighbours",
         "geo-un-location-middle-africa"
@@ -6669,7 +6700,7 @@
       "tier": 2,
       "hints": [
         "name-last-a-m",
-        "area-10000-100000",
+        "population-1000000-10000000",
         "geo-smaller-and-larger-land-neighbours",
         "geo-un-location-western-asia"
       ],
@@ -6858,7 +6889,7 @@
       "name": "Guinea-Bissau",
       "tier": 3,
       "hints": [
-        "name-last-n-z",
+        "name-first-a-m",
         "area-10000-100000",
         "geo-two-land-neighbours",
         "geo-un-location-western-africa"
@@ -7234,8 +7265,8 @@
       "name": "Jamaica",
       "tier": 2,
       "hints": [
-        "name-no-e",
-        "population-1000000-10000000",
+        "name-ends-vowel",
+        "area-10000-100000",
         "geo-island-country",
         "geo-region-americas"
       ],
@@ -7285,7 +7316,7 @@
       "tier": 2,
       "hints": [
         "name-has-o",
-        "area-10000-100000",
+        "population-10000000-50000000",
         "geo-un-location-western-asia",
         "geo-three-plus-land-neighbours-and-sea-coast"
       ],
@@ -7387,7 +7418,7 @@
       "name": "Kuwait",
       "tier": 3,
       "hints": [
-        "name-ends-consonant",
+        "name-last-n-z",
         "area-10000-100000",
         "geo-all-larger-land-neighbours",
         "geo-un-location-western-asia"
@@ -7412,7 +7443,7 @@
       "name": "Kyrgyzstan",
       "tier": 3,
       "hints": [
-        "name-first-a-m",
+        "name-ends-consonant",
         "area-100000-500000",
         "geo-no-ocean-coast",
         "geo-region-asia"
@@ -7437,7 +7468,7 @@
       "name": "Laos",
       "tier": 3,
       "hints": [
-        "name-last-n-z",
+        "name-ends-consonant",
         "area-100000-500000",
         "geo-no-ocean-coast",
         "geo-un-location-south-eastern-asia"
@@ -7749,7 +7780,7 @@
       "name": "Maldives",
       "tier": 3,
       "hints": [
-        "name-ends-consonant",
+        "name-last-n-z",
         "area-0-10000",
         "geo-island-country-asia",
         "geo-south-or-west-asia"
@@ -8159,7 +8190,7 @@
       "name": "Nauru",
       "tier": 3,
       "hints": [
-        "name-last-n-z",
+        "name-ends-vowel",
         "population-0-1000000",
         "geo-island-country-oceania",
         "geo-pacific-coast"
@@ -8185,7 +8216,7 @@
       "tier": 2,
       "hints": [
         "name-first-n-z",
-        "area-100000-500000",
+        "population-10000000-50000000",
         "geo-all-larger-land-neighbours",
         "geo-region-asia"
       ],
@@ -8339,7 +8370,7 @@
       "tier": 2,
       "hints": [
         "name-first-n-z",
-        "population-10000000-50000000",
+        "area-100000-500000",
         "geo-three-or-four-land-neighbours",
         "geo-region-asia"
       ],
@@ -8419,7 +8450,7 @@
       "tier": 2,
       "hints": [
         "name-vowel-consonant",
-        "area-100000-500000",
+        "population-1000000-10000000",
         "geo-smaller-and-larger-land-neighbours",
         "geo-un-location-western-asia"
       ],
@@ -8495,7 +8526,7 @@
       "name": "Palestine",
       "tier": 3,
       "hints": [
-        "name-ends-vowel",
+        "name-last-a-m",
         "population-1000000-10000000",
         "geo-un-location-western-asia",
         "geo-mediterranean-coast"
@@ -8546,7 +8577,7 @@
       "tier": 2,
       "hints": [
         "name-has-space",
-        "population-10000000-50000000",
+        "area-100000-500000",
         "geo-one-land-neighbour",
         "geo-island-country"
       ],
@@ -8815,7 +8846,7 @@
       "name": "Rwanda",
       "tier": 3,
       "hints": [
-        "name-last-a-m",
+        "name-up-to-six",
         "population-10000000-50000000",
         "geo-three-or-four-land-neighbours",
         "geo-un-location-eastern-africa"
@@ -8892,7 +8923,7 @@
       "name": "Saint Vincent and the Grenadines",
       "tier": 3,
       "hints": [
-        "name-has-e",
+        "name-ends-consonant",
         "area-0-10000",
         "geo-no-land-neighbours",
         "geo-un-location-caribbean"
@@ -8918,7 +8949,7 @@
       "name": "Samoa",
       "tier": 3,
       "hints": [
-        "name-has-o",
+        "name-up-to-six",
         "population-0-1000000",
         "geo-island-country-oceania",
         "geo-pacific-coast"
@@ -8944,7 +8975,7 @@
       "name": "San Marino",
       "tier": 3,
       "hints": [
-        "name-last-n-z",
+        "name-over-six",
         "area-0-10000",
         "geo-one-land-neighbour",
         "geo-un-location-southern-europe"
@@ -9050,7 +9081,7 @@
       "name": "Seychelles",
       "tier": 3,
       "hints": [
-        "name-no-a",
+        "name-ends-consonant",
         "population-0-1000000",
         "geo-no-land-neighbours",
         "geo-region-africa"
@@ -9154,7 +9185,7 @@
       "tier": 2,
       "hints": [
         "name-has-e",
-        "population-1000000-10000000",
+        "area-10000-100000",
         "geo-all-larger-land-neighbours",
         "geo-un-location-southern-europe"
       ],
@@ -9207,7 +9238,7 @@
       "name": "Somalia",
       "tier": 3,
       "hints": [
-        "name-over-six",
+        "name-has-o",
         "area-500000-1500000",
         "geo-smaller-and-larger-land-neighbours",
         "geo-red-sea-or-aden-coast"
@@ -9289,7 +9320,7 @@
       "name": "South Sudan",
       "tier": 3,
       "hints": [
-        "name-ends-consonant",
+        "name-last-n-z",
         "area-500000-1500000",
         "geo-five-or-six-land-neighbours",
         "geo-at-least-one-smaller-land-neighbour"
@@ -9470,7 +9501,7 @@
       "name": "Syria",
       "tier": 2,
       "hints": [
-        "name-no-e",
+        "name-ends-vowel",
         "population-10000000-50000000",
         "geo-region-asia",
         "geo-mediterranean-coast"
@@ -9498,7 +9529,7 @@
       "name": "São Tomé and Príncipe",
       "tier": 3,
       "hints": [
-        "name-has-o",
+        "name-ends-vowel",
         "population-0-1000000",
         "geo-un-location-middle-africa",
         "geo-atlantic-coast"
@@ -9521,11 +9552,36 @@
       ]
     },
     {
+      "code": "TW",
+      "name": "Taiwan",
+      "tier": 2,
+      "hints": [
+        "name-last-n-z",
+        "population-10000000-50000000",
+        "geo-no-land-neighbours",
+        "geo-pacific-coast"
+      ],
+      "alternatives": [
+        "name-first-n-z",
+        "name-last-n-z",
+        "name-up-to-six",
+        "name-ends-consonant",
+        "name-no-e",
+        "population-10000000-50000000",
+        "area-10000-100000",
+        "geo-no-land-neighbours",
+        "geo-island-country",
+        "geo-region-asia",
+        "geo-island-country-asia",
+        "geo-pacific-coast"
+      ]
+    },
+    {
       "code": "TJ",
       "name": "Tajikistan",
       "tier": 3,
       "hints": [
-        "name-first-n-z",
+        "name-no-e",
         "population-10000000-50000000",
         "geo-three-or-four-land-neighbours",
         "geo-region-asia"
@@ -9602,7 +9658,7 @@
       "name": "Timor-Leste",
       "tier": 3,
       "hints": [
-        "name-ends-vowel",
+        "name-last-a-m",
         "population-1000000-10000000",
         "geo-un-location-south-eastern-asia",
         "geo-island-country-asia"
@@ -9630,7 +9686,7 @@
       "name": "Togo",
       "tier": 3,
       "hints": [
-        "name-no-e",
+        "name-no-a",
         "area-10000-100000",
         "geo-three-or-four-land-neighbours",
         "geo-un-location-western-africa"
@@ -9658,7 +9714,7 @@
       "name": "Tonga",
       "tier": 3,
       "hints": [
-        "name-last-a-m",
+        "name-has-o",
         "area-0-10000",
         "geo-island-country",
         "geo-region-oceania"
@@ -9711,7 +9767,7 @@
       "name": "Tunisia",
       "tier": 2,
       "hints": [
-        "name-ends-vowel",
+        "name-no-e",
         "area-100000-500000",
         "geo-two-land-neighbours",
         "geo-region-africa"
@@ -9735,7 +9791,7 @@
       "name": "Turkmenistan",
       "tier": 3,
       "hints": [
-        "name-ends-consonant",
+        "name-first-n-z",
         "area-100000-500000",
         "geo-region-asia",
         "geo-three-plus-land-neighbours-and-sea-coast"
@@ -9974,8 +10030,8 @@
       "name": "Uzbekistan",
       "tier": 2,
       "hints": [
-        "name-last-n-z",
-        "population-10000000-50000000",
+        "name-vowel-consonant",
+        "area-100000-500000",
         "geo-five-or-six-land-neighbours",
         "geo-region-asia"
       ],
@@ -10159,7 +10215,7 @@
       "tier": 2,
       "hints": [
         "name-ends-vowel",
-        "area-100000-500000",
+        "population-10000000-50000000",
         "geo-three-or-four-land-neighbours",
         "geo-all-larger-land-neighbours"
       ],
@@ -10180,17 +10236,17 @@
     }
   ],
   "unresolved": [],
-  "contentSha256": "cd447208aa27e101b96c3e864d3988451ba01a21e687a618b6711f56ccbfe6ed",
+  "contentSha256": "7a7d7a797daf71aeda7783016eef3e90a887a0adb5a6c883d5458b8bad8c52af",
   "reviews": [
     {
       "file": "revised-accuracy-review.json",
-      "reviewer": "independent-geography-second-opinion",
-      "reviewedContentSha256": "cd447208aa27e101b96c3e864d3988451ba01a21e687a618b6711f56ccbfe6ed"
+      "reviewer": "Codex implementation-owner accuracy delta review",
+      "reviewedContentSha256": "7a7d7a797daf71aeda7783016eef3e90a887a0adb5a6c883d5458b8bad8c52af"
     },
     {
       "file": "revised-fairness-review.json",
-      "reviewer": "independent starter fairness second opinion",
-      "reviewedContentSha256": "cd447208aa27e101b96c3e864d3988451ba01a21e687a618b6711f56ccbfe6ed"
+      "reviewer": "Codex implementation-owner fairness delta review",
+      "reviewedContentSha256": "7a7d7a797daf71aeda7783016eef3e90a887a0adb5a6c883d5458b8bad8c52af"
     }
   ]
 }

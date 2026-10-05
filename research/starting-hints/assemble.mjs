@@ -11,12 +11,14 @@ const populationSource = 'https://data.worldbank.org/indicator/SP.POP.TOTL';
 const areaSource = 'https://data.worldbank.org/indicator/AG.LND.TOTL.K2';
 const vaticanPopulationSource = 'https://www.vaticanstate.va/en/state-and-government/general-informations/population.html';
 const vaticanAreaSource = 'https://www.vaticanstate.va/en/state-and-government/general-informations/geography.html';
+const taiwanPopulationSource = 'https://www.ris.gov.tw/documents/data/5/2/DemographicQuarterly_Winter2024.pdf';
+const taiwanAreaSource = 'https://www.cia.gov/the-world-factbook/about/archives/2021/static/826030ce49a2efae1e5291b73991738a/TW-summary.pdf';
 const canonical = country => country.name.normalize('NFD').replace(/\p{Diacritic}/gu, '').toUpperCase();
 const letters = country => canonical(country).replace(/[^A-Z]/g, '');
 const vowel = letter => 'AEIOU'.includes(letter);
 const rules = {
   minimumMatches: 4, minimumPossibleMatches: { 1: 4, 2: 7, 3: 7 },
-  maximumFraction: 0.7, pools: { 1: 45, 2: 110, 3: 195 }, hintsPerCountry: 4,
+  maximumFraction: 0.7, pools: Object.fromEntries([1, 2, 3].map(tier => [tier, pools[tier].length])), hintsPerCountry: 4,
   selection: 'all-reviewed-alternatives', familyWeights: { name: 0.25, numeric: 0.25, geography: 0.5 },
 };
 
@@ -65,8 +67,8 @@ function numericHints(field, family, edges, unit, sources, year) {
         : `${subject} from ${display(low)} to under ${display(high)}${unit}.`;
     return makeHint(`${family}-${low}-${high === Infinity ? 'plus' : high}`, text, family,
       country => country[field] >= low && country[field] < high,
-      low === 0 ? [...sources, field === 'population' ? vaticanPopulationSource : vaticanAreaSource] : sources,
-      { notes: [`Uses the embedded ${year} snapshot${field === 'area' ? '; inland water is excluded' : ''}.`, ...(low === 0 ? ['Vatican City uses its official population and geography publications.'] : [])], range: { field, low, high: high === Infinity ? null : high } });
+      [...sources, ...(low === 0 ? [field === 'population' ? vaticanPopulationSource : vaticanAreaSource] : []), ...(COUNTRIES.some(country => country.code === 'TW' && country[field] >= low && country[field] < high) ? [field === 'population' ? taiwanPopulationSource : taiwanAreaSource] : [])],
+      { notes: [`Uses the embedded ${year} snapshot${field === 'area' ? '; inland water is excluded' : ''}.`, ...(low === 0 ? ['Vatican City uses its official population and geography publications.'] : []), ...(COUNTRIES.some(country => country.code === 'TW' && country[field] >= low && country[field] < high) ? [field === 'population' ? 'Taiwan uses its end-2024 household register total, which differs from resident-population estimates.' : 'Taiwan uses the 2021 CIA archive land-area figure; inland water is excluded.'] : [])], range: { field, low, high: high === Infinity ? null : high } });
   });
 }
 
@@ -144,7 +146,7 @@ const coverage = COUNTRIES.map(country => coverageByCode.get(country.code));
 const sourceBytes = gunzipSync(await readFile(new URL('upstream-countries.json.gz', root)));
 const bank = {
   version: 2,
-  assembled: '2026-10-04',
+  assembled: '2026-10-05',
   status: 'awaiting-independent-review',
   rules,
   selectionNotes: 'Four concise examples per country; gameplay selects from every reviewed eligible alternative. Availability is rechecked against the saved round exclusions. Every Medium/Hard hint must leave at least seven declared possible answers, including conservative extras, and at least four confirmed matches. A partial positive list is not an exhaustive shortlist.',
@@ -152,6 +154,7 @@ const bank = {
   attribution: [
     { source: 'mledoze/countries contributors', license: 'ODbL-1.0', url: nameSource, localLicense: 'DATA_LICENSE.txt' },
     { source: 'World Bank, World Development Indicators', license: 'CC-BY-4.0', populationYear: POPULATION_YEAR, landAreaYear: AREA_YEAR },
+    { source: 'Taiwan Ministry of the Interior household register, December 2024; CIA 2021 geography archive', populationUrl: taiwanPopulationSource, landAreaUrl: taiwanAreaSource },
     { source: 'Vatican City official population and geography publications; additional official and UN geography sources are cited per clue.' },
   ],
   sourceSnapshot: { url: 'https://raw.githubusercontent.com/mledoze/countries/master/countries.json', sha256: createHash('sha256').update(sourceBytes).digest('hex') },

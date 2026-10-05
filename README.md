@@ -12,7 +12,7 @@ Every clue describes the answer compared with your guess. If you guess France an
 
 A round opens with one reviewed hint that stays fixed while you guess. Name hints use the displayed English name: accents do not change letters, spaces and hyphens are not letters, and vowels are A, E, I, O and U. [Country data and clues](DATA_SOURCES.md) explains the other definitions and their limits.
 
-Easy begins with 45 possible answers, Medium expands to 110, and Hard includes all 195 countries. You can guess any country at every difficulty. The last 12 finished answers are excluded; hint wording from the last six shown rounds is avoided when a suitable alternative exists. Help lists the actual available answers after these exclusions and the hint fairness checks.
+Easy begins with 45 possible answers, Medium expands to 111, and Hard includes all 196 countries. You can guess any country at every difficulty. The last 12 finished answers are excluded; hint wording from the last six shown rounds is avoided when a suitable alternative exists. Help lists the actual available answers after these exclusions and the hint fairness checks.
 
 Finish each round to move on, whether you find the country or use all six guesses. After Hard, start a new journey at Easy. Only finished rounds count toward statistics, once each; abandoning a round adds no loss.
 
@@ -103,4 +103,4 @@ Edit `DATA_SOURCES.md` to change the data explanation. Preview and build generat
 
 ## Data and licences
 
-The game covers the 193 United Nations members, Palestine and Vatican City. Population uses a 2024 snapshot; land area uses 2023 figures and excludes inland water. The country database uses [ODbL](DATA_LICENSE.txt); World Bank figures use CC BY 4.0. The Manrope font licence is in `fonts/`. These licences cover the data and font separately from application code and styling.
+The game covers the 193 United Nations members, Palestine, Vatican City and Taiwan. Population uses a 2024 snapshot; land area uses 2023 figures and excludes inland water. Taiwan uses a 2024 household register total and the 2021 CIA land-area archive, as documented in DATA_SOURCES.md. The country database uses [ODbL](DATA_LICENSE.txt); World Bank figures use CC BY 4.0. The Manrope font licence is in `fonts/`. These licences cover the data and font separately from application code and styling.
