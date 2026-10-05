@@ -64,7 +64,7 @@ export function renderReadingPage(page, source) {
 </head>
 <body class="reading-page">
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Ländle home"><img class="brand-icon" src="logo.svg" width="20" height="20" alt="" aria-hidden="true"><span>Ländle<span class="brand-dot">.</span></span></a>
+    <a class="brand" href="index.html" aria-label="Ländle home"><img class="brand-icon" src="logo.svg" width="20" height="20" alt="" aria-hidden="true"><span>Ländle</span></a>
     <a class="reading-back" href="index.html">Back to game</a>
   </header>
   <main class="reading-shell">

@@ -154,10 +154,6 @@ button svg {
   object-fit: contain;
 }
 
-.brand-dot {
-  color: var(--moss);
-}
-
 .header-actions {
   display: flex;
   align-items: center;
