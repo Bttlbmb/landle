@@ -2,6 +2,7 @@ node_modules/
 dist/
 artifacts/
 .deploy/
+.openai/
 .build-*/
 research/starting-hints/candidate-hints.js
 .DS_Store

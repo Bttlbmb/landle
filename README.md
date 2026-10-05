@@ -39,9 +39,25 @@ npm test
 npm run build
 ```
 
-The build writes a complete static site to `dist/`, including the data and licence reading pages. It checks the hint reviews, generates the runtime hints, and replaces the previous export only after preparing all files. Keep source edits outside `dist/`. The game uses local assets and fixed data, without an account or external data service. The configured Sites workflow publishes this export; it can also be served by a static web host.
+The build writes a complete static site to `dist/`, including the data and licence reading pages. It checks the hint reviews, generates the runtime hints, and replaces the previous export only after preparing all files. Keep source edits outside `dist/`. The game uses local assets and fixed data, without an account or external data service. GitHub Actions publishes this export to GitHub Pages; it can also be served by any static web host.
 
 [Verification notes](QA_NOTES.md) explain the automated checks, optional browser checks and remaining limits.
+
+## Publish on GitHub Pages
+
+The complete application source, tests, hint maintenance tools, review records and local assets are backed up in [Bttlbmb/landle](https://github.com/Bttlbmb/landle) on **`main`**. Generated builds and local audit artifacts are excluded; the website is rebuilt from source on every deployment. OpenAI hosting is no longer part of this project's publishing setup.
+
+To enable the website after making the repository public:
+
+1. Open the repository's **Settings → Pages**.
+2. Under **Build and deployment → Source**, select **GitHub Actions**. No publishing branch or folder needs to be selected.
+3. Open **Actions → Deploy GitHub Pages → Run workflow**, choose **`main`**, and run it.
+
+The expected address is [bttlbmb.github.io/landle/](https://bttlbmb.github.io/landle/). The workflow reports the actual website address once deployment succeeds. Each later push to `main` runs the tests, builds `dist/`, and publishes it automatically. Pull requests run the tests and build without publishing. While the repository is private, the workflow builds the backup but skips publishing; changing visibility alone does not trigger deployment, so use the manual run above.
+
+All game assets, module imports and reading-page links use relative paths, so the `/landle/` prefix needs no special configuration. There are no hosting credentials or application secrets to add. If the `github-pages` environment has branch restrictions, allow `main`. See [GitHub's custom workflow instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) for the Pages settings.
+
+Saved game progress is tied to the website's origin. Players start with separate browser progress at the new GitHub address.
 
 ## Maintain the project
 
