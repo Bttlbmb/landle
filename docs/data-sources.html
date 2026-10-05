@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f0f4f2">
+  <title>Ländle — Data sources and attribution</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="reading-pages.css">
+</head>
+<body class="reading-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Ländle home"><img class="brand-icon" src="logo.svg" width="20" height="20" alt="" aria-hidden="true"><span>Ländle<span class="brand-dot">.</span></span></a>
+    <a class="reading-back" href="index.html">Back to game</a>
+  </header>
+  <main class="reading-shell">
+    <article><h1>Country data and clues</h1>
+<p>Ländle uses a fixed set of country data assembled on <strong>3 October 2026</strong>. It does not fetch new figures while you play. This keeps the clues consistent, although newer estimates may differ.</p>
+<h2>Which countries are included?</h2>
+<p>The game covers <strong>195 countries</strong>: the 193 United Nations members, Palestine and Vatican City. It does not include every territory or settle questions of recognition. You can guess any of these countries in every round.</p>
+<p>Names, country codes, regions and geographic reference points come from <a href="https://github.com/mledoze/countries">mledoze/countries</a>, using its <a href="https://raw.githubusercontent.com/mledoze/countries/master/countries.json">countries.json</a> snapshot. Its UN-member flag includes Vatican City; Palestine was added separately. Cyprus uses the <a href="https://unstats.un.org/unsd/methodology/m49/overview/">UN M49</a> classification of Asia for both hints and the revealed region. Geographic, political and cultural groupings can differ.</p>
+<p>Common alternative names, spellings and two- or three-letter country codes are accepted. “Congo” and “Korea” require selecting the intended country. Easy has 45 possible answers, Medium has 110, and Hard has all 195. These groups are editorial choices: a larger pool does not make every country harder to find. Recent answers and hint checks can reduce the pool; Help shows the remaining countries.</p>
+<h2>Population and land area</h2>
+<p>For <strong>194 countries</strong>, these figures come from the World Bank&#39;s World Development Indicators, retrieved on 3 October 2026. The downloaded data reported an update date of 13 July 2026.</p>
+<table><thead><tr><th>Figure</th><th>Year</th><th>Source</th></tr></thead><tbody><tr><td>Resident population</td><td>2024</td><td><a href="https://data.worldbank.org/indicator/SP.POP.TOTL">Population, total — SP.POP.TOTL</a>, via the <a href="https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?date=2024&amp;format=json&amp;per_page=400">Indicators API</a></td></tr><tr><td>Land area in km²</td><td>2023</td><td><a href="https://data.worldbank.org/indicator/AG.LND.TOTL.K2">Land area — AG.LND.TOTL.K2</a>, via the <a href="https://api.worldbank.org/v2/country/all/indicator/AG.LND.TOTL.K2?date=2023&amp;format=json&amp;per_page=400">Indicators API</a></td></tr></tbody></table>
+<p>Population counts residents. The World Bank draws on the UN Population Division, national statistical offices, Eurostat and the UN Statistics Division. These are estimates, and migration, conflict and later revisions can change them.</p>
+<p>Land area excludes inland water, continental-shelf claims and exclusive economic zones. The figures come from FAOSTAT, maintained by the UN Food and Agriculture Organization. Its <a href="https://databank.worldbank.org/metadataglossary/world-development-indicators/series/AG.LND.TOTL.K2">methodology</a> also acknowledges differences in how countries report their area.</p>
+<p>Excluding water can change familiar rankings. In this snapshot, Canada&#39;s <strong>8,788,700 km² of land</strong> is less than the United States&#39; <strong>9,147,420 km²</strong> or China&#39;s <strong>9,388,210 km²</strong>. Rankings that include lakes can differ.</p>
+<p><strong>Vatican City</strong> is absent from these World Bank series. It uses <strong>882 residents</strong>, including citizens and non-citizens, from the <a href="https://www.vaticanstate.va/en/state-and-government/general-informations/population.html">official population report</a> dated 31 December 2024. Its <strong>0.44 km²</strong> comes from the <a href="https://www.vaticanstate.va/en/state-and-government/general-informations/geography.html">official geography publication</a>: 44 hectares.</p>
+<h2>What the clues mean</h2>
+<p>Every clue compares <strong>the answer with your guess</strong>. For population and land area, ↑ means more or larger, ↓ means fewer or smaller, and = means the stored figures match. Because figures are rounded at the source, equal land area can occur for different countries.</p>
+<p>Direction and distance use one approximate reference point per country. They do not measure the distance between borders or capitals. A single point cannot represent every part of a large country or island group, and its geographic scope may differ from that of the population or land-area figures.</p>
+<p>Distance follows the shortest route over a spherical Earth. The arrow shows the route&#39;s starting direction, rounded to eight compass points. Long routes can curve toward the poles, which explains why an arrow may differ from a line drawn on a flat map. The calculation uses the haversine formula and a mean Earth radius of 6,371.0088 km. Identical points have no direction; a correct guess is identified by the country code.</p>
+<table><thead><tr><th>Distance label</th><th>Distance between reference points</th></tr></thead><tbody><tr><td>Very close</td><td>Under 500 km</td></tr><tr><td>Close</td><td>500 to under 2,000 km</td></tr><tr><td>Nearby</td><td>2,000 to under 5,000 km</td></tr><tr><td>Far</td><td>5,000 to under 10,000 km</td></tr><tr><td>Very far</td><td>10,000 km or more</td></tr></tbody></table>
+<p>For example, with Japan as the answer, Italy gives <strong>↗ far · people ↑ · area ↑</strong>. South Korea gives <strong>→ close · people ↑ · area ↑</strong>.</p>
+<h2>Starting hints</h2>
+<p>Each round shows one reviewed fact about the answer&#39;s name, population, land area or geography. It stays fixed throughout the round. The bank contains four examples per country, but the game chooses from every reviewed alternative that fits the difficulty and remaining answer pool. Name and numerical hints each receive roughly a quarter of selections; geography receives roughly half. Recent wording is avoided when a suitable alternative exists.</p>
+<p>A hint must fit at least four confirmed countries and no more than 70% of the remaining answer pool. On Medium and Hard, at least seven countries must be able to fit, including uncertain cases. These uncertain cases are counted as a precaution; the game assigns the hint only to a confirmed match. Counts are checked again after recent answers are removed. If a country has no fair hint, it is removed too, and the check repeats until the pool is consistent.</p>
+<p>Name hints use the displayed English name. Accents do not change letters, spaces and hyphens are not letters, and vowels are A, E, I, O and U. Numerical hints use the same figures as the guessing clues.</p>
+<p>Geography hints describe country-level facts, rather than the reference points used for direction and distance. Sources include the country database, UN classifications, independent geographic references and official country publications. Each phrase&#39;s sources and conventions are recorded in the <a href="starting-hints.json">complete hint bank</a>.</p>
+<p>Border facts account for the Canada–Denmark land border established in 2022 and the Botswana–Zambia border. Hong Kong and Macao are treated as part of China; sea crossings are not land borders. Ambiguous exact border counts are omitted. Island status is checked separately, rather than inferred from an empty border list.</p>
+<p>Neighbour-size hints compare the land-area snapshot. Where adjoining territory and sovereign-country figures could reverse the result, the case remains uncertain; Suriname&#39;s border with French Guiana is one example. Pacific coast wording includes its seas. Some hints group North America, Central America and the Caribbean. South and West Asia are combined because sources classify Iran differently.</p>
+<p>The bank retains sources, confirmed and possible matches, eligible difficulties, conventions, attribution and two independent review certificates. The repository also retains the geography source facts and original review reports. Those reports certify the recorded bank contents; later implementation changes are checked by the current tests.</p>
+<h2>Attribution and licences</h2>
+<p>The names and geography database derives from mledoze/countries, © its contributors, under the <strong>Open Database Licence 1.0 (ODbL)</strong>. Ländle&#39;s derived country and hint databases use the same licence, included in <a href="DATA_LICENSE.txt">DATA_LICENSE.txt</a>. Changes include selected fields, the country roster, aliases, difficulty groups, replacement population and land-area figures, geography corrections and hint assignments. Application code and styling are separate from the database.</p>
+<p>World Bank, World Development Indicators: <strong>SP.POP.TOTL (2024)</strong> and <strong>AG.LND.TOTL.K2 (2023)</strong>, retrieved 3 October 2026. The <a href="https://data.worldbank.org/indicator/SP.POP.TOTL">population</a> and <a href="https://data.worldbank.org/indicator/AG.LND.TOTL.K2">land-area</a> pages specify <strong>Creative Commons Attribution 4.0</strong>. Vatican City figures are attributed to the official publications linked above. Local font notices are in <code>fonts/</code>.</p></article>
+    <footer class="reading-footer"><a href="licence.html">Database licence</a><a href="DATA_SOURCES.md" download>Download original source document</a></footer>
+  </main>
+</body>
+</html>

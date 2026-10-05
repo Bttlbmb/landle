@@ -39,23 +39,33 @@ npm test
 npm run build
 ```
 
-The build writes a complete static site to `dist/`, including the data and licence reading pages. It checks the hint reviews, generates the runtime hints, and replaces the previous export only after preparing all files. Keep source edits outside `dist/`. The game uses local assets and fixed data, without an account or external data service. GitHub Actions publishes this export to GitHub Pages; it can also be served by any static web host.
+The build writes a complete static site to `dist/`, including the data and licence reading pages. It checks the hint reviews, generates the runtime hints, and replaces the previous export only after preparing all files. Keep source edits outside `dist/` and `docs/`. The game uses local assets and fixed data, without an account or external data service. Run `npm run build:pages` to generate the same site in `docs/` for GitHub Pages.
 
 [Verification notes](QA_NOTES.md) explain the automated checks, optional browser checks and remaining limits.
 
 ## Publish on GitHub Pages
 
-The complete application source, tests, hint maintenance tools, review records and local assets are backed up in [Bttlbmb/landle](https://github.com/Bttlbmb/landle) on **`main`**. Generated builds and local audit artifacts are excluded; the website is rebuilt from source on every deployment. OpenAI hosting is no longer part of this project's publishing setup.
+The complete application source, tests, hint maintenance tools, review records and local assets are backed up in [Bttlbmb/landle](https://github.com/Bttlbmb/landle) on **`main`**. The generated website is committed in **`docs/`**. Local `dist/` builds and audit artifacts are excluded. OpenAI hosting is no longer part of this project's publishing setup.
 
 To enable the website after making the repository public:
 
 1. Open the repository's **Settings → Pages**.
-2. Under **Build and deployment → Source**, select **GitHub Actions**. No publishing branch or folder needs to be selected.
-3. Open **Actions → Deploy GitHub Pages → Run workflow**, choose **`main`**, and run it.
+2. Under **Build and deployment → Source**, select **Deploy from a branch**.
+3. Choose branch **`main`**, folder **`/docs`**, and click **Save**.
 
-The expected address is [bttlbmb.github.io/landle/](https://bttlbmb.github.io/landle/). The workflow reports the actual website address once deployment succeeds. Each later push to `main` runs the tests, builds `dist/`, and publishes it automatically. Pull requests run the tests and build without publishing. While the repository is private, the workflow builds the backup but skips publishing; changing visibility alone does not trigger deployment, so use the manual run above.
+The expected address is [bttlbmb.github.io/landle/](https://bttlbmb.github.io/landle/). GitHub publishes the committed `docs/` files when they change on `main`. This project has no custom GitHub Actions workflow; GitHub handles its own Pages deployment internally. The generated `.nojekyll` file serves the export directly without processing it through Jekyll.
 
-All game assets, module imports and reading-page links use relative paths, so the `/landle/` prefix needs no special configuration. There are no hosting credentials or application secrets to add. If the `github-pages` environment has branch restrictions, allow `main`. See [GitHub's custom workflow instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) for the Pages settings.
+For later updates, edit the source files, then run:
+
+```sh
+npm test
+npm run build:pages
+git add .
+git commit -m "Update website"
+git push origin main
+```
+
+Commit the refreshed `docs/` together with the source changes. GitHub does not run the project's build or tests for branch publishing. All game assets, module imports and reading-page links use relative paths, so the `/landle/` prefix needs no special configuration. There are no hosting credentials or application secrets to add. See [GitHub's branch publishing instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) for the Pages settings.
 
 Saved game progress is tied to the website's origin. Players start with separate browser progress at the new GitHub address.
 
@@ -73,6 +83,7 @@ Saved game progress is tied to the website's origin. Players start with separate
 | `research/starting-hints/` | Geography source facts, review records and hint tooling |
 | `game-tools.js` | Optional browser tools using the visible game actions |
 | `server.mjs`, `build.mjs`, `tests/` | Local preview, static export and verification |
+| `docs/` | Generated website committed for GitHub Pages; rebuild rather than edit directly |
 | `fonts/`, `logo.svg`, `favicon.svg` | Local typeface, its licence and artwork |
 
 Browse the [hint bank](research/starting-hints/index.html) in the local preview. It shows four examples per country and the wider set used in play.

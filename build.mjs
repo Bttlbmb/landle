@@ -12,16 +12,16 @@ const files = [
 ];
 
 /** Stage a complete static export before replacing the previous successful build. */
-export async function buildSite(root = import.meta.dirname) {
+export async function buildSite(root = import.meta.dirname, outputDirectory = 'dist') {
   await Promise.all(files.map(file => stat(join(root, file))));
   const bank = await loadHintBank(root);
   const pages = await Promise.all(READING_PAGES.map(async page => [page.name,
     renderReadingPage(page, await readFile(join(root, page.source), 'utf8')),
   ]));
   const generated = [...pages, ['starting-hints.js', hintRuntimeSource(bank)],
-    ['starting-hints.json', JSON.stringify(bank) + '\n']];
+    ['starting-hints.json', JSON.stringify(bank) + '\n'], ['.nojekyll', '']];
   const staging = await mkdtemp(join(root, '.build-'));
-  const destination = join(root, 'dist');
+  const destination = join(root, outputDirectory);
   const output = join(staging, 'dist');
   const previous = join(staging, 'previous');
   let cleanStaging = true;
@@ -58,6 +58,7 @@ export async function buildSite(root = import.meta.dirname) {
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  await buildSite();
-  console.log('Static Ländle files are ready in dist/.');
+  const outputDirectory = process.argv.includes('--pages') ? 'docs' : 'dist';
+  await buildSite(import.meta.dirname, outputDirectory);
+  console.log(`Static Ländle files are ready in ${outputDirectory}/.`);
 }

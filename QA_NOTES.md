@@ -6,6 +6,8 @@ On 5 October 2026, the cleanup passed all 87 unit tests, 41 Chromium browser sce
 
 ## Game and data checks
 
+The GitHub Pages branch export passed all 89 tests on 5 October 2026. Both `dist/` and `docs/` exports are checked for complete assets, generated reading pages, removal of obsolete files, and preservation of the previous export when inputs are missing. A browser check served the actual `docs/` files under `/landle/` at 390px and 1440px widths; guessing, Help links, data attribution, the licence page and return navigation passed without browser errors, failed requests or external asset requests.
+
 ```sh
 npm test
 npm run build
