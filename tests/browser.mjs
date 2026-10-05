@@ -848,6 +848,48 @@ try {
     await page.close();
   }
 
+  for (const [width, path] of [[320, '/'], [1440, '/'], [390, '/dist/index.html']]) {
+    const page = await openPage(width, 900, undefined, path);
+    await page.fixture({ tier: 2, guesses: ['IT'] });
+    await page.fill('Fran');
+    const before = await page.evaluate(() => JSON.parse(localStorage.getItem('landle-v1')));
+    visible(await page.geometry(['#start-over-button', '#help-button']), 'Header actions');
+    await page.click('#start-over-button');
+    assert.equal(await page.rows(), 0);
+    assert.equal(await page.evaluate(() => document.querySelector('#journey-level-label').textContent), 'Easy');
+    assert.equal(await page.evaluate(() => document.querySelector('#country-search').value), '');
+    assert.equal(await page.evaluate(() => document.querySelector('#country-options').hidden), true);
+    const after = await page.evaluate(() => JSON.parse(localStorage.getItem('landle-v1')));
+    assert.equal(after.rounds.length, 1);
+    assert.ok(!before.rounds.some(round => round.target === after.rounds[0].target));
+    assert.deepEqual(after.stats, before.stats);
+    await page.reviewedHint();
+    await page.guess(after.rounds[0].target);
+    await page.click('#start-over-button');
+    assert.equal(await page.rows(), 0);
+    assert.equal(await page.evaluate(() => document.querySelector('#result-panel').hidden), true);
+    assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('landle-v1')).tier), 1);
+    await page.screenshot(`start-over-${width}`);
+    checks.push({ check: 'header-start-over', width, path });
+    await page.close();
+  }
+
+  for (const path of ['/', '/dist/index.html']) {
+    const page = await openPage(390, 844, undefined, path);
+    // Older test-page HTML may load the latest app without the new header action.
+    await page.send('Page.addScriptToEvaluateOnNewDocument', { source: `
+      new MutationObserver(() => document.querySelector('#start-over-button')?.remove())
+        .observe(document, { childList: true, subtree: true });
+    ` });
+    await page.navigate();
+    assert.equal(await page.evaluate(() => document.querySelector('#start-over-button')), null);
+    await page.reviewedHint();
+    await page.guess('Italy');
+    assert.equal(await page.rows(), 1, 'Older HTML still loads the starter clue and playable board');
+    checks.push({ check: 'older-html-without-start-over', path });
+    await page.close();
+  }
+
   const exported = await openPage(390, 844, undefined, '/dist/index.html');
   await exported.reviewedHint();
   await exported.guess('Italy');

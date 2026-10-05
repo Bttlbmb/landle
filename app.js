@@ -7,6 +7,7 @@ import {
   recordGuess,
   advanceJourney,
   restartPuzzle,
+  restartJourney,
   MAX_GUESSES
 } from './game-state.js';
 import { registerGameTools } from './game-tools.js';
@@ -14,6 +15,7 @@ import { searchCountries } from './country-search.js';
 
 // Cache permanent elements; result and dialog content are replaced when rendered.
 const ui = {
+  startOverButton: document.getElementById('start-over-button'),
   helpButton: document.getElementById('help-button'),
   journeyLevelLabel: document.getElementById('journey-level-label'),
   journeyLevelProgress: document.getElementById('journey-level-progress'),
@@ -531,7 +533,7 @@ function showHelp() {
       <strong>↓ smaller</strong> — less land than France</p>
     </div>
     <p>Each journey has three rounds: <strong>Easy → Medium → Hard</strong>, with six guesses per country. Finish a round to move on, whether you find the country or use all six guesses. After Hard, start a new journey at Easy.</p>
-    <p>Reload starts a fresh country at the current difficulty. If the round is already finished, it moves to the next round. Your statistics stay.</p>
+    <p><strong>Start over</strong> begins a new journey at Easy. Reload starts a fresh country at the current difficulty. If the round is already finished, it moves to the next round. Your statistics stay.</p>
     ${poolDetails()}
     <details class="pool-details help-reference">
       <summary>Typing, clues and saved progress</summary>
@@ -653,6 +655,14 @@ window.visualViewport?.addEventListener('scroll', () => {
   positionOptions();
 });
 ui.helpButton.addEventListener('click', showHelp);
+// Older preview pages can lack this optional header action; still load their board.
+ui.startOverButton?.addEventListener('click', () => {
+  refreshStore();
+  restartJourney(store);
+  loadPuzzle();
+  ui.clueAnnouncement.textContent = 'New journey: Easy. Round 1 of 3.';
+  revealNewRound();
+});
 ui.dialogClose.addEventListener('click', () => ui.gameDialog.close());
 ui.gameDialog.addEventListener('click', event => {
   if (event.target === ui.gameDialog) {

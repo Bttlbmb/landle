@@ -20,6 +20,8 @@ Finish each round to move on, whether you find the country or use all six guesse
 
 A normal visit resumes your saved board, including in another tab. **Reloading replaces an unfinished round** with a new country at the same difficulty. Reloading a finished round advances to the next one; after Hard, it begins a new journey. Statistics stay. An abandoned answer does not enter the answer cooldown, but its shown hint enters the hint history.
 
+**Start over**, beside Help in the header, clears the current journey and begins a fresh Easy round. Completed-round statistics and recent answer and hint history stay saved; abandoning an unfinished round adds no loss.
+
 Progress belongs to this browser at this website address. Clearing browser data removes it; a different browser or address has separate progress. If storage is unavailable, the game continues without saving. Tabs share saved boards: an update to the same round keeps your typed draft, while a replacement round clears it.
 
 Older version 1 saves keep their statistics and start a fresh Easy journey. Existing Journey saves recover their board and recent history where possible. Damaged rounds restart without clearing valid lifetime statistics; history missing from an old save cannot be reconstructed.

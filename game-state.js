@@ -304,3 +304,13 @@ export function restartPuzzle(store, { random } = {}) {
   rememberHint(store, next);
   return next;
 }
+
+/** Start over at Easy, keeping completed statistics and recent answer/hint history. */
+export function restartJourney(store, { random } = {}) {
+  getPuzzle(store);
+  const next = nextPuzzle(store, 1, store.rounds.map(round => round.target), random);
+  store.tier = 1;
+  store.rounds = [next];
+  rememberHint(store, next);
+  return next;
+}

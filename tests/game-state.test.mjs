@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { COUNTRIES } from '../data.js';
 import { countriesForTier, findCountry, openingHint, openingHintsFor } from '../geography.js';
-import { newStore, restoreStore, createPuzzle, validPuzzle, getPuzzle, recordGuess, advanceJourney, restartPuzzle, getOpeningHint } from '../game-state.js';
+import { newStore, restoreStore, createPuzzle, validPuzzle, getPuzzle, recordGuess, advanceJourney, restartPuzzle, restartJourney, getOpeningHint } from '../game-state.js';
 
 const wrongCodes = puzzle => COUNTRIES.filter(country => country.code !== puzzle.target).slice(0, 6).map(country => country.code);
 const setup = (tier = 1) => {
@@ -410,6 +410,32 @@ test('detached, restored and stale completed boards cannot change the active rou
   const restored = restoreStore(store);
   assert.equal(recordGuess(restored, next, next.target).error, 'invalid-puzzle');
   assert.equal(recordGuess(restored, getPuzzle(restored), getPuzzle(restored).target).ok, true);
+});
+
+test('starting over from any round returns to Easy and preserves statistics and recent history', () => {
+  for (const tier of [1, 2, 3]) {
+    for (const finished of [false, true]) {
+      const { store, puzzle } = setup(tier);
+      if (finished) finish(store, puzzle, true);
+      else recordGuess(store, puzzle, wrongCodes(puzzle)[0]);
+      const stats = structuredClone(store.stats);
+      const answers = structuredClone(store.recentAnswers);
+      const hints = structuredClone(store.recentHints);
+      const priorTargets = store.rounds.map(round => round.target);
+      const fresh = restartJourney(store, { random: 0 });
+      assert.equal(store.tier, 1);
+      assert.deepEqual(store.rounds, [fresh]);
+      assert.deepEqual(fresh.guesses, []);
+      assert.equal(fresh.finished, false);
+      assert.equal(priorTargets.includes(fresh.target), false);
+      assert.deepEqual(store.stats, stats);
+      assert.deepEqual(store.recentAnswers, answers);
+      assert.deepEqual(store.recentHints.slice(0, -1), hints);
+      assert.equal(store.recentHints.at(-1).hintId, fresh.hintId);
+      assert.equal(recordGuess(store, puzzle, puzzle.target).error, 'invalid-puzzle');
+      assert.deepEqual(getPuzzle(restoreStore(JSON.stringify(store))), fresh);
+    }
+  }
 });
 
 test('reloading an unfinished round changes its target at the same tier without changing stats', () => {

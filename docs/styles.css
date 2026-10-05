@@ -156,7 +156,22 @@ button svg {
 
 .header-actions {
   display: flex;
+  align-items: center;
   gap: 4px;
+}
+
+.start-over-button {
+  min-height: 44px;
+  padding: 0 12px;
+  border-radius: var(--radius);
+  background: transparent;
+  font-size: 12px;
+  font-weight: 600;
+  transition: background .18s;
+}
+
+.start-over-button:hover {
+  background: var(--primary-soft);
 }
 
 .icon-button {
