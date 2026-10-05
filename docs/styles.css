@@ -120,8 +120,12 @@ button svg {
 
 /* Header and introduction */
 
+.site-header,
+.game-shell {
+  width: min(100% - 40px,600px);
+}
+
 .site-header {
-  width: min(100% - 80px,1000px);
   border-bottom: 1px solid var(--line);
   height: 56px;
   flex: none;
@@ -189,7 +193,6 @@ button svg {
 }
 
 .game-shell {
-  width: min(100% - 40px,600px);
   padding: 16px 0 32px;
   margin: 0 auto;
 }
@@ -830,9 +833,13 @@ dialog::backdrop {
 }
 
 @media(max-width:640px) {
+  .site-header,
+  .game-shell {
+    width: calc(100% - 28px);
+  }
+
   .site-header {
     height: 48px;
-    width: calc(100% - 28px);
   }
 
   .brand {
@@ -847,7 +854,6 @@ dialog::backdrop {
   .game-shell {
     padding-bottom: 31px;
     padding-top: 12px;
-    width: calc(100% - 28px);
   }
 
   .clue-symbol {
@@ -1204,15 +1210,17 @@ dialog::backdrop {
 /* Grow from phone proportions into the existing 600px tablet/desktop grid.
    Short landscape layouts keep their existing width/height treatment. */
 @media (min-width: 480px) and (max-width: 767px) and (min-height: 501px) {
+  .site-header,
+  .game-shell {
+    width: min(calc(100% - 28px),600px);
+  }
+
   .site-header {
-    --header-gutter: clamp(14px,calc(9.02778vw - 29.3333px),40px);
-    width: min(calc(100% - 2 * var(--header-gutter)),1000px);
     height: clamp(48px,calc(2.77778vw + 34.6667px),56px);
   }
   .brand { font-size: clamp(23px,calc(.694444vw + 19.6667px),25px); }
   .brand-icon { width: clamp(18px,calc(.694444vw + 14.6667px),20px); height: clamp(18px,calc(.694444vw + 14.6667px),20px); }
   .game-shell {
-    width: min(calc(100% - 28px),600px);
     padding-top: clamp(12px,calc(1.38889vw + 5.3333px),16px);
     padding-bottom: clamp(31px,calc(.347222vw + 29.3333px),32px);
   }
